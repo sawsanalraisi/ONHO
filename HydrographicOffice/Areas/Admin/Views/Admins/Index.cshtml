@@ -1,0 +1,255 @@
+﻿@model IEnumerable<UserViewModel>
+@inject CultureLocalizer Localizer
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    int count = 1;
+}
+
+<style>
+    .initial-d {
+        font-family: 'Arabic Typesetting'
+    }
+</style>
+
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-sm-4">
+
+        @*<h2>@Localizer.Text("News_List")</h2>*@
+        <p></p>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a asp-area="Admin" asp-controller="Home" asp-action="Index">@Localizer.Text("Home")</a>
+            </li>
+            <li class="breadcrumb-item active">
+                <strong>@Localizer.Text("UsersList")</strong>
+            </li>
+        </ol>
+    </div>
+
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox ">
+                <div class="ibox-title">
+                    <h5>@Localizer.Text("UsersList")</h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+
+                    <div class="table-responsive">
+                        <table id="tbl" class="table table-striped table-bordered table-hover dataTables-example">
+                            <thead>
+                                <tr>
+                                    <th style="width:70px" class="nosort">#</th>
+                                    <th>@Localizer.Text("Name")</th>
+                                    <th>@Localizer.Text("Email")</th>
+                                    <th>@Localizer.Text("Roles")</th>
+                                    <th style="width:50px">@Localizer.Text("Update")</th>
+                                    <th style="width:50px">@Localizer.Text("Acitve")</th>
+                                    <th style="width:50px">@Localizer.Text("Delete")</th>
+                                    <th style="width:50px">@Localizer.Text("ChangePassword")</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                <tr>
+                                    <td style="width:70px" class="nosort">@count</td>
+                                    <td>@item.Name</td>
+                                    <td>@item.Email</td>
+                                    <td>@((item.Roles!=null && item.Roles.Count()>0)?(string.Join(",", (item.Roles.Select(x => x.Replace(x, Localizer.Text(Convert.ToString(x)))).ToList()))):"-")</td>
+
+                                    <td>
+                                        <a class="" href="@Url.Action("Update",new { Id=item.Id})"><i class="fa fa-pencil-square-o"></i></a>
+                                    </td>
+                                    <td>
+
+                                        @if (item.IsActive)
+                                        {
+                                            <input type="checkbox" onclick="activenot('@item.Id')" checked>
+                                        }
+                                        else
+                                        {
+                                            <input type="checkbox" onclick="activenot('@item.Id')" />
+                                        }
+
+                                    </td>
+                                    <td>
+                                        <a class="confirm-text" onclick="Delete('@item.Id')" href="javascript:void(0);"><i class='fa fa-trash'></i></a>
+                                    </td>
+                                    <td>
+                                        <a class="confirm-text"  href="@Url.Action("ChangePassword",new { ID=item.Id})"><i class='fa fa-user'></i></a>
+                                    </td>
+                                </tr>
+
+                                    count++;
+                                }
+                            </tbody>
+                            <tfoot>
+
+                            </tfoot>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $('.dataTables-example').DataTable({
+                pageLength: 10,
+                dom: '<"pull-left"B><"pull-right"f>rt<"row"<"col-sm-4"l><"col-sm-4"i><"col-sm-4"p>>',
+                searching: false,
+                ordering: false,
+                responsive: true,
+
+                language: {
+                    loadingRecords: '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Loading..." : "تحميل البيانات ...")',
+                    processing: '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Processing..." : "جاري تحميل البيانات ...")',
+                    emptyTable: '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")?"No data available in table":"لا توجد بيانات")',
+                    info: '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Showing _START_ to _END_ of _TOTAL_ records" : "اظهار _START_ الى _END_ من _TOTAL_ سجلات")',
+                    infoEmpty: '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")?"No records found":"لا توجد سجلات")',
+                    infoFiltered: '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "(filtered1 from _MAX_ total records)" : "(تمت تصفيته من _MAX_ سجلات)")',
+                    lengthMenu: '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Show _MENU_" : "اظهار _MENU_")',
+                    search: '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")?"Search:":"بحث:")',
+                    zeroRecords: '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")?"No matching records found":"لا توجد سجلات متطابقة")',
+                    paginate: {
+                        previous: '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")?"Prev":"السابق")',
+                        next: '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")?"Next":"التالي")',
+                        last: '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")?"Last":"الأخير")',
+                        first: '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")?"First":"الأول")'
+                    },
+
+                },
+                     buttons: [
+                         //'excelHtml5',
+                         //'csvHtml5',
+                         //'print'
+                     ],
+                     lengthMenu: [
+                         [10, 25, 50, 100],
+                         [10, 25, 50, 100]
+                     ],
+                     pageLength: 10,
+                     pagingType: "full_numbers"
+               
+
+            });
+
+        });
+
+        
+     
+
+
+        function activenot(id) {
+            debugger;
+
+            Swal.fire({
+                title: "@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "You want to Change the state of the item?" : " هل تريد تغيير حالة العنصر؟")",
+                type: "warning",
+                showCancelButton: true,
+                showCloseButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Yes" : "نعم")",
+                cancelButtonText: "@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "No" : "لا")",
+
+
+            }).then((result) => {
+                if (result != null && result.value == true) {
+                        debugger;
+                        var ID = id;
+                        var url = '@Url.Action("setlockout")';
+                        $.ajax({
+                            Type: "GET",
+                            url: url,
+                            data: { 'ID': ID },
+                            success: function (data) {
+                                var dataRes = Number(data);
+                                //alert(data);
+                                if (dataRes > 0) {
+                        @*var href = '@Url.Action("Index", "Building")';
+                       *@
+
+                                    // $(".DataTable").DataTable().ajax.reload(null, false);
+                                    debugger;
+                                    //console.log($(this).parent());
+                                    // p.row($(this).parent()).remove().draw();
+
+                                    swal('@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Done" : "تم")', "", "success");
+
+                                    window.location.reload(true)
+                                }
+                                else {
+                                    swal('@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Error Try Again" : "حدث خطأ")');
+
+                                }
+                            }
+                        });
+
+                    }//swal("Deleted!", "Your imaginary file has been deleted.", "success");
+            });
+
+        };
+
+        function Delete(id) {
+            Swal.fire({
+
+                title: "@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "You Want to Delete the item ?" : "هل تريد حذف العنصر ؟")",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Yes" : "نعم")',
+                cancelButtonText: '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "No" : "لا")',
+                closeOnConfirm: false
+            }).then((result) => {
+                if (result != null && result.value == true) {
+                    var ID = id;
+                    var url = '@Url.Action("Delete")';
+                    $.ajax({
+                        Type: "GET",
+                        url: url,
+                        data: { 'ID': ID },
+                        success: function (data) {
+                            var dataRes = Number(data);
+                            //alert(data);
+                            if (dataRes > 0) {
+                        @*var href = '@Url.Action("Index", "Building")';
+                       *@
+                                // $(".DataTable").DataTable().ajax.reload(null, false);
+                                debugger;
+                                //console.log($(this).parent());
+                                // p.row($(this).parent()).remove().draw();
+
+                                swal('@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Done" : "تم")', "", "success");
+
+                                window.location.reload(true)
+                            }
+                            else {
+                                swal('@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Error Try Again" : "حدث خطأ")');
+
+                            }
+                        }
+                    });
+                }
+            });
+
+        };
+
+    </script>
+}
+

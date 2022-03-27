@@ -1,0 +1,569 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link href="~/sty/Style.css" rel="stylesheet" />
+    <link href="~/sty/Style-Reg.css" rel="stylesheet" />
+    @*<link href="~/css/all.min.css" rel="stylesheet" />
+        <script src="~/js/all.min.js"></script>*@
+
+</head>
+<body>
+
+
+    @*<li><a class="dropdown-item" href="@Url.Action("Index","NoticeToMariner")"> الإعلانات الملاحية</a></li>
+                    <li><a class="dropdown-item" href="@Url.Action("Index","NavigationWarning")"> الإنذارات الملاحية</a></li>
+                    <li><a class="dropdown-item" href="@Url.Action("Create","NewFeature")"> إضافة معلم جديد</a></li>
+                    <li><a class="dropdown-item" href="@Url.Action("Create","DifferentReport")"> تقارير المعالم البحرية </a></li>
+                    <li><a class="dropdown-item" href="@Url.Action("Create","SpecialTask")">   طلبات خاصة  </a></li>
+                    <li><a class="dropdown-item" href="@Url.Action("Create","NewSurvey")">   مسح جديد </a></li>
+                    <li><a class="dropdown-item" href="@Url.Action("Create","ServiceRequestType")">  منتجات و بيانات </a></li>
+
+        <h5><p class=""> <a href="@Url.Action("Index","NoticeToMariner")">الإعلانات الملاحية</a></p></h5>
+        <h5> <p><a href="@Url.Action("Index","NavigationWarning")"> الإنذارات الملاحية</a> </p></h5>
+
+        <h5><p>  <a href="@Url.Action("Create","NewFeature")"> إضافة معلم جديد</a></p></h5>
+
+        <h5><p><a href="@Url.Action("Create","DifferentReport")"> تقارير المعالم البحرية </a></p></h5>
+        <h5><p><a href="@Url.Action("Create","NewSurvey")"> مسح جديد</a> </p></h5>
+
+        <h5><p><a href="@Url.Action("Create","ServiceRequestType")"> منتجات و بيانات </a> </p></h5>*@
+
+
+
+    <!--//nav-->
+
+
+
+    <nav class="navbar navbar-expand-sm navbar-light  ">
+        <div class="container-fluid">
+
+            <div class="row p-3">
+
+
+                <div class="col-md-3 ">
+                    <a class="navbar-brand d-flex" href="index.html">
+                        <img src="Images/logo.png" width="130" height="160" />
+                        <div class="align-self-center"> &nbsp &nbsp <span class="txtColorGold h3 "> <b>   Oman National</b></span> <br /> &nbsp &nbsp <span class="txtColorBlue h3"><b>Hydrographic Office</b></span></div>
+                    </a>
+                </div>
+
+
+                <div class="col-md-9  collapse navbar-collapse  d-flex flex-row-reverse" id="mynavbar">
+                    <div class="d-flex visionOmanStyle">
+
+                        <a class="nav-link" href=""> <img src="Images/omanvision.png" width="150" height="80" /></a>
+
+
+                        <div class="dropdown drop-down-style float-right  align-self-center">
+                            <a class="nav-link dropdown-toggle  txtColorBlue" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">English </a>
+                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">English</a></li>
+                                <li><a class="dropdown-item" href="#">Arabic</a></li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+
+                <div class="col-md-12  collapse navbar-collapse  " id="mynavbar">
+                    <ul class="navbar-nav mr-auto d-flex justify-content-between listNavStyle navStyle ">
+
+
+                        <li class="nav-item "> <a class="nav-link" href="index.html">Home</a></li>
+
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Who We Are</a>
+                            <ul class="dropdown-menu  ">
+                                <li><a class="dropdown-item" href="WhoWeAre.html"> Hydrography History</a></li>
+                                <li><a class="dropdown-item " href="Aim.html">    Vision, Mission and Objective</a></li>
+                                <li><a class="dropdown-item" href="NationalRole.html"> Roles and Responsibilities</a></li>
+                                <li><a class="dropdown-item" href="OrganizationalStructure.html">  General Sections</a></li>
+                            </ul>
+                        </li>
+
+
+
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> Services</a>
+                            <ul class="dropdown-menu ">
+                                <li><a class="dropdown-item" href="@Url.Action("Index","NoticeToMariner")"> Notice to Mariners</a></li>
+                                <li><a class="dropdown-item" href="@Url.Action("Index","NavigationWarning")">  Navigational Warnings</a></li>
+                                <li><a class="dropdown-item" href="@Url.Action("Create","NewFeature")"> Add a new Feature   </a></li>
+                                <li><a class="dropdown-item" href="@Url.Action("Create","DifferentReport")"> Marine Landmark Reports</a></li>
+                                <li><a class="dropdown-item" href="@Url.Action("Create","SpecialTask")"> special Task</a></li>
+                                <li><a class="dropdown-item" href="@Url.Action("Create","NewSurvey")">  New Survey</a></li>
+                                <li><a class="dropdown-item" href="@Url.Action("Create","ServiceRequestType")"> Products and Data </a></li>
+
+                            </ul>
+                        </li>
+
+
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> Activities</a>
+
+                            <ul class="dropdown-menu">
+
+                                <li><a class="dropdown-item" href="HydrographyUnit.html"> Hydrography Unit </a></li>
+
+
+
+
+                                <li class="d-flex dropdown-hover-all">
+                                    <div class="dropdown ">
+                                        <div class="dropdown-toggle txtColorBlue submenu" id="dropdownMenuButton222" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><b>  National Hydrographic Archive</b> </div>
+
+                                        <div class="dropdown-menu submenu2" aria-labelledby="dropdownMenuButton222" style=" margin-top:-30px; ">
+                                            <a class="dropdown-item" href="archive.html"> Hydrographic Archive Section  </a>
+                                            <a class="dropdown-item" href="archdata.html">  Marine data  </a>
+                                            <a class="dropdown-item" href="Omanbook.html">  Oman Maritime Book</a>
+                                        </div>
+
+                                    </div>
+
+                                </li>
+
+
+
+                                <li><a class="dropdown-item" href="MarineSafetyInformation.html">  Maritime Safety Information</a></li>
+                                <li><a class="dropdown-item" href="MaritimeBorder.html">  Maritime Boundaries</a></li>
+                                <li><a class="dropdown-item" href="Production.html">Production</a></li>
+
+
+                            </ul>
+                        </li>
+
+
+
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Training</a>
+                            <ul class="dropdown-menu">
+
+                                <li><a class="dropdown-item" href="HydrographySchool.html"> Hydrographic Training School</a></li>
+                                <li><a class="dropdown-item" href="training.html">  General Training Courses</a></li>
+
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-item"> <a class="nav-link" href="ContactUs.html"> Connect us</a></li>
+
+                        <li>
+
+                            <form class="d-flex">
+                                <div class="navSearch">
+                                    <a class="nav-link " href="javascript:void(0)">
+                                        <input type="text" id="search-bar" placeholder="Search">
+                                        <i class="fa fa-search search-icon"></i>
+                                    </a>
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+    <!--<video width="100%" playsinline autoplay muted loop class="mt-2" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) inset; mix-blend-mode: multiply; ">
+        <source src="Video/OHNO.mov" type="video/mp4">
+
+    </video>-->
+
+
+
+    <video width="100%" playsinline autoplay muted loop class="mt-2" style="mix-blend-mode: multiply; ">
+        <source src="Video/pathy3.mov" type="video/mp4">
+    </video>
+
+
+
+    @RenderBody()
+    @*@Url.Action("Index","NoticeToMariner")
+          @Url.Action("Index","NavigationWarning")
+         @Url.Action("Create","NewFeature")
+          @Url.Action("Create","DifferentReport")
+         @Url.Action("Create","SpecialTask")
+         @Url.Action("Create","NewSurvey")
+        @Url.Action("Create","ServiceRequestType")*@
+
+
+    <div class="container mt-5 text-center">
+
+        <h2 class=" mt-5 txtColorBlue">Our Services</h2>
+
+        <div class="row mt-5 txtColorBlue ">
+
+
+            <div class="col-lg-2 col-md-4">
+                <a href="@Url.Action("Index","NoticeToMariner")">
+                    <div class="centerimgCir">
+                        <img src="Images/not1.png" class="rounded-circle  imgstylecir " width="150" height="150" style="object-fit: scale-down; ">
+                        <div class="overlay2 rounded-circle"></div>
+                    </div>
+                    <br />
+                    <h5><p class=""> Notice to Mariners </p></h5>
+                </a>
+            </div>
+
+
+
+            <div class="col-lg-2 col-md-4">
+                <a href="@Url.Action("Index","NavigationWarning")">
+                    <div class="centerimgCir">
+                        <img src="Images/Nav.png" class="rounded-circle  imgstylecir " width="150" height="150" style="">
+                        <div class="overlay2 rounded-circle"></div>
+                    </div>
+                    <br />
+
+                    <h5> <p>  Navigational Warnings </p></h5>
+                </a>
+            </div>
+
+
+
+
+            <div class="col-lg-2 col-md-4">
+                <a href="@Url.Action("Create","NewFeature")">
+                    <div class="centerimgCir">
+                        <img src="Images/New.png" class="rounded-circle  imgstylecir " width="150" height="150">
+                        <div class="overlay2 rounded-circle"></div>
+                    </div>
+                    <br />
+
+                    <h5><p>     Add a new Feature </p></h5>
+                </a>
+            </div>
+
+
+
+
+            <div class="col-lg-2 col-md-4">
+                <a href="@Url.Action("Create","DifferentReport")">
+                    <div class="centerimgCir">
+                        <img src="Images/report.png" class="rounded-circle  imgstylecir " width="150" height="150">
+                        <div class="overlay2 rounded-circle"></div>
+                    </div>
+                    <br />
+
+                    <h5><p>   Marine Landmark Reports </p></h5>
+                </a>
+            </div>
+
+
+
+            <div class="col-lg-2 col-md-4">
+                <a href="@Url.Action("Create","NewSurvey")">
+                    <div class="centerimgCir">
+                        <img src="Images/news.png" class="rounded-circle  imgstylecir " width="150" height="150">
+                        <div class="overlay2 rounded-circle"></div>
+                    </div>
+                    <br />
+
+                    <h5><p>New Survey </p></h5>
+                </a>
+            </div>
+
+
+
+            <div class="col-lg-2 col-md-4">
+                <a href="@Url.Action("Create","ServiceRequestType")">
+                    <div class="centerimgCir">
+                        <img src="Images/data.png" class="rounded-circle  imgstylecir " width="150" height="150">
+                        <div class="overlay2 rounded-circle"></div>
+                    </div>
+                    <br />
+
+                    <h5><p> Products and Data  </p></h5>
+                </a>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="container mt-3 p-5 txtColorBlue ">
+
+
+        <div class="container mt-5  text-center">
+            <div class="row no-gutters mt-5">
+                <div class="col-md-4 p-3 d-flex  BackHighColor ">
+                    <div class="p-3">
+                        <img src="Images/portal.png" width="150" height="150">
+                        <p class="">
+                            <br />
+                            <a href=""> <b> Marine Data </b></a>
+                        <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabi sed metus id et viverra augue.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 p-3 d-flex   ">
+
+                    <div class="p-3">
+                        <img src="Images/multi.png" width="150" height="150" />
+                        <p class="">
+                            <br />
+                            <a href="PhotoGallery.html"><b> Pictures Library </b></a>
+
+                        <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabi sed metus id et viverra augue.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 p-3 d-flex  BackHighColor ">
+                    <div class="p-3">
+                        <img src="Images/pp3.png" width="150" height="150">
+                        <p class="">
+                            <br />
+                            <a href="IndexMap.html"><b>  Map Index  </b> </a>
+                        <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabi sed metus id et viverra augue.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div class="container ">
+            <div class="row no-gutters">
+
+                <div class="col-md-4 p-4 d-flex ">
+                    <div class="p-4">
+                        <img src="Images/org.png" width="80" height="80" /><b class="p-3">organizations </b>
+                        <p class="mt-3 txtColorBlue">
+                            <a href="https://iho.int/">  International Hydrographic Organization <i class="fa-solid fa-arrow-up-right-from-square"></i> </a><br />
+                            <a href="https://www.imo.org/">International Maritime Organization<i class="fa-solid fa-arrow-up-right-from-square"></i></a><br />
+                            <a href="https://www.gov.uk/government/organisations/uk-hydrographic-office">United Kingdom Hydrographic Office    <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br />
+
+
+
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 p-4 d-flex BackHighColor  ">
+                    <div class="p-4">
+                        <img src="Images/links.png" width="80" height="80" /><b class="p-3">Quick links  </b>
+
+                        <p class="mt-3">
+                            <a href="https://www.ita.gov.om/itaportal/About/about.aspx">  Ministry of Transport, Communications and Information Technology <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br />
+                            <a href="https://fm.gov.om/">   Foreign Ministry of Oman <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br />
+                            <a href="https://www.squ.edu.om/squ-ar">   Sultan Qaboos University<i class="fa-solid fa-arrow-up-right-from-square"></i></a><br />
+
+
+
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 p-4 d-flex ">
+                    <div class="p-4">
+                        <img src="Images/ads.png" width="80" height="80" /><b class="p-3">Announcement</b>
+                        <p class="">
+                            ####################<br />
+                            ####################
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="container-fulid list-style myfooter">
+
+        <header>
+            <div class="overlay"></div>
+            <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                <source src="Video/Footer.mp4" type="video/mp4">
+            </video>
+            <div class="container ">
+                <div class="d-flex align-items-center">
+                    <div class="w-100 text-white">
+
+                        <div class="container-fulid">
+                            <div class=" row d-flex  p-5 ">
+
+                                <div class="col-md-4 d-flex">
+                                    <div class=" ">
+
+                                        <ul>
+                                            <li><h5><b> Oman National  <br /> Hydrographic Office</b></h5></li>
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="#">Service</a>Services </li>
+                                            <li><a href="WhoWeAre.html"> Who We Are</a></li>
+                                            <li><a href="HydrographyUnit.html">Activities</a></li>
+                                            <li><a href="HydrographySchool.html">Training</a></li>
+                                            <li><a href="#"> Connect us</a></li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4 d-flex">
+                                    <div class="  ">
+
+                                        <ul>
+                                            <li> <h5><b> Connect With us</b></h5></li>
+                                            <li>
+
+                                                <p>
+                                                    Oman National Hydrographic Office<br />
+                                                    Ministry of Defence - Muaskar Al Murtafa'a <br />
+                                                    P.O.Box: 723 -  P.C: 111<br />
+                                                    Sultanate of Oman  <br />
+                                                    Telephone: 21512432  968 +<br />
+                                                    fax: 67092432  968 +<br />
+                                                    Email : onho@mod.gov.om
+                                                </p>
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+        </header>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="text-center copyRightStyle  p-1">
+        &copy;  © All rights reserved to the Oman National Hydrographic Office 2022
+    </div>
+
+
+
+
+    <script>
+
+        (function ($bs) {
+            const CLASS_NAME = 'has-child-dropdown-show';
+            $bs.Dropdown.prototype.toggle = function (_orginal) {
+                return function () {
+                    document.querySelectorAll('.' + CLASS_NAME).forEach(function (e) {
+                        e.classList.remove(CLASS_NAME);
+                    });
+                    let dd = this._element.closest('.dropdown').parentNode.closest('.dropdown');
+                    for (; dd && dd !== document; dd = dd.parentNode.closest('.dropdown')) {
+                        dd.classList.add(CLASS_NAME);
+                    }
+                    return _orginal.call(this);
+                }
+            }($bs.Dropdown.prototype.toggle);
+
+            document.querySelectorAll('.dropdown').forEach(function (dd) {
+                dd.addEventListener('hide.bs.dropdown', function (e) {
+                    if (this.classList.contains(CLASS_NAME)) {
+                        this.classList.remove(CLASS_NAME);
+                        e.preventDefault();
+                    }
+                    e.stopPropagation(); // do not need pop in multi level mode
+                });
+            });
+
+            // for hover
+            document.querySelectorAll('.dropdown-hover, .dropdown-hover-all .dropdown').forEach(function (dd) {
+                dd.addEventListener('mouseenter', function (e) {
+                    let toggle = e.target.querySelector(':scope>[data-bs-toggle="dropdown"]');
+                    if (!toggle.classList.contains('show')) {
+                        $bs.Dropdown.getOrCreateInstance(toggle).toggle();
+                        dd.classList.add(CLASS_NAME);
+                        $bs.Dropdown.clearMenus();
+                    }
+                });
+                dd.addEventListener('mouseleave', function (e) {
+                    let toggle = e.target.querySelector(':scope>[data-bs-toggle="dropdown"]');
+                    if (toggle.classList.contains('show')) {
+                        $bs.Dropdown.getOrCreateInstance(toggle).toggle();
+                    }
+                });
+            });
+        })(bootstrap);
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>

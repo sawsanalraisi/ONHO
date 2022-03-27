@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Acitve" xml:space="preserve">
+    <value>مفعل</value>
+  </data>
+  <data name="AddAds" xml:space="preserve">
+    <value>إضافة إعلان</value>
+  </data>
+  <data name="AddFrequency" xml:space="preserve">
+    <value>إضافة تردد</value>
+  </data>
+  <data name="AddImages" xml:space="preserve">
+    <value>إضافة صور</value>
+  </data>
+  <data name="AddNews" xml:space="preserve">
+    <value>إضافة خبر</value>
+  </data>
+  <data name="AddProgram" xml:space="preserve">
+    <value>اضافة برنامج</value>
+  </data>
+  <data name="AddUser" xml:space="preserve">
+    <value>اضافة المستخدم</value>
+  </data>
+  <data name="AddVideos" xml:space="preserve">
+    <value>إضافة مقطع فيديو</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>المدير العام</value>
+  </data>
+  <data name="AdsAdmin" xml:space="preserve">
+    <value>مدير قائمة الاعلانات</value>
+  </data>
+  <data name="AdsList" xml:space="preserve">
+    <value>قائمة الإعلانات</value>
+  </data>
+  <data name="AppStore" xml:space="preserve">
+    <value>متجر ابل</value>
+  </data>
+  <data name="BackToList" xml:space="preserve">
+    <value>الرجوع للقائمة</value>
+  </data>
+  <data name="British" xml:space="preserve">
+    <value>British Notice To Mariner</value>
+  </data>
+  <data name="broadcasterName" xml:space="preserve">
+    <value>اسم المذيع</value>
+  </data>
+  <data name="broadcasterNamear" xml:space="preserve">
+    <value>اسم المذيع بالعربية</value>
+  </data>
+  <data name="broadcasterNameen" xml:space="preserve">
+    <value>اسم المذيع بالانجليزية</value>
+  </data>
+  <data name="CategoryId" xml:space="preserve">
+    <value>أسم المنتج</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>تغيير كلمة المرور</value>
+  </data>
+  <data name="ContactUsList" xml:space="preserve">
+    <value>قائمة تواصل معنا</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>التاريخ</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>الوصف</value>
+  </data>
+  <data name="Descriptionar" xml:space="preserve">
+    <value>الوصف بالعربية</value>
+  </data>
+  <data name="Descriptionen" xml:space="preserve">
+    <value>الوصف بالانجليزية</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>التفاصيل</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>البريد الإلكترونى</value>
+  </data>
+  <data name="Emailerror" xml:space="preserve">
+    <value>من فضلك ادخل البريد الإلكترونى بشكل صحيح</value>
+  </data>
+  <data name="EmailReqired" xml:space="preserve">
+    <value>البريد الإلكترونى مطلوب</value>
+  </data>
+  <data name="EndTime" xml:space="preserve">
+    <value>وقت النهاية</value>
+  </data>
+  <data name="faildreqired" xml:space="preserve">
+    <value>حقل مطلوب</value>
+  </data>
+  <data name="fb" xml:space="preserve">
+    <value>فيس بوك</value>
+  </data>
+  <data name="FileFormatId" xml:space="preserve">
+    <value>نوع الملف</value>
+  </data>
+  <data name="FrequenciesAdmin" xml:space="preserve">
+    <value>مدير قائمة الترددات</value>
+  </data>
+  <data name="FrequencyList" xml:space="preserve">
+    <value>قائمة الترددات</value>
+  </data>
+  <data name="GooglePlay" xml:space="preserve">
+    <value>متجر جوجل</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>الرئيسية</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>الصورة</value>
+  </data>
+  <data name="Images" xml:space="preserve">
+    <value>الصور</value>
+  </data>
+  <data name="ImagesAdmin" xml:space="preserve">
+    <value>مدير قائمة الصور</value>
+  </data>
+  <data name="ImagesList" xml:space="preserve">
+    <value>قائمة الصور</value>
+  </data>
+  <data name="instgram" xml:space="preserve">
+    <value>انستجرام</value>
+  </data>
+  <data name="IsActive" xml:space="preserve">
+    <value>مفعل</value>
+  </data>
+  <data name="Later" xml:space="preserve">
+    <value>لاحقا</value>
+  </data>
+  <data name="liveAudio" xml:space="preserve">
+    <value>رابط الراديو</value>
+  </data>
+  <data name="livevideo" xml:space="preserve">
+    <value>رابط الفيديو</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>تسجيل الدخول</value>
+  </data>
+  <data name="LoginFaild" xml:space="preserve">
+    <value>من فضلك تأكد من البريد الالكترونى وكلمة المرور</value>
+  </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>تسجيل الخروج</value>
+  </data>
+  <data name="MainProgramsAdmin" xml:space="preserve">
+    <value>مدير قائمة البرامج الرئيسيه</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>الرسالة</value>
+  </data>
+  <data name="MobileImages" xml:space="preserve">
+    <value>الصور الخاصة بالهاتف </value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>الإسم</value>
+  </data>
+  <data name="NewAdmin" xml:space="preserve">
+    <value>مدير قائمة الاخبار</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>كلمة المرور الجديدة</value>
+  </data>
+  <data name="News" xml:space="preserve">
+    <value>الأخبار</value>
+  </data>
+  <data name="News_List" xml:space="preserve">
+    <value>قائمة الأخبار</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>التالى</value>
+  </data>
+  <data name="Notice To Mariner" xml:space="preserve">
+    <value>الاعلانات الملاحية</value>
+  </data>
+  <data name="NoticeDate" xml:space="preserve">
+    <value>التاريخ</value>
+  </data>
+  <data name="NoticeEdition" xml:space="preserve">
+    <value>الاصدار</value>
+  </data>
+  <data name="NoticeFileName" xml:space="preserve">
+    <value>نوع الملف</value>
+  </data>
+  <data name="NoticeType" xml:space="preserve">
+    <value>نوع الملاحظة</value>
+  </data>
+  <data name="NotiecDesc" xml:space="preserve">
+    <value>الوصف</value>
+  </data>
+  <data name="Now" xml:space="preserve">
+    <value>الآن</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>رقم التردد</value>
+  </data>
+  <data name="OldPassword" xml:space="preserve">
+    <value>كلمة المرور القديمة</value>
+  </data>
+  <data name="Oman" xml:space="preserve">
+    <value>Oman Notice To Mariner</value>
+  </data>
+  <data name="Order" xml:space="preserve">
+    <value>الترتيب</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>كلمة المرور</value>
+  </data>
+  <data name="passwordReqired" xml:space="preserve">
+    <value>كلمة المرور مطلوبة</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>رقم الهاتف</value>
+  </data>
+  <data name="ProgramList" xml:space="preserve">
+    <value>قائمة البرامج</value>
+  </data>
+  <data name="ProgramsAdmin" xml:space="preserve">
+    <value>مدير قائمة البرامج</value>
+  </data>
+  <data name="Region" xml:space="preserve">
+    <value>المنطقة</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>الصلاحيات</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>حفظ</value>
+  </data>
+  <data name="SendNotfactions" xml:space="preserve">
+    <value>إرسال الإشعارات</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>الإعدادات</value>
+  </data>
+  <data name="SettingsAdmin" xml:space="preserve">
+    <value>مدير قائمة الاعددادات</value>
+  </data>
+  <data name="SliderList" xml:space="preserve">
+    <value>قائمة البرامج الرئيسيه</value>
+  </data>
+  <data name="SoundCloud" xml:space="preserve">
+    <value>ساوند كلاود</value>
+  </data>
+  <data name="StartTime" xml:space="preserve">
+    <value>وقت البداية</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>حالة الاعلان</value>
+  </data>
+  <data name="StatusRequest" xml:space="preserve">
+    <value>حالة الطلب</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>العنوان</value>
+  </data>
+  <data name="Titlear" xml:space="preserve">
+    <value>العنوان بالعربية</value>
+  </data>
+  <data name="Titleen" xml:space="preserve">
+    <value>العنوان بالانجليزية</value>
+  </data>
+  <data name="Titles" xml:space="preserve">
+    <value>العنوان</value>
+  </data>
+  <data name="twitter" xml:space="preserve">
+    <value>تويتر</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
+  <data name="UpdateAds" xml:space="preserve">
+    <value>تعديل الإعلان</value>
+  </data>
+  <data name="UpdateFrequency" xml:space="preserve">
+    <value>تعديل تردد</value>
+  </data>
+  <data name="UpdateImages" xml:space="preserve">
+    <value>تعديل الصور</value>
+  </data>
+  <data name="UpdateNews" xml:space="preserve">
+    <value>تعديل الأخبار</value>
+  </data>
+  <data name="UpdateProgram" xml:space="preserve">
+    <value>تعديل البرنامج</value>
+  </data>
+  <data name="UpdateSlider" xml:space="preserve">
+    <value>تعديل البرنامج الرئيسى</value>
+  </data>
+  <data name="UpdateUser" xml:space="preserve">
+    <value>تعديل المستخدم</value>
+  </data>
+  <data name="UpdateVideos" xml:space="preserve">
+    <value>تعديل مقاطع الفيديو</value>
+  </data>
+  <data name="Url" xml:space="preserve">
+    <value>الرابط</value>
+  </data>
+  <data name="UsersAdmin" xml:space="preserve">
+    <value>مدير قائمة المستخدمين</value>
+  </data>
+  <data name="UsersList" xml:space="preserve">
+    <value>قائمة المستخدمين</value>
+  </data>
+  <data name="UsersMap" xml:space="preserve">
+    <value>خريطة المستخدمين</value>
+  </data>
+  <data name="UsersType" xml:space="preserve">
+    <value>نوع المستخدمين</value>
+  </data>
+  <data name="VideoAdmin" xml:space="preserve">
+    <value>مدير قائمة الفيديو</value>
+  </data>
+  <data name="VideosList" xml:space="preserve">
+    <value>قائمة الفيديو</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>تنزيل الملف</value>
+  </data>
+  <data name="website" xml:space="preserve">
+    <value>الموقع الالكتروني</value>
+  </data>
+  <data name="youtube" xml:space="preserve">
+    <value>يوتيوب</value>
+  </data>
+</root>

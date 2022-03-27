@@ -1,0 +1,95 @@
+﻿@model IEnumerable<Hydro.DAL.Entities.NoticeToMariner>
+
+@{
+    ViewData["Title"] = "IndexTest";
+}
+
+<h1>IndexTest</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NoticeType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NotiecDesc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NoticeFileName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NoticeDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NoticeEdition)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreateBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreateAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdateBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdateAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UploadeFile)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Isdelete)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoticeType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NotiecDesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoticeFileName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoticeDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoticeEdition)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreateBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreateAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdateBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdateAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UploadeFile)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Isdelete)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

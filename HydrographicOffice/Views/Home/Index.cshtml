@@ -1,0 +1,23 @@
+﻿@inject  CultureLocalizer  _Localizer
+    @{
+        ViewData["Title"] = "Home Page";
+
+        var X = _Localizer.Text("Home");
+    }
+  
+
+    <div class="text-center">
+        <h1 class="display-4">@_Localizer.Text("Home")</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>
+
+
+@section Scripts{
+
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable();
+        });
+    </script>
+
+ }

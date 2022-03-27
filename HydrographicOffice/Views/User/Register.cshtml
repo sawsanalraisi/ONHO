@@ -1,0 +1,88 @@
+﻿@model HydrographicOffice.Models.LoginRegisterVm 
+
+<div class="container">
+    <div class="row d-flex align-items-center justify-content-center">
+        <div class="col-md-10 ">
+
+            <form method="post" action="@Url.Action("Register", "User")">
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="card px-5 py-5 ">
+                    <h2 class="mt-3 txtColorGold text-center">انشاء حساب جديد  </h2>
+
+                    <small class="mt-2 txtColorBlue">يرجى ملء هذا النموذج لإنشاء حساب.</small>
+
+                    <div class="form-input">
+
+                        <i class="fa fa-user search-icon2"></i>
+
+                        <input type="text" class="form-control" placeholder="اسم المستخدم " asp-for="UserName">
+
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+
+                    </div>
+
+                    <div class="form-input">
+                        <i class="fa-solid fa-user search-icon2"></i>
+                        <input type="text" class="form-control" placeholder="اسم كامل " asp-for="FullName">
+                        <span asp-validation-for="FullName" class="text-danger"></span>
+
+                    </div>
+
+                    <div class="form-input">
+                        <i class="fa-solid fa-building search-icon2"></i>
+                        <input type="text" class="form-control" placeholder="اسم المنظمة" asp-for="OrgraizationName">
+                        <span asp-validation-for="OrgraizationName" class="text-danger"></span>
+
+                    </div>
+
+                    <div class="form-input">
+                        <i class="fa-solid fa-phone search-icon2"></i>
+                        <input type="text" class="form-control" placeholder="رقم التليفون " asp-for="PhoneNumber">
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+
+                    </div>
+
+
+                    <div class="form-input">
+                        <i class="fa-solid fa-location-pin search-icon2"></i>
+                        <input type="text" class="form-control" placeholder="عنوان" asp-for="Address">
+                        <span asp-validation-for="Address" class="text-danger"></span>
+
+                    </div>
+
+                    <div class="form-input">
+                        <i class="fa-solid fa-envelope search-icon2"></i>
+                        <input type="text" class="form-control" placeholder="عنوان بريد الكتروني " asp-for="Email">
+                        <span asp-validation-for="Email" class="text-danger"></span>
+
+                    </div>
+
+                    <div class="form-input">
+                        <i class="fa-solid fa-lock search-icon2"></i>
+                        <input type="text" class="form-control" placeholder="كلمه السر" asp-for="Password">
+                        <span asp-validation-for="Password" class="text-danger"></span>
+
+                    </div>
+                    <div class="form-check">
+
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked="">
+                        <label class="form-check-label txtColorGold " for="flexCheckChecked"> أوافق على جميع البيانات</label>
+
+                    </div>
+
+                    <button class="btn mt-4 signup backBlue text-white">انشاء حساب جديد </button>
+
+
+                    <div class="text-center mt-4">
+                        <span class="txtColorGold">عضو بالفعل ؟</span>
+                        <a href="@Url.Action("LoginUser","User")" class="text-decoration-none txtColorBlue">تسجيل الدخول</a>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>

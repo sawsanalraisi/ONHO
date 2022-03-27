@@ -1,0 +1,478 @@
+﻿@using HydrographicOffice.Models;
+
+
+@{
+    var culture = System.Globalization.CultureInfo.CurrentCulture;
+
+    LoginViewModel modellocal = new LoginViewModel();
+    LoginRegisterVm loginRegisterVm = new LoginRegisterVm();
+
+
+    if (ViewBag.model !=null)
+    {
+        modellocal = ViewBag.model as LoginViewModel;
+    }
+}
+
+@inject CultureLocalizer Localizer
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    @*<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="~/sty/Style.css" rel="stylesheet" />
+        <link href="~/sty/all.min.css" rel="stylesheet" />
+
+        <link href="~/sty/Style-Reg.css" rel="stylesheet" />
+
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="js/all.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet">
+        <link href="http://fonts.googleapis.com/css?family=Roboto:400,700,300" rel="stylesheet" type="text/css">*@
+
+
+    @*/...............................................*@
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <link href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/scroller/2.0.5/css/scroller.bootstrap5.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.8.1/jquery.timepicker.min.css"
+          type="text/css" />
+    @*<link href="~/css/jquery.dataTables.min.css" rel="stylesheet" />*@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="~/sty/Style.css" rel="stylesheet" />
+    <link href="~/sty/Style-Reg.css" rel="stylesheet" />
+    <link href="~/sty/all.min.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+    <!-- header-->
+
+    <div class="container-fluid ">
+        <div class="d-flex justify-content-between ">
+            <div class=" d-flex">
+                <a class="navbar-brand " href="index.html"><img src="~/Images/logo.png" width="130" height="160" /> </a>
+                <div class="align-self-center"> &nbsp &nbsp <span class="txtColorGold h3 "> <b> Oman National</b></span> <br /> &nbsp &nbsp <span class="txtColorBlue h3"><b>  Hydrographic Office</b></span></div>
+
+            </div>
+            <div class=" align-self-center">
+
+                <div class="dropdown drop-down-style float-right  ">
+                    <a class="nav-link dropdown-toggle align-self-center txtColorBlue" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        @if (!culture.Name.Contains("en-US"))
+                        {
+                            @:English
+                        }
+                        else
+                        {
+                            @:العربية
+                        }
+                        
+
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-light " aria-labelledby="navbarDarkDropdownMenuLink">
+                        <li><a class="dropdown-item" asp-controller="Home" asp-action="ChangeLanguage">English</a></li>
+                        <li><a class="dropdown-item" asp-controller="Home" asp-action="ChangeLanguage">Arabic</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="navSearch">
+                        <a class="nav-link " href="javascript:void(0)">
+                            <input type="text" id="search-bar" placeholder="Search">
+                            <i class="fa fa-search search-icon"></i>
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- ...............................................................................................................-->
+    <!--  nav -->
+
+
+    <nav class="navbar navbar-expand-sm navbar-dark backBlue stick-ey-top navStyle mt-2 ">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse " id="mynavbar">
+                <!--// me-auto-->
+                <ul class="navbar-nav navSpace">
+
+                    <li class="nav-item "> <a class="nav-link" href="index.html">Home</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> Who We Are</a>
+                        <ul class=" dropdown-menu ">
+
+
+                            <li><a class="dropdown-item" href="WhoWeAre.html"> Hydrography History</a></li>
+                            <li><a class="dropdown-item " href="Aim.html">    Vision, Mission and Objective</a></li>
+                            <li><a class="dropdown-item" href="NationalRole.html"> Roles and Responsibilities</a></li>
+                            <li><a class="dropdown-item" href="OrganizationalStructure.html">  General Sections</a></li>
+
+                        </ul>
+                    </li>
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> Services</a>
+                        <ul class="dropdown-menu ">
+                            <li><a class="dropdown-item" href="@Url.Action("Index","NoticeToMariner")"> Notice to Mariners</a></li>
+                            <li><a class="dropdown-item" href="@Url.Action("Index","NavigationWarning")">  Navigational Warnings</a></li>
+                            <li><a class="dropdown-item" href="@Url.Action("Create","NewFeature")"> Add a new Feature   </a></li>
+                            <li><a class="dropdown-item" href="@Url.Action("Create","DifferentReport")"> Marine Landmark Reports</a></li>
+                            <li><a class="dropdown-item" href="@Url.Action("Create","NewSurvey")">  New Survey</a></li>
+                            <li><a class="dropdown-item" href="@Url.Action("Create","SpecialTask")">  Special Task </a></li>
+                            <li><a class="dropdown-item" href="@Url.Action("Create","ServiceRequestType")"> Products and Data </a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> Activities</a>
+
+                        <ul class="dropdown-menu ">
+
+                            <li><a class="dropdown-item" href="HydrographyUnit.html">  Hydrography Unit </a></li>
+
+
+
+
+                            <li class="d-flex dropdown-hover-all">
+                                <div class="dropdown ">
+                                    <div class="dropdown-toggle txtColorBlue submenu" id="dropdownMenuButton222" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><b>   National Hydrographic Archive</b> </div>
+
+                                    <div class="dropdown-menu submenu2 " aria-labelledby="dropdownMenuButton222" style=" margin-top:-30px; ">
+                                        <a class="dropdown-item" href="archive.html"> Hydrographic Archive Section  </a>
+                                        <a class="dropdown-item" href="archdata.html">  Marine data  </a>
+                                        <a class="dropdown-item" href="Omanbook.html">  Oman Maritime Book</a>
+                                    </div>
+
+                                </div>
+
+                            </li>
+
+
+
+
+
+                            <li><a class="dropdown-item" href="MarineSafetyInformation.html">  Maritime Safety Information</a></li>
+                            <li><a class="dropdown-item" href="MaritimeBorder.html">  Maritime Boundaries</a></li>
+                            <li><a class="dropdown-item" href="Production.html">Production</a></li>
+
+
+                        </ul>
+                    </li>
+
+
+
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Training</a>
+                        <ul class="dropdown-menu">
+
+                            <li><a class="dropdown-item" href="HydrographySchool.html"> Hydrographic Training School</a></li>
+                            <li><a class="dropdown-item" href="training.html">  General Training Courses</a></li>
+
+                        </ul>
+                    </li>
+
+
+                    <li class="nav-item"> <a class="nav-link" href="ContactUs.html">Connect us </a></li>
+
+                </ul>
+
+
+
+                <form class="d-flex navSearch">
+                    <ul class="navbar-nav me-auto">
+
+                        @if (User != null && User.Identity.IsAuthenticated && User.Identity.Name != null)
+                        {
+
+
+                            <li class="nav-item d-flex text-white ps-3">
+                                @User.Identity.Name
+                            </li>
+
+                            <li class="nav-item d-flex">
+                                <a asp-area="" asp-action="Logout" asp-controller="User">
+
+                                    <i class="fa fa-sign-out text-white ps-3"></i>
+                                </a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item d-flex text-white">
+                                <a class="nav-link" data-bs-toggle="modal" data-bs-target="#myModalLogin"> sign in</a>
+                                <a class="nav-link" href="javascript:void(0)">/</a>
+                                <a class="nav-link" data-bs-toggle="modal" data-bs-target="#myModalRegister">sign up</a>
+                            </li>
+                        }
+
+
+
+                    </ul>
+                </form>
+
+
+            </div>
+
+        </div>
+    </nav>
+
+
+
+
+    <!-- login _  Registeration -->
+
+
+
+    <div class="modal fade" id="myModalLogin">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <!--//login part-->
+                <div class="container">
+                    <div class="row d-flex align-items-center justify-content-center">
+                        <div class="col-md-10 ">
+
+                            @await Html.PartialAsync("~/Views/Shared/_loginpatial.cshtml", modellocal)
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="modal fade" id="myModalRegister">
+        <div class="modal-dialog modal-lg modal-dialog-centered  ">
+            <div class="modal-content">
+
+                <!--//Regteration part-->
+                <div class="container">
+                    <div class="row d-flex align-items-center justify-content-center">
+                        <div class="col-md-10 ">
+                            @await Html.PartialAsync("~/Views/Shared/_RegisterPariatl.cshtml", loginRegisterVm)
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col backImg"></div>
+            <div class="col-9">
+                <div class="container" style="margin-bottom: 60px;">
+                    <main role="main" class="">
+
+                        @RenderBody()
+                    </main>
+                </div>
+            </div>
+            <div class="col backImg"></div>
+        </div>
+    </div>
+
+
+
+
+
+    <!--  footer -->
+
+
+    <div class="text-white text-center position-relative">
+        <img src="~/Images/Line.png" style="width:100%;" class="position-absolute top-0 start-0" />
+
+    </div>
+
+    <div class="container-fluid ImgfooterStyle2 list-style myfooter ">
+
+        <div class="container ">
+            <div class="d-flex align-items-center">
+                <div class="w-100 text-white">
+
+                    <div class="container-fulid">
+                        <div class=" row d-flex  p-5 footerShk ">
+                            <div class="col-md-4 d-flex">   </div>
+
+
+                            <div class="col-md-4 d-flex">
+                                <div class=" ">
+
+                                    <ul>
+                                        <li><h5><b> Oman National  <br /> Hydrographic Office</b></h5></li>
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="#">Service</a>Services </li>
+                                        <li><a href="WhoWeAre.html"> Who We Are</a></li>
+                                        <li><a href="HydrographyUnit.html">Activities</a></li>
+                                        <li><a href="HydrographySchool.html">Training</a></li>
+                                        <li><a href="#"> Connect us</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-4 d-flex">
+                                <div class="  ">
+
+                                    <ul>
+                                        <li> <h5><b> Connect With us</b></h5></li>
+                                        <li>
+
+                                            <p>
+                                                Oman National Hydrographic Office<br />
+                                                Ministry of Defence - Muaskar Al Murtafa'a <br />
+                                                P.O.Box: 723 -  P.C: 111<br />
+                                                Sultanate of Oman  <br />
+                                                Telephone: 21512432  968 +<br />
+                                                fax: 67092432  968 +<br />
+                                                Email : onho@mod.gov.om
+                                            </p>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <div class="text-center copyRightStyle p-1">
+        &copy;  © All rights reserved to the Oman National Hydrographic Office 2022
+    </div>
+
+
+
+
+
+    @*<script src="~/lib/jquery/dist/jquery.js"></script>*@
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/scroller/2.0.5/js/dataTables.scroller.min.js"></script>
+    @*<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>*@
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    @*<script src="~/Admin/js/sweetalert2.all.min.js"></script>*@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.8.1/jquery.timepicker.min.js"></script>
+    @*<script src="~/lib/jquery/dist/jquery.min.js"></script>*@
+    <script src="~/js/all.min.js"></script>
+
+
+    <script>
+
+        (function ($bs) {
+            const CLASS_NAME = 'has-child-dropdown-show';
+            $bs.Dropdown.prototype.toggle = function (_orginal) {
+                return function () {
+                    document.querySelectorAll('.' + CLASS_NAME).forEach(function (e) {
+                        e.classList.remove(CLASS_NAME);
+                    });
+                    let dd = this._element.closest('.dropdown').parentNode.closest('.dropdown');
+                    for (; dd && dd !== document; dd = dd.parentNode.closest('.dropdown')) {
+                        dd.classList.add(CLASS_NAME);
+                    }
+                    return _orginal.call(this);
+                }
+            }($bs.Dropdown.prototype.toggle);
+
+            document.querySelectorAll('.dropdown').forEach(function (dd) {
+                dd.addEventListener('hide.bs.dropdown', function (e) {
+                    if (this.classList.contains(CLASS_NAME)) {
+                        this.classList.remove(CLASS_NAME);
+                        e.preventDefault();
+                    }
+                    e.stopPropagation(); // do not need pop in multi level mode
+                });
+            });
+
+            // for hover
+            document.querySelectorAll('.dropdown-hover, .dropdown-hover-all .dropdown').forEach(function (dd) {
+                dd.addEventListener('mouseenter', function (e) {
+                    let toggle = e.target.querySelector(':scope>[data-bs-toggle="dropdown"]');
+                    if (!toggle.classList.contains('show')) {
+                        $bs.Dropdown.getOrCreateInstance(toggle).toggle();
+                        dd.classList.add(CLASS_NAME);
+                        $bs.Dropdown.clearMenus();
+                    }
+                });
+                dd.addEventListener('mouseleave', function (e) {
+                    let toggle = e.target.querySelector(':scope>[data-bs-toggle="dropdown"]');
+                    if (toggle.classList.contains('show')) {
+                        $bs.Dropdown.getOrCreateInstance(toggle).toggle();
+                    }
+                });
+            });
+        })(bootstrap);
+
+    </script>
+
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

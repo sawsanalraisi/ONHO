@@ -1,0 +1,128 @@
+﻿@model HydrographicOffice.Models.NewFeatureVm
+@inject CultureLocalizer _Localizer
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "_Layout";
+}
+
+
+
+
+<!--//New Feature-->
+<div class="container">
+    <div class="row d-flex align-items-center justify-content-center">
+        <div class="col-md-12 ">
+
+            <form asp-action="Create" method="post" enctype="multipart/form-data">
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                @*<div class="card px-5 py-5 ">*@
+
+                <h2 class="mt-3 txtColorGold text-center">New Feature</h2>
+
+                <div class="form-input">
+                    <label>Select New Featur:</label>
+                    <select asp-for="Status" class="form-control form-select form-controlNonSpace">
+                        @foreach (EnumCommon.StatusNewFeature suit in (EnumCommon.StatusNewFeature[])Enum.GetValues(typeof(EnumCommon.StatusNewFeature)))
+                        {
+
+                            <option value="@(((int)suit).ToString())">@_Localizer.Text(suit.ToString())</option>
+
+                        }
+                    </select>
+                    <span asp-validation-for="Status" class="text-danger"></span>
+
+                </div>
+
+                <div class="form-input">
+                    <input asp-for="Organization" class="form-control form-controlNonSpace" placeholder="  Organization " />
+                    <span asp-validation-for="Organization" class="text-danger"></span>
+                </div>
+
+                <div class="form-input">
+                    <input asp-for="Position" class="form-control form-controlNonSpace" placeholder="Position" />
+                    <span asp-validation-for="Position" class="text-danger"></span>
+                </div>
+
+                <div class="form-input">
+                    <input asp-for="NewFeatureDate" class="form-control form-controlNonSpace" placeholder="  New Feature Date " />
+                    <span asp-validation-for="NewFeatureDate" class="text-danger"></span>
+                </div>
+
+                <div class="form-input">
+                    <input asp-for="Region" class="form-control form-controlNonSpace" placeholder="  Region " />
+                    <span asp-validation-for="Region" class="text-danger"></span>
+                </div>
+
+                <div class="form-input">
+                    <input asp-for="Phone" class="form-control form-controlNonSpace" placeholder="Phone" />
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                </div>
+
+
+                <div class="form-input">
+                    <input asp-for="Email" class="form-control form-controlNonSpace" placeholder="  Email " />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+
+                <div class="form-input">
+                    <input asp-for="Purpose" class="form-control form-controlNonSpace" placeholder="  Purpose " />
+                    <span asp-validation-for="Purpose" class="text-danger"></span>
+                </div>
+
+
+
+                <div class="form-input">
+                    <input asp-for="Character" class="form-control form-controlNonSpace" placeholder="  Character " />
+                    <span asp-validation-for="Character" class="text-danger"></span>
+                </div>
+
+
+                <div class="form-input">
+                    <textarea asp-for="Description" class="form-control3 form-control2  " rows="5" placeholder=" Description . . ."></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+
+
+                <div class="form-input mt-3 d-f text-center">
+                    <div class="BoxDach p-3">
+                        <label for="file" class="form-label">
+                            <i class="fa-solid fa-cloud-arrow-up inputfileicon"></i>
+                            <br />
+                        </label>
+                        <br />
+                        <input asp-for="Files" type="file" class="" name="Files" id="Files" multiple onchange="updateList()">
+                        <span id="fileList" class="fileList"></span>
+                    </div>
+                </div>
+
+
+                <button type="submit" class="btn mt-4 signup backBlue text-white" style="width:100%"> Send new Feature </button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+@section Scripts {
+    <script>
+        updateList = function () {
+            debugger;
+            var input = document.getElementById('Files');
+            var output = document.getElementById('fileList');
+            var children = "";
+            for (var i = 0; i < input.files.length; ++i) {
+                children += '<li>' + input.files.item(i).name + '</li>';
+            }
+            output.innerHTML = '<ul>' + children + '</ul>';
+        }
+    </script>
+
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20220227065338_AddNewPropInDocumentFile.cs" />
+    <Compile Remove="Migrations\20220227065338_AddNewPropInDocumentFile.Designer.cs" />
+    <Compile Remove="Migrations\20220227065549_AddNewPropInDocumentFiles.cs" />
+    <Compile Remove="Migrations\20220227065549_AddNewPropInDocumentFiles.Designer.cs" />
+    <Compile Remove="Migrations\20220227070015_AddNewPropInDocumentFiles.cs" />
+    <Compile Remove="Migrations\20220227070015_AddNewPropInDocumentFiles.Designer.cs" />
+    <Compile Remove="Migrations\20220227070242_AddNewPropInDocumentFiless.cs" />
+    <Compile Remove="Migrations\20220227070242_AddNewPropInDocumentFiless.Designer.cs" />
+    <Compile Remove="Migrations\20220227070804_AddNewPropInDocumentFile.cs" />
+    <Compile Remove="Migrations\20220227070804_AddNewPropInDocumentFile.Designer.cs" />
+    <Compile Remove="Migrations\20220302055200_UpdateServiceRe.cs" />
+    <Compile Remove="Migrations\20220302055200_UpdateServiceRe.Designer.cs" />
+    <Compile Remove="Migrations\20220302060455_UpdateServiceRequest.cs" />
+    <Compile Remove="Migrations\20220302060455_UpdateServiceRequest.Designer.cs" />
+    <Compile Remove="Migrations\20220302061318_UpdateServiceRequestRelation.cs" />
+    <Compile Remove="Migrations\20220302061318_UpdateServiceRequestRelation.Designer.cs" />
+    <Compile Remove="Migrations\20220302061413_UpdateServiceRequestRelation.cs" />
+    <Compile Remove="Migrations\20220302061413_UpdateServiceRequestRelation.Designer.cs" />
+    <Compile Remove="Migrations\20220302061646_UpdateServiceRequestLongType.cs" />
+    <Compile Remove="Migrations\20220302061646_UpdateServiceRequestLongType.Designer.cs" />
+    <Compile Remove="Migrations\20220302062455_UpdateServiceRequestLongType.cs" />
+    <Compile Remove="Migrations\20220302062455_UpdateServiceRequestLongType.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="3.1.10" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+  </ItemGroup>
+
+</Project>

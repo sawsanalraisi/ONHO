@@ -1,0 +1,82 @@
+﻿* {
+    font-family: "GE SS";
+    font-size:16px;}
+
+.backgroungbody {
+    background-image: url('Images/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: cover;
+}
+
+
+*.height {
+    height: 100vh
+}
+
+.signup {
+    height: 50px;
+    font-size: 14px
+}
+
+.search-icon2 {
+    color: #d4a658;
+    position: absolute;
+    padding: 15px;
+}
+
+.form-input {
+    position: relative;
+    margin-bottom: 5px;
+    margin-top: 5px
+}
+
+.form-control {
+    height: 50px;
+    text-indent: 24px;
+    font-size: 15px
+}
+
+    .form-control:focus {
+        box-shadow: none;
+        border-color: #d4a658;
+    }
+
+
+.txtGold{
+    color: #d4a658;
+}
+
+
+.txtBlue{
+    color: #20426b;
+}
+
+.backBlue {
+    background-color: #20346b;
+}
+
+
+.backgold {
+    background-color: #d2ab69;
+    
+}
+
+.backblack {
+    background-color: #000000;
+}
+
+.tablestyle thead {
+    background-color: #d2ab69;
+    color: #20426b;
+}
+
+
+.fixed-table-toolbar {
+    background-color: #20346b;
+}
+

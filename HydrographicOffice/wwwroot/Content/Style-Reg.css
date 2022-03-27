@@ -1,0 +1,110 @@
+﻿/*@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+*/
+bodyForm{
+    background-color: #535fe6;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300
+}
+
+.height {
+    /*height: 100vh*/
+}
+
+.card {
+    border: none;
+    padding: 20px;
+    /*background-color: #1c1e21;*/
+/*    color: #fff
+*/}
+
+.circle {
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5855e7;
+    color: #fff;
+    font-size: 10px;
+    border-radius: 50%
+}
+
+.form-input {
+    position: relative;
+    margin-bottom: 5px;
+    margin-top: 5px
+}
+
+    .form-input i {
+        position: absolute;
+        font-size: 18px;
+        top: 15px;
+        left: 10px;
+        margin-top:10px;
+
+    }
+
+.form-control {
+    height: 50px;
+ /*   background-color: #1c1e21;*/
+    text-indent: 24px;
+    font-size: 15px
+}
+
+    .form-control:focus {
+        /*   background-color: #25272a;*/
+        box-shadow: none;
+        /*        color: #fff;
+*/ border-color: #20426b;
+    }
+
+.form-check-label {
+    margin-top: 2px;
+    font-size: 14px ;
+    margin-right: 2px;
+}
+
+.signup {
+    height: 50px;
+    font-size: 14px
+}
+
+.form-check .form-check-input {
+    float: right;
+    margin-right: 11px;
+    margin-left:10px;
+}
+
+svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
+   /* position: absolute;
+    padding: 15px;*/
+   /* color: #d4a658;*/
+}
+
+
+.form-control2 {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    text-indent: 25px;
+}
+
+
+
+.search-icon2  {
+    color: #d4a658;
+    position: absolute;
+    padding: 15px;
+}

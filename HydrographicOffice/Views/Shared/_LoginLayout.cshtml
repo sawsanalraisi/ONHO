@@ -1,0 +1,120 @@
+﻿
+@*@inject IOptions<RequestLocalizationOptions> LocOptions*@
+@{
+    var culture = System.Globalization.CultureInfo.CurrentCulture;
+
+    var arclass = "";
+}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Oman National hydrographic office</title>
+
+    <link href="~/Admin/css/bootstrap.min.css" rel="stylesheet">
+    @if (!culture.Name.Contains("en-US"))
+    {
+        arclass = "rtls";
+        <link href="~/Admin/css/plugins/bootstrap-rtl/bootstrap-rtl.min.css" rel="stylesheet">
+        <link href="~/Admin/css/stylear.css" rel="stylesheet" />
+    }
+
+
+    <link href="~/Admin/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="~/Admin/css/animate.css" rel="stylesheet">
+    <link href="~/Admin/css/style.css" rel="stylesheet">
+    @if (!culture.Name.Contains("en-US"))
+    {
+
+        <link href="~/Admin/css/stylear.css" rel="stylesheet" />
+    }
+
+</head>
+
+<body class="gray-bg @arclass">
+
+    @if (!culture.Name.Contains("en-US"))
+    {
+        <a style="float:left;padding:30px;font-size:17px" align="left" class="" asp-area="" asp-controller="Home" asp-action="ChangeLanguage">English</a>
+    }
+    else
+    {
+        <a style="float:right;padding:30px;font-size:17px" align="right" class="" asp-area="" asp-controller="Home" asp-action="ChangeLanguage">العربية</a>
+    }
+
+    <p>
+        <br />
+    </p>
+    <div class="middle-box text-center loginscreen animated fadeInDown">
+        <div>
+            <div>
+
+                <img style="margin-top:40px;" width="200" src="~/Images/logo2.png" />
+
+            </div>
+
+            <br />
+
+
+            <div>
+                @RenderBody()
+            </div>
+
+        </div>
+    </div>
+    @*<div class="loginColumns animated fadeInDown">
+
+            <p align="center">
+                <h2 class="font-bold" align="center">Welcome to MOD</h2>
+            </p>
+            <p>
+                <br />
+
+            </p>
+            <div class="row">
+
+                <div class="col-md-6">
+                  =
+
+                    <p>
+                        <img height="300" width="300" src="~/Admin/img/Royal_Army_of_Oman_Seal.svg" />
+                    </p>
+
+
+
+                </div>
+                <div class="col-md-6">
+
+
+                </div>
+            </div>
+
+        </div>*@
+
+
+    <div class=" p-4  text-center backgold txtTopStyle-Hyd ">
+        <p>© جميع الحقوق محفوظة لمكتب الهيدروغرافي الوطني العماني 2022</p>
+    </div>
+
+    <script src="~/Admin/js/jquery-3.1.1.min.js"></script>
+    <script src="~/Admin/js/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+    @RenderSection("scripts", required: false)
+
+    @*@section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+        }*@
+</body>
+
+</html>
+
+
+
+

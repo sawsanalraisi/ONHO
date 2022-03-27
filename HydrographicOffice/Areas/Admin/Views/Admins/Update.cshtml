@@ -1,0 +1,164 @@
+﻿@model UserViewModel
+@inject CultureLocalizer Localizer
+@{
+    ViewData["Title"] = "AddFrequency";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+@*<link href="~/Admin/FileUploader/css/fileinput.css" rel="stylesheet" />
+<link href="~/Admin/FileUploader/themes/explorer-fa/theme.css" rel="stylesheet">*@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-sm-4">
+
+        @*<h2>@Localizer.Text("News_List")</h2>*@
+        <p></p>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a asp-area="Admin" asp-controller="Home" asp-action="Index">@Localizer.Text("Home")</a>
+            </li>
+            <li class="breadcrumb-item active">
+                <strong>@Localizer.Text("UpdateUser")</strong>
+            </li>
+        </ol>
+    </div>
+
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox ">
+                <div class="ibox-title">
+                    <h5>@Localizer.Text("UpdateUser")</h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+
+                    <form class="m-t" role="form" method="post" enctype="multipart/form-data">
+                        @Html.HiddenFor(x => x.Id)
+
+                        <br />
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <br />
+                        <br />
+                        <div class="text-success">@ViewBag.Done</div>
+                        <br />
+
+                        <div class="form-group  row">
+                            <label class="col-sm-2 col-form-label">@Localizer.Text("Name")</label>
+
+                            <div class="col-sm-10">
+                                <input type="text" asp-for="Name" class="form-control">
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group  row">
+                            <label class="col-sm-2 col-form-label">@Localizer.Text("Email")</label>
+
+                            <div class="col-sm-10">
+                                <input type="text" asp-for="Email" class="form-control">
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        
+
+                        <div class="form-group  row">
+                            <label class="col-sm-2 col-form-label">@Localizer.Text("Roles")</label>
+
+                            <div class="col-sm-10">
+                                @foreach (var item in ViewBag.roles)
+                                {
+
+                                    <input type="checkbox" @((Model.Roles.Contains(Convert.ToString(item))) ? "checked='checked'" : "") value="@(item)" name="Roles" class="form-control">@Localizer.Text(Convert.ToString(item))<span></span>
+                                }
+
+                                <p>
+                                    <br />
+                                    <br />
+                                    <span asp-validation-for="Roles" class="text-danger"></span>
+                                </p>
+                            </div>
+
+                        </div>
+
+
+
+                        <br />
+
+                        <div class="form-group row">
+                            <div class="col-sm-4 col-sm-offset-2">
+                                <a class="btn btn-white btn-sm" asp-area="Admin" asp-controller="Admins" asp-action="Index">@Localizer.Text("BackToList")</a>
+                                <button class="btn btn-primary btn-sm" type="submit">@Localizer.Text("Save")</button>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    @*<script src="~/Admin/FileUploader/js/fileinput.js"></script>
+    <script src="~/Admin/FileUploader/js/locales/ar.js"></script>
+    <script src="~/Admin/FileUploader/themes/explorer-fa/theme.js"></script>
+    <script src="~/Admin/FileUploader/js/plugins/piexif.js"></script>
+    <script src="~/Admin/FileUploader/js/plugins/sortable.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#Date').datepicker({
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: true,
+                autoclose: true,
+                format: "mm/dd/yyyy"
+            });
+
+            $("#newsimage").fileinput({
+                language: "@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "en" : "ar")",
+                theme: "explorer-fa",
+                showUpload: false,
+                maxFileSize: 10240,
+                dropZoneEnabled: false,
+                maxFileCount: 4,
+               
+                allowedFileExtensions: ["jpg", "png", "jpeg"],
+                mainClass: "input-group"
+            });
+            $("#newsimagemobile").fileinput({
+                 language: "@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "en" : "ar")",
+                theme: "explorer-fa",
+                showUpload: false,
+                maxFileSize: 10240,
+                dropZoneEnabled: false,
+                maxFileCount: 4,
+              
+                allowedFileExtensions: ["jpg", "png", "jpeg"],
+                mainClass: "input-group"
+            });
+
+        });
+
+    </script>*@
+
+}
+

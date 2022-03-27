@@ -1,0 +1,86 @@
+﻿@model Hydro.DAL.Entities.ServiceRequestType
+@inject CultureLocalizer  _Localizer
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>ServiceRequestType</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <div class="form-group">
+                    <label asp-for="Status" class="control-label">@_Localizer.Text("Status")</label>
+                    <select asp-for="Status" class="form-control">
+                        @foreach (EnumCommon.RequestStatus suit in (EnumCommon.RequestStatus[])Enum.GetValues(typeof(EnumCommon.RequestStatus)))
+                        {
+
+                        <option value="@(((int)suit).ToString())">@_Localizer.Text(suit.ToString())</option>
+
+                        }
+                    </select>
+                    @*<input asp-for="NoticeType" class="form-control" />*@
+                    <span asp-validation-for="Status" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Years" class="control-label"></label>
+                <input asp-for="Years" class="form-control" readonly />
+                <span asp-validation-for="Years" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quantity" class="control-label"></label>
+                <input asp-for="Quantity" class="form-control" readonly />
+                <span asp-validation-for="Quantity"  class="text-danger"></span>
+            </div>
+            <div class="form-group" >
+                <label asp-for="Postion" class="control-label"></label>
+                <input asp-for="Postion" class="form-control" readonly />
+                <span asp-validation-for="Postion" class="text-danger"></span>
+            </div>
+            <div class="form-group" >
+                <label asp-for="Purpose" class="control-label"></label>
+                <input asp-for="Purpose" class="form-control" readonly />
+                <span asp-validation-for="Purpose" class="text-danger"></span>
+            </div>
+            <div class="form-group" >
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" readonly/>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+          
+       
+     
+      
+            <div class="form-group" >
+                <label asp-for="Region" class="control-label"></label>
+                <input asp-for="Region" class="form-control" readonly />
+                <span asp-validation-for="Region" class="text-danger"></span>
+            </div>
+            <div class="form-group" >
+                <label asp-for="CategoryId" class="control-label"></label>
+                <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId" readonly></select>
+                <span asp-validation-for="CategoryId" class="text-danger"></span>
+            </div>
+            <div class="form-group" >
+                <label asp-for="FileFormatId" class="control-label"></label>
+                <select asp-for="FileFormatId" class="form-control" asp-items="ViewBag.FileFormatId" readonly></select>
+                <span asp-validation-for="FileFormatId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
