@@ -1,0 +1,128 @@
+﻿@model HydrographicOffice.Models.NewFeatureVm
+
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "_AdminLayout";
+}
+
+
+<style>
+    .check-box {
+        padding: 50px;
+    }
+</style>
+
+
+<link href="~/Admin/sty/Style-Page.css" rel="stylesheet" />
+
+<h1 class="txtColorBlue text-center"><mark class="highlight"> New Feature</mark></h1>
+
+<hr />
+<div class="container mb-5">
+    <div class="row d-flex align-items-center justify-content-center ">
+        <div class="col-md-10 shadow-lg p-3 mb-5 bg-body rounded mt-5">
+
+
+
+            <h3>
+                New Feature Details
+            </h3>
+            <hr />
+
+
+
+
+
+
+
+            <h5>Request Details:</h5>
+
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Position)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Position)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.NewFeatureDate)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.NewFeatureDate)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Region)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Region)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Character)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Character)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Status)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Status)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Purpose)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Purpose)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Description)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Description)
+                </dd>
+
+
+
+
+
+            </dl>
+
+
+
+            <h5>Connection Details:</h5>
+
+            <div class="container mt-3">
+                <div class="row">
+                    <div class="d-flex mb-3">
+
+
+                        <div class="p-2">@Html.DisplayNameFor(model => model.Email)</div>
+                        <div class="p-2"> @Html.DisplayFor(model => model.Email)</div>
+
+                        <div class="p-2 ms-5">@Html.DisplayNameFor(model => model.Phone)</div>
+                        <div class="p-2"> @Html.DisplayFor(model => model.Phone)</div>
+
+                        <div class="p-2 ms-5">@Html.DisplayNameFor(model => model.Organization)</div>
+                        <div class="p-2">@Html.DisplayFor(model => model.Organization)</div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="form-input">
+                <a asp-action="Index"><i class="fas fa-arrow-left"></i> &nbsp;Back to List</a>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+</div>
+
+

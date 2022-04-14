@@ -9,12 +9,12 @@ namespace HydrographicOffice.Models
     public class UserViewModel
     {
         public string Id { get; set; }
-        [Required(ErrorMessage = "EmailReqired")]
-        [EmailAddress(ErrorMessage = "Emailerror")]
+        [Required(ErrorMessage = "Email Required")]
+        [EmailAddress(ErrorMessage = "Email Error")]
         public string Email { get; set; }
-        [Required(ErrorMessage = "faildreqired")]
+        [Required(ErrorMessage = "Faild Required")]
         public string Name { get; set; }
-        [Required(ErrorMessage = "faildreqired")]
+        [Required(ErrorMessage = "Faild Required")]
         public List<string> Roles { get; set; }
         public bool IsActive { get; set; }
         [Required(ErrorMessage = "passwordReqired")]

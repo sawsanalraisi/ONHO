@@ -5,58 +5,69 @@
     ViewData["Title"] = "Index";
     Layout = "_Layout";
 }
+
+<link href="~/Admin/sty/Style-Page.css" rel="stylesheet" />
+
 <h2 class="txtTopStylearch223-Hyd mt-5" style="text-align:center"><mark class="markSty-who highlight ">Navigation Warning  </mark> </h2>
-<table class="table table-striped dt-responsive nowrap tbl shadow-lg p-3 mb-5 rounded" width="100%" cellspacing="0" id="tbl1">
-    <thead>
-        <tr>
-            <th>
-                @_Localizer.Text("Status")
-            </th>
-            <th>
-                @_Localizer.Text("NavWarnDesc")
-            </th>
-            <th>
-                @_Localizer.Text("NavFileName")
-            </th>
-            <th>
-                @_Localizer.Text("WarnNumber")
-            </th>
-            <th>
-                @_Localizer.Text("WaringDate")
-            </th>
-            <th>
-                View
-            </th>
 
-        </tr>
 
-    <tbody>
-        @foreach (var item in Model)
-        {
+<div class="p-1 scrollmenu " style="overflow-x:auto;">
+
+    <table class="table tbl shadow-lg p-3 mb-5 bg-body rounded" id="tbl1">
+
+
+        @*<table class="table table-striped dt-responsive nowrap tbl shadow-lg p-3 mb-5 rounded" width="100%" cellspacing="0" id="tbl1">*@
+        <thead>
             <tr>
-                <td>
-                    @_Localizer.Text(((EnumCommon.NavigationWarning)item.Status).ToString())
-                </td>
+                <th>
+                    @_Localizer.Text("Status")
+                </th>
+                <th>
+                    @_Localizer.Text("NavWarnDesc")
+                </th>
+                <th>
+                    @_Localizer.Text("NavFileName")
+                </th>
+                <th>
+                    @_Localizer.Text("WarnNumber")
+                </th>
+                <th>
+                    @_Localizer.Text("WaringDate")
+                </th>
+                <th data-orderable="false">
+                    View
+                </th>
 
-                <td>
-                    @Html.DisplayFor(modelItem => item.NavWarnDesc)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.NavFileName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.WarnNumber)
-                </td>
-                <td>
-                    @(Convert.ToString(item.WaringDate.ToString("dd-MM-yyyy")))
-                </td>
-                <td>
-                    <a href="~/UploadedFiles/@item.UploadeFile" download="file" target="_blank"> View </a>
-                </td>
             </tr>
-        }
-    </tbody>
-</table>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @_Localizer.Text(((EnumCommon.NavigationWarning)item.Status).ToString())
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NavWarnDesc)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NavFileName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.WarnNumber)
+                    </td>
+                    <td>
+                        @(Convert.ToString(item.WaringDate.ToString("dd-MM-yyyy")))
+                    </td>
+                    <td>
+                        <a href="~/UploadedFiles/@item.UploadeFile" download="file" target="_blank"><i class="fa-solid fa-download"  style="font-size:25px;"></i></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
 
 @section Scripts{
     <script>
@@ -66,7 +77,7 @@
         });
         function DrawTable() {
             $("#tbl1").dataTable({
-             /*   dom: '<"pull-left"B><"pull-right"f>rt<"row"<"col-sm-4"l><"col-sm-4"i><"col-sm-4"p>>',*/
+              dom: '<"pull-left"B><"pull-right"f>rt<"row"<"col-sm-4"l><"col-sm-4"i><"col-sm-4"p>>',
                 "autoWidth": true,
                 "bFilter": true,
                 "bSortable": true,

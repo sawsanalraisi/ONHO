@@ -70,7 +70,7 @@
                 </td>
                 <td>
                         @*<a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |*@
-                    <button type="button" data-id="@item.Id"  class="btn btn-primary"  data-toggle="modal" id="Openbutton" data-target="#UpdateRequest">
+                    <button type="button" data-id="@item.Id"  class="btn btn-primary Openbutton"  data-toggle="modal"  data-target="#UpdateRequest">
                         Update Request
                     </button>
                 </td>
@@ -118,7 +118,7 @@
     <script>
        $(document).ready(function () {
             DrawTable();
-           $("#Openbutton").click(function () {
+           $(".Openbutton").click(function () {
 
                debugger;
 
@@ -173,6 +173,7 @@
 
 
         function update() {
+            debugger;
             var stauts = $("#selectstauts").val();
             var objid = $("#txtid").val();
             var url = '@Url.Action("UpdateRequest")';

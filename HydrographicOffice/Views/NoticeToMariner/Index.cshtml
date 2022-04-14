@@ -6,82 +6,85 @@
 
 }
 
+<link href="~/Admin/sty/Style-Page.css" rel="stylesheet" />
+
 @*<link href="~/sty/Style.css" rel="stylesheet" />*@
 @*<link href="~/css/jquery.dataTables.min.css" rel="stylesheet" />*@
 
 
 <h2 class="txtTopStylearch223-Hyd mt-5" style="text-align:center"><mark class="markSty-who highlight ">@_Localizer.Text("Notice To Mariner")   </mark> </h2>
 
-<table class="table tbl shadow-lg p-3 mb-5 bg-body rounded" id="tbl" style="text-align:center;">
-    <thead>
-        <tr>
-            <th>
-                @_Localizer.Text("NoticeType")
-            </th>
-            <th>
-                @_Localizer.Text("NotiecDesc")
-            </th>
-            <th>
-                @_Localizer.Text("NoticeFileName")
-            </th>
-            <th>
-                @_Localizer.Text("NoticeDate")
-            </th>
-            <th>
-                @_Localizer.Text("NoticeEdition")
+@*<table class="table tbl shadow-lg p-3 mb-5 bg-body rounded" id="tbl" style="text-align:center;">*@
 
-            </th>
-            <th>
-                @_Localizer.Text("View")
+<div class="p-1 scrollmenu " style="overflow-x:auto;">
 
-            </th>
-
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+    <table class="table tbl shadow-lg p-3 mb-5 bg-body rounded" id="tbl">
+        <thead>
             <tr>
-                <td>
-                    @_Localizer.Text(((EnumCommon.NoticeToMariner)item.NoticeType).ToString())
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.NotiecDesc)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.NoticeFileName)
-                </td>
-                <td>
-                    @(Convert.ToString(item.NoticeDate.ToString("dd-MM-yyyy")))
-                    @*@Html.DisplayFor(modelItem => item.NoticeDate)*@
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.NoticeEdition)
-                </td>
+                <th>
+                    @_Localizer.Text("NoticeType")
+                </th>
+                <th>
+                    @_Localizer.Text("NotiecDesc")
+                </th>
+                <th>
+                    @_Localizer.Text("NoticeFileName")
+                </th>
+                <th>
+                    @_Localizer.Text("NoticeDate")
+                </th>
+                <th>
+                    @_Localizer.Text("NoticeEdition")
 
-                <td>
-                    <a href="~/UploadedFiles/@item.UploadeFile" download="file" target="_blank"> @_Localizer.Text("View") </a>
-                </td>
+                </th>
+                <th data-orderable="false">
+                    @_Localizer.Text("View")
 
-                @*<td>
-                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                    </td>*@
+                </th>
+
             </tr>
-        }
-    </tbody>
-</table>
-@section Scripts{
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @_Localizer.Text(((EnumCommon.NoticeToMariner)item.NoticeType).ToString())
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NotiecDesc)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NoticeFileName)
+                    </td>
+                    <td>
+                        @(Convert.ToString(item.NoticeDate.ToString("dd-MM-yyyy")))
+                        @*@Html.DisplayFor(modelItem => item.NoticeDate)*@
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NoticeEdition)
+                    </td>
 
-    <script>
+                    <td>
+                        <a href="~/UploadedFiles/@item.UploadeFile" download="file" target="_blank"><i class="fa-solid fa-download"  style="font-size:25px;"></i> </a>
+                    </td>
+
+
+                </tr>
+            }
+        </tbody>
+    </table>
+    </div>
+    @section Scripts{
+
+        <script>
        $(document).ready(function () {
             DrawTable();
 
         });
         function DrawTable() {
             $("#tbl").dataTable({
-                //dom: '<"pull-left"B><"pull-right"f>rt<"row"<"col-sm-4"l><"col-sm-4"i><"col-sm-4"p>>',
+                dom: '<"pull-left"B><"pull-right"f>rt<"row"<"col-sm-4"l><"col-sm-4"i><"col-sm-4"p>>',
                 "autoWidth": true,
                 "bFilter": true,
                 "aaSorting": [],
@@ -122,8 +125,8 @@
 
             });
         }
-    </script>
+        </script>
 
 
-}
+    }
 

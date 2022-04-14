@@ -22,6 +22,7 @@ namespace Hydro.DAL.Entities
         public string Description { set; get; }
         public bool Isdelete { set; get; } = false;
         public string DescForOther { get; set; }
+        public int Status { get; set; }
         [NotMapped]
         public List<DocumentFile> ListOfFiles { get; set; }
     }

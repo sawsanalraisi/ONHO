@@ -20,7 +20,9 @@ namespace HydrographicOffice.Mapping
             CreateMap<DifferentReport, DifferentReVm>().ReverseMap();
             CreateMap<DifferentReport, DifferentRepDto>().ReverseMap();
             CreateMap<NewFeature, NewFeatureVm>().ReverseMap();
+            CreateMap<NewFeature, NewFeaturesDto>().ReverseMap();
             CreateMap<SpecialTask, SpecialTaskVm>().ReverseMap();
+            CreateMap<SpecialTask, SpecialTaskDto>().ReverseMap();
             CreateMap<Category, CategoryDto>().ReverseMap();
             CreateMap<Category, CategoryVm>().ReverseMap();
             CreateMap<FileFormat, FileFormatDto>().ReverseMap();
@@ -31,16 +33,7 @@ namespace HydrographicOffice.Mapping
             CreateMap<User, UserDto>().ReverseMap();
             CreateMap<User, RegisterUserMVm>().ReverseMap();
             CreateMap<User, LoginRegisterVm>().ReverseMap();
-
-
-
-
-
-
-
-
-
-
+            CreateMap<Notification, NotificationDTO>().ReverseMap();
         }
     }
 }

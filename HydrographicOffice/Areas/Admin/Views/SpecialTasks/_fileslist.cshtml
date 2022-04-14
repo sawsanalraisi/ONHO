@@ -1,0 +1,17 @@
+﻿@model Hydro.BAL.DTO.SpecialTaskDto
+@{
+    Layout = null;
+
+}
+
+
+    <div class="">
+
+
+        @foreach (var item2 in Model.ListOfFiles.ToList())
+        {
+            <a href="~/UploadedFiles/@item2.Path" download="download"><i class="fa-solid fa-download" style="font-size:25px;"></i></a>@item2.Path
+            <br />
+        }
+    </div>
+    

@@ -33,10 +33,23 @@ namespace Hydro.BAL.Service
             return _context.NewSurveys.Include(c =>c.FileFormat).Include(c=>c.ListOLegalDocument).ToList();
         }
 
+        //public NewSurvey GetById(long Id)
+        //{
+        //    return _context.NewSurveys.Where(c => c.Id == Id).FirstOrDefault();
+        //}
+
+
         public NewSurvey GetById(long Id)
         {
-            return _context.NewSurveys.Where(c => c.Id == Id).FirstOrDefault();
+            var obj = _context.NewSurveys.Where(c => c.Id == Id).FirstOrDefault();
+
+            obj.ListOLegalDocument = new List<LegalDocument>();
+            obj.ListOLegalDocument = _context.LegalDocuments.Where(c =>c.NewSurveyId==obj.Id).ToList();
+
+            return obj;
+
         }
+
 
         public bool Save()
         {

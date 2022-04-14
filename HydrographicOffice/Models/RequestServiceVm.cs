@@ -10,9 +10,6 @@ namespace HydrographicOffice.Models
     {
 
         public long ld { get; set; }
-
-     
-
         [Required]
         [Display(Name = "Request Type")]
         public int RequestType { get; set; }

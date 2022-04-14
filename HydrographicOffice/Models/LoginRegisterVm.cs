@@ -9,7 +9,7 @@ namespace HydrographicOffice.Models
     public class LoginRegisterVm
     {
         public string Id { get; set; }
-        [Required(ErrorMessage = "Email Required")]
+        [Required(ErrorMessage = "EmailRequired")]
         [EmailAddress(ErrorMessage = "Emaile Error")]
         public string Email { get; set; }
        

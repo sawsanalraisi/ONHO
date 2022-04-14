@@ -1,6 +1,7 @@
 ﻿using Hydro.BAL.Interface;
 using Hydro.DAL;
 using Hydro.DAL.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,7 +40,14 @@ namespace Hydro.BAL.Service
 
         public List<DifferentReport> GetAll()
         {
-            return _context.DifferentReports.ToList();
+           var list =_context.DifferentReports.ToList();
+            foreach (var item in list)
+            {
+                item.ListOfFiles = new List<DocumentFile>();
+                item.ListOfFiles = _context.DocumentFiles.Where(c => c.Type == 1 && c.ParentId == item.Id).ToList();
+            }
+
+            return list;
         }
 
         public DifferentReport GetById(long Id)

@@ -135,6 +135,9 @@
   <data name="AddProgram" xml:space="preserve">
     <value>Add Program</value>
   </data>
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
   <data name="AddUser" xml:space="preserve">
     <value>Add User</value>
   </data>
@@ -150,8 +153,14 @@
   <data name="AdsList" xml:space="preserve">
     <value>Ads List</value>
   </data>
+  <data name="Agree" xml:space="preserve">
+    <value>Agree All Condation</value>
+  </data>
   <data name="AppStore" xml:space="preserve">
     <value>AppStore</value>
+  </data>
+  <data name="AunnoceToCreateEamil" xml:space="preserve">
+    <value>Please Fail the Filed to Create New Account</value>
   </data>
   <data name="BackToList" xml:space="preserve">
     <value>Back To List</value>
@@ -207,7 +216,7 @@
   <data name="Emailerror" xml:space="preserve">
     <value>Please Enter Valid Email</value>
   </data>
-  <data name="EmailReqired" xml:space="preserve">
+  <data name="EmailRequired" xml:space="preserve">
     <value>Email Required</value>
   </data>
   <data name="EndTime" xml:space="preserve">
@@ -224,6 +233,9 @@
   </data>
   <data name="FrequencyList" xml:space="preserve">
     <value>Frequenies List</value>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>Full Name</value>
   </data>
   <data name="GooglePlay" xml:space="preserve">
     <value>GooglePlay</value>
@@ -247,7 +259,7 @@
     <value>Active</value>
   </data>
   <data name="Login" xml:space="preserve">
-    <value>Login</value>
+    <value>User Login</value>
   </data>
   <data name="LoginFaild" xml:space="preserve">
     <value>Please Check Email And Passwoed</value>
@@ -312,6 +324,9 @@
   <data name="Oman" xml:space="preserve">
     <value>Oman Notice To Mariner</value>
   </data>
+  <data name="OrgraizationName" xml:space="preserve">
+    <value>Orgraization Name</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Password</value>
   </data>
@@ -332,6 +347,9 @@
   </data>
   <data name="Region" xml:space="preserve">
     <value>Region</value>
+  </data>
+  <data name="RegisterNew" xml:space="preserve">
+    <value>Register New Account</value>
   </data>
   <data name="Roles" xml:space="preserve">
     <value>Roles</value>
@@ -404,6 +422,9 @@
   </data>
   <data name="Url" xml:space="preserve">
     <value>Url</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>User Name Should be Your Email Address</value>
   </data>
   <data name="UsersAdmin" xml:space="preserve">
     <value>Users Admin</value>

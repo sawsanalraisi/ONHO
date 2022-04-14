@@ -135,6 +135,9 @@
   <data name="AddProgram" xml:space="preserve">
     <value>اضافة برنامج</value>
   </data>
+  <data name="Address" xml:space="preserve">
+    <value>العنوان</value>
+  </data>
   <data name="AddUser" xml:space="preserve">
     <value>اضافة المستخدم</value>
   </data>
@@ -150,8 +153,14 @@
   <data name="AdsList" xml:space="preserve">
     <value>قائمة الإعلانات</value>
   </data>
+  <data name="Agree" xml:space="preserve">
+    <value>اوافق على كل الشروط</value>
+  </data>
   <data name="AppStore" xml:space="preserve">
     <value>متجر ابل</value>
+  </data>
+  <data name="AunnoceToCreateEamil" xml:space="preserve">
+    <value>يرجى ملء هذا النموذج لإنشاء حساب</value>
   </data>
   <data name="BackToList" xml:space="preserve">
     <value>الرجوع للقائمة</value>
@@ -201,14 +210,11 @@
   <data name="Emailerror" xml:space="preserve">
     <value>من فضلك ادخل البريد الإلكترونى بشكل صحيح</value>
   </data>
-  <data name="EmailReqired" xml:space="preserve">
+  <data name="EmailRequired" xml:space="preserve">
     <value>البريد الإلكترونى مطلوب</value>
   </data>
   <data name="EndTime" xml:space="preserve">
     <value>وقت النهاية</value>
-  </data>
-  <data name="faildreqired" xml:space="preserve">
-    <value>حقل مطلوب</value>
   </data>
   <data name="fb" xml:space="preserve">
     <value>فيس بوك</value>
@@ -221,6 +227,9 @@
   </data>
   <data name="FrequencyList" xml:space="preserve">
     <value>قائمة الترددات</value>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>الاسم الثلاثي</value>
   </data>
   <data name="GooglePlay" xml:space="preserve">
     <value>متجر جوجل</value>
@@ -324,6 +333,9 @@
   <data name="Order" xml:space="preserve">
     <value>الترتيب</value>
   </data>
+  <data name="OrgraizationName" xml:space="preserve">
+    <value>مكان العمل</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>كلمة المرور</value>
   </data>
@@ -341,6 +353,9 @@
   </data>
   <data name="Region" xml:space="preserve">
     <value>المنطقة</value>
+  </data>
+  <data name="RegisterNew" xml:space="preserve">
+    <value>انشاء حساب جديد</value>
   </data>
   <data name="Roles" xml:space="preserve">
     <value>الصلاحيات</value>
@@ -416,6 +431,9 @@
   </data>
   <data name="Url" xml:space="preserve">
     <value>الرابط</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>اسم المستخدم</value>
   </data>
   <data name="UsersAdmin" xml:space="preserve">
     <value>مدير قائمة المستخدمين</value>

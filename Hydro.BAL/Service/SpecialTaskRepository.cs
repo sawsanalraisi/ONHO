@@ -37,12 +37,30 @@ namespace Hydro.BAL.Service
 
         public List<SpecialTask> GetAll()
         {
-            return _context.SpecialTasks.ToList();
+            var list = _context.SpecialTasks.ToList();
+            foreach (var item in list)
+            {
+                item.ListOfFiles = new List<DocumentFile>();
+                item.ListOfFiles = _context.DocumentFiles.Where(c => c.Type == 3 && c.ParentId == item.Id).ToList();
+            }
+            return list;
         }
+
+        //public SpecialTask GetById(long Id)
+        //{
+        //    return _context.SpecialTasks.Where(c => c.Id == Id).FirstOrDefault();
+
+        //}
+
 
         public SpecialTask GetById(long Id)
         {
-            return _context.SpecialTasks.Where(c => c.Id == Id).FirstOrDefault();
+            var obj = _context.SpecialTasks.Where(c => c.Id == Id).FirstOrDefault();
+
+            obj.ListOfFiles = new List<DocumentFile>();
+            obj.ListOfFiles = _context.DocumentFiles.Where(c => c.Type == 3 && c.ParentId == obj.Id).ToList();
+
+            return obj;
 
         }
 

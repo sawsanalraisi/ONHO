@@ -37,14 +37,31 @@ namespace Hydro.BAL.Service
 
         public List<NewFeature> GetAll()
         {
-            return _context.NewFeatures.ToList();
+           var list= _context.NewFeatures.ToList();
+            foreach (var item in list)
+            {
+                item.ListOfFiles = new List<DocumentFile>();
+                item.ListOfFiles = _context.DocumentFiles.Where(c => c.Type == 2 && c.ParentId == item.Id).ToList();
+            }
+            return list;
         }
+
+        //public NewFeature GetById(long Id)
+        //{
+        //    return _context.NewFeatures.Where(c => c.Id == Id).FirstOrDefault();
+        //}
+
 
         public NewFeature GetById(long Id)
         {
-            return _context.NewFeatures.Where(c => c.Id == Id).FirstOrDefault();
-        }
+            var obj = _context.NewFeatures.Where(c => c.Id == Id).FirstOrDefault();
 
+            obj.ListOfFiles = new List<DocumentFile>();
+            obj.ListOfFiles = _context.DocumentFiles.Where(c => c.Type == 2 && c.ParentId == obj.Id).ToList();
+
+            return obj;
+
+        }
         public bool Save()
         {
             return (_context.SaveChanges() >= 0);

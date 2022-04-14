@@ -1,88 +1,135 @@
-﻿@model IEnumerable<HydrographicOffice.Models.DifferentReVm>
-
+﻿@model IEnumerable<Hydro.BAL.DTO.DifferentRepDto>
+@inject CultureLocalizer  _Localizer
 @{
     ViewData["Title"] = "Index";
+
+    Layout = "_Layout";
 }
 
+<h2 class="txtTopStylearch223-Hyd mt-5" style="text-align:center"><mark class="markSty-who highlight ">@_Localizer.Text("Different Report")   </mark> </h2>
 
-<table class="table">
+<table class="table tbl shadow-lg p-3 mb-5 bg-body rounded" id="tbl" style="text-align:center;">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Email)
+                @_Localizer.Text("ReportType")
+            </th>
+            @*<th>
+                @_Localizer.Text("Email")
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Phone)
+                @_Localizer.Text("Organization")
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Organization)
+                @_Localizer.Text("DifferentRepDate")
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ReportType)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Position)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DifferentRepDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Region)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Character)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Purpose)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
+                @_Localizer.Text("Position")
 
-            <th>
-                @Html.DisplayNameFor(model => model.UploadFiles)
             </th>
-           
+            <th>
+                @_Localizer.Text("Region")
+
+            </th>*@
+
+            @*<th>
+                test
+            </th>*@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+        @foreach (var item in Model)
+        {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Email)
+                @Html.DisplayFor(modelItem => item.Id)
+
+            </td>
+            @*<td>
+                @_Localizer.Text(((EnumCommon.DifferentReportType)item.ReportType).ToString())
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Phone)
+                @Html.DisplayFor(modelItem => item.Email)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Organization)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ReportType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Position)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DifferentRepDate)
+                @(Convert.ToString(item.DifferentRepDate.ToString("dd-MM-yyyy")))
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Region)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Character)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Purpose)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UploadFiles)
-            </td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>*@
+           
+            @*<td>
+
+                @foreach (var item2 in item.ListOfFiles.ToList())
+                {
+                    <a href="~/UploadedFiles/@item2.Path" download="download">@item2.Id</a>
+                }
+
+            </td>*@
+            
 
         </tr>
-}
+        }
     </tbody>
 </table>
+@section Scripts{
+
+    <script>
+       $(document).ready(function () {
+            DrawTable();
+
+        });
+        function DrawTable() {
+            $("#tbl").dataTable({
+                //dom: '<"pull-left"B><"pull-right"f>rt<"row"<"col-sm-4"l><"col-sm-4"i><"col-sm-4"p>>',
+                "autoWidth": true,
+                "bFilter": true,
+                "aaSorting": [],
+                //"bSortable": true,
+                //ordering: true,
+                language: {
+                    loadingRecords: '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Loading..." : "تحميل البيانات ...")',
+                    processing: '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Processing..." : "جاري تحميل البيانات ...")',
+                    emptyTable:'@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")?"No data available in table":"لا توجد بيانات")',
+                    info:     '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Showing _START_ to _END_ of _TOTAL_ records" : "اظهار _START_ الى _END_ من _TOTAL_ سجلات")' ,
+                    infoEmpty: '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")?"No records found":"لا توجد سجلات")',
+                    infoFiltered:'@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "(filtered1 from _MAX_ total records)" : "(تمت تصفيته من _MAX_ سجلات)")' ,
+                    lengthMenu: '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Show _MENU_" : "اظهار _MENU_")',
+                    search: '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")?"Search:":"بحث:")',
+                    zeroRecords: '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")?"No matching records found":"لا توجد سجلات متطابقة")',
+                    paginate: {
+                        previous:'@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")?"Prev":"السابق")',
+                        next:'@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")?"Next":"التالي")' ,
+                        last:'@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")?"Last":"الأخير")' ,
+                        first:'@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")?"First":"الأول")'
+                    }
+                },
+                responsive: {
+                    details: {
+                    }
+                },
+                buttons: [
+                    //'excelHtml5',
+                    //'csvHtml5',
+                    //'print'
+                ],
+               lengthMenu: [
+                    [10, 25, 50, 100],
+                    [10, 25, 50, 100]
+                ],
+                pageLength: 10,
+                pagingType: "full_numbers"
+
+            });
+        }
+    </script>
+
+
+}
+

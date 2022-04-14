@@ -6,13 +6,43 @@
     Layout = "_Layout";
 
 }
+<link href="~/Admin/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css" rel="stylesheet" />
+<style>
+
+    .counter {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .counter input {
+            width: 100%;
+            border: 0;
+            line-height: 30px;
+            font-size: 20px;
+            text-align: center;
+            background: red;
+            color: #fff;
+            appearance: none;
+            outline: 0;
+        }
+
+        .counter span {
+            display: block;
+            font-size: 25px;
+            padding: 0 10px;
+            cursor: pointer;
+            color: #0052cc;
+            user-select: none;
+        }
+
+</style>
+<h2 class="txtTopStylearch223-Hyd mt-5" style="text-align:center"><mark class="highlight ">Service Request  </mark> </h2>
 
 
-
-
-
-
-<!--//Special Task -->
 <div class="container">
     <div class="row d-flex align-items-center justify-content-center">
         <div class="col-md-10 ">
@@ -21,51 +51,97 @@
 
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-                <div class="card px-5 py-5 ">
+                @*<div class="card px-5 py-5 ">*@
 
+                @*<h2 class="mt-3 txtColorGold text-center">Service Request  </h2>*@
+                <p class="mt-5 mb-3txtColorBlue">Please fill the form ...</p>
 
-                    <h2 class="mt-3 txtColorGold text-center">Service Request  </h2>
+                <div class="d-flex d-grid gap-1 ">
 
-
-
-
-                    <div class="form-input">
-                        <label for="cars">Choose Your Service: </label>
-
-                        <select onchange="Getlist(this)" class="form-control" id="sertype" name="sertype">
+                    <div class="form-input" style="width:100%;">
+                        @*<label for="cars" class="control-label align-self-center" style="width:30%;">Choose Your Service: </label>*@
+                        <select onchange="Getlist(this)" class="form-control  form-select form-controlNonSpace" id="sertype" name="sertype">
+                            <option value="0" selected>select type of service</option>
                             <option value="1" selected>Product</option>
                             <option value="2">Data</option>
                         </select>
                     </div>
 
 
+                    <div class="form-input" style="width:100%;">
+                        @*<label class="control-label align-self-center" style="width:30%;"> Select Item:</label>*@
+                        @*@Html.DropDownList("CategoryId", ViewBag.CategoryId, "", new { @class = "form-control" })
+                        <span asp-validation-for="CategoryId" class="text-danger"></span>*@
 
 
-                    <div class="form-group">
-                        <label class="control-label"> Select Item:</label>
-                        @Html.DropDownList("CategoryId", ViewBag.CategoryId, "", new { @class = "form-control" })
+                        <select asp-for="CategoryId" class="form-control form-select form-controlNonSpace">
+                            <option value="0">Select Category</option>
+                            @foreach (var suit in ViewBag.CategoryId  as SelectList)
+                            {
+                                <option value="@(suit.Value)">@(suit.Text)</option>
+                            }
+                        </select>
                         <span asp-validation-for="CategoryId" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+
+
+                <div class="d-flex d-grid gap-1 ">
+
+                    <div class="form-input" style="width:100%;">
+                        @*<label for="cars" class="control-label align-self-center" style="width:30%;">Choose File Type:</label>*@
+                        @*<select asp-for="FileFormatId" class="form-control form-controlNonSpace" asp-items="ViewBag.FileFormatId"></select>
+            <span asp-validation-for="FileFormat" class="text-danger"></span>*@
+                        <select asp-for="FileFormatId" class="form-control form-select form-controlNonSpace">
+                            <option value="0">Select File Format</option>
+                            @foreach (var suit in ViewBag.FileFormatId as SelectList)
+                            {
+                                <option value="@(suit.Value)">@(suit.Text)</option>
+                            }
+                        </select>
+                        <span asp-validation-for="FileFormatId" class="text-danger"></span>
+
                     </div>
 
 
 
-                    <div class="form-input">
-                        <label for="cars">Choose File Type:</label>
-                        <select asp-for="FileFormatId" class="form-control" asp-items="ViewBag.FileFormatId"></select>
-                        <span asp-validation-for="FileFormat" class="text-danger"></span>
-                    </div>
-
-
-                    <div class="form-input">
-                        <input asp-for="Years" class="form-control form-controlNonSpace" placeholder="Service Date" />
-                        <span asp-validation-for="Years" class="text-danger"></span>
-                    </div>
-
-
-                    <div class="form-input">
+                    @*<div class="form-input" style="width:100%;">
                         <input asp-for="Quantity" class="form-control form-controlNonSpace" placeholder="Quantity" />
                         <span asp-validation-for="Quantity" class="text-danger"></span>
+                    </div>*@
+
+                    <div class="form-input" style="width:100%;">
+                        <div class="counter">
+                            <span class="down" onClick='decreaseCount(event, this)'>-</span>
+                            <input type="text" asp-for="Quantity" class="form-control form-controlNonSpace" value="Quantity">
+                            <span class="up" onClick='increaseCount(event, this)'>+</span>
+                        </div>
+                        <span asp-validation-for="Quantity" class="text-danger"></span>
                     </div>
+
+
+
+
+
+                    @*<div class="form-input d-flex" style="width:100%;">
+            <input asp-for="Years" class="form-control form-controlNonSpace" placeholder="Service Date" />
+            <span asp-validation-for="Years" class="text-danger"></span>
+        </div>*@
+
+                    <div class="form-input" style="width:100%">
+                        <i class="fa fa-calendar" style=" position: absolute; padding: 15px; right:0;"></i>
+                        <input type="text" asp-for="Years" class="form-control form-controlNonSpace" value="@DateTime.Now.ToString("dd/MM/yyyy")">
+                        <span asp-validation-for="Years" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+
+
+
+
 
                     <div class="form-input">
                         <input asp-for="Postion" class="form-control form-controlNonSpace" placeholder="Postion" />
@@ -76,29 +152,15 @@
                         <input asp-for="Purpose" class="form-control form-controlNonSpace" placeholder="Purpose" />
                         <span asp-validation-for="Purpose" class="text-danger"></span>
                     </div>
-
-
                     <div class="form-input">
                         <input asp-for="Region" class="form-control form-controlNonSpace" placeholder="Region" />
                         <span asp-validation-for="Region" class="text-danger"></span>
                     </div>
-
-
-
                     <div class="form-input">
                         <textarea asp-for="Description" class="form-control3 form-control2  " rows="5" placeholder=" Description . . ."></textarea>
                         <span asp-validation-for="Description" class="text-danger"></span>
                     </div>
-
-
-
-
-
-
-
-
-
-                    <button type="submit" class="btn mt-4 signup backBlue text-white">  Request  </button>
+                    <button type="submit" class="btn mt-4 signup backBlue text-white" style="width:100%">  <h5> Request </h5> </button>
 
 
 </form>
@@ -106,20 +168,29 @@
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
 @section Scripts {
 
-    <script>
+
+    <script src="~/Admin/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+    <script src="~/Admin/js/plugins/daterangepicker/daterangepicker.js"></script>
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+<script>
+
+
+        $(document).ready(function () {
+            $('#Years').datepicker({
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: true,
+                autoclose: true,
+                format: "mm/dd/yyyy"
+            });
+            var check = "#sertype".val;
+        });
+
+
         function Getlist(obj) {
             $("#CategoryId").html("");
 
@@ -137,7 +208,29 @@
                 }
             });
         };
+
+
+    function increaseCount(a, b) {
+        var input = b.previousElementSibling;
+        var value = parseInt(input.value, 10);
+        value = isNaN(value) ? 0 : value;
+        value++;
+        input.value = value;
+    }
+
+    function decreaseCount(a, b) {
+        var input = b.nextElementSibling;
+        var value = parseInt(input.value, 10);
+        if (value > 1) {
+            value = isNaN(value) ? 0 : value;
+            value--;
+            input.value = value;
+        }
+      }
+
+
+
     </script>
 
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
 }

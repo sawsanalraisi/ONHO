@@ -52,9 +52,9 @@ namespace HydrographicOffice.Models
 
         [Required]
         [Display(Name = "Description")]
+        [MaxLength(200, ErrorMessage = "maximum {1} characters allowed")]
         public string Description { set; get; }
-        public bool Isdelete { set; get; } = false;
-        public string UploadFiles { get; set; }
+
         public List<IFormFile>Files { get; set; }
 
     }

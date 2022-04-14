@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Hydro.BAL.DTO;
 using Hydro.BAL.Interface;
+using Hydro.DAL;
 using Hydro.DAL.Entities;
 using HydrographicOffice.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -22,22 +23,22 @@ namespace HydrographicOffice.Controllers
         private readonly IMapper _mapper;
         private IHostingEnvironment _environment;
         private readonly IFileFormatRepository _fileFormatRepository;
+        private readonly INotificationRepository _NotificationRepository;
+        private readonly IUserRepository _userRepository;
+        private readonly IContactUsRepository _ContactUsRepository;
+        private readonly HydroDBContext _context;
 
 
-        public NewSurveyController(INewSurveyRepository newSurveyRepository, IHostingEnvironment environment, IFileFormatRepository fileFormatRepository, IMapper mapper)
+        public NewSurveyController(INewSurveyRepository newSurveyRepository, HydroDBContext context ,IContactUsRepository ContactUsRepository, IUserRepository userRepository, INotificationRepository NotificationRepository, IHostingEnvironment environment, IFileFormatRepository fileFormatRepository, IMapper mapper)
         {
             _newSurveyRepository = newSurveyRepository;
             _mapper = mapper;
             _environment = environment;
             _fileFormatRepository = fileFormatRepository;
-        }
-        [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme, Roles = "Admin,AdsAdmin")]
-
-        public IActionResult Index()
-        {
-            var list = _newSurveyRepository.GetAll();
-            var MappedList = _mapper.Map<List<NewSurveyDto>>(list);
-            return View(MappedList);
+            _NotificationRepository = NotificationRepository;
+            _userRepository = userRepository;
+            _ContactUsRepository = ContactUsRepository;
+            _context = context;
         }
 
         [HttpGet]
@@ -49,11 +50,18 @@ namespace HydrographicOffice.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateAsync( NewSurveyVm obj)
+        public async Task<IActionResult> Create( NewSurveyVm obj)
         {
+            var userLogin = HttpContext.User.Identity.Name;
+            var userDetail = UserDetails(userLogin);
+            var emailAddress = $"Dear {userDetail.Email}";
             var list = new List<LegalDocument>();
+            var notificationName = "New Survey";
+            var statusRequest = "Pendding";
+
             if (ModelState.IsValid)
             {
+
                 foreach (var item in obj.Files)
                 {
                     if (item.Length > 0)
@@ -80,43 +88,50 @@ namespace HydrographicOffice.Controllers
 
                     }
                 }
-                try
-                {
+               
                     var mapper = _mapper.Map<NewSurvey>(obj);
+                
+                    //mapper.Type = (int)EnumCommon.SurveyType.;
+               
+                    
+                    
                     mapper.Status = 1;
+                    mapper.CreateBy = userDetail.Email;
+                    mapper.CreatedDate = DateTime.Now;
                     _newSurveyRepository.Add(mapper);
                     _newSurveyRepository.Save();
 
                     mapper.ListOLegalDocument = list;
-
                     _newSurveyRepository.AddLegalDocument(mapper.ListOLegalDocument, mapper.Id);
                     _newSurveyRepository.Save();
-                    return RedirectToAction("Index", "Home");
-                }
-                catch (Exception ex)
-                {
+                    var enumDisplayType = ((EnumCommon.SurveyType)mapper.Type).ToString();
 
-                    throw ex;
-                }
+             
+                  
+                    _ContactUsRepository.AddContactUs(new ContactUs()
+                    {
+                        Email = emailAddress,
+                        Title = "Oman National Hydrographic Office <br>",
+                        Message = $" Order Item Name: {enumDisplayType }<br> { $"Your Status is: {statusRequest}" }"
+                    });
+                    _ContactUsRepository.Save();
+               
+
+                    _NotificationRepository.AddNotification(new Notification() { AssignTo = "Admin", isRead = false, CreateDate = DateTime.Now, Status = 0, RefId = mapper.Id, NotificationName = notificationName });
+                    _NotificationRepository.Save();
+                    return RedirectToAction("Index", "Home");
+                
+               
           
             }
 
             return View(obj);
         }
-
-        public IActionResult UpdateRequest(int stauts, long id)
+        public User UserDetails(string userLogin)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-            var check = _newSurveyRepository.GetById(id);
-            check.Status = stauts;
-            var mapper = _mapper.Map<NewSurvey>(check);
-                     _newSurveyRepository.Update(mapper);
-                     _newSurveyRepository.Save();
-                     return RedirectToAction(nameof(Index));
-            
+            User user = _userRepository.GetByUserName(userLogin);
+            return user;
         }
+
     }
 }

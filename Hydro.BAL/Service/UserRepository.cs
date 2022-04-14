@@ -38,9 +38,10 @@ namespace Hydro.BAL.Service
             return _context.Users.Where(c => c.Id == Id).FirstOrDefault();
         }
 
-        public User GetByUserName(string Email)
+        public User GetByUserName(string email)
         {
-            return _context.Users.Where(c => c.Email == c.Email).FirstOrDefault();
+            return _context.Users.Where(c => c.Email ==email).FirstOrDefault();
+             
         }
 
         public bool Save()

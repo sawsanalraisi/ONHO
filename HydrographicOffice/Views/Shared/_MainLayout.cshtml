@@ -17,37 +17,18 @@
 <body>
 
 
-    @*<li><a class="dropdown-item" href="@Url.Action("Index","NoticeToMariner")"> الإعلانات الملاحية</a></li>
-                    <li><a class="dropdown-item" href="@Url.Action("Index","NavigationWarning")"> الإنذارات الملاحية</a></li>
-                    <li><a class="dropdown-item" href="@Url.Action("Create","NewFeature")"> إضافة معلم جديد</a></li>
-                    <li><a class="dropdown-item" href="@Url.Action("Create","DifferentReport")"> تقارير المعالم البحرية </a></li>
-                    <li><a class="dropdown-item" href="@Url.Action("Create","SpecialTask")">   طلبات خاصة  </a></li>
-                    <li><a class="dropdown-item" href="@Url.Action("Create","NewSurvey")">   مسح جديد </a></li>
-                    <li><a class="dropdown-item" href="@Url.Action("Create","ServiceRequestType")">  منتجات و بيانات </a></li>
 
-        <h5><p class=""> <a href="@Url.Action("Index","NoticeToMariner")">الإعلانات الملاحية</a></p></h5>
-        <h5> <p><a href="@Url.Action("Index","NavigationWarning")"> الإنذارات الملاحية</a> </p></h5>
-
-        <h5><p>  <a href="@Url.Action("Create","NewFeature")"> إضافة معلم جديد</a></p></h5>
-
-        <h5><p><a href="@Url.Action("Create","DifferentReport")"> تقارير المعالم البحرية </a></p></h5>
-        <h5><p><a href="@Url.Action("Create","NewSurvey")"> مسح جديد</a> </p></h5>
-
-        <h5><p><a href="@Url.Action("Create","ServiceRequestType")"> منتجات و بيانات </a> </p></h5>*@
-
-
-
-    <!--//nav-->
 
 
 
     <nav class="navbar navbar-expand-sm navbar-light  ">
         <div class="container-fluid">
 
-            <div class="row p-3">
+            <div class="row">
 
 
                 <div class="col-md-3 ">
+
                     <a class="navbar-brand d-flex" href="index.html">
                         <img src="Images/logo.png" width="130" height="160" />
                         <div class="align-self-center"> &nbsp &nbsp <span class="txtColorGold h3 "> <b>   Oman National</b></span> <br /> &nbsp &nbsp <span class="txtColorBlue h3"><b>Hydrographic Office</b></span></div>
@@ -56,18 +37,30 @@
 
 
                 <div class="col-md-9  collapse navbar-collapse  d-flex flex-row-reverse" id="mynavbar">
-                    <div class="d-flex visionOmanStyle">
+                    <div class=" visionOmanStyle ">
 
-                        <a class="nav-link" href=""> <img src="Images/omanvision.png" width="150" height="80" /></a>
+                        <div class="d-flex justify-content-between">
+                            <div class="nav-link" href=""> <img src="Images/omanvision.png" width="150" height="80" /></div>
 
 
-                        <div class="dropdown drop-down-style float-right  align-self-center">
-                            <a class="nav-link dropdown-toggle  txtColorBlue" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">English </a>
-                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">English</a></li>
-                                <li><a class="dropdown-item" href="#">Arabic</a></li>
-                            </ul>
+                            <div class="dropdown drop-down-style float-right  align-self-center">
+                                <a class="nav-link dropdown-toggle  txtColorBlue" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">English </a>
+                                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">English</a></li>
+                                    <li><a class="dropdown-item" href="#">Arabic</a></li>
+                                </ul>
+                            </div>
+
                         </div>
+
+                        <form class="d-flex">
+                            <div class="navSearch">
+                                <a class=" " href="javascript:void(0)">
+                                    <input type="text" id="search-bar" placeholder="Search">
+                                    <i class="fa fa-search search-icon"></i>
+                                </a>
+                            </div>
+                        </form>
 
 
                     </div>
@@ -80,7 +73,7 @@
 
 
 
-                <div class="col-md-12  collapse navbar-collapse  " id="mynavbar">
+                <div class="col-md-12  collapse navbar-collapse  mt-2" id="mynavbar">
                     <ul class="navbar-nav mr-auto d-flex justify-content-between listNavStyle navStyle ">
 
 
@@ -91,9 +84,8 @@
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Who We Are</a>
                             <ul class="dropdown-menu  ">
                                 <li><a class="dropdown-item" href="WhoWeAre.html"> Hydrography History</a></li>
-                                <li><a class="dropdown-item " href="Aim.html">    Vision, Mission and Objective</a></li>
+                                <li><a class="dropdown-item " href="Aims.html">    Vision, Mission and Objective</a></li>
                                 <li><a class="dropdown-item" href="NationalRole.html"> Roles and Responsibilities</a></li>
-                                <li><a class="dropdown-item" href="OrganizationalStructure.html">  General Sections</a></li>
                             </ul>
                         </li>
 
@@ -106,14 +98,12 @@
                                 <li><a class="dropdown-item" href="@Url.Action("Index","NoticeToMariner")"> Notice to Mariners</a></li>
                                 <li><a class="dropdown-item" href="@Url.Action("Index","NavigationWarning")">  Navigational Warnings</a></li>
                                 <li><a class="dropdown-item" href="@Url.Action("Create","NewFeature")"> Add a new Feature   </a></li>
-                                <li><a class="dropdown-item" href="@Url.Action("Create","DifferentReport")"> Marine Landmark Reports</a></li>
+                                @*<li><a class="dropdown-item" href="@Url.Action("Create","DifferentReport")"> Marine Landmark Reports</a></li>*@
                                 <li><a class="dropdown-item" href="@Url.Action("Create","SpecialTask")"> special Task</a></li>
                                 <li><a class="dropdown-item" href="@Url.Action("Create","NewSurvey")">  New Survey</a></li>
                                 <li><a class="dropdown-item" href="@Url.Action("Create","ServiceRequestType")"> Products and Data </a></li>
-
                             </ul>
                         </li>
-
 
 
                         <li class="nav-item dropdown">
@@ -169,11 +159,19 @@
                         <li>
 
                             <form class="d-flex">
-                                <div class="navSearch">
-                                    <a class="nav-link " href="javascript:void(0)">
+                                <div class="navSearch2">
+                                    <!--<a class="nav-link " href="javascript:void(0)">
                                         <input type="text" id="search-bar" placeholder="Search">
                                         <i class="fa fa-search search-icon"></i>
-                                    </a>
+                                    </a>-->
+                                    <ul class="navbar-nav mr-auto d-flex justify-content-between listNavStyle navStyle d-grid gap-1" style="margin-right: 26px;">
+
+                                        <li class="nav-item"> <a class="nav-link" data-bs-toggle="modal" data-bs-target="#myModalLogin"> Sign Up</a></li>
+                                        <li class="nav-item"> <a class="nav-link"> /</a></li>
+
+                                        <li class="nav-item"> <a class="nav-link" data-bs-toggle="modal" data-bs-target="#myModalRegister">Sign In</a></li>
+
+                                    </ul>
                                 </div>
                             </form>
                         </li>
@@ -200,222 +198,7 @@
 
 
 
-
-    <!--<video width="100%" playsinline autoplay muted loop class="mt-2" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) inset; mix-blend-mode: multiply; ">
-        <source src="Video/OHNO.mov" type="video/mp4">
-
-    </video>-->
-
-
-
-    <video width="100%" playsinline autoplay muted loop class="mt-2" style="mix-blend-mode: multiply; ">
-        <source src="Video/pathy3.mov" type="video/mp4">
-    </video>
-
-
-
     @RenderBody()
-    @*@Url.Action("Index","NoticeToMariner")
-          @Url.Action("Index","NavigationWarning")
-         @Url.Action("Create","NewFeature")
-          @Url.Action("Create","DifferentReport")
-         @Url.Action("Create","SpecialTask")
-         @Url.Action("Create","NewSurvey")
-        @Url.Action("Create","ServiceRequestType")*@
-
-
-    <div class="container mt-5 text-center">
-
-        <h2 class=" mt-5 txtColorBlue">Our Services</h2>
-
-        <div class="row mt-5 txtColorBlue ">
-
-
-            <div class="col-lg-2 col-md-4">
-                <a href="@Url.Action("Index","NoticeToMariner")">
-                    <div class="centerimgCir">
-                        <img src="Images/not1.png" class="rounded-circle  imgstylecir " width="150" height="150" style="object-fit: scale-down; ">
-                        <div class="overlay2 rounded-circle"></div>
-                    </div>
-                    <br />
-                    <h5><p class=""> Notice to Mariners </p></h5>
-                </a>
-            </div>
-
-
-
-            <div class="col-lg-2 col-md-4">
-                <a href="@Url.Action("Index","NavigationWarning")">
-                    <div class="centerimgCir">
-                        <img src="Images/Nav.png" class="rounded-circle  imgstylecir " width="150" height="150" style="">
-                        <div class="overlay2 rounded-circle"></div>
-                    </div>
-                    <br />
-
-                    <h5> <p>  Navigational Warnings </p></h5>
-                </a>
-            </div>
-
-
-
-
-            <div class="col-lg-2 col-md-4">
-                <a href="@Url.Action("Create","NewFeature")">
-                    <div class="centerimgCir">
-                        <img src="Images/New.png" class="rounded-circle  imgstylecir " width="150" height="150">
-                        <div class="overlay2 rounded-circle"></div>
-                    </div>
-                    <br />
-
-                    <h5><p>     Add a new Feature </p></h5>
-                </a>
-            </div>
-
-
-
-
-            <div class="col-lg-2 col-md-4">
-                <a href="@Url.Action("Create","DifferentReport")">
-                    <div class="centerimgCir">
-                        <img src="Images/report.png" class="rounded-circle  imgstylecir " width="150" height="150">
-                        <div class="overlay2 rounded-circle"></div>
-                    </div>
-                    <br />
-
-                    <h5><p>   Marine Landmark Reports </p></h5>
-                </a>
-            </div>
-
-
-
-            <div class="col-lg-2 col-md-4">
-                <a href="@Url.Action("Create","NewSurvey")">
-                    <div class="centerimgCir">
-                        <img src="Images/news.png" class="rounded-circle  imgstylecir " width="150" height="150">
-                        <div class="overlay2 rounded-circle"></div>
-                    </div>
-                    <br />
-
-                    <h5><p>New Survey </p></h5>
-                </a>
-            </div>
-
-
-
-            <div class="col-lg-2 col-md-4">
-                <a href="@Url.Action("Create","ServiceRequestType")">
-                    <div class="centerimgCir">
-                        <img src="Images/data.png" class="rounded-circle  imgstylecir " width="150" height="150">
-                        <div class="overlay2 rounded-circle"></div>
-                    </div>
-                    <br />
-
-                    <h5><p> Products and Data  </p></h5>
-                </a>
-            </div>
-
-
-        </div>
-    </div>
-
-
-
-
-
-
-
-
-    <div class="container mt-3 p-5 txtColorBlue ">
-
-
-        <div class="container mt-5  text-center">
-            <div class="row no-gutters mt-5">
-                <div class="col-md-4 p-3 d-flex  BackHighColor ">
-                    <div class="p-3">
-                        <img src="Images/portal.png" width="150" height="150">
-                        <p class="">
-                            <br />
-                            <a href=""> <b> Marine Data </b></a>
-                        <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabi sed metus id et viverra augue.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4 p-3 d-flex   ">
-
-                    <div class="p-3">
-                        <img src="Images/multi.png" width="150" height="150" />
-                        <p class="">
-                            <br />
-                            <a href="PhotoGallery.html"><b> Pictures Library </b></a>
-
-                        <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabi sed metus id et viverra augue.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4 p-3 d-flex  BackHighColor ">
-                    <div class="p-3">
-                        <img src="Images/pp3.png" width="150" height="150">
-                        <p class="">
-                            <br />
-                            <a href="IndexMap.html"><b>  Map Index  </b> </a>
-                        <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabi sed metus id et viverra augue.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-
-
-        <div class="container ">
-            <div class="row no-gutters">
-
-                <div class="col-md-4 p-4 d-flex ">
-                    <div class="p-4">
-                        <img src="Images/org.png" width="80" height="80" /><b class="p-3">organizations </b>
-                        <p class="mt-3 txtColorBlue">
-                            <a href="https://iho.int/">  International Hydrographic Organization <i class="fa-solid fa-arrow-up-right-from-square"></i> </a><br />
-                            <a href="https://www.imo.org/">International Maritime Organization<i class="fa-solid fa-arrow-up-right-from-square"></i></a><br />
-                            <a href="https://www.gov.uk/government/organisations/uk-hydrographic-office">United Kingdom Hydrographic Office    <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br />
-
-
-
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-md-4 p-4 d-flex BackHighColor  ">
-                    <div class="p-4">
-                        <img src="Images/links.png" width="80" height="80" /><b class="p-3">Quick links  </b>
-
-                        <p class="mt-3">
-                            <a href="https://www.ita.gov.om/itaportal/About/about.aspx">  Ministry of Transport, Communications and Information Technology <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br />
-                            <a href="https://fm.gov.om/">   Foreign Ministry of Oman <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br />
-                            <a href="https://www.squ.edu.om/squ-ar">   Sultan Qaboos University<i class="fa-solid fa-arrow-up-right-from-square"></i></a><br />
-
-
-
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-md-4 p-4 d-flex ">
-                    <div class="p-4">
-                        <img src="Images/ads.png" width="80" height="80" /><b class="p-3">Announcement</b>
-                        <p class="">
-                            ####################<br />
-                            ####################
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-
-
-
 
 
 
@@ -423,8 +206,19 @@
 
     <div class="container-fulid list-style myfooter">
 
+        <div class="text-white text-center">
+            <img src="Images/Plink3.png" style="width:100%;" class="linefooter" />
+        </div>
+
+        <!--<img class="linefooter" style="width:100%; " />-->
+
         <header>
-            <div class="overlay"></div>
+
+            <div class="overlay">
+            </div>
+
+
+
             <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
                 <source src="Video/Footer.mp4" type="video/mp4">
             </video>
@@ -435,43 +229,32 @@
                         <div class="container-fulid">
                             <div class=" row d-flex  p-5 ">
 
-                                <div class="col-md-4 d-flex">
-                                    <div class=" ">
 
-                                        <ul>
-                                            <li><h5><b> Oman National  <br /> Hydrographic Office</b></h5></li>
-                                            <li><a href="index.html">Home</a></li>
-                                            <li><a href="#">Service</a>Services </li>
-                                            <li><a href="WhoWeAre.html"> Who We Are</a></li>
-                                            <li><a href="HydrographyUnit.html">Activities</a></li>
-                                            <li><a href="HydrographySchool.html">Training</a></li>
-                                            <li><a href="#"> Connect us</a></li>
-                                        </ul>
-                                    </div>
+                                <div class="container-fluid p-1 bg- text-white text-center ">
+                                    <h5 class="mb-3"><b> Oman National Hydrographic Office </b></h5>
+                                    &nbsp &nbsp <a href="index.html">Home</a>
+                                    &nbsp &nbsp  <a href="#">Service</a>
+                                    &nbsp &nbsp  <a href="WhoWeAre.html"> Who We Are</a>
+                                </div>
+
+
+                                <div class="container-fluid p-2 bg- text-white text-center mt-3">
+                                    <p>
+
+                                        &nbsp      Ministry of Defence - Muaskar Al Murtafa'a    <br />
+
+                                        &nbsp   Telephone: 21512432  968 +<br />
+                                        Email : onho@mod.gov.om
+
+
+
+                                    </p>
 
                                 </div>
-                                <div class="col-md-4 d-flex">
-                                    <div class="  ">
 
-                                        <ul>
-                                            <li> <h5><b> Connect With us</b></h5></li>
-                                            <li>
 
-                                                <p>
-                                                    Oman National Hydrographic Office<br />
-                                                    Ministry of Defence - Muaskar Al Murtafa'a <br />
-                                                    P.O.Box: 723 -  P.C: 111<br />
-                                                    Sultanate of Oman  <br />
-                                                    Telephone: 21512432  968 +<br />
-                                                    fax: 67092432  968 +<br />
-                                                    Email : onho@mod.gov.om
-                                                </p>
-                                            </li>
 
-                                        </ul>
 
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -489,15 +272,18 @@
 
 
 
-
-
-
-
-
-
     <div class="text-center copyRightStyle  p-1">
-        &copy;  © All rights reserved to the Oman National Hydrographic Office 2022
+        &copy; All rights reserved to the Oman National Hydrographic Office 2022
     </div>
+
+
+
+
+
+
+
+
+
 
 
 

@@ -20,13 +20,16 @@ namespace HydrographicOffice.Controllers
         private readonly INewFeatureRepository _newFeatureRepository;
         private readonly IMapper _mapper;
         private IHostingEnvironment _environment;
+        private readonly INotificationRepository _NotificationRepository;
 
 
-        public NewFeatureController(INewFeatureRepository newFeatureRepository, IMapper mapper, IHostingEnvironment environment)
+        public NewFeatureController(INewFeatureRepository newFeatureRepository, INotificationRepository NotificationRepository, IMapper mapper, IHostingEnvironment environment)
         {
             _newFeatureRepository = newFeatureRepository;
             _mapper = mapper;
             _environment = environment;
+            _NotificationRepository = NotificationRepository;
+
         }
         [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme, Roles = "Admin,AdsAdmin")]
 
@@ -44,6 +47,8 @@ namespace HydrographicOffice.Controllers
         public async Task<IActionResult> Create(NewFeatureVm obj)
         {
             var list = new List<DocumentFile>();
+
+            var notificationName = "New Feature";
             if (ModelState.IsValid)
             {
                 foreach (var item in obj.Files)
@@ -73,15 +78,19 @@ namespace HydrographicOffice.Controllers
                     }
                 }
                 var mapper = _mapper.Map<NewFeature>(obj);
+                mapper.RequestStatus = 1;
                 _newFeatureRepository.Add(mapper);
                 _newFeatureRepository.Save();
 
                 mapper.ListOfFiles = list;
+                _NotificationRepository.AddNotification(new Notification() { AssignTo = "Admin", isRead = false, CreateDate = DateTime.Now, Status = 0, RefId = mapper.Id, NotificationName = notificationName });
 
+                _NotificationRepository.Save();
                 _newFeatureRepository.AddDocument(mapper.ListOfFiles, mapper.Id);
+                TempData["Success"] = (System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English") ? "Done.. Your Request Success" : "تم إرسال طلبك");
+                TempData.Keep("Success");
                 return RedirectToAction("Index","Home");
             }
-
             return View(obj);
         }
 

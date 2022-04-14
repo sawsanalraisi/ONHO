@@ -79,5 +79,14 @@ namespace HydrographicOffice.Models
             [Display(Name = "Rejected")]
             Rejected = 3,
         }
+        public enum Status
+        {
+            [Display(Name = "Open")]
+            Open = 1,
+            [Display(Name = "Close")]
+            Close = 2,
+            [Display(Name = "Review")]
+            Review = 3,
+        }
     }
 }

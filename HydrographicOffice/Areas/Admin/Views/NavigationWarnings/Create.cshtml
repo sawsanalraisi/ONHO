@@ -1,0 +1,115 @@
+﻿@model HydrographicOffice.Models.NavigationWVm
+@inject CultureLocalizer _Localizer
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "_AdminLayout";
+
+}
+
+
+<div class="container ">
+    <div class="row d-flex align-items-center justify-content-center">
+        <div class="col-md-10 ">
+
+            <form asp-action="Create" method="post" enctype="multipart/form-data">
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+                <h1 class="txtColorBlue text-center"><mark class="highlight">Navigation Warning </mark></h1>
+
+                <hr />
+
+                <div class="form-input d-flex">
+
+                    <label asp-for="Status" class="control-label align-self-center " style="width:15%;"> Status </label>
+
+                    <select asp-for="Status" class="form-control">
+                        @foreach (EnumCommon.NavigationWarning suit in (EnumCommon.NavigationWarning[])Enum.GetValues(typeof(EnumCommon.NavigationWarning)))
+                        {
+                            <option value="@(((int)suit).ToString())">@_Localizer.Text(suit.ToString())</option>
+                        }
+
+                    </select>
+
+                    <span asp-validation-for="Status" class="text-danger"></span>
+                </div>
+
+
+
+                <div class="form-input">
+                    <input asp-for="NavFileName" class="form-control form-controlNonSpace" placeholder="@_Localizer.Text("NavFileName")" />
+                    <span asp-validation-for="NavFileName" class="text-danger"></span>
+                </div>
+
+                <div class="form-input">
+                    <input asp-for="WarnNumber" class="form-control form-controlNonSpace" placeholder=" @_Localizer.Text("WarnNumber")" />
+                    <span asp-validation-for="WarnNumber" class="text-danger"></span>
+                </div>
+
+
+                <div class="form-input">
+                    <input asp-for="NavFileName" class="form-control form-controlNonSpace" placeholder="@_Localizer.Text("NavFileName")" />
+                    <span asp-validation-for="NavFileName" class="text-danger"></span>
+                </div>
+
+                <div class="form-input">
+                    <input asp-for="WarnNumber" class="form-control form-controlNonSpace" placeholder="@_Localizer.Text("WarnNumber")" />
+                    <span asp-validation-for="WarnNumber" class="text-danger"></span>
+                </div>
+
+                <div class="form-input">
+                    <input asp-for="WaringDate" class="form-control form-controlNonSpace" placeholder="@_Localizer.Text("WaringDate")" />
+                    <span asp-validation-for="WaringDate" class="text-danger"></span>
+                </div>
+
+
+
+
+                <div class="form-input">
+                    <textarea asp-for="NavWarnDesc" class="form-control3 form-control2  " rows="5" placeholder=" Description . . ."></textarea>
+                    <span asp-validation-for="NavWarnDesc" class="text-danger"></span>
+                </div>
+
+
+
+                <div class="form-input">
+                    <label class="control-label">@_Localizer.Text("UploadFile")</label>
+                    <input type="file" asp-for="File" />
+                </div>
+
+
+                <div class="form-input">
+                    <button type="submit" class="btn mt-4  mb-5 signup backBlue text-white" style="width:100%;font-size:22px;"> @_Localizer.Text("Save") </button>
+                </div>
+
+
+      
+
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+@section Scripts {
+    <script>
+        updateList = function () {
+            debugger;
+            var input = document.getElementById('Files');
+            var output = document.getElementById('fileList');
+            var children = "";
+            for (var i = 0; i < input.files.length; ++i) {
+                children += '<li>' + input.files.item(i).name + '</li>';
+            }
+            output.innerHTML = '<ul>' + children + '</ul>';
+        }
+    </script>
+
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -18,6 +18,7 @@ namespace HydrographicOffice.Models
 
         [Required]
         [Display(Name = "Notiec Description")]
+        [MaxLength(200, ErrorMessage = "maximum {1} characters allowed")]
         public string NotiecDesc { get; set; }
 
         [Required]

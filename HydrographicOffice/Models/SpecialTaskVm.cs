@@ -40,6 +40,8 @@ namespace HydrographicOffice.Models
 
         [Required]
         [Display(Name = "Description")]
+        [MaxLength(200, ErrorMessage = "maximum {1} characters allowed")]
+
         public string Description { set; get; }
         public string DescForOther { get; set; }
 
@@ -47,6 +49,7 @@ namespace HydrographicOffice.Models
 
         //public IFormFile File { get; set; }
         public List<IFormFile> Files { get; set; }
+        public string key { set; get; }
 
 
     }

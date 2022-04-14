@@ -1,7 +1,4 @@
-﻿* {
-    font-family: "GE SS";
-    font-size:16px;}
-
+﻿
 .backgroungbody {
     background-image: url('Images/background.jpg');
     background-repeat: no-repeat;
@@ -37,7 +34,7 @@
 
 .form-control {
     height: 50px;
-    text-indent: 24px;
+  /*  text-indent: 10px;*/
     font-size: 15px
 }
 

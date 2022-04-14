@@ -23,6 +23,7 @@ namespace HydrographicOffice.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.Done = TempData["Success"]?.ToString() ?? null;
             return View();
         }
 

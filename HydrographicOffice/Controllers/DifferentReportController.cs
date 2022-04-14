@@ -21,20 +21,15 @@ namespace HydrographicOffice.Controllers
         private readonly IDifferentReportsRepository _differentReportsRepository;
         private readonly IMapper _mapper;
         private IHostingEnvironment _environment;
+        private readonly INotificationRepository _NotificationRepository;
 
 
-        public DifferentReportController(IDifferentReportsRepository differentReportsRepository,IMapper mapper, IHostingEnvironment environment)
+        public DifferentReportController(IDifferentReportsRepository differentReportsRepository, INotificationRepository NotificationRepository, IMapper mapper, IHostingEnvironment environment)
         {
             _differentReportsRepository = differentReportsRepository;
             _mapper = mapper;
             _environment = environment;
-        }
-        [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme, Roles = "Admin")]
-        public IActionResult Index()
-        {
-            var list = _differentReportsRepository.GetAll();
-            var MappedList = _mapper.Map<List<DifferentRepDto>>(list);
-            return View();
+            _NotificationRepository = NotificationRepository;
         }
 
         [HttpGet]
@@ -48,6 +43,7 @@ namespace HydrographicOffice.Controllers
         {
 
             var list = new List<DocumentFile>();
+            var notificationName = "Different Report";
             if (ModelState.IsValid)
             {
                 foreach (var item in obj.Files)
@@ -78,51 +74,51 @@ namespace HydrographicOffice.Controllers
                 }
                
                 var mapper = _mapper.Map<DifferentReport>(obj);
+                mapper.Status = 1;
                 _differentReportsRepository.Add(mapper);
                 _differentReportsRepository.Save();
                 mapper.ListOfFiles = list;
-
                 _differentReportsRepository.AddDocument(mapper.ListOfFiles, mapper.Id);
-                return RedirectToAction("Index", "Home");
-                
+                _NotificationRepository.AddNotification(new Notification() { AssignTo = "Admin", isRead = false, CreateDate = DateTime.Now, Status = 0, RefId = mapper.Id, NotificationName = notificationName });
+                _NotificationRepository.Save();
+
+                return RedirectToAction("Index", "Home");             
             }
 
             return View(obj);
         }
 
-        [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme, Roles = "Admin,AdsAdmin")]
-        public IActionResult Edit(long id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-            var NoticeDetails = _differentReportsRepository.GetById(id);
-            if (NoticeDetails == null)
-            {
-                return NotFound();
-            }
-            return View(NoticeDetails);
-        }
+        //public IActionResult Edit(long id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    var NoticeDetails = _differentReportsRepository.GetById(id);
+        //    if (NoticeDetails == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    return View(NoticeDetails);
+        //}
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme, Roles = "Admin,AdsAdmin")]
-        public async Task<IActionResult> Edit(long id, DifferentReport differentReport)
-        {
-            if (id != differentReport.Id)
-            {
-                return NotFound();
-            }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> Edit(long id, DifferentReport differentReport)
+        //{
+        //    if (id != differentReport.Id)
+        //    {
+        //        return NotFound();
+        //    }
 
-            if (ModelState.IsValid)
-            {
-                _differentReportsRepository.Update(differentReport);
-                _differentReportsRepository.Save();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(differentReport);
-        }
+        //    if (ModelState.IsValid)
+        //    {
+        //        _differentReportsRepository.Update(differentReport);
+        //        _differentReportsRepository.Save();
+        //        return RedirectToAction(nameof(Index));
+        //    }
+        //    return View(differentReport);
+        //}
 
     }
 }

@@ -18,29 +18,40 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Controllers;
+using Hydro.DAL;
+using Microsoft.Extensions.Logging;
+using System.Text;
+using static HydrographicOffice.EnumSweetAlert.Enums;
 
 namespace HydrographicOffice.Controllers
 {
     public class UserController : Controller
     {
-        private readonly IUserRepository _userService;
+        private readonly IUserRepository _userRepository;
         private readonly IMapper _mapper;
         private IHostingEnvironment _environment;
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
         private readonly CultureLocalizer _Localizer;
-        public UserController(IUserRepository userService, CultureLocalizer Localizer, IMapper mapper, IHostingEnvironment environment, UserManager<User> userManager, SignInManager<User> signInManager)
+        private readonly HydroDBContext _context;
+        private readonly IContactUsRepository _ContactUsRepository;
+
+
+        public UserController(IUserRepository userService,IUserRepository userRepository,
+        IContactUsRepository ContactUsRepository ,HydroDBContext context, CultureLocalizer Localizer, IMapper mapper, IHostingEnvironment environment, UserManager<User> userManager, SignInManager<User> signInManager)
         {
-            _userService = userService;
+            _userRepository = userRepository;
             _mapper = mapper;
             _environment = environment;
             _userManager = userManager;
             _signInManager = signInManager;
             _Localizer = Localizer;
-
+            _context = context;
+            _ContactUsRepository = ContactUsRepository;
+            
         }
 
-      
+      [HttpGet]
         public IActionResult Register()
         {
             return View();
@@ -96,9 +107,8 @@ namespace HydrographicOffice.Controllers
         //}
 
        
-        public async Task<JsonResult>UserLogin2(LoginViewModel model)
+        public async Task<JsonResult>UserLogin(LoginViewModel model)
         {
-           
 
             if (ModelState.IsValid)
             {
@@ -152,6 +162,66 @@ namespace HydrographicOffice.Controllers
             LoginRegisterVm loginRegisterVm = new LoginRegisterVm();
             return PartialView("_RegisterPariatl", loginRegisterVm);
         }
+        [HttpGet]
+        public IActionResult ForgetPassword()
+        {
+            ViewBag.Done = TempData["Success"]?.ToString()??null;
 
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ForgetPassword(ForgetPassword model)
+        {
+         
+            if (ModelState.IsValid)
+            {
+                var user = await _userManager.FindByEmailAsync(model.Email);
+                if (user != null)
+                {
+                    var password = CreatePassword(7);
+                 
+                    var removeResult=  await  _userManager.RemovePasswordAsync(user);
+                    var addResult = await _userManager.AddPasswordAsync(user, password);
+                    if (addResult.Succeeded)
+                    {
+                        _ContactUsRepository.AddContactUs(new ContactUs()
+                        {
+                            Email = user.Email,
+                            Title = "Oman National Hydrographic Office <br>",
+                            Message = $" New Password: {password }<br> { $" Thanks " }"
+                        });
+                        _ContactUsRepository.Save();
+                        TempData["Success"] = (System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English") ? "Done.. Please Check Your Email" : "تم التعديل");
+                        TempData.Keep("Success");
+                        return RedirectToAction("ForgetPassword", "User");
+                    }
+                    return RedirectToAction("ForgetPassword", "User");
+
+
+                }
+                return View(model);
+            }
+
+            return View(model);
+        }
+        public User UserDetails(string userLogin)
+        {
+            User user = _userRepository.GetByUserName(userLogin);
+            return user;
+        }
+
+
+        public string CreatePassword(int length)
+        {
+            const string valid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890@#!";
+            StringBuilder res = new StringBuilder();
+            Random rnd = new Random();
+            while (0 < length--)
+            {
+                res.Append(valid[rnd.Next(valid.Length)]);
+            }
+            return res.ToString();
+        }
     }
 }

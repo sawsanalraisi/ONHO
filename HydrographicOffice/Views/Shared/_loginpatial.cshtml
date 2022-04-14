@@ -10,24 +10,24 @@
 
     <div class="card px-5 py-5 ">
         <p>@ViewBag.erro</p>
-        <h2 class="mt-3 txtColorGold text-center">  تسجيل الدخول  </h2>
+        <h2 class="mt-3 txtColorGold text-center">@Localizer.Text("Login")</h2>
 
         <div class="form-input">
             <i class="fa-solid fa-envelope search-icon2"></i>
-            <input type="text" class="form-control" required placeholder="عنوان بريد الكتروني " asp-for="Email" id="email">
+            <input type="text" class="form-control" required placeholder="@Localizer.Text("Email")" asp-for="Email" id="email">
             <span asp-validation-for="Email" class="text-danger"></span>
 
         </div>
         <div class="form-input">
             <i class="fa-solid fa-lock search-icon2"></i>
-            <input type="text" class="form-control" required placeholder="كلمه السر" asp-for="Password" id="password">
+            <input type="password" class="form-control" required placeholder="@Localizer.Text("Password")" asp-for="Password" id="password">
             <span asp-validation-for="Password" class="text-danger"></span>
         </div>
 
         <button type="submit" class="btn btn-primary block full-width m-b">@Localizer.Text("Login")</button>
 
         <div class="text-center mt-4">
-            <a href="@Url.Action("RenderRegisterion","User")"> انشاء حساب جديد</a>
+            <a href="@Url.Action("ForgetPassword","User")">@Localizer.Text("Forget Password")</a>
         </div>
 
     </div>
@@ -50,7 +50,7 @@
     debugger;
                    var email = $("#email").val();
                    var password = $("#password").val();
-        var url = '@Url.Action("UserLogin2", "User")';
+        var url = '@Url.Action("UserLogin", "User")';
 
 
         if (email != null && email != '' && password != null && password!='') {

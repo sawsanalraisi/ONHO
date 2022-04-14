@@ -146,6 +146,9 @@ namespace Hydro.DAL.Migrations
                     b.Property<int>("ReportType")
                         .HasColumnType("int");
 
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
                     b.Property<string>("UploadFiles")
                         .HasColumnType("nvarchar(max)");
 
@@ -349,6 +352,9 @@ namespace Hydro.DAL.Migrations
                     b.Property<string>("Region")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("RequestStatus")
+                        .HasColumnType("int");
+
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
@@ -480,6 +486,42 @@ namespace Hydro.DAL.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("NoticeToMariners");
+                });
+
+            modelBuilder.Entity("Hydro.DAL.Entities.Notification", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("AssignTo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CreateBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("NotificationName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("RefId")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("isRead")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Notifications");
                 });
 
             modelBuilder.Entity("Hydro.DAL.Entities.Order", b =>
@@ -685,6 +727,9 @@ namespace Hydro.DAL.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<int>("SpecialTaskType")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Status")
                         .HasColumnType("int");
 
                     b.HasKey("Id");

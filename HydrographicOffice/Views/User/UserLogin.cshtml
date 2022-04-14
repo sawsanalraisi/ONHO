@@ -1,28 +1,29 @@
 ﻿@model LoginViewModel
+@inject CultureLocalizer _Localizer
 
 @{
     Layout = "_LoginLayout";
     ViewData["Title"] = "Login";
+    var X = _Localizer.Text("Home");
 }
-@inject CultureLocalizer Localizer
 <form class="m-t" role="form" method="post">
 
-    <h3>@Localizer.Text("Login")</h3>
+    <h3>@_Localizer.Text("Login")</h3>
     <br />
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     <br />
     <div class="form-group">
-        <input type="text" asp-for="Email" class="form-control" placeholder="@Localizer.Text("Email")">
+        <input type="text" asp-for="Email" class="form-control" placeholder="@_Localizer.Text("Email")">
         <span asp-validation-for="Email" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <input type="password" asp-for="Password" class="form-control" placeholder="@Localizer.Text("Password")">
+        <input type="password" asp-for="Password" class="form-control" placeholder="@_Localizer.Text("Password")">
         <span asp-validation-for="Password" class="text-danger"></span>
     </div>
 
     <br />
-    <button type="submit" class="btn btn-primary block full-width m-b">@Localizer.Text("Login")</button>
+    <button type="submit" class="btn btn-primary block full-width m-b">@_Localizer.Text("Login")</button>
 </form>
 <br />
 

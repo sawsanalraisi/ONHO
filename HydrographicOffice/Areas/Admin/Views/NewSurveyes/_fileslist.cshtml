@@ -1,0 +1,19 @@
+﻿
+@model Hydro.BAL.DTO.NewSurveyDto
+@{
+    Layout = null;
+
+}
+
+
+<div >
+    @foreach (var item2 in Model.ListOLegalDocument.ToList())
+    {
+    <a href="~/UploadedFiles/@item2.Path" download="download"><i class="fa-solid fa-download" style="font-size:25px;"></i></a>@item2.Path
+      <br/>
+    }
+
+
+
+</div>
+

@@ -1,0 +1,112 @@
+﻿@model HydrographicOffice.Models.NoticeToMVm
+@inject CultureLocalizer  _Localizer
+@{
+    ViewData["Title"] = "Create";
+    //Layout = "_AdminLayout";
+    //Layout = "_Layout";
+    Layout = "_AdminLayout";
+
+}
+
+
+
+<!--//notice to marine-->
+<div class="container ">
+    <div class="row d-flex align-items-center justify-content-center">
+        <div class="col-md-10 ">
+
+            <form  asp-action="Create" method="post" enctype="multipart/form-data">
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+                <h1 class="txtColorBlue text-center"><mark class="highlight">@_Localizer.Text("Notice To Mariner") </mark></h1>
+
+                <hr />
+                <div class="form-input d-flex">
+
+
+                    <label asp-for="NoticeType" class="control-label align-self-center " style="width:15%;"> @_Localizer.Text("NoticeType") </label>
+
+
+                    <select asp-for="NoticeType" class="form-control">
+                        @foreach (EnumCommon.NoticeToMariner suit in (EnumCommon.NoticeToMariner[])Enum.GetValues(typeof(EnumCommon.NoticeToMariner)))
+                        {
+
+                            <option value="@(((int)suit).ToString())">@_Localizer.Text(suit.ToString())</option>
+
+                        }
+
+
+                    </select>
+
+                    <span asp-validation-for="NoticeType" class="text-danger"></span>
+                </div>
+
+
+
+
+
+
+
+
+
+                <div class="form-input">
+                    <input asp-for="NoticeFileName" class="form-control form-controlNonSpace" placeholder="Notice File Name" />
+                    <span asp-validation-for="NoticeFileName" class="text-danger"></span>
+                </div>
+
+                <div class="form-input">
+                    <input asp-for="NoticeEdition" class="form-control form-controlNonSpace" placeholder="  Notice Edition " />
+                    <span asp-validation-for="NoticeEdition" class="text-danger"></span>
+                </div>
+
+                <div class="form-input">
+                    <input asp-for="NoticeDate" class="form-control form-controlNonSpace" placeholder="  Notice Date " />
+                    <span asp-validation-for="NoticeDate" class="text-danger"></span>
+                </div>
+
+
+                <div class="form-input">
+                    <textarea asp-for="NotiecDesc" class="form-control3 form-control2  " rows="5" placeholder=" Description . . ."></textarea>
+                    <span asp-validation-for="NotiecDesc" class="text-danger"></span>
+                </div>
+              
+                <div class="form-input">
+                    <label class="control-label">@_Localizer.Text("UploadFile")</label>
+                    <input type="file" asp-for="File" />
+                </div>
+
+
+                <div class="form-input">
+                    <button type="submit" class="btn mt-4 signup backBlue text-white" style="width:100%;font-size:22px;"> @_Localizer.Text("Save") </button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+@section Scripts {
+    <script>
+        updateList = function () {
+            debugger;
+            var input = document.getElementById('Files');
+            var output = document.getElementById('fileList');
+            var children = "";
+            for (var i = 0; i < input.files.length; ++i) {
+                children += '<li>' + input.files.item(i).name + '</li>';
+            }
+            output.innerHTML = '<ul>' + children + '</ul>';
+        }
+    </script>
+
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+

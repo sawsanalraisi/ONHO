@@ -1,0 +1,103 @@
+﻿@model HydrographicOffice.Models.ServiceVm
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "_AdminLayout";
+
+}
+
+<style>
+    .check-box {
+        padding: 50px;
+    }
+</style>
+
+
+<link href="~/Admin/sty/Style-Page.css" rel="stylesheet" />
+<h1 class="txtColorBlue text-center">
+    <mark class="highlight">
+Service Product
+    </mark>
+</h1>
+<hr />
+<div class="container mt-5 mb-5">
+    <div class="row d-flex align-items-center justify-content-center ">
+        <div class="col-md-10 shadow-lg p-3 mb-5 bg-body rounded mt-5">
+
+            <h3>
+                Service Product
+
+            </h3>
+            <hr />
+
+            <h5>Request Details:</h5>
+
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Categories.ItemName)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Categories.ItemName)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.FileFormat)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.FileFormat)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Purpose)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Purpose)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Description)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Description)
+                </dd>
+
+           
+
+            </dl>
+
+
+
+            <h5>Connection Details:</h5>
+
+            <div class="container mt-3">
+                <div class="row">
+                    <div class="d-flex mb-3">
+
+
+                        <div class="p-2">@Html.DisplayNameFor(model => model.CreateBy)</div>
+                        <div class="p-2"> @Html.DisplayFor(model => model.CreateBy)</div>
+
+                        <div class="p-2 ms-5">@Html.DisplayNameFor(model => model.CreateAt)</div>
+                        <div class="p-2"> @Html.DisplayFor(model => model.CreateAt)</div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="form-input">
+
+                <a asp-action="Index"><i class="fas fa-arrow-left"></i> &nbsp;Back to List</a>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+</div>
+
+
+@*<a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |*@

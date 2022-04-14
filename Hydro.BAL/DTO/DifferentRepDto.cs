@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Hydro.DAL.Entities;
+using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,6 +8,7 @@ namespace Hydro.BAL.DTO
 {
    public class DifferentRepDto
     {
+
         public long Id { set; get; }
 
 
@@ -15,6 +18,7 @@ namespace Hydro.BAL.DTO
 
 
         public string Organization { set; get; }
+
 
         public int ReportType { set; get; }
 
@@ -32,6 +36,10 @@ namespace Hydro.BAL.DTO
 
         public string Description { set; get; }
         public bool Isdelete { set; get; } = false;
+        public int Status { get; set; }
+
         public string UploadFiles { get; set; }
+        public List<DocumentFile> ListOfFiles { get; set; }
+
     }
 }

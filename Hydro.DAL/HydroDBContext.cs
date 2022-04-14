@@ -36,7 +36,7 @@ namespace Hydro.DAL
         
         public DbSet<BeforProces> BeforProcess { get; set; }
         public DbSet<EmailConfigur> EmailConfigurs { get; set; }
-
+        public DbSet<Notification> Notifications { get; set; }
 
     }
 }

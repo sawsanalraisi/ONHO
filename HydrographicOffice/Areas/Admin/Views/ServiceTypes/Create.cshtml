@@ -1,0 +1,76 @@
+﻿@model HydrographicOffice.Models.CategoryVm
+@inject CultureLocalizer  _Localizer
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "_AdminLayout";
+
+}
+
+
+
+<div class="container mt-5">
+    <div class="row d-flex align-items-center justify-content-center">
+        <div class="col-md-10 ">
+
+            <form asp-action="Create">
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+                <h1 class="txtColorBlue text-center"><mark class="highlight">Service type </mark></h1>
+
+                <hr />
+
+
+
+                <div class="form-input d-flex">
+                    <label asp-for="EnumServiceType" class="control-label align-self-center " style="width:15%;"> @_Localizer.Text("NoticeType") </label>
+                    <select asp-for="EnumServiceType" class="form-control">
+                        @foreach (EnumCommon.ServiceType suit in (EnumCommon.ServiceType[])Enum.GetValues(typeof(EnumCommon.ServiceType)))
+                        {
+
+                            <option value="@(((int)suit).ToString())">@_Localizer.Text(suit.ToString())</option>
+
+                        }
+
+                    </select>
+
+                    <span asp-validation-for="EnumServiceType" class="text-danger"></span>
+                </div>
+
+
+
+
+                @*@_Localizer.Text("Desc")*@
+                <div class="form-input d-flex">
+                    <label asp-for="ItemName" class="control-label align-self-center" style="width:15%;"></label>
+                    <input asp-for="ItemName" class="form-control form-controlNonSpace" />
+                    <span asp-validation-for="ItemName" class="text-danger"></span>
+                </div>
+
+
+
+
+                <div class="form-input">
+                    <button type="submit" class="btn mt-4 signup backBlue text-white" style="width:100%;font-size:22px;"> @_Localizer.Text("Save") </button>
+                </div>
+
+                <div class="form-input">
+                    <a asp-action="Index"><i class="fas fa-arrow-left"></i> &nbsp;Back to List</a>
+                </div>
+
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+

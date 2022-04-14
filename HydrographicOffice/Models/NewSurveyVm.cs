@@ -10,7 +10,7 @@ namespace HydrographicOffice.Models
     public class NewSurveyVm
     {
 
-        public long ld { get; set; }
+        public long Id { get; set; }
 
         [Display(Name = "Survey Type")]
         public int Type { get; set; }
@@ -28,6 +28,8 @@ namespace HydrographicOffice.Models
 
         [Required]
         [Display(Name = "Description")]
+        [MaxLength(200, ErrorMessage = "maximum {1} characters allowed")]
+
         public string Description { get; set; }
 
         [Required]

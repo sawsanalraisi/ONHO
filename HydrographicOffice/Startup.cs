@@ -75,6 +75,8 @@ namespace HydrographicOffice
             services.AddScoped<ISupportRepository, SupportRepository>();
             services.AddScoped<IContactUsRepository, ContactUsRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<INotificationRepository, NotificationRepository>();
+
 
             services.AddAuthentication().AddCookie();
 

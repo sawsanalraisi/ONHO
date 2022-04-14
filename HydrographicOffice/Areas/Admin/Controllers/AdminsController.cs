@@ -37,7 +37,7 @@ namespace HydrographicOffice.Areas.Admin.Controllers
                 UserList.Add(new UserViewModel { Email = item.Email, IsActive = ((item.LockoutEnd != null && item.LockoutEnd > DateTime.Now) ? false : true), Name = item.FullName, Id = item.Id, Roles = _User.GetRolesAsync(item).Result.ToList() });
             }
 
-            return View(UserList.Except(UserList.Where(x => x.Roles.Contains("Admin")).ToList()));
+            return View(UserList.ToList());
         }
 
         public IActionResult New()
@@ -101,8 +101,8 @@ namespace HydrographicOffice.Areas.Admin.Controllers
                     return View(obj);
                 }
             }
-
-            return View(obj);
+            return RedirectToAction("Index", "Admins");
+//            return View(obj);
         }
 
 

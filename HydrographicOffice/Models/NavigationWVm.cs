@@ -13,6 +13,7 @@ namespace HydrographicOffice.Models
 
         [Required]
         [Display(Name = "Navigational Warning Description")]
+        [MaxLength(200, ErrorMessage = "maximum {1} characters allowed")]
         public string NavWarnDesc { set; get; }
 
         [Required]

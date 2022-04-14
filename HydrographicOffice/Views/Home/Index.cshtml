@@ -1,23 +1,246 @@
-﻿@inject  CultureLocalizer  _Localizer
-    @{
-        ViewData["Title"] = "Home Page";
+﻿@inject CultureLocalizer  _Localizer
+@{
+    ViewData["Title"] = "Home Page";
 
-        var X = _Localizer.Text("Home");
-    }
-  
+    var X = _Localizer.Text("Home");
+}
 
-    <div class="text-center">
+<link href="~/Admin/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+
+@*<div class="text-center">
         <h1 class="display-4">@_Localizer.Text("Home")</h1>
         <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>*@
+
+
+
+
+
+
+<video width="100%" playsinline autoplay muted loop class="mt-2" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) inset; mix-blend-mode: multiply; ">
+    <source src="Video/OHNO.mov" type="video/mp4">
+
+</video>
+
+
+
+
+
+<div class="container-fluid mt-5 text-center">
+
+    <h2 class=" mt-5 txtColorBlue">Our Services</h2>
+
+    <div class="row mt-5 txtColorBlue justify-content-center ">
+
+
+        <div class="col-lg-2 col-md-4">
+            <div class="">
+                <div class="centerimgCir">
+                    <img src="Images/not1.png" class="rounded-circle  imgstylecir " width="150" height="150" style="object-fit: scale-down; ">
+                    <div class="overlay2 rounded-circle"></div>
+                </div>
+                <br />
+                <h5><p class=""> Notice to Mariners </p></h5>
+            </div>
+        </div>
+
+
+
+        <div class="col-lg-2 col-md-4">
+            <div class="">
+                <div class="centerimgCir">
+                    <img src="Images/Nav.png" class="rounded-circle  imgstylecir " width="150" height="150" style="">
+                    <div class="overlay2 rounded-circle"></div>
+                </div>
+                <br />
+
+                <h5> <p>  Navigational Warnings </p></h5>
+            </div>
+        </div>
+
+
+
+
+        <div class="col-lg-2 col-md-4">
+            <div class="">
+                <div class="centerimgCir">
+                    <img src="Images/New.png" class="rounded-circle  imgstylecir " width="150" height="150">
+                    <div class="overlay2 rounded-circle"></div>
+                </div>
+                <br />
+
+                <h5><p>     Hydrographic Notes </p></h5>
+            </div>
+        </div>
+
+
+
+
+        <!--<div class="col-lg-2 col-md-4">
+            <div class="">
+                <div class="centerimgCir">
+                    <img src="Images/report.png" class="rounded-circle  imgstylecir " width="150" height="150">
+                    <div class="overlay2 rounded-circle"></div>
+                </div>
+                <br />
+
+                <h5><p>   Marine Landmark Reports </p></h5>
+            </div>
+        </div>-->
+
+
+
+        <div class="col-lg-2 col-md-4">
+            <div class="">
+                <div class="centerimgCir">
+                    <img src="Images/news.png" class="rounded-circle  imgstylecir " width="150" height="150">
+                    <div class="overlay2 rounded-circle"></div>
+                </div>
+                <br />
+
+                <h5><p>Hydrographic Survey </p></h5>
+            </div>
+        </div>
+
+
+
+        <div class="col-lg-2 col-md-4">
+            <div class="">
+                <div class="centerimgCir">
+                    <img src="Images/data.png" class="rounded-circle  imgstylecir " width="150" height="150">
+                    <div class="overlay2 rounded-circle"></div>
+                </div>
+                <br />
+
+                <h5><p> Products and Data  </p></h5>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container-fluid mt-3 p-5 txtColorBlue ">
+
+
+    <div class="container-fluid mt-5  text-center">
+        <div class="row no-gutters mt-5">
+            <div class="col-md-4 p-3 d-flex  BackHighColor ">
+                <div class="p-3">
+                    <img src="Images/portal.png" width="120" height="120">
+                    <p class="">
+                        <br />
+                        <a href=""> <b> Marine Data </b></a>
+                    <p class="">Provides access to marine data sets held by Oman National Hydrographic Office's Archive</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 p-3 d-flex   ">
+
+                <div class="p-3">
+                    <img src="Images/multi.png" width="120" height="120" />
+                    <p class="">
+                        <br />
+                        <a href="PhotoGallery.html"><b> Photo Gallery </b></a>
+
+                    <p class="">Highlight some of the works and events belong to Oman National Hydrographic Office</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 p-3 d-flex  BackHighColor ">
+                <div class="p-3">
+                    <img src="Images/pp3.png" width="120" height="120" ">
+                    <p class="">
+                        <br />
+                        <a href="IndexMap.html"><b>  Chart Index  </b> </a>
+                    <p class="">it includes the index of Oman paper and electronic charts approved by the Oman National Hydrographic Office</p>
+                </div>
+            </div>
+
+        </div>
     </div>
 
 
+
+    <div class="container-fluid text-center ">
+        <div class="row no-gutters">
+
+            <div class="col-md-4 p-4 d-flex justify-content-center">
+                <div class="p-4">
+                    <img src="Images/org.png" width="80" height="80" /><b class="p-3">Hydrographic Organizations  </b>
+                    <p class="mt-3 txtColorBlue text-start">
+                        <a href="https://iho.int/">  International Hydrographic Organization <i class="fa-solid fa-arrow-up-right-from-square"></i> </a><br />
+                        <a href="https://www.imo.org/">International Maritime Organization<i class="fa-solid fa-arrow-up-right-from-square"></i></a><br />
+                        <a href="https://www.gov.uk/government/organisations/uk-hydrographic-office">United Kingdom Hydrographic Office    <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br />
+
+
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4 p-4 d-flex BackHighColor  justify-content-center">
+                <div class="p-4">
+                    <img src="Images/links.png" width="80" height="80" /><b class="p-3">Quick links  </b>
+
+                    <p class="mt-3 text-start">
+                        <a href="https://www.ita.gov.om/itaportal/About/about.aspx">  Ministry of Transport, Communications and Information Technology <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br />
+                        <a href="https://fm.gov.om/">   Foreign Ministry of Oman <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br />
+                        <a href="https://www.squ.edu.om/squ-ar">   Sultan Qaboos University<i class="fa-solid fa-arrow-up-right-from-square"></i></a><br />
+
+                        <a href="https://www.maf.gov.om/">   Ministry of Agriculture, Fisheries and Water Recourses<i class="fa-solid fa-arrow-up-right-from-square"></i></a><br />
+
+
+                    </p>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-4 p-4 d-flex justify-content-center">
+                <div class="p-4">
+                    <img src="Images/ads.png" width="80" height="80" /><b class="p-3">Announcement </b>
+                    <p class="mt-3 txtColorBlue text-start">
+                        <a href=""> ######################## </a><br />
+                        <a href=""> ######################## </a><br />
+                        <a href=""> ######################## </a><br />
+
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
 @section Scripts{
+    <script src="~/sweetAlert/sweetalert.min.js"></script>
 
     <script>
-        $(document).ready(function () {
-            $('#myTable').DataTable();
-        });
-    </script>
 
- }
+    $(document).ready(function () {
+    debugger;
+    if ('@ViewBag.Done' != '' && '@ViewBag.Done' != null) {
+
+    swal('@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Done.. Your Request Success" : "تم ارسال طلبك")', "", "success");
+    }
+    });
+    </script>
+}

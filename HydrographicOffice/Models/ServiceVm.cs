@@ -27,6 +27,7 @@ namespace HydrographicOffice.Models
 
         [Required]
         [Display(Name = "Description")]
+        [MaxLength(200, ErrorMessage = "maximum {1} characters allowed")]
         public string Description { get; set; }
         public string Region { get; set; }
 

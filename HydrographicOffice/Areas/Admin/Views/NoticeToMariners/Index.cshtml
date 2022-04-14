@@ -1,0 +1,144 @@
+﻿@model IEnumerable<Hydro.BAL.DTO.NoticeToMarinerDto>
+@inject CultureLocalizer  _Localizer
+@{
+    ViewData["Title"] = "Index";
+    //Layout = "_AdminLayout2";
+    //Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    Layout = "_AdminLayout";
+
+}
+
+<link href="~/Admin/sty/Style-Page.css" rel="stylesheet" />
+
+<h1 class="txtColorBlue text-center"><mark class="highlight">@_Localizer.Text("Notice To Mariner")</mark></h1>
+
+<hr />
+<div class="container">
+
+    <div class="position-relative">
+        <p class="btn bg-success mt-1 ms-3  ps-5 pe-5 pt-2 pb-2 position-absolute "><a asp-action="Create" class="text-white text-decoration-none" style="font-size:18px;"> Create New</a></p>
+    </div>
+
+
+            <div class="p-1 scrollmenu " style="overflow-x:auto;">
+
+                <table class="table tbl shadow-lg p-3 mb-5 bg-body rounded" id="tbl">
+
+                    <thead>
+                        <tr>
+                            <th style=" width: 140px;">
+                                @_Localizer.Text("NoticeType")
+                            </th>
+                            <th style="width: 200px; ">
+                                @_Localizer.Text("NotiecDesc")
+                            </th>
+                            <th style="width: 150px; ">
+                                @_Localizer.Text("NoticeFileName")
+                            </th>
+                            <th style="width: 100px; ">
+                                @_Localizer.Text("NoticeDate")
+                            </th>
+                            <th style="width: 100px; ">
+                                @_Localizer.Text("NoticeEdition")
+                            </th>
+                            <th style=" width: 50px;" data-orderable="false">
+                                @*@_Localizer.Text("View")*@
+
+
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @_Localizer.Text(((EnumCommon.NoticeToMariner)item.NoticeType).ToString())
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.NotiecDesc)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.NoticeFileName)
+                                </td>
+                                <td>
+                                    @(Convert.ToString(item.NoticeDate.ToString("dd-MM-yyyy")))
+                                    @*@Html.DisplayFor(modelItem => item.NoticeDate)*@
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.NoticeEdition)
+                                </td>
+
+                                <td>
+                                    <div class="d-flex" style="margin-right:10px;">
+                                        <div class="ps-2 iconDown"> <a href="~/UploadedFiles/@item.UploadeFile" download="file" target="_blank"> @*@_Localizer.Text("View")*@<i class="fa-solid fa-download" style="font-size:25px;"></i> </a>   </div>
+
+                                        <div class="ps-2 iconEdit"> <a asp-action="Edit" asp-route-id="@item.Id"><i class="fas fa-edit" style="font-size:25px;"></i>@*Edit*@</a></div>
+
+                                        <div class="ps-2 iconDetail"><a asp-action="Details" asp-route-id="@item.Id"><i class="fa-solid fa-file-lines" style="font-size:25px;"></i>@*Details*@</a></div>
+                                        <div class="ps-2 iconDel"><a asp-action="Delete" asp-route-id="@item.Id"><i class="fa fa-trash" style="font-size:25px;"></i></a></div>
+
+
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+    </div>
+    @section Scripts{
+
+        <script>
+       $(document).ready(function () {
+            DrawTable();
+
+        });
+        function DrawTable() {
+            $("#tbl").dataTable({
+                "dom": '<"pull-left"B><"pull-right"f>rt<"row"<"col-sm-4"l><"col-sm-4"i><"col-sm-4"p>>',
+                "autoWidth": true,
+                "bFilter": true,
+                "aaSorting": [],
+                //"bSortable": true,
+                //ordering: true,
+                language: {
+                    loadingRecords: '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Loading..." : "تحميل البيانات ...")',
+                    processing: '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Processing..." : "جاري تحميل البيانات ...")',
+                    emptyTable:'@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")?"No data available in table":"لا توجد بيانات")',
+                    info:     '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Showing _START_ to _END_ of _TOTAL_ records" : "اظهار _START_ الى _END_ من _TOTAL_ سجلات")' ,
+                    infoEmpty: '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")?"No records found":"لا توجد سجلات")',
+                    infoFiltered:'@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "(filtered1 from _MAX_ total records)" : "(تمت تصفيته من _MAX_ سجلات)")' ,
+                    lengthMenu: '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Show _MENU_" : "اظهار _MENU_")',
+                    search: '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")?"Search:":"بحث:")',
+                    zeroRecords: '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")?"No matching records found":"لا توجد سجلات متطابقة")',
+                    paginate: {
+                        previous:'@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")?"Prev":"السابق")',
+                        next:'@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")?"Next":"التالي")' ,
+                        last:'@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")?"Last":"الأخير")' ,
+                        first:'@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")?"First":"الأول")'
+                    }
+                },
+                responsive: {
+                    details: {
+                    }
+                },
+                buttons: [
+                    //'excelHtml5',
+                    //'csvHtml5',
+                    //'print'
+                ],
+               lengthMenu: [
+                    [10, 25, 50, 100],
+                    [10, 25, 50, 100]
+                ],
+                pageLength: 10,
+                pagingType: "full_numbers"
+
+            });
+        }
+        </script>
+
+
+    }
+
