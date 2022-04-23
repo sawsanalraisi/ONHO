@@ -27,6 +27,7 @@ namespace HydrographicOffice.Models
         public string Organization { set; get; }
 
         [Required]
+        [Range(1, int.MaxValue, ErrorMessage = "Please select Special Task Type")]
         [Display(Name = "Types")]
         public int SpecialTaskType { set; get; }
 

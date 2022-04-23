@@ -52,7 +52,7 @@ namespace HydrographicOffice
                 options.Password.RequireLowercase = false;
                 options.Password.RequireNonAlphanumeric = false;
                 options.Password.RequireUppercase = false;
-
+                options.Password.RequiredLength = 6;
 
 
             })
@@ -76,6 +76,7 @@ namespace HydrographicOffice
             services.AddScoped<IContactUsRepository, ContactUsRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<INotificationRepository, NotificationRepository>();
+            services.AddScoped<IOmanbookRepository, OmanbookRepository>();
 
 
             services.AddAuthentication().AddCookie();

@@ -38,7 +38,11 @@ namespace HydrographicOffice.Models
         public DateTime CreateAt { get; set; }
         [Display(Name = "Create By")]
         public string CreateBy { get; set; }
+
+        [Range(1, int.MaxValue, ErrorMessage = "Please select Category ")]
         public long CategoryId { get; set; }
+
+        [Range(1, int.MaxValue, ErrorMessage = "Please select File Format ")]
         public long FileFormatId { get; set; }
         public int Status { get; set; }
 

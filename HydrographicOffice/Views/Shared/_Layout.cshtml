@@ -14,34 +14,14 @@
     }
 }
 
-@inject CultureLocalizer Localizer
+@inject CultureLocalizer _Localizer
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-
-    @*<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="~/sty/Style.css" rel="stylesheet" />
-        <link href="~/sty/all.min.css" rel="stylesheet" />
-
-        <link href="~/sty/Style-Reg.css" rel="stylesheet" />
-
-        <script src="~/lib/jquery/dist/jquery.min.js"></script>
-        <script src="js/all.min.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
-
-
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet">
-        <link href="http://fonts.googleapis.com/css?family=Roboto:400,700,300" rel="stylesheet" type="text/css">*@
-
-
-    @*/...............................................*@
 
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -52,20 +32,55 @@
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.8.1/jquery.timepicker.min.css"
           type="text/css" />
-    @*<link href="~/css/jquery.dataTables.min.css" rel="stylesheet" />*@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="~/Admin/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
 
-    <link href="~/sty/Style.css" rel="stylesheet" />
-    <link href="~/sty/Style-Reg.css" rel="stylesheet" />
     <link href="~/sty/all.min.css" rel="stylesheet" />
 
 
+    @if (culture.Name.Contains("en-US"))
+    {
+        <link href="~/sty/Style_en.css" rel="stylesheet" />
+        <style>
+            .textRight {text-align-last: left; }
+            .pull-right {float: right; }
+            .form-select { background-position: right 0.75rem center;}
+            .calsty { position: absolute; padding: 15px;right: 0; }
 
+        </style>
+
+    }
+    else
+    {
+        <link href="~/sty/Style_ar.css" rel="stylesheet" />
+        <style>
+            .textRight { text-align-last: right; }
+            .pull-right {float: left; }
+            .form-select { background-position: left 0.75rem center;  }
+            .calsty {position: absolute; padding: 15px;left: 0; }
+        </style>
+    }
+
+    <link href="~/sty/archivestyle.css" rel="stylesheet" />
+    <link href="~/sty/liberary.css" rel="stylesheet" />
+    <link href="~/sty/Style-Page.css" rel="stylesheet" />
+    <link href="~/sty/Style-Reg.css" rel="stylesheet" />
+
+
+
+    <link href="~/Admin/FileUploader/css/fileinput.css" rel="stylesheet" />
+    <link href="~/Admin/FileUploader/themes/explorer-fa/theme.css" rel="stylesheet">
+    <link href="~/Admin/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/6.4.1/css/intlTelInput.css">
+
+
+    <link href="~/sty/Style_file.css" rel="stylesheet">
 
 
 </head>
-<body>
+
+<body dir="@(culture.Name.Contains("en-US")? "ltr" : "rtl")">
 
 
 
@@ -75,14 +90,23 @@
     <div class="container-fluid ">
         <div class="d-flex justify-content-between ">
             <div class=" d-flex">
-                <a class="navbar-brand " href="index.html"><img src="~/Images/logo.png" width="130" height="160" /> </a>
-                <div class="align-self-center"> &nbsp &nbsp <span class="txtColorGold h3 "> <b> Oman National</b></span> <br /> &nbsp &nbsp <span class="txtColorBlue h3"><b>  Hydrographic Office</b></span></div>
+                <a class="navbar-brand " href="@Url.Action("Home", "Pages")"><img src="~/Images/logo.png" width="150" height="190" /> </a>
 
+                @if (culture.Name.Contains("en-US"))
+                {
+                    <div class="align-self-center"> &nbsp &nbsp <span class="txtColorGold h3 "> <b>   @_Localizer.Text("omannational")</b></span> <br /> &nbsp &nbsp <span class="txtColorBlue h3"><b> @_Localizer.Text("HydroOffice")</b></span></div>
+                }
+                else
+                {
+                    <div class="align-self-center"> &nbsp &nbsp <span class="txtColorGold h3 "> <b>   @_Localizer.Text("HydroOffice")</b></span> <br /> &nbsp &nbsp <span class="txtColorBlue h3"><b> @_Localizer.Text("omannational")</b></span></div>
+
+                }
             </div>
             <div class=" align-self-center">
 
-                <div class="dropdown drop-down-style float-right  ">
-                    <a class="nav-link dropdown-toggle align-self-center txtColorBlue" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="dropdown drop-down-style" style="float:right;">
+                    <a class="nav-link dropdown-toggle txtColorBlue" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+
                         @if (!culture.Name.Contains("en-US"))
                         {
                             @:English
@@ -94,32 +118,26 @@
 
 
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-light " aria-labelledby="navbarDarkDropdownMenuLink">
+
+                    <ul class="dropdown-menu dropdown-menu-light " style=" min-width: 6rem" aria-labelledby="navbarDarkDropdownMenuLink">
                         <li><a class="dropdown-item" asp-controller="Home" asp-action="ChangeLanguage">English</a></li>
                         <li><a class="dropdown-item" asp-controller="Home" asp-action="ChangeLanguage">Arabic</a></li>
                     </ul>
                 </div>
 
-
-
-
                 <div>
-
-
-                    <div class="navSearch1">
-                        <a class="nav-link " href="javascript:void(0)">
-                            <input type="text" id="search-bar" placeholder="Search">
-                            <i class="fa fa-search search-icon"></i>
-                        </a>
-                    </div>
-
-
+                    <a class="nav-link " href="javascript:void(0)">
+                        <input type="text" id="search-bar" placeholder="Search">
+                        <i class="fa fa-search search-icon"></i>
+                    </a>
                 </div>
+
+
+
             </div>
         </div>
 
     </div>
-
 
 
     <!--  nav -->
@@ -128,61 +146,75 @@
     <nav class="navbar navbar-expand-sm navbar-dark backBlue sticky-top navStyle mt-2 ">
         <div class="container-fluid">
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <button class="navbar-toggler float-end" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse navSearch3 " id="mynavbar">
+            <div class="collapse navbar-collapse " id="mynavbar">
                 <!--// me-auto-->
-                <ul class="navbar-nav navSpace">
 
-                    <li class="nav-item "> <a class="nav-link" href="index.html">Home</a></li>
+                <ul class="@(culture.Name.Contains("en-US")? "navbar-nav navSpace me-auto " : "navbar-nav navSpace ms-auto")">
+
+                    @*<ul class="navbar-nav navSpace me-auto">*@
+
+                    <li class="nav-item "> <a class="nav-link" href="@Url.Action("Home", "Pages")">@_Localizer.Text("Home")</a></li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> Who We Are</a>
-                        <ul class=" dropdown-menu ">
+
+                        <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown"> @_Localizer.Text("whoweAre")</a>
+
+                        <ul class=" dropdown-menu textRight">
+
+                            <li><a class="dropdown-item" href="@Url.Action("WhoWeAre", "Pages")"> @_Localizer.Text("HydroHistory")</a></li>
+                            <li><a class="dropdown-item " href="@Url.Action("Aims", "Pages")">    @_Localizer.Text("Aims")</a></li>
+                            <li><a class="dropdown-item" href="@Url.Action("NationalRole", "Pages")">@_Localizer.Text("RolesandResp") </a></li>
+                        </ul>
+                    </li>
 
 
-                            <li><a class="dropdown-item" href="WhoWeAre.html"> Hydrography History</a></li>
-                            <li><a class="dropdown-item " href="Aims.html">    Vision, Mission and Objective</a></li>
-                            <li><a class="dropdown-item" href="NationalRole.html"> Roles and Responsibilities</a></li>
+
+
+
+
+
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> @_Localizer.Text("Services")</a>
+
+                        <ul class="dropdown-menu textRight ">
+                            <li><a class="dropdown-item" href="@Url.Action("Index", "NoticeToMariner")">@_Localizer.Text("NoticetoMariners") </a></li>
+                            <li><a class="dropdown-item" href="@Url.Action("Index", "NavigationWarning")"> @_Localizer.Text("NavigationalWarnings") </a></li>
+                            <li><a class="dropdown-item" href="@Url.Action("Create", "NewFeature")"> @_Localizer.Text("HydrographicNotes")</a></li>
+                            <li><a class="dropdown-item" href="@Url.Action("Create", "NewSurvey")">  @_Localizer.Text("HydrographicSurvey")</a></li>
+                            <li><a class="dropdown-item" href="@Url.Action("Create", "SpecialTask")"> @_Localizer.Text("SpecialTask")</a></li>
+                            <li><a class="dropdown-item" href="@Url.Action("Create", "ServiceRequestType")">@_Localizer.Text("ProductsandData")</a></li>
 
                         </ul>
                     </li>
 
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> Services</a>
-                        <ul class="dropdown-menu ">
-                            <li><a class="dropdown-item" href="@Url.Action("Index","NoticeToMariner")"> Notice to Mariners</a></li>
-                            <li><a class="dropdown-item" href="@Url.Action("Index","NavigationWarning")">  Navigational Warnings</a></li>
-                            <li><a class="dropdown-item" href="@Url.Action("Create","NewFeature")"> Add a new Feature   </a></li>
-                            @*<li><a class="dropdown-item" href="@Url.Action("Create","DifferentReport")"> Marine Landmark Reports</a></li>*@
-                            <li><a class="dropdown-item" href="@Url.Action("Create","NewSurvey")">  New Survey</a></li>
-                            <li><a class="dropdown-item" href="@Url.Action("Create","SpecialTask")">  Special Task </a></li>
-                            <li><a class="dropdown-item" href="@Url.Action("Create","ServiceRequestType")"> Products and Data </a></li>
-                        </ul>
-                    </li>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> @_Localizer.Text("Activities")</a>
 
+                        <ul class="dropdown-menu textRight ">
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> Activities</a>
-
-                        <ul class="dropdown-menu ">
-
-                            <li><a class="dropdown-item" href="HydrographyUnit.html">  Hydrography Unit </a></li>
-
+                            <li><a class="dropdown-item" href="@Url.Action("HydrographyUnit", "Pages") "> @_Localizer.Text("HydroUnit") </a></li>
 
 
 
                             <li class="d-flex dropdown-hover-all">
                                 <div class="dropdown ">
-                                    <div class="dropdown-toggle txtColorBlue submenu" id="dropdownMenuButton222" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><b>   National Hydrographic Archive</b> </div>
+                                    <div class="dropdown-toggle txtColorBlue submenu" id="dropdownMenuButton222" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><b>  @_Localizer.Text("NationalHydrogArchive")</b> </div>
 
                                     <div class="dropdown-menu submenu2 " aria-labelledby="dropdownMenuButton222" style=" margin-top:-30px; ">
-                                        <a class="dropdown-item" href="archive.html"> Hydrographic Archive Section  </a>
-                                        <a class="dropdown-item" href="archdata.html">  Marine data  </a>
-                                        <a class="dropdown-item" href="Omanbook.html">  Oman Maritime Book</a>
+                                        <hr id="lineDropdown" />
+
+
+                                        <a class="dropdown-item" href=" @Url.Action("archive", "Pages") "> @_Localizer.Text("HydroArchiveSection")  </a>
+                                        <a class="dropdown-item" href=" @Url.Action("archdata", "Pages") "> @_Localizer.Text("Marinedata") </a>
+                                        <a class="dropdown-item" href=" @Url.Action("Index", "Omanbook") "> @_Localizer.Text("OmanMaritimeBook")  </a>
+
                                     </div>
 
                                 </div>
@@ -191,11 +223,14 @@
 
 
 
+                            <li><a class="dropdown-item" href="@Url.Action("MarineSafetyInformation", "Pages")"> @_Localizer.Text("MaritimeSafetyInfo")  </a></li>
+                            <li><a class="dropdown-item" href="@Url.Action("MaritimeBorders", "Pages")"> @_Localizer.Text("MaritimeBoundaries") </a></li>
+                            <li><a class="dropdown-item" href="@Url.Action("Production", "Pages")">@_Localizer.Text("Production") </a></li>
 
 
-                            <li><a class="dropdown-item" href="MarineSafetyInformation.html">  Maritime Safety Information</a></li>
-                            <li><a class="dropdown-item" href="MaritimeBorder.html">  Maritime Boundaries</a></li>
-                            <li><a class="dropdown-item" href="Production.html">Production</a></li>
+
+
+
 
 
                         </ul>
@@ -206,54 +241,57 @@
 
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Training</a>
-                        <ul class="dropdown-menu">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">@_Localizer.Text("Training")</a>
 
-                            <li><a class="dropdown-item" href="HydrographySchool.html"> Hydrographic Training School</a></li>
-                            <li><a class="dropdown-item" href="training.html">  General Training Courses</a></li>
+
+
+
+
+
+                        <ul class="dropdown-menu textRight ">
+
+                            <li><a class="dropdown-item" href="@Url.Action("HydrographySchool", "Pages")"> @_Localizer.Text("HydroTrainSchool") </a></li>
+
 
                         </ul>
                     </li>
 
 
-                    <li class="nav-item"> <a class="nav-link" href="ContactUs.html">Connect us </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="@Url.Action("ContactUs", "Pages")">@_Localizer.Text("contactus")  </a></li>
+
 
                 </ul>
 
 
 
-                <form class="d-flex navSearch">
-                    <ul class="navbar-nav me-auto navSearch3 ">
+
+                <form class="d-flex">
+                    <div class="navSearch2">
+                        <ul class="navbar-nav mr-auto d-flex justify-content-between listNavStyle navStyle d-grid gap-1" style="margin-right: 26px;">
+
+                            @if (User != null && User.Identity.IsAuthenticated && User.Identity.Name != null)
+                            {
+
+                                <li class="nav-item text-white"> @User.Identity.Name</li>
+                                <li class="nav-item text-white"><a asp-area="" asp-action="Logout" asp-controller="User"> <i class="fa fa-sign-out ps-3"></i> </a></li>
+                            }
+                            else
+                            {
+
+                                <li class="nav-item"> <a class="nav-link" data-bs-toggle="modal" data-bs-target="#myModalLogin"> @_Localizer.Text("SignUp")</a></li>
+                                <li class="nav-item" id="slach"> <a class="nav-link"> /</a></li>
+                                <li class="nav-item"> <a class="nav-link" data-bs-toggle="modal" data-bs-target="#myModalRegister">@_Localizer.Text("SignIn")</a></li>
 
 
-                        @if (User != null && User.Identity.IsAuthenticated && User.Identity.Name != null)
-                        {
-
-                            <li class="nav-item d-flex text-white ps-3">
-                                @User.Identity.Name
-                            </li>
-
-                            <li class="nav-item d-flex">
-                                <a asp-area="" asp-action="Logout" asp-controller="User">
-
-                                    <i class="fa fa-sign-out text-white ps-3"></i>
-                                </a>
-                            </li>
-                        }
-                        else
-                        {
-                        
-                            <li class="nav-item d-flex text-white">
-                                <a class="nav-link" data-bs-toggle="modal" data-bs-target="#myModalLogin"> sign in</a>
-                                <a class="nav-link" href="javascript:void(0)">/</a>
-                                <a class="nav-link" data-bs-toggle="modal" data-bs-target="#myModalRegister">sign up</a>
-                            </li>
-                        }
+                            }
 
 
-                    </ul>
+
+
+
+                        </ul>
+                    </div>
                 </form>
-
 
             </div>
 
@@ -263,185 +301,6 @@
 
 
 
-
-
-    <!-- header-->
-    <!--<div class="container-fluid ">
-        <div class="d-flex justify-content-between ">
-            <div class=" d-flex">
-                <a class="navbar-brand " href="index.html"><img src="~/Images/logo.png" width="130" height="160" /> </a>
-                <div class="align-self-center"> &nbsp &nbsp <span class="txtColorGold h3 "> <b> Oman National</b></span> <br /> &nbsp &nbsp <span class="txtColorBlue h3"><b>  Hydrographic Office</b></span></div>
-
-            </div>
-            <div class=" align-self-center">
-
-                <div class="dropdown drop-down-style float-right  ">
-                    <a class="nav-link dropdown-toggle align-self-center txtColorBlue" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        @if (!culture.Name.Contains("en-US"))
-                        {
-                            @:English
-                        }
-                        else
-                        {
-                            @:العربية
-                        }
-
-
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-light " aria-labelledby="navbarDarkDropdownMenuLink">
-                        <li><a class="dropdown-item" asp-controller="Home" asp-action="ChangeLanguage">English</a></li>
-                        <li><a class="dropdown-item" asp-controller="Home" asp-action="ChangeLanguage">Arabic</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <div class="navSearch">
-                        <a class="nav-link " href="javascript:void(0)">
-                            <input type="text" id="search-bar" placeholder="Search">
-                            <i class="fa fa-search search-icon"></i>
-                        </a>
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
-
-    </div>-->
-    <!-- ...............................................................................................................-->
-    <!--  nav -->
-    <!--<nav class="navbar navbar-expand-sm navbar-dark backBlue stick-ey-top navStyle mt-2 ">
-        <div class="container-fluid">
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse " id="mynavbar">-->
-    <!--// me-auto-->
-    <!--<ul class="navbar-nav navSpace">
-
-                    <li class="nav-item "> <a class="nav-link" href="index.html">Home</a></li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> Who We Are</a>
-                        <ul class=" dropdown-menu ">
-
-
-                            <li><a class="dropdown-item" href="WhoWeAre.html"> Hydrography History</a></li>
-                            <li><a class="dropdown-item " href="Aim.html">    Vision, Mission and Objective</a></li>
-                            <li><a class="dropdown-item" href="NationalRole.html"> Roles and Responsibilities</a></li>
-                            <li><a class="dropdown-item" href="OrganizationalStructure.html">  General Sections</a></li>
-
-                        </ul>
-                    </li>
-
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> Services</a>
-                        <ul class="dropdown-menu ">
-                            <li><a class="dropdown-item" href="@Url.Action("Index","NoticeToMariner")"> Notice to Mariners</a></li>
-                            <li><a class="dropdown-item" href="@Url.Action("Index","NavigationWarning")">  Navigational Warnings</a></li>
-                            <li><a class="dropdown-item" href="@Url.Action("Create","NewFeature")"> Add a new Feature   </a></li>
-                            <li><a class="dropdown-item" href="@Url.Action("Create","DifferentReport")"> Marine Landmark Reports</a></li>
-                            <li><a class="dropdown-item" href="@Url.Action("Create","NewSurvey")">  New Survey</a></li>
-                            <li><a class="dropdown-item" href="@Url.Action("Create","SpecialTask")">  Special Task </a></li>
-                            <li><a class="dropdown-item" href="@Url.Action("Create","ServiceRequestType")"> Products and Data </a></li>
-                        </ul>
-                    </li>
-
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> Activities</a>
-
-                        <ul class="dropdown-menu ">
-
-                            <li><a class="dropdown-item" href="HydrographyUnit.html">  Hydrography Unit </a></li>
-
-
-
-
-                            <li class="d-flex dropdown-hover-all">
-                                <div class="dropdown ">
-                                    <div class="dropdown-toggle txtColorBlue submenu" id="dropdownMenuButton222" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><b>   National Hydrographic Archive</b> </div>
-
-                                    <div class="dropdown-menu submenu2 " aria-labelledby="dropdownMenuButton222" style=" margin-top:-30px; ">
-                                        <a class="dropdown-item" href="archive.html"> Hydrographic Archive Section  </a>
-                                        <a class="dropdown-item" href="archdata.html">  Marine data  </a>
-                                        <a class="dropdown-item" href="Omanbook.html">  Oman Maritime Book</a>
-                                    </div>
-
-                                </div>
-
-                            </li>
-
-
-                            <li><a class="dropdown-item" href="MarineSafetyInformation.html">  Maritime Safety Information</a></li>
-                            <li><a class="dropdown-item" href="MaritimeBorder.html">  Maritime Boundaries</a></li>
-                            <li><a class="dropdown-item" href="Production.html">Production</a></li>
-
-
-                        </ul>
-                    </li>
-
-
-
-
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Training</a>
-                        <ul class="dropdown-menu">
-
-                            <li><a class="dropdown-item" href="HydrographySchool.html"> Hydrographic Training School</a></li>
-                            <li><a class="dropdown-item" href="training.html">  General Training Courses</a></li>
-
-                        </ul>
-                    </li>
-
-
-                    <li class="nav-item"> <a class="nav-link" href="ContactUs.html">Connect us </a></li>
-
-                </ul>
-
-
-
-                <form class="d-flex navSearch">
-                    <ul class="navbar-nav me-auto">
-
-                        @if (User != null && User.Identity.IsAuthenticated && User.Identity.Name != null)
-                        {
-
-
-                            <li class="nav-item d-flex text-white ps-3">
-                                @User.Identity.Name
-                            </li>
-
-                            <li class="nav-item d-flex">
-                                <a asp-area="" asp-action="Logout" asp-controller="User">
-
-                                    <i class="fa fa-sign-out text-white ps-3"></i>
-                                </a>
-                            </li>
-                        }
-                        else
-                        {
-                            <li class="nav-item d-flex text-white">
-                                <a class="nav-link" data-bs-toggle="modal" data-bs-target="#myModalLogin"> sign in</a>
-                                <a class="nav-link" href="javascript:void(0)">/</a>
-                                <a class="nav-link" data-bs-toggle="modal" data-bs-target="#myModalRegister">sign up</a>
-                            </li>
-                        }
-
-
-
-                    </ul>
-                </form>
-
-
-            </div>
-
-        </div>
-    </nav>-->
     <!-- login _  Registeration -->
 
 
@@ -502,81 +361,48 @@
 
 
 
-
-    <div class="container-fulid list-style myfooter">
-
-        @*<div class="text-white text-center">
-            <img src="Images/Plink3.png" style="width:100%;" class="linefooter" />
-        </div>*@
-
+    <div class="container-fulid list-style text-white">
         <header>
-
-            <div class="overlay">
-            </div>
-
-
+            <div class="overlay"> </div>
 
             <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-                <source src="Video/Footer.mp4" type="video/mp4">
+                <source src="~/Video/Footer.mp4" type="video/mp4">
             </video>
-            <div class="container ">
-                <div class="d-flex align-items-center">
-                    <div class="w-100 text-white">
-
-                        <div class="container-fulid">
-                            <div class=" row d-flex  p-5 ">
 
 
-                                <div class="container-fluid p-1 bg- text-white text-center ">
-                                    <h5 class="mb-3"><b> Oman National Hydrographic Office </b></h5>
-                                    &nbsp &nbsp <a href="index.html">Home</a>
-                                    &nbsp &nbsp  <a href="#">Service</a>
-                                    &nbsp &nbsp  <a href="WhoWeAre.html"> Who We Are</a>
-                                </div>
+            <div class="container p-5 text-white text-center">
+                <h5 class="mb-3"><b> @_Localizer.Text("OfficeName")</b></h5>
 
+                <a href="@Url.Action("Home", "Pages")" class="me-3 text-white">@_Localizer.Text("Home")</a>
+                <a href="@Url.Action("Service", "Pages")" class="me-3 text-white">@_Localizer.Text("Services")</a>
+                <a href="@Url.Action("WhoWeAre", "Pages")" class="me-3 text-white"> @_Localizer.Text("whoweAre")</a>
 
-                                <div class="container-fluid p-2 bg- text-white text-center mt-3">
-                                    <p>
-
-                                        &nbsp      Ministry of Defence - Muaskar Al Murtafa'a    <br />
-
-                                        &nbsp   Telephone: 21512432  968 +<br />
-                                        Email : onho@mod.gov.om
-
-                                    </p>
-
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
+                <div class="mt-4">
+                    @_Localizer.Text("LocationHydroOffice")   <br />
+                    @_Localizer.Text("telepHydroOffice")<br />
+                    @_Localizer.Text("EmailHydroOffice")
                 </div>
             </div>
 
         </header>
     </div>
 
+
     <div class="text-center copyRightStyle  p-1">
-        &copy; All rights reserved to the Oman National Hydrographic Office 2022
+        &copy;  @_Localizer.Text("CopyRight")
     </div>
 
 
 
 
-
-
-    @*<script src="~/lib/jquery/dist/jquery.js"></script>*@
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
     <script src="https://cdn.datatables.net/scroller/2.0.5/js/dataTables.scroller.min.js"></script>
-    @*<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>*@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="~/Admin/js/sweetalert2.all.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.8.1/jquery.timepicker.min.js"></script>
-    @*<script src="~/lib/jquery/dist/jquery.min.js"></script>*@
     <script src="~/js/all.min.js"></script>
     <script src="~/sweetAlert/sweetalert.min.js"></script>
 

@@ -75,7 +75,10 @@ namespace HydrographicOffice.Controllers
                 _ContactUsRepository.Save();
                 return RedirectToAction("Index", "Home");
                 }
+            _ContactUsRepository.AddContactUs(new ContactUs()
+            {
 
+            });
             return View(obj);
         }
 

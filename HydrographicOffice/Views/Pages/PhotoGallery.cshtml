@@ -1,0 +1,219 @@
+﻿@inject CultureLocalizer  _Localizer
+@{
+    ViewData["Title"] = "PhotoGallery";
+     Layout = "_Layout";
+    var X = _Localizer.Text("Home");
+}
+ <link href="~/sty/liberary.css" rel="stylesheet" />
+
+<link href="~/Admin/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+
+            <div class="col-12 mt-5">
+
+
+                <h2 class="txtColorBlue text-center mt-3"><mark class="markSty-who highlight ">@_Localizer.Text("PhotoesExhibition")</mark></h2>
+
+
+
+                <div class="row text-center mt-5 ">
+
+                    <div class="col-md-4 a box2 mb-5">
+                        <div class=" card h-100 shadow-lg p-3 mb-3 bg-body rounded " data-bs-toggle="modal" data-bs-target="#myModal1">
+                            <img src="~/Images/opening_day/5.jpg" width="100%">
+                            <br />
+                            <h5 class="txtColorBlue">@_Localizer.Text("openOffice") </h5>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-4 a box2 mb-5">
+                        <div class=" card h-100 shadow-lg p-3 mb-3 bg-body rounded" data-bs-toggle="modal" data-bs-target="#myModal2">
+                            <img src="~/Images/admiral/6.jpg" width="100%">
+                            <br />
+                            <h5 class="txtColorBlue">@_Localizer.Text("VisitofBiritishadmiral")</h5>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-md-4 a box2 mb-5 ">
+                        <div class=" card h-100 shadow-lg p-3 mb-3 bg-body rounded" data-bs-toggle="modal" data-bs-target="#myModal3">
+                            <img src="~/Images/officers/6.jpg" width="100%">
+                            <br />
+                            <h5 class="txtColorBlue">@_Localizer.Text("VisitofNewOfficers")</h5>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+
+
+
+
+            <div class="modal" id="myModal1">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+
+                            <div class="btn-close" data-bs-dismiss="modal"></div>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+
+                            <h2 class="txtTopStyle-Hyd text-center "><mark class="markSty-who highlight "> @_Localizer.Text("openOffice") </mark></h2>
+                            <div class="containerf">
+                                <div class="card">
+                                    <img src="~/Images/opening_day/1.jpg">
+                                    <div class="card__head">Generate Lorem</div>
+                                </div>
+                                <div class="card">
+                                    <img src="~/Images/opening_day/2.jpg">
+                                    <div class="card__head">Generate Lorem</div>
+                                </div>
+                                <div class="card">
+                                    <img src="~/Images/opening_day/3.jpg">
+                                    <div class="card__head">Generate Lorem</div>
+                                </div>
+                                <div class="card">
+                                    <img src="~/Images/opening_day/4.jpg">
+                                    <div class="card__head">Generate Lorem</div>
+                                </div>
+                                <div class="card">
+                                    <img src="~/Images/opening_day/5.jpg">
+                                    <div class="card__head">Generate Lorem</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="modal" id="myModal2">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+
+                            <div class="btn-close" data-bs-dismiss="modal"></div>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+
+                            <h2 class="txtTopStyle-Hyd text-center "><mark class="markSty-who highlight ">@_Localizer.Text("VisitofBiritishadmiral") </mark></h2>
+                            <div class="containerf">
+                                <div class="card">
+                                    <img src="~/Images/admiral/1.jpg">
+                                    <div class="card__head">Generate Lorem</div>
+                                </div>
+                                <div class="card">
+                                    <img src="~/Images/admiral/2.jpg">
+                                    <div class="card__head">Generate Lorem</div>
+                                </div>
+                                <div class="card">
+                                    <img src="~/Images/admiral/4.jpg">
+                                    <div class="card__head">Generate Lorem</div>
+                                </div>
+                                <div class="card">
+                                    <img src="~/Images/admiral/5.jpg">
+                                    <div class="card__head">Generate Lorem</div>
+                                </div>
+                                <div class="card">
+                                    <img src="~/Images/admiral/6.jpg">
+                                    <div class="card__head">Generate Lorem</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="modal" id="myModal3">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+
+                            <div class="btn-close" data-bs-dismiss="modal"></div>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+
+                            <h2 class="txtTopStyle-Hyd text-center "><mark class="markSty-who highlight ">@_Localizer.Text("VisitofNewOfficers")</mark></h2>
+                            <div class="containerf">
+                                <div class="card">
+                                    <img src="~/Images/officers/1.jpg">
+                                    <div class="card__head">Generate Lorem</div>
+                                </div>
+                                <div class="card">
+                                    <img src="~/Images/officers/2.jpg">
+                                    <div class="card__head">Generate Lorem</div>
+                                </div>
+                                <div class="card">
+                                    <img src="~/Images/officers/3.jpg">
+                                    <div class="card__head">Generate Lorem</div>
+                                </div>
+                                <div class="card">
+                                    <img src="~/Images/officers/4.jpg">
+                                    <div class="card__head">Generate Lorem</div>
+                                </div>
+                                <div class="card">
+                                    <img src="~/Images/officers/5.jpg">
+                                    <div class="card__head">Generate Lorem</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+       
+     
+
+
+
+               
+
+@section Scripts{
+    <script src="~/sweetAlert/sweetalert.min.js"></script>
+
+    <script>
+
+    $(document).ready(function () {
+    debugger;
+    if ('@ViewBag.Done' != '' && '@ViewBag.Done' != null) {
+
+    swal('@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Done.. Your Request Success" : "تم ارسال طلبك")', "", "success");
+    }
+    });
+    </script>
+}

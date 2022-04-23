@@ -1,0 +1,193 @@
+﻿@inject CultureLocalizer  _Localizer
+@{
+    ViewData["Title"] = "electronic navigation";
+     Layout = "_Layout";
+    var X = _Localizer.Text("Home");
+        var culture = System.Globalization.CultureInfo.CurrentCulture;
+
+}
+
+<link href="~/Admin/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+
+
+ @if (culture.Name.Contains("en-US"))
+    {
+  <h2 class="txtColorBlue text-center mt-5"><mark class="markSty-who highlight">Electronic Navigational Charts</mark></h2>
+
+            
+
+  <video width="100%" playsinline autoplay muted loop class="mt-5" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) inset; mix-blend-mode: multiply; ">
+ <source src="~/Video/electronic charts.mov" type="video/mp4">
+
+ </video>
+              
+
+<div class="container mt-3"> 
+
+
+                            <div class="row mt-5 mb-5">
+                                <div class="col-md-12  text1">
+                                    <p>
+                                        Electronic navigational charts (ENC) are the new developed generation of the traditional paper nautical charts defined as adjacent (cells) that are identical at the edges and complementary
+                                        to each other, containing information, hydrographic data and other additional details. Electronic nautical charts have the characteristic of magnification and miniaturization in the
+                                        presentation of hydrographic information and thus provide a wide range of scale, different from paper copies of nautical charts, where these cells are classified into groups known as
+                                        coverage scales. They are produced with high standards and specifications that are compatible with internationally adopted standards and specifications issued by the IMO. A military
+                                        layer could also be added to these charts, known as AML, containing additional information to be used during maritime exercises and operations. ENCs are used in Electronic Chart Display
+                                        and Information System (ECDIS). ENCs have the potential to display additional information or detailed data when needed, speedy updates, as well as the possibility to link the electronic
+                                        chart projector to other devices to display the location of the ship and to provide the warning option for ships to alert when approaching danger to provide maximum navigational safety.
+                                    </p>
+                                </div>
+                            </div>
+
+                          
+
+                            <b class=" txtColorBlue11 mt-5 " style="text-align:initial;">  Converting to the new standard of electronic navigational charts (S-101)</b>
+
+
+                              <div class="row mt-3 mb-3">
+                                <div class="col-md-12  text1">
+                                   <p>
+                                        The new standard of electronic navigational charts (S-101) is the new developed generation of electronic navigational charts, which will add many advantages to
+                                        users of electronic charts, creating a qualitative shift in maritime navigation. It is expected that hydrographic offices worldwide will begin producing this
+                                        type of charts early in 2024. In order to meet national requirements by providing state-of-the-art navigational products to Omani water users, ONHO is currently
+                                        shifting to this standard in the production of Omani electronic navigational charts to keep pace with the global shift towards electronic navigation.
+
+                                    </p>
+                                </div>
+                            </div>
+
+
+                          
+                               <b class=" txtColorBlue11 mt-5" style="text-align:initial;">Omani electronic navigational charts</b>
+
+                                 <div class="row mt-3">
+                                <div class="col-md-12 text1">
+                                    <p>
+                                        ONHO, in cooperation with the International Centre for Electronic Navigational Charts (IC-ENC) of the United Kingdom, is responsible for the production, quality control and updating of ENCs in
+                                        order to enhance navigational safety in Omani waters. IC-ENC is responsible for the worldwide dissemination and marketing of electronic charts. Until today, XX electronic cells have been produced
+                                        and more cells are being produced to cover all Omani maritime areas.
+
+                                        <a href="@Url.Action("IndexMap","Pages")">  The index of Omani electronic navigational charts</a> shows all of these charts.
+
+                                        Also, all electronic charts published are found in  <a href="https://iho.maps.arcgis.com/apps/webappviewer/index.html?id=06d967702c7f4094bbc5b4f8e485b712&mobileBreakPoint=300"> Chart Catalogues on IHO website</a>.
+
+                                    </p>
+                                </div>
+                            </div>
+
+
+
+                            <div class="example11 mt-5">
+                                <p style="margin-top: 10px; margin-right: 80px;">
+
+                                    To get electronic Charts, please visit
+                                    <a href="https://enavigator.ukho.gov.uk">https://enavigator.ukho.gov.uk</a>
+
+                                </p>
+                            </div>
+
+
+
+
+ </div>
+ }
+ else
+ {
+
+
+
+
+    
+
+
+                <h2 class="txtColorBlue text-center mt-5"><mark class="markSty-who highlight">الخرائط الملاحية الإلكترونية</mark></h2>
+
+
+                <video width="100%" playsinline autoplay muted loop class="mt-5" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) inset; mix-blend-mode: multiply; ">
+                    <source src="~/Video/electronic charts.mov" type="video/mp4">
+
+                </video>
+
+<div class="container mt-3"> 
+
+
+                            <div class="row mt-5 mb-5">
+                                <div class="col-md-12  text1">
+                                    <p>
+                                        تعتبر الخرائط الملاحية الإلكترونية أو مختصرا الـ (Electronic Navigational Chart: ENC) الجيل الجديد المطور من الخرائط الملاحية الورقية - التقليدية- وتعرف بأنها (خلايا) متجاورة متطابقة عند الحواف ومكملة لبعضها البعض تحتوي على معلومات وبيانات هيدروغرافية وتفاصيل إضافية أخرى، وتتميز الخرائط الملاحية الالكترونية بخاصية التكبير والتصغير في عرض المعلومات الهيدروغرافية وبهذا فهي توفر مدى متسع لمقياس الرسم -بخلاف النسخ الورقية من الخرائط الملاحية- حيث تصنف هذه الخلايا على مجموعات تعرف بنطاقات التغطية، ويتم انتاجها بمواصفات ومعايير عالية حيث تكون متوافقة مع المعايير والمواصفات القياسية المعتمدة دوليا والتي أصدرتها منظمة الهيدروغرافيا الدولية. كذلك بالإمكان إضافة طبقة عسكرية لهذه الخرائط تعرف بالـ (AML) تحتوي على معلومات إضافية لاستخدامها أثناء التمارين والعمليات البحرية. ويتم استخدام الخرائط الملاحية الإلكترونية في نظام عرض إلكتروني للمعلومات والخرائط الإلكترونية (ECDIS)، وتتميز الخرائط الملاحية الإلكترونية بإمكانية عرض معلومات إضافية أو بيانات تفصيلية عند الحاجة، وكذلك تتميز بسرعة إجراء التحديثات، بالإضافة إلى إمكانية ربط جهاز عرض الخرائط الإلكترونية مع أجهزة أخرى وذلك لعرض مباشر لموقع السفينة وتوفير خيار الإنذار للسفن للتحذير عند الاقتراب من الخطر لتوفير أقصى درجات السلامة الملاحية.
+
+
+
+                                    </p>
+                                </div>
+                            </div>
+
+                          
+
+                            <b class=" txtColorBlue11 mt-5" style="text-align:initial;">  التحول للمعيار الجديد للخرائط الملاحية الالكترونية S-101</b>
+
+
+                              <div class="row mt-3 mb-3">
+                                <div class="col-md-12  text1">
+                                   <p>
+                                       المعيار الجديد للخرائط الملاحية الالكترونية S-101 يعتبر بمثابة الجيل الجديد المطور من الخرائط الملاحية الالكترونية، والذي سيضيف العديد من المزايا لمستخدمي الخرائط الالكترونية مما سيحدث نقلة نوعية في مجال الملاحة البحرية. من المتوقع ان تبدأ المكاتب الهيدروغرافية حول العالم في انتاج هذا النوع من الخرائط بداية العام 2024م، وللوفاء بالمتطلبات الوطنية بتوفير أحدث المنتجات الملاحية لمستخدمي المياه العمانية يعمل المكتب حاليا في التحول الى هذا المعيار في انتاج الخرائط الملاحية الالكترونية العمانية لمواكبة التحول العالمي نحو الملاحة الالكترونية.
+
+                                    </p>
+                                </div>
+                            </div>
+
+                              <b class=" txtColorBlue11 mt-5" style="text-align:initial;">  الخرائط الملاحية الالكترونية العمانية</b>
+
+
+
+
+
+                            <div class="row mt-3">
+                                <div class="col-md-12 text1">
+                                    <p>
+                                        يتولى المكتب الهيدروغرافي الوطني العماني مسؤولية إنتاج وضبط الجودة وتحديث الخرائط الملاحية
+                                        الإلكترونية حفاظا على تعزيز السلامة الملاحية في المياه العمانية،
+                                        وذلك بالتعاون مع المركز الدولي للخرائط الإلكترونية (IC-ENC)
+                                        بالمملكة المتحدة؛ الذي يقوم بمهمة نشر وتسويق
+                                        الخرائط الإلكترونية على المستوى العالمي. وقد تم إنتاج عدد XX
+                                        خلية الكترونية لغاية الآن والعمل جاري لإنتاج المزيد
+                                        من الخلايا لتغطي كافة المناطق البحرية العمانية ويوضح
+                                        <a href="@Url.Action("IndexMap","Pages")">  فهرس  الخرائط الملاحية الإلكترونية العمانية </a>
+                                        مخططًا لجميع هذه الخرائط.     كذلك بالإمكان الاطلاع على جميع الخرائط الالكترونية المنشورة
+                                        من خلال
+                                        <a href="https://iho.maps.arcgis.com/apps/webappviewer/index.html?id=06d967702c7f4094bbc5b4f8e485b712&mobileBreakPoint=300"> فهرس الخرائط في موقع المنظمة الهيدروغرافية الدولية.</a>
+                                    </p>
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div class="example11 mt-5">
+                                
+                                <p style="margin-top: 10px; margin-right: 80px;  ">
+                        لطلب الخرائط الإلكترونية يرجى التواصل مع الرابط أدناه
+                        <a href="https://enavigator.ukho.gov.uk">https://enavigator.ukho.gov.uk</a>
+                    </p>
+                            </div>
+ </div>
+
+
+ }
+ 
+@section Scripts{
+    <script src="~/sweetAlert/sweetalert.min.js"></script>
+
+    <script>
+
+    $(document).ready(function () {
+    debugger;
+    if ('@ViewBag.Done' != '' && '@ViewBag.Done' != null) {
+
+    swal('@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Done.. Your Request Success" : "تم ارسال طلبك")', "", "success");
+    }
+    });
+    </script>
+}

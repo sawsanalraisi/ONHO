@@ -8,11 +8,11 @@ namespace HydrographicOffice.Models
 {
     public class LoginViewModel
     {
-        [Required(ErrorMessage = "Email Required")]
+        [Required(ErrorMessage = "EmailRequired")]
         [EmailAddress(ErrorMessage = "Email Error")]
         public string Email { get; set; }
 
-        [Required(ErrorMessage = "Password Required")]
+        [Required(ErrorMessage = "Password Required"), MinLength(6)]
         [DataType(DataType.Password)]
         public string Password { get; set; }
 

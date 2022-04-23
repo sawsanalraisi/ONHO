@@ -43,6 +43,7 @@ namespace HydrographicOffice.Models
         public string Character { set; get; }
 
         [Required]
+        [Range(1, int.MaxValue, ErrorMessage = "Please select Featur status")]
         [Display(Name = "status")]
         public int Status { set; get; }
 

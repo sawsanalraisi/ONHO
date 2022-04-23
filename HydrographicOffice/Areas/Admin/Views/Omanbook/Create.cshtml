@@ -1,0 +1,60 @@
+﻿@model HydrographicOffice.Models.OmanbookMVm
+@inject CultureLocalizer  _Localizer
+@{
+    ViewData["Title"] = "Create";
+    Layout = "_AdminLayout";
+}
+
+
+<div class="container">
+    <div class="row d-flex align-items-center justify-content-center">
+        <div class="col-md-10 ">
+
+            <form asp-action="Create" method="post" enctype="multipart/form-data">
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+                <h2 class="txtColorBlue text-center mt-5"><mark class="markSty-who highlight">Oman book Index</mark></h2>
+
+               
+                <div class="form-input">
+                    <input asp-for="Year" class="form-control form-controlNonSpace" placeholder="Book Version (Year)" />
+                    <span asp-validation-for="Year" class="text-danger"></span>
+                </div>
+
+       
+                <div class="form-group">
+                    <label class="control-label">@_Localizer.Text("UploadFile")</label>
+                    <input type="file" asp-for="File" />
+                </div>
+
+
+
+                <button type="submit" class="btn mt-4 signup backBlue text-white"> @_Localizer.Text("Save") </button>
+
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    <script>
+        updateList = function () {
+            debugger;
+            var input = document.getElementById('Files');
+            var output = document.getElementById('fileList');
+            var children = "";
+            for (var i = 0; i < input.files.length; ++i) {
+                children += '<li>' + input.files.item(i).name + '</li>';
+            }
+            output.innerHTML = '<ul>' + children + '</ul>';
+        }
+    </script>
+
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

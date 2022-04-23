@@ -13,12 +13,16 @@ namespace HydrographicOffice.Models
         public long Id { get; set; }
 
         [Display(Name = "Survey Type")]
+        [Range(1, int.MaxValue, ErrorMessage = "Please select Survey Type")]
+
         public int Type { get; set; }
         public int Status { get; set; }
 
         [Required]
         [Display(Name = "Position")]
         public string Position { get; set; }
+
+        [Range(1, int.MaxValue, ErrorMessage = "Please select File Format")]
 
         public long FileFormatId { get; set; }
 

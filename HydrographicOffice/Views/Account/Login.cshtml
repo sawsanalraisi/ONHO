@@ -5,34 +5,67 @@
     ViewData["Title"] = "Login";
 }
 @inject CultureLocalizer Localizer
-<form class="m-t" role="form" method="post">
 
-    @*<h3>@Localizer.Text("Login")</h3>*@
-    <br />
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-    <br />
-    <div class="form-group">
-        <input type="text" asp-for="Email" class="form-control" placeholder="@Localizer.Text("Email")">
-        <span asp-validation-for="Email" class="text-danger"></span>
+
+
+
+
+    @*<form class="m-t" role="form" method="post">
+
+     
+        <br />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <br />
+        <div class="form-group">
+            <input type="text" asp-for="Email" class="form-control" placeholder="@Localizer.Text("Email")">
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <input type="password" asp-for="Password" class="form-control" placeholder="@Localizer.Text("Password")">
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+
+        <br />
+        <button type="submit" class="btn btn-primary block full-width m-b">@Localizer.Text("Login")</button>
+
+
+
+    </form>
+    <br />*@
+
+    <div class="container text-center"><img src="~/Images/Logo.png" width="20%" height="20%" /></div>
+
+    <div class="container mt-5">
+        <div class="row d-flex align-items-center justify-content-center mt-5">
+            <div class="col-md-6 m-3 mt-5">
+                <div class="card px-5 py-5 shadow-lg p-3 mb-5 bg-body rounded">
+
+                    <h2 class=" text-center mb-5 txtBlue"> Admin Login </h2>
+
+                    <form class="mt-1" role="form" method="post">
+
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-input mt-3">
+                            <input type="text" asp-for="Email" class="form-control" placeholder="@Localizer.Text("Email")">
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+
+
+                        <div class="form-input mt-3">
+                            <input type="password" asp-for="Password" class="form-control" placeholder="@Localizer.Text("Password")">
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+
+                        <button type="submit" class="btn mt-4  text-white" style="background-color: #20426b;width:100%;">@Localizer.Text("Login")</button>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="form-group">
-        <input type="password" asp-for="Password" class="form-control" placeholder="@Localizer.Text("Password")">
-        <span asp-validation-for="Password" class="text-danger"></span>
-    </div>
-
-
-    <br />
-    <button type="submit" class="btn btn-primary block full-width m-b">@Localizer.Text("Login")</button>
-
-
-
-    @*<p class="text-muted text-center">
-            <small>Do not have an account?</small>
-        </p>
-        <a class="btn btn-sm btn-white btn-block" href="register.html">Create an account</a>*@
-</form>
-<br />
 
 
 

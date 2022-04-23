@@ -1,0 +1,396 @@
+﻿@inject CultureLocalizer  _Localizer
+@{
+    ViewData["Title"] = "Production";
+     Layout = "_Layout";
+    var X = _Localizer.Text("Home");
+        var culture = System.Globalization.CultureInfo.CurrentCulture;
+
+}
+
+<link href="~/Admin/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+ @if (culture.Name.Contains("en-US"))
+{
+    <br /><br />
+    <h2 class="txtColorBlue text-center "><mark class="markSty-who highlight "> Production </mark></h2>
+
+    <div class="container mt-2 ">
+        <div class="row">
+                        <div class="col-sm-12 p-3 m-2 bg-white ">
+
+
+
+                            <p>
+                                Within the national efforts and roles of the Oman National Hydrographic Office (ONHO) in ensuring maximum navigational safety in Omani waters for all ships and maritime transport and trade operations, the Production Department issues various navigational products that provide the marine information and data needed by the navigator in Omani waters.
+                                <br /> <br />
+
+                                The Department produces nautical charts (paper and electronic) and their publications with international standards covering Omani waters and updates them, while ensuring that they conform to the standard specifications of the International Hydrographic Organization (IHO) to ensure maximum navigational safety in Omani waters. Until today, ONHO has produced XX paper charts and XX electronic navigation chart covering most Omani maritime areas in a plan to produce charts covering all Omani waters, in addition to sustaining paper and electronic nautical charts by updating them or issuing new editions and cancelling old charts after studying new hydrographic surveys and their impact on published charts.
+                                <br /> <br />
+
+                                All stages of production and update include inspection and quality control phases to determine the extent to which the charts meet the general specifications of the Omani nautical charts as well as their conformity with the standard specifications of the IHO. These specifications can be accessed through the international specifications and standards page on the website of the organization. In addition, the Department produces special charts by the request of users, such as navigational training charts, maritime operational charts and military exercises.
+
+                                <br /><br />
+
+                            </p>
+
+
+
+
+
+                            <h2 class="txtColorBlue text-center "><mark class="markSty-who highlight "> Cartography </mark></h2>
+
+
+                            <p>
+                                <br />
+                                Cartography is the science and art of cartography with accompanying studies using scientific foundations and practical techniques. These scientific bases are used for the production of paper and electronic Omani nautical charts, as well as for the production of special charts of various civilian and military institutions on demand and for their purpose such as navigational training charts, depth charts, maritime operation charts, etc. The Production Department of ONHO is responsible for the production of nautical charts with international standard specifications covering most Omani maritime areas.
+                                <br /><br />
+                                Shifting to new international standards for marine data S-100
+                                The International Hydrographic Organization (IHO) has recently adopted a contemporary hydrographic standard for marine data and information modelling and it is called (S-100), which contains a set of new standards for various digital navigation products such as the new generation of electronic charts, which is considered to be the modern, developed system of digital marine and hydrographic data. It is based on the (ISO19100) series of geospatial data standards and specifications, which will facilitate the use of hydrographic data by other data providers outside hydrographic offices and users of electronic charts. As per the recommendations of IHO, the Office is currently in the process of converting to this standard in the production of various layers of hydrographic data, such as electronic nautical charts (S-101), the depth data layer (S-102), etc, to keep pace with the global shift towards electronic navigation and to provide various modern navigational products to Omani water users.
+
+                            </p>
+
+
+
+
+
+                            <div id="accordion">
+
+
+                                <div class="card">
+                                    <div class="card-header backBlue  d-flex justify-content-between hovertitle" data-bs-toggle="collapse" href="#collapseOne">
+
+                                        <a class="btn text-white" data-bs-toggle="collapse" href="#collapseOne">
+                                            <b>   Difference between nautical charts and land maps</b>
+                                        </a>
+
+                                        <a class="btn text-white arrow" data-bs-toggle="collapse" href="#collapseOne">
+
+                                            <img src="~/Images/tick-m.PNG" width="20">
+                                        </a>
+
+
+
+                                    </div>
+                                    <div id="collapseOne" class="collapse " data-bs-parent="#accordion">
+                                        <div class="card-body">
+
+                                            It should be noted that the nautical chart is a legal document established on the basis of international
+                                            standards and specifications based on international references and of specific colours used by a navigator
+                                            at sea to determine his course in the high seas, straits and bays. Nautical charts usually contain
+                                            bathymetric, coastline, tidal forecasts, debris, obstacles and navigational aids. It is considered
+                                            the eye of the navigator at sea and of paramount importance in providing maximum navigational safety.
+                                            While the land map is an indicative guide that describes the elements that can be seen on the ground
+                                            and use multiple colours compared to nautical charts to describe geographical elements, each map usually
+                                            has its own key. The land map contains landmarks, city schemes, trails, roads, elevations, mountains and
+                                            plains.
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="card">
+                                    <div class="card-header backBlue  d-flex justify-content-between hovertitle" data-bs-toggle="collapse" href="#collapseTwo">
+
+                                        <a class="btn text-white" data-bs-toggle="collapse" href="#collapseTwo">
+                                            <b>  Omani paper nautical chart</b>
+                                        </a>
+
+                                        <a class="btn text-white arrow" data-bs-toggle="collapse" href="#collapseTwo">
+
+                                            <img src="~/Images/tick-m.PNG" width="20">
+                                        </a>
+
+
+
+                                    </div>
+                                    <div id="collapseTwo" class="collapse " data-bs-parent="#accordion">
+                                        <div class="card-body">
+
+                                            The produced Omani paper nautical charts can be purchased by ordering them directly through
+                                            the website or by contacting the sales section of the Oman National Hydrographic Office on
+                                            XXX or by ordering them through <b>Elcom International LLC </b>by calling <b>(+968)24788802</b>.
+                                            Users of Omani charts can also obtain all Omani navigational declarations,
+                                            which contain minor modifications on the chart, through the navigational declarations
+                                            and alerts page.
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <br />
+                            The most notable navigational products produced from this Department include the following:
+
+
+                        </div>
+
+
+
+
+
+                        <div class="row text-center mt-5">
+
+                            <div class="col-md-4 a box2 mb-5 ">
+                                <div class=" card h-100 shadow-lg p-3 mb-6 bg-body rounded">
+                                    <img src="~/Images/pro1.jpg" width="100%">
+                                    <br /><br />
+                                    <h4 class="txtColorBlue"><a href="@Url.Action("paper_nav_chart","Pages")">Paper nautical charts</a></h4>
+
+                                    <p class=" phgJust"> The traditional nautical charts are provided as paper charts that are printed and updated on demand </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-4 a box2 mb-5">
+                                <div class=" card h-100 shadow-lg p-3 mb-6 bg-body rounded">
+                                    <img src="~/Images/pro4.jpg" width="100%">
+                                    <br /><br />
+                                    <h4 class="txtColorBlue"><a href="@Url.Action("electronic_navigation","Pages") ">  Electronic navigational charts </a></h4>
+
+                                    <p class=" phgJust">  (ENC) are the new developed generation of the traditional paper nautical charts  containing information, hydrographic data and other additional details. </p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-4 a box2 mb-5">
+                                <div class=" card h-100 shadow-lg p-3 mb-6 bg-body rounded">
+                                    <img src="~/Images/pro2.jpg" width="100%">
+                                    <br /><br />
+                                    <h4 class="txtColorBlue"><a href="@Url.Action("Special_Product","Pages")">   Special products</a></h4>
+
+                                    <p class=" phgJust">  The Office provides hydrographic data to all users, such as companies working in Omani coasts and various government ministries and bodies.   </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+    </div>
+
+
+}
+else
+{
+    
+
+        <br /><br />
+                <h2 class="txtColorBlue text-center "><mark class="markSty-who highlight "> الإنتاج </mark></h2>
+
+                <div class="container mt-2 ">
+                    <div class="row">
+                        <div class="col-sm-12 p-3 m-2 bg-white ">
+
+
+
+                            <p>
+                                ضمن الجهود والأدوار الوطنية التي يقوم بها المكتب الهيدروغرافي الوطني العماني؛ لتأمين أقصى درجات السلامة الملاحية في المياه العمانية لجميع السفن؛ وأيضًا سعيًا إلى تأمين عمليات النقل والتجارة البحرية؛ فإن قسم الإنتاج يُصْدر مختلف المنتجات الملاحية التي توفر المعلومات والبيانات البحرية التي يحتاجها المَلاح في المياه العمانية، إذ يقوم القسم بإنتاج وتحديث الخرائط الملاحية (الورقية والإلكترونية)، والمنشورات التابعة لها بمواصفات قياسية دولية تغطي المياه العمانية؛ مع ضمان مطابقتها للمواصفات الموحدة للمنظمة الدولية للهيدروغرافيا، لتحقيق أقصى درجات السلامة الملاحية في المياه  العمانية.
+                                <br /> <br />
+                                وقد أصدر المكتب حتى الآن XX خارطة ملاحية ورقية وXX خارطة ملاحية إلكترونية؛ تغطي معظم المناطق البحرية العمانية ضمن خطة لإنتاج خرائط تغطي جميع المياه العمانية، إضافة إلى استدامة الخرائط الملاحية الورقية والإلكترونية عن طريق تحديثها، أو إصدار خرائط جديدة مُحدَّثة (طبعة جديدة)، وإلغاء الخرائط القديمة؛ بعد دراسة تأثر الخارطة المنشورة بالمسوحات والبيانات الهيدروغرافية الجديدة. وتتخلل جميع مراحل الإنتاج والتحديث مراحل للفحص وضبط الجودة؛ للوقوف على مدى استيفاء الخرائط للمواصفات العامة للخرائط الملاحية العمانية، ومدى مطابقتها للمواصفات الموحدة للمنظمة الدولية للهيدروغرافيا، ويمكن الاطلاع على هذه المواصفات من خلال صفحة المواصفات والمقاييس الدولية في موقع المنظمة. إضافة إلى ذلك؛ يقوم القسم بإنتاج الخرائط الخاصة على حسب طلب مستخدمي هذه الخرائط، مثل: خرائط التدريب الملاحية، وخرائط العمليات البحرية والتمارين العسكرية.
+                                <br /><br /><br />
+
+                            </p>
+
+
+
+
+
+                            <h2 class="txtColorBlue text-center "><mark class="markSty-who highlight ">  رسم الخرائط  </mark></h2>
+
+
+                            <p>
+                                رسم الخرائط او الكارتوغرافيا هو علم وفن رسم الخرائط مع الدراسات المصاحبة لها باستخدام أسس علمية وتقنيات فنية، وتستخدم هذه الأسس العلمية في إنتاج الخرائط الملاحية العمانية الورقية والالكترونية، بالإضافة الى انتاج الخرائط الخاصة لمختلف الجهات المدنية والعسكرية حسب الطلب والغرض المراد منها كخرائط التدريب الملاحية، خرائط الأعماق وخرائط العمليات البحرية وغيرها، ويتولى قسم الإنتاج بالمكتب الهيدروغرافي الوطني العماني مسؤولية انتاج الخرائط الملاحية بمواصفات قياسية دولية تغطي معظم المناطق البحرية العمانية.
+                            </p>
+
+
+
+
+
+                            <div id="accordion">
+
+
+                                <div class="card">
+                                    <div class="card-header backBlue  d-flex justify-content-between hovertitle" data-bs-toggle="collapse" href="#collapseOne">
+
+                                        <a class="btn text-white" data-bs-toggle="collapse" href="#collapseOne">
+                                            <b>    الفرق بين الخارطة البحرية والخارطة البرية</b>
+                                        </a>
+
+                                        <a class="btn text-white arrow" data-bs-toggle="collapse" href="#collapseOne">
+
+                                            <img src="~/Images/tick-w.PNG" width="20">
+                                        </a>
+
+
+
+                                    </div>
+                                    <div id="collapseOne" class="collapse " data-bs-parent="#accordion">
+                                        <div class="card-body">
+
+                                            تعد الخريطة الملاحية البحرية وثيقة قانونية تُنشأ على أسس ومعايير قياسية دولية تستند على مراجع دولية وذات ألوان محددة يستخدمها الملاح في البحر لتحديد مساره في أعالي البحار،
+                                            وكذلك في المضايق والخلجان، وعادة ما تحتوي
+                                            الخرائط البحرية
+
+                                            على قياسات الأعماق، وخط الساحل، وتنبؤات المد والجزر، والحطام والعوائق والمساعدات الملاحية،
+                                            إذ تُعد عين الملاح في البحر، وذات أهمية قصوى في توفير أقصى درجات السلامة الملاحية. بينما تُمثل الخارطة دليلًا استرشاديًا يصف العناصر التي تُمكن مشاهدتها
+                                            على أرض الواقع، ويُستخدم بها ألوان متعددة مقارنة بالخرائط البحرية؛ لوصف العناصر الجغرافية، وعادة ما يوجد لكل خارطة مفتاح خاص بها
+                                            ، وتحتوي الخارطة البرية على المعالم البرية، مخططات المدن، المسارات، الطرق، الارتفاعات، والجبال والسهول.
+
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="card">
+                                    <div class="card-header backBlue  d-flex justify-content-between hovertitle" data-bs-toggle="collapse" href="#collapseTwo">
+
+                                        <a class="btn text-white" data-bs-toggle="collapse" href="#collapseTwo">
+                                            <b>       الخرائط الملاحية الورقية العمانية</b>
+                                        </a>
+
+                                        <a class="btn text-white arrow" data-bs-toggle="collapse" href="#collapseTwo">
+
+                                            <img src="~/Images/tick-w.PNG" width="20">
+                                        </a>
+
+
+
+                                    </div>
+                                    <div id="collapseTwo" class="collapse " data-bs-parent="#accordion">
+                                        <div class="card-body">
+
+                                            يمكن شراء الخرائط الملاحية العمانية الورقية المنتجة عن طريق طلبها مباشرة من خلال الصفحة الإلكترونية،
+                                            أو من خلال الاتصال بقسم المبيعات في المكتب الهيدروغرافي الوطني العماني على الرقم XXX، أو طلبها عن طريق شركة إلكوم العالمية
+                                            <b>(Elcom International LLC)</b>
+                                            من خلال التواصل على الهاتف رقم <b>(+968)24788802</b>.
+                                            كما يمكن لمستخدمي الخرائط العمانية الحصول على جميع
+                                            الإعلانات الملاحية العمانية -التي تحتوي التعديلات الطفيفة بالخارطة- من خلال صفحة الإعلانات والإنذارات الملاحية.
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <br />
+                            ومن أبرز المنتجات الملاحية التي تصدر من هذا القسم:
+
+
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="row text-center mt-5">
+
+                            <div class="col-md-4 a box2 mb-5 ">
+                                <div class=" card h-100 shadow-lg p-3 mb-6 bg-body rounded">
+                                    <img src="~/Images/pro1.jpg" width="100%">
+                                    <br /><br />
+                                    <h4 class="txtColorBlue"><a href="@Url.Action("paper_nav_chart","Pages")">الخرائط الملاحية الورقية</a></h4>
+
+                                    <p class=" phgJust">  خرائط ملاحية تقليدية يتم توفيرها كخرائط ورقية تطبع مُحدّثة عند الطلب  </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-4 a box2 mb-5">
+                                <div class=" card h-100 shadow-lg p-3 mb-6 bg-body rounded">
+                                    <img src="~/Images/pro4.jpg" width="100%">
+                                    <br /><br />
+                                    <h4 class="txtColorBlue"><a href="@Url.Action("electronic_navigation","Pages")">    الخرائط الملاحية الإلكترونية </a></h4>
+
+                                    <p class=" phgJust">   الخرائط الملاحية الإلكترونية  الجيل الجديد المطور من الخرائط الملاحية الورقية - التقليدية
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-4 a box2 mb-5">
+                                <div class=" card h-100 shadow-lg p-3 mb-6 bg-body rounded">
+                                    <img src="~/Images/pro2.jpg" width="100%">
+                                    <br /><br />
+                                    <h4 class="txtColorBlue"><a href="@Url.Action("Special_Product","Pages")"> المنتجات الخاصة</a></h4>
+
+                                    <p class=" phgJust">   يوفر المكتب البيانات الهيدروغرافية لجميع المستخدمين
+                                </div>
+
+                            </div>
+
+
+
+
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@section Scripts{
+    <script src="~/sweetAlert/sweetalert.min.js"></script>
+
+    <script>
+
+    $(document).ready(function () {
+    debugger;
+    if ('@ViewBag.Done' != '' && '@ViewBag.Done' != null) {
+
+    swal('@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Done.. Your Request Success" : "تم ارسال طلبك")', "", "success");
+    }
+    });
+    </script>
+}

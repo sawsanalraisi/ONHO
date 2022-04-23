@@ -1,0 +1,172 @@
+﻿@inject CultureLocalizer  _Localizer
+@{
+    ViewData["Title"] = "paper nav chart";
+     Layout = "_Layout";
+    var X = _Localizer.Text("Home");
+        var culture = System.Globalization.CultureInfo.CurrentCulture;
+
+}
+
+<link href="~/Admin/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+
+   @if (culture.Name.Contains("en-US"))
+{
+
+    <br /><br />
+    <h2 class="txtColorBlue text-center "><mark class="markSty-who highlight">   Paper Nautical Charts </mark></h2>
+
+
+
+    <div class="container mt-3 mb-5">
+        <div class="row">
+
+                        <div class="col-sm-12  ">
+
+
+                            <div class="row">
+                                <div class="col-md-12 text1">
+                                    <p>
+
+                                        The traditional nautical charts are provided as paper charts that are printed and updated on demand. XX nautical charts have been produced until November 2021.
+                                        It has different scales covering most Omani coasts and maritime areas. The index of Omani Nautical Charts shows a diagram of all these charts.
+                                        The paper nautical charts produced are divided into three main measurements: The nautical map is produced on a scientific basis based on cartography.
+                                        During the production process, the map goes through many stages prior to its release. Highlights include:
+                                    </p>
+                                </div>
+                            </div>
+
+
+
+                            <br>
+
+                            <div>
+
+                       
+
+                                <h1 class="text-center mt-5">    Stages of Production of the Map </h1>
+
+                                <video width="100%" height="1000px" playsinline autoplay muted>
+                                    <source src="~/Video/production2.mov" type="video/mp4">
+                                </video>
+
+
+                                <div class="example11 mt-5">
+                                    <p style="margin-top: 10px; margin-right: 80px;  ">
+
+                                        To Viwe the Paper Nautical Charts, please click <a href="@Url.Action("IndexMap","Pages")">here</a>
+                                        
+
+                                    </p>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+}
+else
+{
+
+
+
+       <br /><br />
+                <h2 class="txtColorBlue text-center "><mark class="markSty-who highlight">   الخرائط الملاحية الورقية </mark></h2>
+
+
+
+                <div class="container mt-3  mb-5">
+                    <div class="row">
+
+                        <div class="col-sm-12  ">
+
+
+                            <div class="row">
+                                <div class="col-md-12 text1">
+                                    <p>
+
+                                        هي خرائط ملاحية تقليدية يتم توفيرها
+                                        كخرائط ورقية تطبع مُحدّثة عند الطلب، وأنتج المكتب عدد
+                                        XX خارطة ملاحية حتى نوفمبر 2021م، وهي ذات مقاييس رسم مختلفة تغطي
+                                        معظم السواحل والمناطق البحرية العمانية، ويوضح فهرس
+                                        الخرائط الملاحية العمانية مخططًا لجميع هذه الخرائط.
+                                        وتقسم الخرائط الملاحية الورقية التي يتم إنتاجها
+                                        إلى ثلاثة مقاييس رسم رئيسة، هي: الخرائط الملاحية
+                                        ذات مقياس الرسم الكبير، الخرائط الملاحية ذات
+                                        مقياس الرسم المتوسط، والخرائط الملاحية ذات مقياس
+                                        الرسم الصغير. ويتم إنتاج الخارطة الملاحية على أسس
+                                        علمية مبنية على عِلم الكارتوغرافيا، وتمرُّ الخارطة
+                                        خلال عملية الإنتاج حتى صدورها، بمراحل أبرزها:
+                                    </p>
+                                </div>
+                            </div>
+
+
+
+                            <br>
+
+                            <div>
+
+                             
+
+
+
+                                <h1 class="text-center mt-5">    مراحل إنتاج الخارطة</h1>
+
+                                <video width="100%" height="1000px" playsinline autoplay muted>
+                                    <source src="~/Video/production.mov" type="video/mp4">
+                                </video>
+
+                         
+
+                            </div>
+
+
+                            <br />
+                            <div class="example11">
+                                <p style="margin-top: 10px; margin-right: 80px;  ">
+
+                                    للإطلاع على الخرائط الورقية 
+                                    <a href="@Url.Action("IndexMap","Pages")">اضغط هنا </a>
+
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+    
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+@section Scripts{
+    <script src="~/sweetAlert/sweetalert.min.js"></script>
+
+    <script>
+
+    $(document).ready(function () {
+    debugger;
+    if ('@ViewBag.Done' != '' && '@ViewBag.Done' != null) {
+
+    swal('@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Done.. Your Request Success" : "تم ارسال طلبك")', "", "success");
+    }
+    });
+    </script>
+}

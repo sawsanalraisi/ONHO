@@ -1,6 +1,6 @@
 ﻿/*@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 */
-bodyForm {
+bodyForm{
     background-color: #535fe6;
     font-family: "Poppins", sans-serif;
     font-weight: 300
@@ -12,11 +12,10 @@ bodyForm {
 
 .card {
     border: none;
-    padding: 20px;
+    padding-top: 20px;
     /*background-color: #1c1e21;*/
-    /*    color: #fff
-*/
-}
+/*    color: #fff
+*/}
 
 .circle {
     height: 20px;
@@ -41,53 +40,28 @@ bodyForm {
         font-size: 18px;
         top: 15px;
         left: 10px;
-        margin-top: 10px;
+        margin-top:10px;
+
     }
 
 .form-control {
     height: 50px;
-    /*   background-color: #1c1e21;*/
+ /*   background-color: #1c1e21;*/
     text-indent: 24px;
     font-size: 15px
 }
 
-
-.form-controlNonSpace {
-    height: 50px;
-    /*   background-color: #1c1e21;*/
-    text-indent: 0px;
-    font-size: 15px
-}
-
-.form-control:focus {
-    /*   background-color: #25272a;*/
-    box-shadow: none;
-    /*        color: #fff;
-*/ border-color: #20426b;
-}
-
-
-
-.form-control3 {
-    /*height: 50px;*/
-    /*   background-color: #1c1e21;*/
-    width: 100%;
-    text-indent: 24px;
-    font-size: 15px
-}
-
-    .form-control3:focus {
+    .form-control:focus {
         /*   background-color: #25272a;*/
         box-shadow: none;
         /*        color: #fff;
 */ border-color: #20426b;
     }
 
-
 .form-check-label {
-    margin-top: 2px;
-    font-size: 14px;
-    margin-right: 2px;
+ /*   margin-top: 2px;
+    font-size: 14px ;
+    margin-right: 2px;*/
 }
 
 .signup {
@@ -96,15 +70,15 @@ bodyForm {
 }
 
 .form-check .form-check-input {
-    float: right;
+  /*  float: right;
     margin-right: 11px;
-    margin-left: 10px;
+    margin-left:10px;*/
 }
 
 svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
-    /* position: absolute;
+   /* position: absolute;
     padding: 15px;*/
-    /* color: #d4a658;*/
+   /* color: #d4a658;*/
 }
 
 
@@ -129,38 +103,8 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
 
 
 
-.search-icon2 {
+.search-icon2  {
     color: #d4a658;
     position: absolute;
     padding: 15px;
-}
-
-
-.inputfileicon {
-    font-size: 80px;
-    color: #20426b;
-}
-
-
-input[type=file]::file-selector-button {
-    border: 2px solid #d4a658;
-    /*   padding: .2em .4em;*/
-    border-radius: .2em;
-    background-color: #d4a658;
-    transition: 1s;
-}
-
-    input[type=file]::file-selector-button:hover {
-        background-color: #d4a658;
-        border: 2px solid #d4a658;
-    }
-
-.BoxDach {
-    border: 3px dotted #d4a658;
-}
-
-.fileList ul li {
-    list-style: none;
-    text-align: left;
-    margin-top: 5px;
 }

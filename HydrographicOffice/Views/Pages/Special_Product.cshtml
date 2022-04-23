@@ -1,0 +1,290 @@
+﻿@inject CultureLocalizer  _Localizer
+@{
+    ViewData["Title"] = "Special Product";
+     Layout = "_Layout";
+    var X = _Localizer.Text("Home");
+        var culture = System.Globalization.CultureInfo.CurrentCulture;
+
+}
+
+<link href="~/Admin/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+
+   @if (culture.Name.Contains("en-US"))
+{
+
+    <br /><br />
+    <h2 class="txtColorBlue text-center "><mark class="markSty-who highlight">   Special Products </mark></h2>
+
+
+
+    <div class="container mt-3 ">
+        <div class="row">
+
+                        <div class="col-sm-12  ">
+
+
+
+
+                            <div class="row">
+                                <div class="col-md-12  text1 mb-5">
+                                    <p>
+                                        The Office provides hydrographic data to all users, such as companies working in Omani coasts and various government ministries and bodies, in the form of direct data or through
+                                        the production of special maps for non-navigational purposes, as requested and intended. In addition, supporting Sultan's Armed Forces and other security agencies by providing
+                                        military requirements of hydrographic products, whether for tactical, operational or training purposes. These products complement the military geographic requirements system
+                                        provided by other military actors. Production processes require high efforts to obtain materials produced with high-quality international standards and specifications, most
+                                        notable products are:
+                                    </p>
+                                </div>
+                            </div>
+
+                          
+
+                            <p style="  font-size: 19px;">
+
+                                <b> General Operations Plot (armed forces related)</b>
+                            </p>
+
+
+
+
+
+                            <div class="row">
+                                <div class="col-md-12  text1">
+                                    <p>
+                                        General Operations Plots (GOPs) are operational charts of a special nature produced, derived and printed for the Royal Navy of Oman and other
+                                        military and security actors, depending on operational requirements, military and tactical exercises and as planned, such as joint operations
+                                        charts and maritime shooting boundary charts, as well as charts of maritime operational areas.
+                                    </p>
+                                </div>
+
+
+
+                            </div>
+
+
+                            <br>
+
+                            <p style="  font-size: 19px;">
+                                <b> Navigation Training Charts</b>
+                            </p>
+
+
+
+
+                            <div class="row">
+                                <div class="col-md-12  text1">
+                                    <p>
+                                        Nautical charts of a special nature produced by the Office for maritime navigation training for various academic and training bodies such as the
+                                        Sultan Qaboos Naval Academy, which is a place for training navigation officers of Royal Navy of Oman vessels.
+                                    </p>
+                                </div>
+
+
+
+                            </div>
+
+
+                            <br>
+
+
+                            <p style="font-size: 19px;">
+
+                                <b> Special Charts</b>
+                            </p>
+
+
+                            <div class="row mb-5">
+                                <div class="col-md-12  text1">
+                                    <p>
+                                        Special non-navigational charts containing the diverse hydrographic and navigational information and data of all Omani maritime areas along the coastline, produced on demand and intended for coastal zone management and depth charts.
+                                    </p>
+                                </div>
+
+
+
+                            </div>
+                        
+
+
+
+
+
+
+
+                        </div>
+
+
+
+                        <div class="example11 mb-5">
+                            <p style="margin-top: 10px; margin-right: 80px;  ">
+
+                                To get Special Products , please visit
+                                <a href="@Url.Action("ContactUs","Pages")">Oman National Hydrographic Office</a>
+
+                            </p>
+                        </div>
+
+                   
+
+                    </div>
+                 
+    </div>
+
+}
+else
+{
+    
+
+        <br /><br />
+    <h2 class="txtColorBlue text-center "><mark class="markSty-who highlight">   المنتجات الخاصة  </mark></h2>
+
+
+
+    <div class="container mt-3 ">
+        <div class="row">
+
+                        <div class="col-sm-12  ">
+
+
+
+
+                            <div class="row">
+                                <div class="col-md-12  text1 mb-5">
+                                     <p>
+                                        يقوم المكتب بتوفير البيانات الهيدروغرافية
+                                        لجميع المستخدمين كالشركات العاملة بالسواحل العمانية
+                                        ومختلف الوزارات والهيئات الحكومية على هيئة بيانات
+                                        مباشرة او عن طريق انتاج خرائط خاصة تستخدم للأغراض غير
+                                        الملاحية وذلك حسب الطلب والغرض المراد منها. كذلك يتمثل الدعم
+                                        والمساندة اللازمان لقوات السلطان المسلحة والأجهزة الأمنية
+                                        الأخرى في توفير المتطلبات العسكرية من المنتجات الهيدروغرافية
+                                        للجهات المذكورة، سواء كانت للأغراض العملياتية التعبوية أو
+                                        التدريبة، وهذه المنتجات مكملة لمنظومة المتطلبات الجغرافية
+                                        العسكرية التي يتم توفيرها من جهات عسكرية أخرى. وتتطلب
+                                        عمليات الإنتاج لجهود عالية للحصول على مواد منتجة بمعايير
+                                        ومواصفات دولية عالية الجودة، ومن أبرز هذه المنتجات:
+                                    </p>
+                                </div>
+                            </div>
+
+                          
+
+                            <p style="  font-size: 19px;">
+
+                               <b> خرائط العمليات البحرية (الخاصة بالقوات المسلحة). </b>
+                                </p>
+
+
+
+
+
+                            <div class="row">
+                                <div class="col-md-12  text1">
+                                   <p>
+                                        خرائط العمليات البحرية الـ (GOPs)
+                                        هي خرائط عملياتية ذات طبيعة خاصة يتم إنتاجها واشتقاق
+                                        البعض الآخر منها وطباعتها للبحرية السلطانية العمانية
+                                        والجهات العسكرية والأمنية الأخرى، وذلك حسب المتطلبات
+                                        العملياتية والتمارين العسكرية والتعبوية وحسب ما هو
+                                        مخطط لها كخرائط العمليات المشتركة وخرائط حدود الرماية
+                                        البحرية، وكذلك خرائط المناطق العملياتية البحرية.
+                                    </p>
+                                </div>
+
+
+
+                            </div>
+
+
+                            <br>
+
+                            <p style="  font-size: 19px;">
+                               <b> خرائط التدريب الملاحية</b>
+                            </p>
+
+
+
+
+                            <div class="row">
+                                <div class="col-md-12  text1">
+                                    <p>
+                                        خرائط ملاحية ذات طبيعة خاصة ينتجها
+                                        المكتب لأغراض التدريب على الملاحة البحرية لمختلف الجهات الاكاديمية
+                                        والتدريبية كأكاديمية السلطان قابوس البحرية التي يتم استخدامها
+                                        لغرض لتدريب ضباط الملاحة بسفن البحرية السلطانية العمانية.
+                                    </p>
+                                </div>
+
+
+
+                            </div>
+
+
+                            <br>
+
+
+                            <p style="font-size: 19px;">
+
+                                <b> الخرائط الخاصة</b>
+                            </p>
+
+
+                            <div class="row mb-5">
+                                <div class="col-md-12  text1">
+                                     <p>
+                                        خرائط خاصة تنتج للأغراض غير الملاحية وتحتوي على المعلومات والبيانات
+                                        الهيدروغرافية والملاحية المتنوعة لجميع المناطق البحرية العمانية
+                                        على امتداد الشريط الساحلي، يتم انتاجها حسب الطلب والغرض
+                                        المراد منها كخرائط إدارة المناطق الساحلية وخرائط الأعماق.
+                                    </p>
+                                </div>
+
+
+
+                            </div>
+                       
+
+
+                        </div>
+
+
+
+                        <div class="example11 mb-5">
+                             <p style="margin-top: 10px; margin-right: 80px;  ">
+                        للحصول على المنتجات الخاصة يرجى زيارة
+                        <a href="@Url.Action("ContactUs","Pages")">المكتب الهيدروغرافي الوطني العماني</a>
+                    </p>
+
+                          
+                        </div>
+
+                   
+
+                    </div>
+                 
+    </div>
+
+}
+
+
+
+
+
+
+
+
+@section Scripts{
+    <script src="~/sweetAlert/sweetalert.min.js"></script>
+
+    <script>
+
+    $(document).ready(function () {
+    debugger;
+    if ('@ViewBag.Done' != '' && '@ViewBag.Done' != null) {
+
+    swal('@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Done.. Your Request Success" : "تم ارسال طلبك")', "", "success");
+    }
+    });
+    </script>
+}

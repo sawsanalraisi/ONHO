@@ -1,0 +1,562 @@
+﻿@inject CultureLocalizer  _Localizer
+
+@{
+    var culture = System.Globalization.CultureInfo.CurrentCulture;
+
+    LoginViewModel modellocal = new LoginViewModel();
+    LoginRegisterVm loginRegisterVm = new LoginRegisterVm();
+
+
+    if (ViewBag.model !=null)
+    {
+        modellocal = ViewBag.model as LoginViewModel;
+    }
+
+     ViewData["Title"] = "Hydrography Unit";
+     Layout = "_Layout";
+}
+
+
+<link href="~/Admin/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+
+
+@if (culture.Name.Contains("en-US"))
+{
+    <br/>
+    <div class="container">
+        <div class="row">
+
+
+            <h2 class="txtColorBlue text-center mt-3 "><mark class="markSty-who highlight"> Hydrography Unit  </mark></h2>
+
+
+
+
+            <div class="col-sm-12 mt-3 bg-white ">
+                <p>
+                    The hydrography unit is the main pillar of the hydrographic tasks assigned to hydrographic ships throughout the Sultanate.
+                    It is concerned with reference operations and the collection of tidal data, which is an essential necessity in any survey
+                    operations, not to mention it is concerned with collecting depth data in shallow places such as ports and areas adjacent to beaches.
+                </p>
+            </div>
+
+
+            <h3 class="txtColorBlue text-center mt-3 p-3"><mark class="markSty-who highlight">The Roles and Functions of the Hydrography Unit   </mark></h3>
+
+
+
+            <div class="list-group">
+
+
+                <a href="#" class="list-group-item list-group-item-action " aria-current="true">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h4 class="mb-1 txtColorBlue">  Provide hydrographic reference </h4>
+
+                    </div>
+                    <p class="mb-1">
+
+                        Providing hydrographic support for hydrographic survey ships while they conduct survey work in all Omani waters.
+
+                    </p>
+                </a>
+
+
+                <a href="#" class="list-group-item list-group-item-action " aria-current="true">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h4 class="mb-1 txtColorBlue"> Tide data collection</h4>
+
+                    </div>
+                    <p class="mb-1">
+
+                        The unit collects tidal data during hydrography operations. It is also concerned with collecting that data on a permanent and continuous basis through the fixed station at the Saeed bin Sultan Naval Base.
+                    </p>
+                </a>
+
+
+
+
+                <a href="#" class="list-group-item list-group-item-action " aria-current="true">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h4 class="mb-1 txtColorBlue"> Collect depths in shallow areas</h4>
+
+                    </div>
+                    <p class="mb-1">
+
+                        The unit carries out integrated operations with the work of hydrography ships so that it is entrusted with surveys of shallow depths that ships cannot reach, and it is also entrusted with surveys of ports and
+                        closed and narrow places, by means of depth collecting devices of a single beam type.
+
+                    </p>
+                </a>
+
+
+                <a href="#" class="list-group-item list-group-item-action " aria-current="true">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h4 class="mb-1 txtColorBlue">    Beach surveys </h4>
+
+                    </div>
+                    <p class="mb-1">
+
+                        This unit is entrusted with basic tasks prior to any landing operation during the joint operations, and to provide a detailed view of the beach study and the degree of incline to ensure the safety of the path of
+                        the automatic landings entrusted to the landing operations, and that this path is free of submerged rocks and other threats to the safety of those ships and mechanisms.
+
+                    </p>
+                </a>
+
+
+                <a href="#" class="list-group-item list-group-item-action " aria-current="true">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h4 class="mb-1 txtColorBlue">      Operations defining the coastline </h4>
+
+                    </div>
+                    <p class="mb-1">
+                        The Hydrography Unit performs the operations of determining the coast line that extends along the territorial waters of the Sultanate and the variables that occur and modern constructions that require updating
+                        in the marine charts, especially the ports and other economic projects adjacent to the coast.
+
+
+                    </p>
+                </a>
+
+
+                <a href="#" class="list-group-item list-group-item-action " aria-current="true">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h4 class="mb-1 txtColorBlue">
+                            Data processing and Quality control
+                        </h4>
+
+                    </div>
+                    <p class="mb-1">
+
+                        The data processing department of this unit plays a leading and essential role in the initial processing of the data collected by hydrographic vessels and the beach survey department of the unit in preparation
+                        for raising a preliminary perception of the collected depths that will be added to and updated marine maps. This process requires extreme accuracy by using the latest global programs.
+
+                    </p>
+                </a>
+
+
+
+
+
+                <a href="#" class="list-group-item list-group-item-action " aria-current="true">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h4 class="mb-1 txtColorBlue">Training and qualification for the hydrography staff  </h4>
+
+                    </div>
+                    <p class="mb-1">
+                        Training and qualification for the hydrography staff, in addition to hosting and training university students during their on-the-job training period according to their academic courses, as well as
+                        giving introductory lectures to various weapons and government institutions during official visits and according to requirements.
+
+                    </p>
+                </a>
+
+
+
+
+            </div>
+
+
+
+            <div>
+                <br />
+                The Hydrography Unit of the Royal Navy of Oman is considered a representative of the Sultanate in the field of hydrographic survey, as it participates with visiting and friendly ships while conducting surveys in the
+                territorial waters. It also participates in the world in conferences and seminars in the same specialty.
+
+
+            </div>
+
+
+
+
+
+          <h2 class="txtColorBlue text-center mt-5 "><mark class="markSty-who highlight">The Main Fields of Hydrography Unit  </mark></h2>
+
+
+
+            <div class="container text-center mt-3 p-2 ">
+                <div class="row justify-content-center">
+
+                    <div class="col-sm-4 shadow m-5 p-3 box">
+                        <h4 style="color: #20426b;">Hydrographic Support   </h4>
+                        <br>
+                        <p class="phgJust">
+                            The hydrographic support Section is concerned with the follow-up and administrative supervision of the job and the supervision of applications, in addition to the supervision and preparation,
+                            the preparation of the human and technical cadre for the work of the surveys carried out by the unit, the department also collects and coordinates business reports and direct supervision of
+                            the national unit and the requirements of the hydrogen unit building. The department preserves and archives all correspondence, incoming and outgoing instructions, Navy instructions and spirits,
+                            studying, and keeping it in the unit.
+                        </p>
+                    </div>
+
+                    <div class="col-sm-4  shadow m-5  p-3 box">
+                        <h4 style="color: #20426b;">  Field Support  </h4>
+                        <br>
+                        <p class="phgJust">
+                            The department directly supervises the storage and disbursement of hydrographic devices on demand for field work and maintenance and follow-up on new requests for devices, in addition to renewing
+                            subscriptions for devices, software and licenses used in collecting and analyzing hydrographic data, as well as following up on internal and external maintenance of devices and submitting special
+                            reports It repairs and receives hydrographic devices. The department also provides technical support for hydrographic survey ships.
+                        </p>
+                    </div>
+
+                    <div class="col-sm-4  shadow m-5 p-3 box">
+                        <h4 style="color: #20426b;">Beach Survey   </h4>
+                        <br>
+                        <p class="phgJust">
+
+                            The Beach Survey Section supervises and prepares plans for surveys and various works related to beaches, such as surveys with depths less than 20 meters by the unit boat or Jet Ski. In addition to
+                            supervising the tidal monitoring devices in the various ports of the Sultanate.
+
+                        </p>
+                        <p class="phgJust">Hydrography Survey Tools:</p>
+
+                        <p class="txtColorGold phgJust">  HSL 2 &nbsp; <a style="cursor: pointer;color: blue" data-bs-toggle="modal" data-bs-target="#more1">More </a></p>
+
+
+
+                        <p class="txtColorGold phgJust"> Jet Ski &nbsp; <a style="cursor: pointer; color:blue" data-bs-toggle="modal" data-bs-target="#more2">More</a></p>
+                    </div>
+
+                    <div class="col-sm-4 shadow m-5 p-3 box">
+                        <h4 style="color: #20426b;">Hydrographic Data Processing </h4>
+                        <br>
+
+                        <p class="phgJust">
+
+
+                            This section is concerned with the initial processing of survey data, especially the depth data carried out by survey ships or other departments, by means of special and precise programs that calibrate and correct them as IHO standards, submitted to ONHO to revise and approval to use for ONHO requirement for charts production.
+
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="modal fade" id="more1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="h44"><mark class="highlight"> HSL 2</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <p class="phgJust">
+                        (HSL 2) hydrographic survey launch is an important addition to the hydrographic unit, as it was equipped with a multi-beam survey system, which make it easy for the unit to complete
+                        the tasks assigned to it by the Hydrography Directorate in the fastest time and with very high accuracy, as it facilitated the completion of surveys of very shallow depths that were
+                        assigned to the hydrography ships and caused danger At the draft of ships.
+                    </p>
+
+                    <img src="~/Images/ship.jpg" alt="Los Angeles" class="d-block" style="width: 100%; ">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="more2">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="h44"><mark class="highlight"> Jet Ski</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <p class="phgJust">
+                        Jet ski have recently been used in the hydrography unit in carrying out hydrographic surveys in order to raise the operational efficiency of the unit and to facilitate and speed up the
+                        implementation of many hydrographic tasks such as surveying ports and floating moorings, due to their ease of movement and their ability to collect accurate depth data in a limited spatial
+                        scale, as It was provided with an advanced hydrographic survey system, in addition to providing it with sonar equipment during the hydrographic survey process, which ensures the integrity
+                        of the quality of hydrographic data.
+
+                    </p>
+
+                    <img src="~/Images/jk.jpg" alt="Los Angeles" class="d-block" style="width: 100%; ">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+    else
+    {
+
+
+
+
+
+          <br>
+                <div class="container">
+                    <div class="row">
+
+
+                        <h2 class="txtColorBlue text-center mt-3 "><mark class="markSty-who highlight">وحدة الهيدروغرافيا</mark></h2>
+
+
+                        <div class="col-sm-12 mt-3 bg-white ">
+                            <p>
+                                تُعد وحدة الهيدروغرافيا الركيزة الرئيسة لمهام الهيدروغرافيا التي تُناط بسفن الهيدروغرافيا في أرجاء السلطنة، إذ إنها الجهة المَعنية بعمليات الإسناد، وجمع بيانات المد والجزر التي تُعد ضرورة أساس في أي عملية للمسح، ناهيك عن كونها مَعنية عن جمع بيانات الأعماق في الأماكن الضحلة، مثل: الموانئ، والمناطق المتاخمة للشواطئ.
+
+
+                            </p>
+                        </div>
+
+
+                        <h3 class="txtColorBlue text-center mt-3 p-3"><mark class="markSty-who highlight"> دور ومهام وحدة الهيدروغرافيا</mark></h3>
+
+
+
+                        <div class="list-group">
+
+
+                            <a href="#" class="list-group-item list-group-item-action " aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h4 class="mb-1 txtColorBlue">   تقديم الإسناد الهيدروغرافي </h4>
+
+                                </div>
+                                <p class="mb-1">
+
+                                    لسفن المسح الهيدروغرافي أثناء قيامها بأعمال المسح في جميع المياه العمانية.
+
+                                </p>
+                            </a>
+
+
+                            <a href="#" class="list-group-item list-group-item-action " aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h4 class="mb-1 txtColorBlue"> جمع بيانات المد والجزر</h4>
+
+                                </div>
+                                <p class="mb-1">
+
+                                    تقوم الوحدة بعمليات جمع بيانات المد والجزر خلال عمليات الهيدروغرافيا، كما أنها مَعنية بجمع تلك البيانات بصورة دائمة ومتواصلة من خلال المحطة الثابتة بقاعدة سعيد بن سلطان البحرية.
+                                </p>
+                            </a>
+
+
+
+
+                            <a href="#" class="list-group-item list-group-item-action " aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h4 class="mb-1 txtColorBlue">جمع الأعماق في المناطق الضحلة</h4>
+
+                                </div>
+                                <p class="mb-1">
+
+                                    تقوم الوحدة بعمليات متكاملة مع أعمال سفن الهيدروغرافيا، إذ يُناط بها عمليات مسح الأعماق الضحلة التي لا تتمكن سفـن الهيدروغرافيا من الوصول إليها، كما تُناط بها عمليات مسح الموانئ، والأماكن المغلقة والضيقة؛ بواسطة أجهزة جمع أعماق من نوع أحادي الشعاع.
+
+                                </p>
+                            </a>
+
+
+                            <a href="#" class="list-group-item list-group-item-action " aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h4 class="mb-1 txtColorBlue"> عمليات مسح الشواطئ </h4>
+
+                                </div>
+                                <p class="mb-1">
+
+                                    . يُناط بهذه الوحدة مهام أساس قبيل أي عملية إنزال خلال العمليات المشتركة، وتقديم رؤية مفصلة عن دراسة الشاطئ ومدى درجة انحداره؛ للتأكد من سلامة مسار قطع الإبرار الآلي المُناط بها عمليات الإنزال، وخلو ذلك المسار من الصخور المغمورة وغيرها، ممَّا يضمن سلامة تلك السفن والآليات.
+
+                                </p>
+                            </a>
+
+
+                            <a href="#" class="list-group-item list-group-item-action " aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h4 class="mb-1 txtColorBlue"> عمليات تحديد الخط الساحلي</h4>
+
+                                </div>
+                                <p class="mb-1">
+                                    تقوم وحدة الهيدروغرافيا بعمليات تحديد خط الساحلي الذي يمتد على طول المياه الإقليمية لسلطنة عمان، والمتغيرات التي تحدث، والإنشاءات الحديثة التي تتطلب تحديث في الخرائط البحرية، لاسيما الموانئ والمشاريع الاقتصادية الأخرى المتاخمة للساحل.
+
+
+                                </p>
+                            </a>
+
+
+                            <a href="#" class="list-group-item list-group-item-action " aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h4 class="mb-1 txtColorBlue">
+                                        عمليات ضبط الجودة ومعالجة البيانات
+                                    </h4>
+
+                                </div>
+                                <p class="mb-1">
+
+                                    فيا، وقسم مسح الشواطئ التابع للوحدة، تمهيدًا لرفع تصور أولي للأعماق التي تم جمعها، والتي سيتم إضافتها للخرائط البحرية لتحديثها، إذ تتطلب هذه العملية دقة متناهية بواسطة أحدث البرامج عالميًا.
+
+                                </p>
+                            </a>
+
+
+
+
+
+                            <a href="#" class="list-group-item list-group-item-action " aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h4 class="mb-1 txtColorBlue">التدريب والتأهيل لطاقم الهيدروغرافيا  </h4>
+
+                                </div>
+                                <p class="mb-1">
+                                    مواكبةً للتطور المستمر في تِقنيات الأجهزة والبرامج، إضافة لاستضافة طلبة الجامعات وتدريبهم على رأس العمل وفقًا لمقرراتهم الدراسية، وإلقاء المحاضرات التعريفية لمختلف الأسلحة والمؤسسات الحكومية خلال الزيارات الرسمية وحسب المتطلبات.
+
+                                </p>
+                            </a>
+
+
+                        </div>
+
+
+
+
+
+                        <h2 class="txtColorBlue text-center mt-5 "><mark class="markSty-who highlight">أهم المجالات  في وحدة الهيدروغرافيا   </mark></h2>
+
+
+
+                        <div class="container text-center mt-3 p-2 ">
+                            <div class="row justify-content-center">
+
+                                <div class="col-sm-4 shadow m-5 p-3 box">
+                                    <h4 style="color: #20426b;">الإسناد الهيدروغرافي  </h4>
+                                    <br>
+                                    <p class="phgJust">
+                                        يعنى قسم الإسناد الهيدروغرافي بمتابعة المتطلبات الإدارية والتنظيمية للوحدة ورفع الطلبات الخاصة بالإعمال، بالإضافة إلى الإشراف الإداري والتجهيز وتوفير الكادر البشري والتقني لأعمال المسوحات التي تقوم بها الوحدة، كما يقوم القسم بجمع تقارير الاعمال وتنسيقها والإشراف المباشر على مخازن الوحدة ومتطلبات مبنى وحدة الهيدروغرافيا. يقوم القسم بحفظ وجمع وارشفة جميع المراسلات الصادرة والواردة ونشر تعليمات البحرية وبث روح الالتزام والانضباط بين أفراد الوحدة.
+
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-4  shadow m-5  p-3 box">
+                                    <h4 style="color: #20426b;">   الإسناد الميداني   </h4>
+                                    <br>
+                                    <p class="phgJust">
+                                        يقوم القسم  بالإشراف المباشر على تخزين اجهزة الهيدروغرافيا وصرفها حسب الطلب للاعمال الميدانية وصيانتها ومتابعة الطلبات الجديدة للأجهزة، بالإضافة إلى تجديد إشتراكات الأجهزة والبرامج والرخص المستخدمة في جمع وتحليل البيانات الهيدروغرافية، كذلك متابعة صيانة الأجهزة داخليا وخارجيا ورفع التقارير الخاصة بإصلاح وإستلام أجهزة الهيدروغرافيا ،كما يقوم القسم بتقديم الدعم  الفني لسفن المسح الهيدروغرافي.
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-4  shadow m-5 p-3 box">
+                                    <h4 style="color: #20426b;"> مسح الشواطئ    </h4>
+                                    <br>
+                                    <p class="phgJust">
+
+                                        يقوم قسم مسح الشواطئ  بالإشراف وإعداد الخطط للمسوحات والأعمال المختلفة التي تخص الشواطئ، مثل مسوحات الأعماق أقل عن 20 متر وذلك بواسطة قارب الوحدة أو بواسطة الدراجات المائية، كما توكل للقسم مهام مسح انحدار الشواطئ وتآكلها وكذلك المسح للأغراض العملياتية كالإنزال البرمائي لمساندة القطع والسفن البحرية الأخرى، بالإضافة  الى الإشراف على أجهزة رصد المد والجزر بموانئ سلطنة عمان المختلفة.
+
+                                    </p>
+                                    <p class="phgJust">قوارب المسح الهيدروغرافي:</p>
+
+                                    <p class="txtColorGold phgJust">  قارب المسح الهيدروغرافي &nbsp; <a style="cursor: pointer;color: blue" data-bs-toggle="modal" data-bs-target="#more1">المزيد </a></p>
+
+
+
+                                    <p class="txtColorGold phgJust"> الدراجات المائية  &nbsp; <a style="cursor: pointer; color:blue" data-bs-toggle="modal" data-bs-target="#more2">المزيد</a></p>
+                                </div>
+
+                                <div class="col-sm-4 shadow m-5 p-3 box">
+                                    <h4 style="color: #20426b;"> معالجة البيانات الهيدروغرافية  </h4>
+                                    <br>
+
+                                    <p class="phgJust">
+
+
+                                        يختص هذا القسم بمعالجة البيانات الخام للمسوحات الهيدروغرافية لاسيما بيانات الأعماق التي تقوم بها سفن و أقسام المسح الهيدروغرافي وذلك باستخدام برامج معالجة بيانات خاصة و دقيقة تقوم بمعايرتها وتصحيحها و ذلك بحسب معايير المنظمة الهيدروغرافية الدولية  ، ومن ثم ارسالها للمكتب الهيدروغرافي الوطني العماني لمراجعتها و استخدامها لتلبية متطلبات انتاج الخرائط الملاحية.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+ <div class="modal fade" id="more1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="h44" ><mark class="highlight">قارب المسح الهيدروغرافي</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <p class="phgJust">
+                        يعتبر قارب الوحدة الجديد إضافة كبيرة لوحدة الهيدروغرافيا، حيث يحوي على أجهزة حديثة ومتطورة كجهاز متعدد الذبذبات مما أسهم في تنفيذ متطلبات العمل بسهولة و يسر من خلال زيادة حجم مساحة التغطية و جودة البيانات الهيدروغرافية ،حيث أنه يقوم بمسوحات الأعماق الضحلة و التي يتعذر وصول سفن الهيدروغرافيا اليها نظرا لطول الغاطس.
+
+
+                    </p>
+
+                    <img src="~/Images/ship.jpg" alt="Los Angeles" class="d-block" style="width: 100%; ">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal fade" id="more2">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="h44" ><mark class="highlight">الدراجات المائية</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" style=" padding: 0.5rem 0.5rem; margin: -0.5rem 19rem -0.5rem auto;"></button>
+
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <p class="phgJust">
+                        يختص هذا القسم بمعالجة البيانات الخام للمسوحات الهيدروغرافية لاسيما بيانات الأعماق التي تقوم بها سفن و أقسام المسح الهيدروغرافي وذلك باستخدام برامج معالجة بيانات خاصة و دقيقة تقوم بمعايرتها وتصحيحها و ذلك بحسب معايير المنظمة الهيدروغرافية الدولية ، ومن ثم ارسالها للمكتب الهيدروغرافي الوطني العماني لمراجعتها و استخدامها لتلبية متطلبات انتاج الخرائط الملاحية.
+
+
+
+                    </p>
+
+                    <img src="~/Images/jk.jpg" alt="Los Angeles" class="d-block" style="width: 100%; ">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    }
+
+
+
+@section Scripts{
+    <script src="~/sweetAlert/sweetalert.min.js"></script>
+
+    <script>
+
+    $(document).ready(function () {
+    debugger;
+    if ('@ViewBag.Done' != '' && '@ViewBag.Done' != null) {
+
+    swal('@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Done.. Your Request Success" : "تم ارسال طلبك")', "", "success");
+    }
+    });
+    </script>
+}

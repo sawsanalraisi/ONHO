@@ -1,0 +1,429 @@
+﻿@inject CultureLocalizer  _Localizer
+@{
+    ViewData["Title"] = "archdata";
+     Layout = "_Layout";
+    var culture = System.Globalization.CultureInfo.CurrentCulture;
+
+}
+
+<link href="~/Admin/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+@if (culture.Name.Contains("en-US"))
+{
+    <h2 class="txtTopStylearch223-Hyd mt-5" style="text-align:center"><mark class="markSty-who highlight "> List of Hydrographic Data</mark> </h2>
+
+    <h4 class=" mt-5 text-center"> ONHO contains many various information including: </h4>
+
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-md-12 p-4 ">
+
+
+                <div class="row">
+
+                    <div class="col-md-4 mb-3">
+                        <div class=" card h-100">
+                            <div class="our-services settings h-100 p-3">
+                                <div class="icon"><img src="~/Images/c1.png" width="90" height="90" class="shadow rounded-circle" style="border: 1px solid #b3a041 "> </div>
+                                <h4> Navigational charts </h4>
+                                <p> Oman's nautical chart scheme provides information about the nautical charts which provides via ONHO. </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-md-4 mb-3">
+                        <div class=" card h-100">
+                            <div class="our-services speedup  h-100 p-3">
+                                <div class="icon"> <img src="~/Images/c2.png" width="90" height="90" class="shadow rounded-circle" style="border: 1px solid #b3a041 "> </div>
+                                <h4> Depth data </h4>
+                                <p> Provide hydrographic surveys coverage which supplies from different sources and differs in coverage and depth accuracy.. </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-4 mb-3">
+                        <div class=" card h-100">
+                            <div class="our-services privacy h-100 p-3">
+                                <div class="icon"> <img src="~/Images/c3.png" width="90" height="90" class="shadow rounded-circle" style="border: 1px solid #b3a041 "> </div>
+                                <h4>Seabed data</h4>
+                                <p> Provide data about the nature of seafloor and sediments.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class=" card h-100">
+                            <div class="our-services backups h-100 p-3">
+                                <div class="icon"> <img src="~/Images/c4.png" width="90" height="90" class="shadow rounded-circle" style="border: 1px solid #b3a041 "> </div>
+                                <h4>	 Tides, water currents and tides current data </h4>
+                                <p>
+                                    Provide data for tidal data for standard and secondary stations.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class=" card h-100">
+                            <div class="our-services ssl h-100 p-3">
+                                <div class="icon"> <img src="~/Images/c5.png" width="90" height="90" class="shadow rounded-circle" style="border: 1px solid #b3a041 "> </div>
+                                <h4>	Base points and base line </h4>
+                                <p>
+
+                                    Provide layouts for fishing ,commercial and other ports with association with ports authority.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class=" card h-100">
+                            <div class="our-services database h-100 p-3">
+                                <div class="icon"> <img src="~/Images/c6.png" width="90" height="90" class="shadow rounded-circle" style="border: 1px solid #b3a041 "> </div>
+                                <h4>	Geodetic control station points data </h4>
+                                <p>
+                                    Data about the refernce points which used to measure the sea water levels.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class=" card h-100">
+                            <div class="our-services speedup h-100 p-3">
+                                <div class="icon"> <img src="~/Images/c7.png" width="90" height="90" class="shadow rounded-circle" style="border: 1px solid #b3a041 "> </div>
+                                <h4>	Historic surveys</h4>
+                                <p>
+                                    Provide a historical collection of the nautical charts.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-md-4 mb-3">
+                        <div class=" card h-100">
+                            <div class="our-services database h-100 p-3">
+                                <div class="icon"> <img src="~/Images/c8.png" width="90" height="90" class="shadow rounded-circle" style="border: 1px solid #b3a041 "> </div>
+                                <h4>		Oil resources areas   </h4>
+                                <p>
+                                    Provide information of the location of offshore petroleum activites.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-md-4 mb-3">
+                        <div class=" card h-100">
+                            <div class="our-services ssl h-100 p-3">
+                                <div class="icon"> <img src="~/Images/c9.png" width="90" height="90" class="shadow rounded-circle" style="border: 1px solid #b3a041 "> </div>
+                                <h4>	 Sunken ships information  </h4>
+                                <p>
+                                    Provide data about the marine wrecks and obstructions in Oman's water.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class=" card h-100">
+                            <div class="our-services backups h-100 p-3">
+                                <div class="icon"> <img src="~/Images/c10.png" width="90" height="90" class="shadow rounded-circle" style="border: 1px solid #b3a041 "> </div>
+                                <h4>	Beaches and ports advantages data </h4>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <div class=" card h-100">
+                            <div class="our-services privacy h-100 p-3">
+                                <div class="icon"> <img src="~/Images/c11.png" width="90" height="90" class="shadow rounded-circle" style="border: 1px solid #b3a041 "> </div>
+                                <h4>  Vertical and horizontal reference data</h4>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class=" card h-100">
+
+                            <div class="our-services speedup h-100 p-3">
+                                <div class="icon"> <img src="~/Images/c12.png" width="90" height="90" class="shadow rounded-circle" style="border: 1px solid #b3a041 "> </div>
+                                <h4> Fisheries areas  </h4>
+                                <p>
+                                    Provide fishing haven locations in oman water.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <div class="row justify-content-center">
+
+                    <div class="col-md-4 mb-3">
+
+                        <div class=" card h-100">
+
+                            <div class="our-services settings h-100 p-3">
+                                <div class="icon"> <img src="~/Images/c13.png" width="90" height="90" class="shadow rounded-circle" style="border: 1px solid #b3a041 "></div>
+                                <h4>  Oman Maritime Book</h4>
+                                <p>
+                                    The annual publication of oman maritime book.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+}
+else{
+
+
+
+
+      <h2 class="txtTopStylearch223-Hyd mt-5" style="text-align:center"><mark class="markSty-who highlight "> البيانات البحرية المتوفرة في أرشيف المكتب الهيدروغرافي</mark> </h2>
+
+
+                <h4 class=" mt-5 text-center"> يضم المكتب الهيدروغرافي الوطني العماني عددًا من البيانات والمعلومات البحرية المتنوعة </h4>
+
+                <div class="container-fluid ">
+                    <div class="row">
+                        <div class="col-md-12 p-2 ">
+
+
+                            <div class="row">
+
+                                <div class="col-md-4 mb-3">
+                                    <div class=" card h-100">
+                                        <div class="our-services settings h-100 p-3">
+                                            <div class="icon"><img src="~/Images/c1.png" width="90" height="90" class="shadow rounded-circle" style="border: 1px solid #b3a041 "> </div>
+                                            <h4> الخرائط الملاحية </h4>
+                                            <p> يوفر مخطط الخرائط الملاحية العمانية معلومات عن جميع الخرائط الملاحية العمانية </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="col-md-4 mb-3">
+                                    <div class=" card h-100">
+                                        <div class="our-services speedup  h-100 p-3">
+                                            <div class="icon"> <img src="~/Images/c2.png" width="90" height="90" class="shadow rounded-circle" style="border: 1px solid #b3a041 "> </div>
+                                            <h4> بيانات الأعماق </h4>
+                                            <p> توفر تغطية للمسوحات الهيدروغرافية وتتوفر من مصادر متنوعة وتختلف في مدى التغطية و دقة الأعماق. </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-4 mb-3">
+                                    <div class=" card h-100">
+                                        <div class="our-services privacy h-100 p-3">
+                                            <div class="icon"> <img src="~/Images/c3.png" width="90" height="90" class="shadow rounded-circle" style="border: 1px solid #b3a041 "> </div>
+                                            <h4>بيانات قاع البحر</h4>
+                                            <p> توفر معلومات عن طبيعة قاع البحر ومكوناته الصخرية.</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <div class=" card h-100">
+                                        <div class="our-services backups h-100 p-3">
+                                            <div class="icon"> <img src="~/Images/c4.png" width="90" height="90" class="shadow rounded-circle" style="border: 1px solid #b3a041 "> </div>
+                                            <h4>قراءات المد والجزر </h4>
+                                            <p>
+                                                توفر قراءات المد والجزر المتوقعة للمحطات الرئيسية والثانوية.
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class=" card h-100">
+                                        <div class="our-services ssl h-100 p-3">
+                                            <div class="icon"> <img src="~/Images/c5.png" width="90" height="90" class="shadow rounded-circle" style="border: 1px solid #b3a041 "> </div>
+                                            <h4>	حدود ومخططات الموانئ </h4>
+                                            <p>
+                                                توفر مخططات موانئ الصيد والموانئ التجارية والسياحية بالتعاون مع هيئات الموانئ والمشغلين.
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class=" card h-100">
+                                        <div class="our-services database h-100 p-3">
+                                            <div class="icon"> <img src="~/Images/c6.png" width="90" height="90" class="shadow rounded-circle" style="border: 1px solid #b3a041 "> </div>
+                                            <h4>	بيانات نقاط التحكم الجيوديسي </h4>
+                                            <p>
+                                                معلومات عن النقاط المرجعية تستخدم لقياس مستويات ماء البحر.
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <div class=" card h-100">
+                                        <div class="our-services speedup h-100 p-3">
+                                            <div class="icon"> <img src="~/Images/c7.png" width="90" height="90" class="shadow rounded-circle" style="border: 1px solid #b3a041 "> </div>
+                                            <h4>	الخرائط والمسوحات التاريخية</h4>
+                                            <p>
+                                                توفر مجموعة من الخرائط الملاحية التاريخية.
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="col-md-4 mb-3">
+                                    <div class=" card h-100">
+                                        <div class="our-services database h-100 p-3">
+                                            <div class="icon"> <img src="~/Images/c8.png" width="90" height="90" class="shadow rounded-circle" style="border: 1px solid #b3a041 "> </div>
+                                            <h4>		مواقع مناطق النفط   </h4>
+                                            <p>
+                                                توفر معلومات عن مواقع الاستثمارات البترولية في البحر.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="col-md-4 mb-3">
+                                    <div class=" card h-100">
+                                        <div class="our-services ssl h-100 p-3">
+                                            <div class="icon"> <img src="~/Images/c9.png" width="90" height="90" class="shadow rounded-circle" style="border: 1px solid #b3a041 "> </div>
+                                            <h4>	الحطام البحري  </h4>
+                                            <p>
+                                                توفر معلومات تفصيلية عن الحطام البحري والسفن الغارقة في مياه سلطنة عمان
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <div class=" card h-100">
+                                        <div class="our-services backups h-100 p-3">
+                                            <div class="icon"> <img src="~/Images/c10.png" width="90" height="90" class="shadow rounded-circle" style="border: 1px solid #b3a041 "> </div>
+                                            <h4>	حماية السواحل و إدارة الشواطئ </h4>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 mb-3">
+                                    <div class=" card h-100">
+                                        <div class="our-services privacy h-100 p-3">
+                                            <div class="icon"> <img src="~/Images/c11.png" width="90" height="90" class="shadow rounded-circle" style="border: 1px solid #b3a041 "> </div>
+                                            <h4>  تخطيط المسوحات البحرية</h4>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class=" card h-100">
+
+                                        <div class="our-services speedup h-100 p-3">
+                                            <div class="icon"> <img src="~/Images/c12.png" width="90" height="90" class="shadow rounded-circle" style="border: 1px solid #b3a041 "> </div>
+                                            <h4> مناطق المصائد السمكية  </h4>
+                                            <p>
+                                                توفر مواقع المصائد السمكية في المياه العمانية
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="row justify-content-center">
+
+                                <div class="col-md-4 mb-3">
+
+                                    <div class=" card h-100">
+
+                                        <div class="our-services settings h-100 p-3">
+                                            <div class="icon"> <img src="~/Images/c13.png" width="90" height="90" class="shadow rounded-circle" style="border: 1px solid #b3a041 "></div>
+                                            <h4>  كتاب عمان البحري</h4>
+                                            <p>
+                                                الإصدار السنوي من كتاب عمان البحري و نسخ الأعوام السابقة
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div> 
+                            </div> 
+                            </div> 
+                            </div>
+                       
+
+}
+@section Scripts{
+    <script src="~/sweetAlert/sweetalert.min.js"></script>
+
+    <script>
+
+    $(document).ready(function () {
+    debugger;
+    if ('@ViewBag.Done' != '' && '@ViewBag.Done' != null) {
+
+    swal('@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Done.. Your Request Success" : "تم ارسال طلبك")', "", "success");
+    }
+    });
+    </script>
+}

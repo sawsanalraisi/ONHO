@@ -1,0 +1,81 @@
+﻿@model Hydro.DAL.Entities.NoticeToMariner
+
+@{
+    ViewData["Title"] = "Edittest";
+}
+
+<h1>Edittest</h1>
+
+<h4>NoticeToMariner</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edittest">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="NoticeType" class="control-label"></label>
+                <input asp-for="NoticeType" class="form-control" />
+                <span asp-validation-for="NoticeType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NotiecDesc" class="control-label"></label>
+                <input asp-for="NotiecDesc" class="form-control" />
+                <span asp-validation-for="NotiecDesc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NoticeFileName" class="control-label"></label>
+                <input asp-for="NoticeFileName" class="form-control" />
+                <span asp-validation-for="NoticeFileName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NoticeDate" class="control-label"></label>
+                <input asp-for="NoticeDate" class="form-control" />
+                <span asp-validation-for="NoticeDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NoticeEdition" class="control-label"></label>
+                <input asp-for="NoticeEdition" class="form-control" />
+                <span asp-validation-for="NoticeEdition" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreateBy" class="control-label"></label>
+                <input asp-for="CreateBy" class="form-control" />
+                <span asp-validation-for="CreateBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreateAt" class="control-label"></label>
+                <input asp-for="CreateAt" class="form-control" />
+                <span asp-validation-for="CreateAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UpdateBy" class="control-label"></label>
+                <input asp-for="UpdateBy" class="form-control" />
+                <span asp-validation-for="UpdateBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UpdateAt" class="control-label"></label>
+                <input asp-for="UpdateAt" class="form-control" />
+                <span asp-validation-for="UpdateAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UploadeFile" class="control-label"></label>
+                <input asp-for="UploadeFile" class="form-control" />
+                <span asp-validation-for="UploadeFile" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Isdelete" /> @Html.DisplayNameFor(model => model.Isdelete)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

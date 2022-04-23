@@ -1,0 +1,223 @@
+﻿@inject CultureLocalizer  _Localizer
+@{
+    ViewData["Title"] = "archive";
+     Layout = "_Layout";
+    var X = _Localizer.Text("Home");
+        var culture = System.Globalization.CultureInfo.CurrentCulture;
+
+}
+
+<link href="~/Admin/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+
+
+@if (culture.Name.Contains("en-US"))
+{
+
+
+    <div class="container-fluid ">
+        <div class="row no-gutters">
+
+
+                        <div class="col-md-12 p-4 d-flex  mt-3">
+                            <div class="p-3">
+
+                                <h2 class="txtTopStylearch223-Hyd" style="text-align:center"><mark class="markSty-who highlight ">Hydrographic Archive </mark> </h2>
+
+                                <p class="praStyle mt-4">
+
+
+                                    Archive is a section of hydrographic data management. These surveys and data have crucial importance entitled to produce charts. Thus,
+                                    it is considered as a national reference and active operator to maintain hydrographic data and to be benefit for all research, military and civil authorities.
+                                    <br /><br />
+                                    <div class="row text-center mt-3">
+                                        <div class="col-6">
+                                            <img src="~/Images/archive2.jpg" width="90% ">
+                                            <br /><br />
+                                            <img src="~/Images/archive3.jpg" width="90% ">
+
+                                        </div>
+
+                                        <div class="col-6">
+                                            <img src="~/Images/archive1.jpg" width="102%">
+                                        </div>
+                                    </div>
+                                </p>
+
+
+                                <br />
+
+                                <h2 class="txtTopStylearch334-Hyd" style="text-align:center"> <mark class="markSty-who highlight mt-5">   Role of Hydrographic Archive</mark> </h2>
+
+
+
+                                <p class="praStyle">
+                                    <br />
+                                    <img src="~/Images/tick-e.PNG" width="23">
+
+                                    The Archive section contains all national and international surveys including single-beam echo sounder or multi-beam echo sounder with
+                                    related data as tides, depths, maps, national and international nautical charts, and other surveys, all available in form of paper charts,
+                                    files and CDs. In order to save search and easy reference, hydro data indexing is carried out on a scientific pattern.
+
+
+                                    <br /><br />
+
+
+                                    <img src="~/Images/tick-e.PNG" width="23">
+
+                                    The archive receives data from different sources, registers and then analyzes data comparing with produced charts and informs navigational safety section about correction to charts.
+
+
+                                    <br /><br />
+
+
+                                    <img src="~/Images/tick-e.PNG" width="23">
+
+                                    The archive provides data of required surveys from production section.
+                                    <br /><br />
+
+
+                                    <img src="~/Images/tick-e.PNG" width="23">
+
+                                    The archive provides national charts and publications as required.
+
+                                    <br /><br />
+
+
+                                    <img src="~/Images/tick-e.PNG" width="23">
+
+                                    The archive provides surveys and charts for civil, and military agencies and persons.
+                                    <br /><br />
+
+
+                                    <img src="~/Images/tick-e.PNG" width="23">
+
+                                    The archive determines CATZOC of all hydrographic surveys.
+                                    <br /><br />
+                                </p>
+
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+}
+else{
+
+
+
+
+
+      <div class="container-fluid ">
+                    <div class="row no-gutters">
+
+
+                        <div class="col-md-12 p-4 d-flex  mt-3">
+                            <div class="p-3">
+
+                                <h2 class="txtTopStylearch223-Hyd" style="text-align:center"><mark class="markSty-who highlight ">   الأرشيف الهيدروغرافي</mark> </h2>
+
+                                <p class="praStyle mt-4">
+                                    يعد الأرشيف الهيدروغرافي أحد مكونات قسم إدارة البيانات الهيدروغرافية، وتمثل هذه البيانات والمسوحات الهيدروغرافية أهمية جوهرية في مسار إنتاج الخرائط، كما يُمثل الأرشيف مرجعًا وطنيًا يقوم بمهمات كبرى في حفظ البيانات الهيدروغرافية، وتتوافر بياناته لجميع الجهات المدنية والعسكرية والبحثية.
+
+
+                                    <br /><br />
+                                    <div class="row text-center mt-3 mb-3">
+                                        <div class="col-6">
+                                            <img src="~/Images/archive2.jpg" width="90% ">
+                                            <br /><br />
+                                            <img src="~/Images/archive3.jpg" width="90% ">
+
+                                        </div>
+
+                                        <div class="col-6">
+                                            <img src="~/Images/archive1.jpg" width="102%">
+                                        </div>
+                                    </div>
+                                </p>
+
+
+                                <br />
+
+                                <h2 class="txtTopStylearch334-Hyd" style="text-align:center"> <mark class="markSty-who highlight mt-5">أدوار الأرشيف الهيدروغرافي</mark> </h2>
+
+
+
+                                <p class="praStyle">
+                                    <br />
+                                    <img src="~/Images/tick.PNG" width="20">
+
+                                    يضم أرشيف المكتب الهيدروغرافي الوطني العماني جميع المسوحات العمانية والأجنبية، سواء مسوحات الأعماق ذات مسبار الصدى الأحادي الحزم، أَمْ المتعدد الحزم والبيانات المتعلقة بها، مثل: بيانات المد والجزر، وبيانات الأعماق، إضافة للخرائط البرية، والخرائط الملاحية العمانية والأجنبية، وبيانات المسوحات الأخرى، وتتوافر هذه البيانات على شكل خرائط ورقية وملفات وأقراص مرنة. ولتيسير الرجوع لهذه المراجع؛ تم إعداد فهرس للأرشيف، يضم كافة البيانات، مُرتبة على نسق علمي معين.
+
+
+                                    <br /><br />
+
+
+                                    <img src="~/Images/tick.PNG" width="20">
+
+                                    يستلم الأرشيف البيانات من المصادر المختلفة، وأرشفة البيانات في سجل خاص، ثم يتم تقييم البيانات، ومدى تأثر الخرائط المنتجة بالبيانات الجديدة، وإعلام قسم السلامة الملاحية بوجود مسح قد يتطلب إجراءً، سواءً بإصدار إعلان ملاحي أَمْ تحديث الخرائط المتأثرة.
+
+
+                                    <br /><br />
+
+
+                                    <img src="~/Images/tick.PNG" width="20">
+
+                                    يوفر الأرشيف بيانات المسوحات المطلوبة من قبل قسم الإنتاج
+                                    <br /><br />
+
+
+                                    <img src="~/Images/tick.PNG" width="20">
+
+                                    يُقدم الأرشيف طلبات الخرائط الملاحية والمنشورات البحرية.
+
+                                    <br /><br />
+
+
+                                    <img src="~/Images/tick.PNG" width="20">
+
+                                    يوفر الأرشيف طلبات المسوحات أو الخرائط للجهات المدنية، والعسكرية، ولأفراد
+                                    <br /><br />
+
+
+                                    <img src="~/Images/tick.PNG" width="20">
+
+                                    تحديد درجة الثقة في البيانات، الذي يسمى CATZOC، لجميع المسوحات الهيدروغرافية.
+                                    <br /><br />
+                                </p>
+
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+
+
+}
+
+
+
+
+
+
+@section Scripts{
+    <script src="~/sweetAlert/sweetalert.min.js"></script>
+
+    <script>
+
+    $(document).ready(function () {
+    debugger;
+    if ('@ViewBag.Done' != '' && '@ViewBag.Done' != null) {
+
+    swal('@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Done.. Your Request Success" : "تم ارسال طلبك")', "", "success");
+    }
+    });
+    </script>
+}

@@ -105,7 +105,7 @@ namespace HydrographicOffice.Controllers
         }
 
         [HttpPost]
-        public IActionResult Edit(long id ,NavigationWVm obj)
+        public async Task<IActionResult> Edit(long id ,NavigationWVm obj)
         {
             var userLogin = HttpContext.User.Identity.Name;
 
@@ -116,6 +116,27 @@ namespace HydrographicOffice.Controllers
 
             if (ModelState.IsValid)
             {
+                if (obj.File.Length > 0)
+                {
+                    var filename = obj.File.FileName.Replace("\"", string.Empty);
+                    var NewfileName = "";
+                    var filenameadnex = "";
+                    if (filename.Contains('.'))
+                    {
+                        var arrExtentions = filename.Split('.');
+                        var lenExtention = arrExtentions.Length;
+                        var extention = arrExtentions[lenExtention - 1];
+                        filenameadnex = DateTime.Now.Ticks.ToString() + "." + extention;
+                        NewfileName = "UploadedFiles/" + filenameadnex;
+                    }
+                    using (var stream = new FileStream(_environment.WebRootPath + "/" + NewfileName, FileMode.Create))
+                    {
+                        await obj.File.CopyToAsync(stream);
+                        obj.UploadeFile = filenameadnex;
+                    }
+
+                }
+
                 var mapper = _mapper.Map<NavigationWarning>(obj);
                 mapper.UpdateAt = DateTime.Now;
                 mapper.UpdateBy = userLogin;

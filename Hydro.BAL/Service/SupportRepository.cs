@@ -18,6 +18,7 @@ namespace Hydro.BAL.Service
         public void AddLog(Logs obj)
         {
             _context.Logs.Add(obj);
+            _context.SaveChanges();
         }
 
       

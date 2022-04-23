@@ -39,7 +39,7 @@ namespace HydrographicOffice.Controllers
             _context = context;
             _NotificationRepository = NotificationRepository;
         }
-     //   [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme, Roles = "Admin,AdsAdmin")]
+        [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme, Roles = "Admin,AdsAdmin")]
 
         public IActionResult Index()
         {

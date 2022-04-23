@@ -6,41 +6,13 @@
     Layout = "_Layout";
 
 }
-<link href="~/Admin/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css" rel="stylesheet" />
-<style>
+@*<link href="~/Admin/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css" rel="stylesheet" />*@
 
-    .counter {
-        width: 100%;
-        margin: auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
 
-        .counter input {
-            width: 100%;
-            border: 0;
-            line-height: 30px;
-            font-size: 20px;
-            text-align: center;
-            background: red;
-            color: #fff;
-            appearance: none;
-            outline: 0;
-        }
+<link href="~/sty/Style_Qty.css" rel="stylesheet">
 
-        .counter span {
-            display: block;
-            font-size: 25px;
-            padding: 0 10px;
-            cursor: pointer;
-            color: #0052cc;
-            user-select: none;
-        }
-
-</style>
-<h2 class="txtTopStylearch223-Hyd mt-5" style="text-align:center"><mark class="highlight ">Service Request  </mark> </h2>
+<h2 class="txtTopStylearch223-Hyd mt-5" style="text-align:center"><mark class="highlight ">@_Localizer.Text("ServiceRequest")  </mark> </h2>
 
 
 <div class="container">
@@ -54,14 +26,14 @@
                 @*<div class="card px-5 py-5 ">*@
 
                 @*<h2 class="mt-3 txtColorGold text-center">Service Request  </h2>*@
-                <p class="mt-5 mb-3txtColorBlue">Please fill the form ...</p>
+                <p class="mt-5 mb-3txtColorBlue">@_Localizer.Text("Pleasefilltheform")</p>
 
                 <div class="d-flex d-grid gap-1 ">
 
                     <div class="form-input" style="width:100%;">
                         @*<label for="cars" class="control-label align-self-center" style="width:30%;">Choose Your Service: </label>*@
                         <select onchange="Getlist(this)" class="form-control  form-select form-controlNonSpace" id="sertype" name="sertype">
-                            <option value="0" selected>select type of service</option>
+                            <option value="0" selected>@_Localizer.Text("seltypeofservice")</option>
                             <option value="1" selected>Product</option>
                             <option value="2">Data</option>
                         </select>
@@ -71,12 +43,12 @@
                     <div class="form-input" style="width:100%;">
                         @*<label class="control-label align-self-center" style="width:30%;"> Select Item:</label>*@
                         @*@Html.DropDownList("CategoryId", ViewBag.CategoryId, "", new { @class = "form-control" })
-                        <span asp-validation-for="CategoryId" class="text-danger"></span>*@
+                            <span asp-validation-for="CategoryId" class="text-danger"></span>*@
 
 
                         <select asp-for="CategoryId" class="form-control form-select form-controlNonSpace">
-                            <option value="0">Select Category</option>
-                            @foreach (var suit in ViewBag.CategoryId  as SelectList)
+                            <option value="0">@_Localizer.Text("SelectCategory") </option>
+                            @foreach (var suit in ViewBag.CategoryId as SelectList)
                             {
                                 <option value="@(suit.Value)">@(suit.Text)</option>
                             }
@@ -93,9 +65,9 @@
                     <div class="form-input" style="width:100%;">
                         @*<label for="cars" class="control-label align-self-center" style="width:30%;">Choose File Type:</label>*@
                         @*<select asp-for="FileFormatId" class="form-control form-controlNonSpace" asp-items="ViewBag.FileFormatId"></select>
-            <span asp-validation-for="FileFormat" class="text-danger"></span>*@
+                            <span asp-validation-for="FileFormat" class="text-danger"></span>*@
                         <select asp-for="FileFormatId" class="form-control form-select form-controlNonSpace">
-                            <option value="0">Select File Format</option>
+                            <option value="0">@_Localizer.Text("SelectFileFormat")</option>
                             @foreach (var suit in ViewBag.FileFormatId as SelectList)
                             {
                                 <option value="@(suit.Value)">@(suit.Text)</option>
@@ -108,62 +80,50 @@
 
 
                     @*<div class="form-input" style="width:100%;">
-                        <input asp-for="Quantity" class="form-control form-controlNonSpace" placeholder="Quantity" />
-                        <span asp-validation-for="Quantity" class="text-danger"></span>
-                    </div>*@
+                            <input asp-for="Quantity" class="form-control form-controlNonSpace" placeholder="Quantity" />
+                            <span asp-validation-for="Quantity" class="text-danger"></span>
+                        </div>*@
 
                     <div class="form-input" style="width:100%;">
                         <div class="counter">
                             <span class="down" onClick='decreaseCount(event, this)'>-</span>
-                            <input type="text" asp-for="Quantity" class="form-control form-controlNonSpace" value="Quantity">
+                            <input type="text" asp-for="Quantity" class="form-control form-controlNonSpace" value="@_Localizer.Text("Quantity")">
                             <span class="up" onClick='increaseCount(event, this)'>+</span>
                         </div>
                         <span asp-validation-for="Quantity" class="text-danger"></span>
                     </div>
 
 
-
-
-
-                    @*<div class="form-input d-flex" style="width:100%;">
-            <input asp-for="Years" class="form-control form-controlNonSpace" placeholder="Service Date" />
-            <span asp-validation-for="Years" class="text-danger"></span>
-        </div>*@
-
                     <div class="form-input" style="width:100%">
-                        <i class="fa fa-calendar" style=" position: absolute; padding: 15px; right:0;"></i>
-                        <input type="text" asp-for="Years" class="form-control form-controlNonSpace" value="@DateTime.Now.ToString("dd/MM/yyyy")">
+                        <i class="fa fa-calendar txtColorGold calsty"></i>
+                        <input type="text" asp-for="Years" class="form-control form-controlNonSpace" placeholder="@_Localizer.Text("dateformat")">
                         <span asp-validation-for="Years" class="text-danger"></span>
                     </div>
                 </div>
 
 
 
+                <div class="form-input">
+                    <input asp-for="Postion" class="form-control form-controlNonSpace" placeholder="@_Localizer.Text("Position")" />
+                    <span asp-validation-for="Postion" class="text-danger"></span>
+                </div>
+
+                <div class="form-input">
+                    <input asp-for="Purpose" class="form-control form-controlNonSpace" placeholder="@_Localizer.Text("Region")" />
+                    <span asp-validation-for="Region" class="text-danger"></span>
+                </div>
+                <div class="form-input">
+                    <input asp-for="Region" class="form-control form-controlNonSpace" placeholder="@_Localizer.Text("Region")" />
+                    <span asp-validation-for="Region" class="text-danger"></span>
+                </div>
+                <div class="form-input">
+                    <textarea asp-for="Description" class="form-control3 form-control2  " rows="5" placeholder="@_Localizer.Text("Description")"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn mt-4 signup backBlue text-white" style="width:100%">  <h5>  @_Localizer.Text("Send") </h5> </button>
 
 
-
-
-                    <div class="form-input">
-                        <input asp-for="Postion" class="form-control form-controlNonSpace" placeholder="Postion" />
-                        <span asp-validation-for="Postion" class="text-danger"></span>
-                    </div>
-
-                    <div class="form-input">
-                        <input asp-for="Purpose" class="form-control form-controlNonSpace" placeholder="Purpose" />
-                        <span asp-validation-for="Purpose" class="text-danger"></span>
-                    </div>
-                    <div class="form-input">
-                        <input asp-for="Region" class="form-control form-controlNonSpace" placeholder="Region" />
-                        <span asp-validation-for="Region" class="text-danger"></span>
-                    </div>
-                    <div class="form-input">
-                        <textarea asp-for="Description" class="form-control3 form-control2  " rows="5" placeholder=" Description . . ."></textarea>
-                        <span asp-validation-for="Description" class="text-danger"></span>
-                    </div>
-                    <button type="submit" class="btn mt-4 signup backBlue text-white" style="width:100%">  <h5> Request </h5> </button>
-
-
-</form>
+            </form>
 
         </div>
     </div>
@@ -175,7 +135,7 @@
     <script src="~/Admin/js/plugins/daterangepicker/daterangepicker.js"></script>
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 
-<script>
+    <script>
 
 
         $(document).ready(function () {
@@ -185,7 +145,7 @@
                 forceParse: false,
                 calendarWeeks: true,
                 autoclose: true,
-                format: "mm/dd/yyyy"
+                dateFormat: "dd/mm/yyyy"
             });
             var check = "#sertype".val;
         });

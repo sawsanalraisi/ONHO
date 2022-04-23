@@ -54,24 +54,9 @@ namespace Hydro.BAL.Service
                 };
                 //mailMessage.To.Add("thinkgirl2018@gmail.com");
                 mailMessage.To.Add(toAddress);
-
-
                 smtpClient.Send(mailMessage);
-                //client.UseDefaultCredentials = true;
-                ////client.Port = int.Parse("587");
-                //client.Credentials = new NetworkCredential("info@alsumoodfm.om", "Year@2021");
-                //client.DeliveryMethod = SmtpDeliveryMethod.Network;
-
-                //client.EnableSsl = true;
-                //client.EnableSsl = true;
-                //MailMessage mailMessage = new MailMessage();
-                //MailMessage mailMessage = new MailMessage();
-                //mailMessage.From = "info@alsumoodfm.om";
-                //mailMessage.To =new ;
-                //mailMessage.Body = "Name: " + name + "<br /><br />Email: " + toAddress + "<br /><br />" + body;
-                //mailMessage.IsBodyHtml = true;
-                //mailMessage.Subject = subject;
-                //client.Send(mailMessage);
+           
+             
             }
             catch (Exception ex)
             {

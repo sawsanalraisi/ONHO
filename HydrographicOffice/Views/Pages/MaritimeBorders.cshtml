@@ -1,0 +1,541 @@
+﻿@inject CultureLocalizer  _Localizer
+@{
+    ViewData["Title"] = "Maritime Borders";
+     Layout = "_Layout";
+    var X = _Localizer.Text("Home");
+        var culture = System.Globalization.CultureInfo.CurrentCulture;
+
+}
+
+<link href="~/Admin/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+
+ @if (culture.Name.Contains("en-US"))
+{
+
+    <br /><br />
+    <h2 class="txtColorBlue text-center "><mark class="markSty-who highlight">  Maritime Boundaries</mark></h2>
+
+    <div class="container mt-3 ">
+        <div class="row phgJust">
+
+
+            <div class="col-sm-12  p-3 m-2 bg-white ">
+
+                <p>
+                    The limit of zones delineated a jurisdictions of coastline encompassing the baseline, internal waters, territorial seas, economic exclusive zone, and continental shelf and overlapping zones between neighbors’ states.
+                </p>
+                <br>
+                <p style="  font-size: 21px;">
+
+                    <b> Maritime Zones </b>
+                </p>
+
+                <p>
+                    Issued in 1982, the Law of the Sea regulates ocean and sea space into maritime zones, that a state may clAims rights. These zones are divided into six zones as follows:
+                </p>
+
+
+
+            </div>
+
+
+
+
+            <div class="container mt-1">
+                <div id="accordion">
+
+
+
+                    <div class="card">
+                        <div class="card-header backBlue d-flex justify-content-between hovertitle" data-bs-toggle="collapse" href="#collapseOne">
+                            <a class="btn text-white" data-bs-toggle="collapse" href="#collapseOne">
+                                <b>   Internal Waters </b>
+                            </a>
+
+                            <a class="btn text-white arrow" data-bs-toggle="collapse" href="#collapseOne">
+
+                                <img src="~/Images/tick-m.PNG" width="20">
+                            </a>
+
+                        </div>
+                        <div id="collapseOne" class="collapse" data-bs-parent="#accordion">
+                            <div class="card-body">
+
+
+                                The paragraph (1) of article (8) of Law of the Sea defined the internal water as the belt of waters that are on the landward side
+                                of the baseline of the territorial sea. The paragraph (1) of article (2) described that the state sovereignty extends to the air
+                                space as well as its underlying seabed and subsoil. This zone includes mouth of rivers, bays and waters between islands up to a
+                                limit not exceeding 12 nautical miles.
+                                <br /><br />
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="card">
+                        <div class="card-header backBlue d-flex justify-content-between hovertitle" data-bs-toggle="collapse" href="#collapseTwo">
+                            <a class="collapsed btn text-white" data-bs-toggle="collapse" href="#collapseTwo">
+                                <b>   Territorial Sea </b>
+                            </a>
+
+                            <a class="btn text-white arrow" data-bs-toggle="collapse" href="#collapseTwo">
+
+                                <img src="~/Images/tick-m.PNG" width="20">
+                            </a>
+                        </div>
+                        <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+                            <div class="card-body">
+
+                                The sovereignty of a costal state extends beyond its land territory and internal waters to an adjacent belt of sea, described as the territorial sea in Article (2).
+                                <br /><br />
+                                This sovereignty extends to the air space and covers the territorial sea as well as its underlying seabed and subsoil. According to Article (3), a state has the right to
+                                establish the breadth of its territorial sea up to a limit not exceeding 12 nautical miles.
+                                <br /><br />
+                                The normal ties line for measuring the breadth of the territorial sea is the mean low water line along the coast. Whenever  the coasts of two states are opposite or adjacent
+                                to each other, neither  a state is entitled to extend its territorial sea beyond the median line, every points on the baseline from which the territorial seas of both states
+                                are measured, unless otherwise specific rules for special cases.
+                                <br /><br />
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="card">
+                        <div class="card-header backBlue d-flex justify-content-between hovertitle" data-bs-toggle="collapse" href="#collapseThree">
+                            <a class="collapsed btn text-white" data-bs-toggle="collapse" href="#collapseThree">
+                                <b>  Contiguous Zone</b>
+                            </a>
+
+                            <a class="btn text-white arrow" data-bs-toggle="collapse" href="#collapseThree">
+
+                                <img src="~/Images/tick-m.PNG" width="20">
+                            </a>
+                        </div>
+                        <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+                            <div class="card-body">
+
+
+
+                                It is described sometimes as adjacent zone: This is a zone contiguous to a costal state’s territorial sea, the contiguous zone may not extend beyond 24 nautical miles from the baselines
+                                from which the breadth of the territorial sea is measured, a 12 nautical miles as a contiguous zone in addition to its 12 nautical miles as territorial sea, over which a state may exerts
+                                the sovereignty of customs, fiscal, immigration and pollution.
+                                <br /><br />
+                                Some states clAims that contiguous zone is not necessary when EEZ exist, but the fact in that EEZ cannot be fully alternative of contiguous zone in case of sufficient space; its role is
+                                always vital, as EEZ only manages issues of security and safety of a costal state.
+                                <br /><br />
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="card">
+                        <div class="card-header backBlue d-flex justify-content-between hovertitle" data-bs-toggle="collapse" href="#collapsefour">
+                            <a class="collapsed btn text-white " data-bs-toggle="collapse" href="#collapsefour">
+                                <b>   The Economic Exclusive Zone (EEZ)</b>
+                            </a>
+
+                            <a class="btn text-white arrow" data-bs-toggle="collapse" href="#collapsefour">
+
+                                <img src="~/Images/tick-m.PNG" width="20">
+                            </a>
+                        </div>
+                        <div id="collapsefour" class="collapse" data-bs-parent="#accordion">
+                            <div class="card-body">
+
+
+
+                                The UNCLOS Articles from (55 to 75) defines legal regime of this regard. (?) . Whether costal or land locked, the end of EEZ is the median line.
+                                <br /><br />
+                                The sovereign in a state has special rights regarding the exploration and use of marine resources of the seabed as fishery and minerals and with
+                                regard to other activities for the economic exploitation and managing the natural resources whether living or nonliving. Meanwhile, this law gives
+                                other states access to the surplus of the allowable resources.
+                                <br /><br />
+
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="card">
+                        <div class="card-header backBlue d-flex justify-content-between hovertitle" data-bs-toggle="collapse" href="#collapsefive">
+                            <a class="collapsed btn text-white " data-bs-toggle="collapse" href="#collapsefive">
+                                <b> The Continental Reef and Continental Margin</b>
+                            </a>
+
+                            <a class="btn text-white arrow" data-bs-toggle="collapse" href="#collapsefive">
+
+                                <img src="~/Images/tick-m.PNG" width="20">
+                            </a>
+                        </div>
+                        <div id="collapsefive" class="collapse" data-bs-parent="#accordion">
+                            <div class="card-body">
+
+
+
+                                According to the Law of the Sea articles from (76 to 85), Continental Reef is equally defined as Continual Margin. However, there is a difference between.
+                                The Continental Reef is comprising the seabed and subsoil of the submarine, including the continental margin, slope gradually extend to seabed ridges or the subsoil there of.
+
+                                <br /><br />
+
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="card">
+                        <div class="card-header backBlue d-flex justify-content-between hovertitle" data-bs-toggle="collapse" href="#collapsesex">
+                            <a class="collapsed btn text-white " data-bs-toggle="collapse" href="#collapsesex">
+                                <b> High Seas</b>
+                            </a>
+
+                            <a class="btn text-white arrow" data-bs-toggle="collapse" href="#collapsesex">
+
+                                <img src="~/Images/tick-m.PNG" width="20">
+                            </a>
+                        </div>
+                        <div id="collapsesex" class="collapse" data-bs-parent="#accordion">
+                            <div class="card-body">
+
+
+
+                                Which are comprised of all parts of the sea that are not under any state control, excluding the internal waters, the territorial seas, EEZ and archipelagic waters, as set in Article (86).
+                                <br /><br />
+
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="mb-5 mt-5">
+        <img src="~/Images/p1.jpg" class="rounded mx-auto d-block m-54" style="width:90%;">
+    </div>
+
+
+}
+else
+{
+    
+      <br /><br />
+                <h2 class="txtColorBlue text-center "><mark class="markSty-who highlight"> الحدود البحرية</mark></h2>
+
+                <div class="container mt-3 ">
+                    <div class="row phgJust">
+
+
+                        <div class="col-sm-12  p-3 m-2 bg-white ">
+
+                            <p>
+                                هي الحدود التي تُحدد نطاق الولاية البحرية للدولة التي تطل على ساحل بحر أو محيط. وتتضمن خطوط الأساس، المياه الداخلية، البحر الإقليمي، المنطقة الاقتصادية الخالصة، حدود الجرف القاري، والحدود بين الدول ذات السواحل المتجاورة والمتقابلة.
+                            </p>
+                            <br>
+                            <p style="  font-size: 21px;">
+
+                                <b> مناطق الولاية البحرية: </b>
+                            </p>
+
+                            <p>
+                                قَسَّم القانون الدولي (الذي أُقرَّ عام 1982م) البحار والمحيطات إلى مناطق ولاية تستطيع الدول الساحلية أن تدَّعيها وتطالبَ بها، وتنقسم هذه المناطق إلى أقسام ستة، هي:
+                            </p>
+
+
+
+                        </div>
+
+
+
+
+                        <div class="container mt-1">
+                            <div id="accordion">
+
+
+
+                                <div class="card">
+                                    <div class="card-header backBlue d-flex justify-content-between hovertitle" data-bs-toggle="collapse" href="#collapseOne">
+                                        <a class="btn text-white" data-bs-toggle="collapse" href="#collapseOne">
+                                            <b>
+                                                المياه الداخلية
+                                            </b>
+                                        </a>
+
+                                        <a class="btn text-white arrow" data-bs-toggle="collapse" href="#collapseOne">
+
+                                            <img src="~/Images/tick-w.PNG" width="20">
+                                        </a>
+
+                                    </div>
+                                    <div id="collapseOne" class="collapse" data-bs-parent="#accordion">
+                                        <div class="card-body">
+
+
+                                            عرَّفتْ الفقرة (1) من المادة (8) من قانون البحار المياه الداخلية أنَّها
+                                            "كل المياه الواقعة على الجانب المواجه للبر من خط الأساس للبحر الإقليمي". وحدَّدت الفقرة (1) من المادة (2) أن سيادة الدولة على المياه
+                                            الداخلية كسيادتها على إقليمها البري. كما يُمكن أنْ يُستخلص من المادة (2) أنَّ السيادة تمارس كاملة على المياه والقاع والمجال الجوي.
+                                            ويدخل ضمن المياه الداخلية مصاب الأنهار والخلجان والمياه المحصورة بين اليابس وسلاسل الجزر التي لا تبعد أكثر من 12 ميلًا بحريًا عنه.
+
+                                            <br /><br />
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="card">
+                                    <div class="card-header backBlue d-flex justify-content-between hovertitle" data-bs-toggle="collapse" href="#collapseTwo">
+                                        <a class="collapsed btn text-white" data-bs-toggle="collapse" href="#collapseTwo">
+                                            <b>   البحر الإقليمي أو المياه الإقليمية </b>
+                                        </a>
+
+                                        <a class="btn text-white arrow" data-bs-toggle="collapse" href="#collapseTwo">
+
+                                            <img src="~/Images/tick-w.PNG" width="20">
+                                        </a>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+                                        <div class="card-body">
+
+                                            هو النطاق الثاني الذي يلي المياه الداخلية والذي
+                                            يُعْرَف بالبحر الإقليمي، ويُطلق عليه أحيانًا المياه الإقليمية. وحدَّدتْ المادة رقم (2) أنَّ سيادة الدولة تمتد لتشمل حزامًا بحريًا ملاصقًا لليابسة وللمياه
+                                            الداخلية، يُعرف بالبحر الإقليمي. كما حدَّدتْ المادة (3) عرض هذا النطاق بحيث لا يتجاوز 12 ميلًا بحريًا. ويبدأ قياس البحر الإقليمي من خط الأساس، وفق
+                                            ما نصَّت عليه المادة رقم (4). وعليه؛ فإن سيادة الدولة ستمتد إلى ما وراء أراضيها إلى البحر الإقليمـي والفضاء الجوي الذي فوقه، وقاعه البحري.
+                                            <br /><br />
+                                            كما اعترفت الاتفاقية بالحق التقليدي للمرور البريء في
+                                            المياه الإقليمية. ويخضع البحر الإقليمي بصورة كاملة قانونيًا وإداريًا لسيادة الدولة الساحلية وقت السلم، وعلى كافة الأطراف المتحاربة احترام المياه الإقليمية
+                                            للدول المحايدة في وقت الحرب. وعندما تكون سواحل دولتين متقابلة أو متلاصقة، لا يحق لأي من الدولتين - في حال عدم وجود اتفاق بينهما على خلاف ذلك، أن تمدَّ بحرها
+                                            الإقليمي إلى أبعد من الخط الوسط الذي تكون كل نقطة عليه متساوية في بُعدها عن أقرب النقاط على خط الأساس الذي يُقاس منه عرض البحر الإقليمي لكل من الدولتين،
+                                            غير أن هذا الحكم لا ينطبق، إذ يكون من الضروري بسبب سند تاريخي، أو ظروف خاصة؛ تعيين حدود البحر الإقليمي لكل من الدولتين بطريقة تُخالف هذا الحكم.
+
+                                            <br /><br />
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="card">
+                                    <div class="card-header backBlue d-flex justify-content-between" data-bs-toggle="collapse" href="#collapseThree">
+                                        <a class="collapsed btn text-white hovertitle" data-bs-toggle="collapse" href="#collapseThree">
+                                            <b>
+                                                المنطقة المتاخمة أو الملاصقة
+                                            </b>
+                                        </a>
+
+                                        <a class="btn text-white arrow" data-bs-toggle="collapse" href="#collapseThree">
+
+                                            <img src="~/Images/tick-w.PNG" width="20">
+                                        </a>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+                                        <div class="card-body">
+
+
+
+                                            يُطلق على هذا النطاق أحيانًا المياه الملاصقة، وهي التي تلي البحر الإقليمي. ولا ينبغي أن يتجاوز عرضها 12 ميلاً بحريًا، بدءًا من نهاية حد البحر الإقليمي،
+                                            بحيث لا يتجاوز عرض النطاقين 24 ميلاً بحريًا من خط الأساس. ويمكن للدولة الساحلية ممارسة السيطرة على هذه المنطقة لأغراض الجمارك والرسوم المالية والهجرة والتلوث. وترى بعض
+                                            الدول أن وجود المنطقة الاقتصادية الخالصة يُغني عن وجود المنطقة المتاخمة، ولكن في الحقيقة لا يمكن أن تكون المنطقة الاقتصادية بديلًا كاملًا عن فكرة المنطقة المتاخمة من حيث
+                                            النطاق الكافي، إلا أنه تبقى هناك دائمًا وظائف تؤديها المنطقة المتاخمة، وتقتصر المنطقة الاقتصادية على حقوق رقابة بعض المسائل التي تتعلق بأمن وسلامة الدولة الساحلية.
+
+                                            <br /><br />
+
+
+
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="card">
+                                    <div class="card-header backBlue d-flex justify-content-between hovertitle" data-bs-toggle="collapse" href="#collapsefour">
+                                        <a class="collapsed btn text-white " data-bs-toggle="collapse" href="#collapsefour">
+                                            <b>
+                                                المنطقة الاقتصادية الخالصة
+                                            </b>
+                                        </a>
+
+                                        <a class="btn text-white arrow" data-bs-toggle="collapse" href="#collapsefour">
+
+                                            <img src="~/Images/tick-w.PNG" width="20">
+                                        </a>
+                                    </div>
+                                    <div id="collapsefour" class="collapse" data-bs-parent="#accordion">
+                                        <div class="card-body">
+
+
+
+                                            تناولت المواد (55) إلى (75) من قانون البحار الأحكام المتعلقة بهذه المنطقة، فمنها أن عرض المفتوحة والمحيطات. أمَّا
+                                            الدول المُطلة على البحار المغلقة وشبه المغلقة؛ فإن نهاية المنطقة الاقتصادية الخالصة هي خط المنتصف بين الدول المتقابلة على تلك البحار. وأعطى القانون الدول الساحلية
+                                            الكثير من الحقوق ضمن هذا النطاق. ويحق للدولة البحرية استكشاف واستثمار والمحافظة على إدارة الثروات الطبيعية الموجودة في قاع البحر، مثل: الثروة السمكية والمعادن.
+                                            <br /><br />
+                                            كما سَمَحتْ الاتفاقية للدول الساحلية بحقوق
+                                            مختلفة في المناطق الاقتصادية الخالصة؛ لغرض الاستثمار الاقتصادي، وحقوق الصيد، واستثمار الموارد غير الحية. وفي الوقت نفسه؛ يجب أن يُسمح للدول المجاورة والقارية والمتضررة
+                                            جغرافيًا بالوصول إلى تلك الثروات التي لم تستثمرها الدول الساحلية في تلك المناطق، على أن تستمر الحريات التقليدية الممنوحة في أعالي البحار بالسريان في تلك المناطق
+                                            <br /><br />
+
+
+
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+                                <div class="card">
+                                    <div class="card-header backBlue d-flex justify-content-between hovertitle" data-bs-toggle="collapse" href="#collapsefive">
+                                        <a class="collapsed btn text-white " data-bs-toggle="collapse" href="#collapsefive">
+                                            <b>
+                                                الجرف القاري والرصيف
+                                            </b>
+                                        </a>
+
+                                        <a class="btn text-white arrow" data-bs-toggle="collapse" href="#collapsefive">
+
+                                            <img src="~/Images/tick-w.PNG" width="20">
+                                        </a>
+                                    </div>
+                                    <div id="collapsefive" class="collapse" data-bs-parent="#accordion">
+                                        <div class="card-body">
+
+
+                                            من الملاحظ أن قانون البحار وخاصة في المواد من (76)
+                                            إلى (85) يستخدم مصطلح "الرصيف القاري" كمرادفٍ لمصطلح "الجرف القاري"، بينما هناك فرق بينهما واقعيًا. إذ إن الجرف القاري هو امتداد طبيعي لليابس تحت الماء،
+                                            ويشمل الرصيف القاري، الذي يكون انحداره تدريجيًا، ويشمل المنحدر الحاد الذي يقع في نهاية الرصيف، ويستمر حتى يلتقي بقاع البحر. ويتفاوت عرض الجرف القاري.
+
+                                            <br /><br />
+
+
+
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+                                <div class="card">
+                                    <div class="card-header backBlue d-flex justify-content-between hovertitle" data-bs-toggle="collapse" href="#collapsesex">
+                                        <a class="collapsed btn text-white " data-bs-toggle="collapse" href="#collapsesex">
+                                            <b> أعالي البحار</b>
+                                        </a>
+
+                                        <a class="btn text-white arrow" data-bs-toggle="collapse" href="#collapsesex">
+
+                                            <img src="~/Images/tick-w.PNG" width="20">
+                                        </a>
+                                    </div>
+                                    <div id="collapsesex" class="collapse" data-bs-parent="#accordion">
+                                        <div class="card-body">
+
+
+
+
+                                            يقصد بأعالي البحار "المناطق من البحار والمحيطات التي لا تخضع لسيادة أي دولة، ساحلية كانت أو غير ساحلية".
+                                            واستثنت المادة (86) من قانون البحار المياه الداخلية والبحر الإقليمي والمنطقة الاقتصادية الخالصة، والمياه الأرخبيلية من أعالي البحار.                                            <br /><br />
+
+
+
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+                      
+
+
+                    </div>
+                </div>
+
+
+                <div class="mb-5 mt-5">
+                    <img src="~/Images/p1.jpg" class="rounded mx-auto d-block m-54" style="width:90%;">
+                </div>
+
+}
+
+
+@section Scripts{
+    <script src="~/sweetAlert/sweetalert.min.js"></script>
+
+    <script>
+
+    $(document).ready(function () {
+    debugger;
+    if ('@ViewBag.Done' != '' && '@ViewBag.Done' != null) {
+
+    swal('@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Done.. Your Request Success" : "تم ارسال طلبك")', "", "success");
+    }
+    });
+    </script>
+}

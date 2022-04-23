@@ -120,6 +120,9 @@
   <data name="Acitve" xml:space="preserve">
     <value>مفعل</value>
   </data>
+  <data name="Activities" xml:space="preserve">
+    <value>الأنشطة</value>
+  </data>
   <data name="AddAds" xml:space="preserve">
     <value>إضافة إعلان</value>
   </data>
@@ -156,6 +159,12 @@
   <data name="Agree" xml:space="preserve">
     <value>اوافق على كل الشروط</value>
   </data>
+  <data name="Aims" xml:space="preserve">
+    <value>الرؤية والرسالة والهدف</value>
+  </data>
+  <data name="Announcement" xml:space="preserve">
+    <value>التنبيهات</value>
+  </data>
   <data name="AppStore" xml:space="preserve">
     <value>متجر ابل</value>
   </data>
@@ -183,11 +192,29 @@
   <data name="ChangePassword" xml:space="preserve">
     <value>تغيير كلمة المرور</value>
   </data>
+  <data name="Character" xml:space="preserve">
+    <value>العلامة</value>
+  </data>
+  <data name="ChartIndex" xml:space="preserve">
+    <value>فهرس الخرائط العمانية</value>
+  </data>
+  <data name="ChartIndexInfo" xml:space="preserve">
+    <value>يضم فهرس الخرائط الورقية والالكترونية المعتمدة من المكتب الهيدروغرافي الوطني العماني</value>
+  </data>
+  <data name="contactus" xml:space="preserve">
+    <value>تواصل معنا</value>
+  </data>
   <data name="ContactUsList" xml:space="preserve">
     <value>قائمة تواصل معنا</value>
   </data>
+  <data name="CopyRight" xml:space="preserve">
+    <value>جميع الحقوق محفوظة لمكتب الهيدروغرافي الوطني العماني 2022</value>
+  </data>
   <data name="Date" xml:space="preserve">
     <value>التاريخ</value>
+  </data>
+  <data name="dateformat" xml:space="preserve">
+    <value>يوم/شهر/سنة</value>
   </data>
   <data name="Delete" xml:space="preserve">
     <value>حذف</value>
@@ -210,6 +237,9 @@
   <data name="Emailerror" xml:space="preserve">
     <value>من فضلك ادخل البريد الإلكترونى بشكل صحيح</value>
   </data>
+  <data name="EmailHydroOffice" xml:space="preserve">
+    <value>البريد الإلكتروني: onho@mod.gov.om</value>
+  </data>
   <data name="EmailRequired" xml:space="preserve">
     <value>البريد الإلكترونى مطلوب</value>
   </data>
@@ -222,6 +252,9 @@
   <data name="FileFormatId" xml:space="preserve">
     <value>نوع الملف</value>
   </data>
+  <data name="FMGOV" xml:space="preserve">
+    <value>وزارة الخارجية العمانية</value>
+  </data>
   <data name="FrequenciesAdmin" xml:space="preserve">
     <value>مدير قائمة الترددات</value>
   </data>
@@ -231,11 +264,47 @@
   <data name="FullName" xml:space="preserve">
     <value>الاسم الثلاثي</value>
   </data>
+  <data name="getPaperNautical" xml:space="preserve">
+    <value>للحصول على الخرائط الورقية يرجى زيارة</value>
+  </data>
   <data name="GooglePlay" xml:space="preserve">
     <value>متجر جوجل</value>
   </data>
   <data name="Home" xml:space="preserve">
     <value>الرئيسية</value>
+  </data>
+  <data name="HydroArchiveSection" xml:space="preserve">
+    <value>الأرشيف</value>
+  </data>
+  <data name="HydrographicNotes" xml:space="preserve">
+    <value>الإعلانات الهيدروغرافية</value>
+  </data>
+  <data name="HydrographicSurvey" xml:space="preserve">
+    <value>مسح جديد</value>
+  </data>
+  <data name="HydroHistory" xml:space="preserve">
+    <value>لمحة تاريخية</value>
+  </data>
+  <data name="HydroNotes" xml:space="preserve">
+    <value> الإعلانات هيدروغرافية</value>
+  </data>
+  <data name="HydroOffice" xml:space="preserve">
+    <value>المكتب الهيدروغرافي</value>
+  </data>
+  <data name="HydroOrg" xml:space="preserve">
+    <value>المنظمات الهيدروغرافية الدولية</value>
+  </data>
+  <data name="HydroSurvey" xml:space="preserve">
+    <value>طلب مسح هيدروغرافي جديد</value>
+  </data>
+  <data name="HydroTrainSchool" xml:space="preserve">
+    <value>مدرسة التدريب الهيدروغرافية</value>
+  </data>
+  <data name="HydroUnit" xml:space="preserve">
+    <value>وحدة الهيدروغرافيا</value>
+  </data>
+  <data name="IHO" xml:space="preserve">
+    <value>المنظمة العالمية الهيدروغرافية</value>
   </data>
   <data name="Image" xml:space="preserve">
     <value>الصورة</value>
@@ -249,11 +318,20 @@
   <data name="ImagesList" xml:space="preserve">
     <value>قائمة الصور</value>
   </data>
+  <data name="IMO" xml:space="preserve">
+    <value>المنظمة البحرية الدولية</value>
+  </data>
+  <data name="IndexofOmanimaps" xml:space="preserve">
+    <value>فهرس الخرائط العمانية</value>
+  </data>
   <data name="instgram" xml:space="preserve">
     <value>انستجرام</value>
   </data>
   <data name="IsActive" xml:space="preserve">
     <value>مفعل</value>
+  </data>
+  <data name="ITA" xml:space="preserve">
+    <value>وزارة النقل والاتصالات وتقنية المعلومات</value>
   </data>
   <data name="Later" xml:space="preserve">
     <value>لاحقا</value>
@@ -264,6 +342,9 @@
   <data name="livevideo" xml:space="preserve">
     <value>رابط الفيديو</value>
   </data>
+  <data name="LocationHydroOffice" xml:space="preserve">
+    <value>معسكر المرتفعة - وزارة الدفاع</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>تسجيل الدخول</value>
   </data>
@@ -273,8 +354,23 @@
   <data name="LogOut" xml:space="preserve">
     <value>تسجيل الخروج</value>
   </data>
+  <data name="MAF" xml:space="preserve">
+    <value>وزارة الثروة الزراعية و السمكية وموارد المياه</value>
+  </data>
   <data name="MainProgramsAdmin" xml:space="preserve">
     <value>مدير قائمة البرامج الرئيسيه</value>
+  </data>
+  <data name="Marinedata" xml:space="preserve">
+    <value>البيانات البحرية</value>
+  </data>
+  <data name="MarinedataInfo" xml:space="preserve">
+    <value>توفر إمكانية الوصول الى البيانات البحرية التي يضمها أرشيف المكتب الهيدروغرافي الوطني العماني</value>
+  </data>
+  <data name="MaritimeBoundaries" xml:space="preserve">
+    <value>قانون البحار (الحدود والحدود)</value>
+  </data>
+  <data name="MaritimeSafetyInfo" xml:space="preserve">
+    <value>معلومات السلامة البحرية</value>
   </data>
   <data name="Message" xml:space="preserve">
     <value>الرسالة</value>
@@ -285,8 +381,26 @@
   <data name="Name" xml:space="preserve">
     <value>الإسم</value>
   </data>
+  <data name="NationalHydrogArchive" xml:space="preserve">
+    <value>الأرشيف الهيدروغرافي الوطني</value>
+  </data>
+  <data name="NavFileName" xml:space="preserve">
+    <value>اسم الملف</value>
+  </data>
+  <data name="NavigationalWarnings" xml:space="preserve">
+    <value>الإنذارات الملاحية</value>
+  </data>
+  <data name="NavigationWarning" xml:space="preserve">
+    <value>الإنذارات الملاحية</value>
+  </data>
+  <data name="NavWarnDesc" xml:space="preserve">
+    <value>التفاصيل</value>
+  </data>
   <data name="NewAdmin" xml:space="preserve">
     <value>مدير قائمة الاخبار</value>
+  </data>
+  <data name="NewFeature" xml:space="preserve">
+    <value>المسح الهيدروغرافي</value>
   </data>
   <data name="NewPassword" xml:space="preserve">
     <value>كلمة المرور الجديدة</value>
@@ -300,9 +414,6 @@
   <data name="Next" xml:space="preserve">
     <value>التالى</value>
   </data>
-  <data name="Notice To Mariner" xml:space="preserve">
-    <value>الاعلانات الملاحية</value>
-  </data>
   <data name="NoticeDate" xml:space="preserve">
     <value>التاريخ</value>
   </data>
@@ -311,6 +422,12 @@
   </data>
   <data name="NoticeFileName" xml:space="preserve">
     <value>نوع الملف</value>
+  </data>
+  <data name="NoticeToMariner" xml:space="preserve">
+    <value>الإعلانات الملاحية</value>
+  </data>
+  <data name="NoticetoMariners" xml:space="preserve">
+    <value>الإعلانات الملاحية</value>
   </data>
   <data name="NoticeType" xml:space="preserve">
     <value>نوع الملاحظة</value>
@@ -324,17 +441,38 @@
   <data name="Number" xml:space="preserve">
     <value>رقم التردد</value>
   </data>
+  <data name="OfficeName" xml:space="preserve">
+    <value>المكتب الهيدروغرافي الوطني العماني</value>
+  </data>
+  <data name="OfficialWorkingHours" xml:space="preserve">
+    <value>ساعات العمل الرسمية: الأحد - الخميس , 7:00 ص - 1:30 م</value>
+  </data>
   <data name="OldPassword" xml:space="preserve">
     <value>كلمة المرور القديمة</value>
   </data>
   <data name="Oman" xml:space="preserve">
     <value>Oman Notice To Mariner</value>
   </data>
+  <data name="OmanMaritimeBook" xml:space="preserve">
+    <value>كتاب عمان البحري</value>
+  </data>
+  <data name="omannational" xml:space="preserve">
+    <value>الوطني العماني</value>
+  </data>
+  <data name="openOffice" xml:space="preserve">
+    <value>افتتاح المكتب الهيدروغرافي الوطني العماني</value>
+  </data>
   <data name="Order" xml:space="preserve">
     <value>الترتيب</value>
   </data>
+  <data name="Organization" xml:space="preserve">
+    <value>اسم المؤسسة</value>
+  </data>
   <data name="OrgraizationName" xml:space="preserve">
     <value>مكان العمل</value>
+  </data>
+  <data name="OurServices" xml:space="preserve">
+    <value>الخدمات</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>كلمة المرور</value>
@@ -345,11 +483,41 @@
   <data name="Phone" xml:space="preserve">
     <value>رقم الهاتف</value>
   </data>
+  <data name="PhotoesExhibition" xml:space="preserve">
+    <value>معرض الصور</value>
+  </data>
+  <data name="PhotoGallery" xml:space="preserve">
+    <value>معرض الصور</value>
+  </data>
+  <data name="PhotoGalleryInfo" xml:space="preserve">
+    <value>تبرز بعض الأعمال والفعاليات الخاص بالمكتب الهيدروغرافي الوطني العماني</value>
+  </data>
+  <data name="Pleasefilltheform" xml:space="preserve">
+    <value>الرجاء تعبيئة الاستمارة</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>الموقع</value>
+  </data>
+  <data name="Production" xml:space="preserve">
+    <value>الإنتاج</value>
+  </data>
+  <data name="ProductsandData" xml:space="preserve">
+    <value>منتجات و بيانات</value>
+  </data>
   <data name="ProgramList" xml:space="preserve">
     <value>قائمة البرامج</value>
   </data>
   <data name="ProgramsAdmin" xml:space="preserve">
     <value>مدير قائمة البرامج</value>
+  </data>
+  <data name="Purpose" xml:space="preserve">
+    <value>الهدف</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>العدد</value>
+  </data>
+  <data name="Quicklinks" xml:space="preserve">
+    <value>روابط سريعة</value>
   </data>
   <data name="Region" xml:space="preserve">
     <value>المنطقة</value>
@@ -360,11 +528,44 @@
   <data name="Roles" xml:space="preserve">
     <value>الصلاحيات</value>
   </data>
+  <data name="RolesandResp" xml:space="preserve">
+    <value>الأدوار والمسؤوليات</value>
+  </data>
   <data name="Save" xml:space="preserve">
     <value>حفظ</value>
   </data>
+  <data name="SelectCategory" xml:space="preserve">
+    <value>اختر الفئة</value>
+  </data>
+  <data name="SelectFileFormat" xml:space="preserve">
+    <value>اختر نوع الملف</value>
+  </data>
+  <data name="SelectNewFeaturstatus" xml:space="preserve">
+    <value>الرجاء اختيار النوع المطلوب</value>
+  </data>
+  <data name="SelectSurveyType" xml:space="preserve">
+    <value>اختر نوع المسح</value>
+  </data>
+  <data name="SelhydroNotstatus" xml:space="preserve">
+    <value>حدد حالة الملاحظات الهيدروغرافية</value>
+  </data>
+  <data name="SelSpecialTaskType" xml:space="preserve">
+    <value>حدد نوع الطلب الخاصة</value>
+  </data>
+  <data name="seltypeofservice" xml:space="preserve">
+    <value>حدد نوع الخدمة</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>إرسال</value>
+  </data>
   <data name="SendNotfactions" xml:space="preserve">
     <value>إرسال الإشعارات</value>
+  </data>
+  <data name="ServiceRequest" xml:space="preserve">
+    <value>طلب خدمة جديدة</value>
+  </data>
+  <data name="Services" xml:space="preserve">
+    <value>الخدمات</value>
   </data>
   <data name="Settings" xml:space="preserve">
     <value>الإعدادات</value>
@@ -372,11 +573,23 @@
   <data name="SettingsAdmin" xml:space="preserve">
     <value>مدير قائمة الاعددادات</value>
   </data>
+  <data name="SignIn" xml:space="preserve">
+    <value>الدخول</value>
+  </data>
+  <data name="SignUp" xml:space="preserve">
+    <value>تسجيل</value>
+  </data>
   <data name="SliderList" xml:space="preserve">
     <value>قائمة البرامج الرئيسيه</value>
   </data>
   <data name="SoundCloud" xml:space="preserve">
     <value>ساوند كلاود</value>
+  </data>
+  <data name="SpecialTask" xml:space="preserve">
+    <value>طلب خاص</value>
+  </data>
+  <data name="SQU" xml:space="preserve">
+    <value>جامعة السلطان قابوس</value>
   </data>
   <data name="StartTime" xml:space="preserve">
     <value>وقت البداية</value>
@@ -386,6 +599,12 @@
   </data>
   <data name="StatusRequest" xml:space="preserve">
     <value>حالة الطلب</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>الموضوع</value>
+  </data>
+  <data name="telepHydroOffice" xml:space="preserve">
+    <value>هاتف: 21512432 968 +</value>
   </data>
   <data name="Title" xml:space="preserve">
     <value>العنوان</value>
@@ -398,6 +617,9 @@
   </data>
   <data name="Titles" xml:space="preserve">
     <value>العنوان</value>
+  </data>
+  <data name="Training" xml:space="preserve">
+    <value>التدريب</value>
   </data>
   <data name="twitter" xml:space="preserve">
     <value>تويتر</value>
@@ -447,6 +669,9 @@
   <data name="UsersType" xml:space="preserve">
     <value>نوع المستخدمين</value>
   </data>
+  <data name="USHO" xml:space="preserve">
+    <value>المكتب الهيدروغرافي البريطاني</value>
+  </data>
   <data name="VideoAdmin" xml:space="preserve">
     <value>مدير قائمة الفيديو</value>
   </data>
@@ -456,8 +681,26 @@
   <data name="View" xml:space="preserve">
     <value>تنزيل الملف</value>
   </data>
+  <data name="VisitofBiritishadmiral" xml:space="preserve">
+    <value>زيارة الفريق البريطاني</value>
+  </data>
+  <data name="VisitofNewOfficers" xml:space="preserve">
+    <value>زيارة ضباط المرشحين</value>
+  </data>
+  <data name="WaringDate" xml:space="preserve">
+    <value>التاريخ</value>
+  </data>
+  <data name="WarnNumber" xml:space="preserve">
+    <value>رقم الانذار</value>
+  </data>
   <data name="website" xml:space="preserve">
     <value>الموقع الالكتروني</value>
+  </data>
+  <data name="whoweAre" xml:space="preserve">
+    <value>من نحن</value>
+  </data>
+  <data name="WorkingHours" xml:space="preserve">
+    <value>ساعات العمل</value>
   </data>
   <data name="youtube" xml:space="preserve">
     <value>يوتيوب</value>

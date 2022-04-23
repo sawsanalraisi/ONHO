@@ -1,0 +1,334 @@
+﻿@inject CultureLocalizer  _Localizer
+@{
+    ViewData["Title"] = "Who We Are";
+     Layout = "_Layout";
+    var X = _Localizer.Text("Home");
+        var culture = System.Globalization.CultureInfo.CurrentCulture;
+
+}
+
+<link href="~/Admin/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+<br /><br />
+
+ @if (culture.Name.Contains("en-US"))
+    {
+
+    <h2 class="txtColorBlue text-center "><mark class="markSty-who highlight">Hydrography </mark></h2>
+
+                <div class="container mt-3 mb-5 ">
+                    <div class="row">
+
+                        <div class="col-sm-12 p-3   bg-white ">
+                            <p class=" phgJust">
+
+                                Hydrography is the science of studying and collecting the scientific characteristics and natural phenomena of water bodies such as seas, oceans, rivers and lakes, and the representation and use of their data and information to provide maximum degree of navigational safety. It is an applied science in common with other sciences such as topography, navigation, geodesy, geology and nature. In addition to providing and ensuring navigational safety, hydrography has many uses that support economic and defence aspects, scientific research, maritime security and service of sectors related to maritime affairs.
+                            </p>
+
+
+
+
+                            <div id="container">
+                                <!-- 	الصورة ياللي بداخل الحاوية -->
+                                <img src="~/Images/DSC08669.jpg" style="width: 100%; ">
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <img src="~/Images/Pline.png" style="width: 100%; ">
+
+                        <!--<img src="~/Images/Pline1.png" style="width: 100%; ">
+
+                        <img src="~/Images/Pline2.png" style="width: 100%; ">-->
+
+
+
+                        <h2 class="txtColorBlue text-center  "><mark class="markSty-who highlight">History of Hydrography </mark></h2>
+
+
+                        <div class="col-sm-12 p-3  bg-white ">
+                            <p class=" phgJust">
+
+
+
+
+                                The origin of hydrography dates back to the eighteenth century, particularly during the wars fought by the British against their enemies, where they noted that they had lost most of their warships, not because of their enemy's power, but because of navigational hazards or because of their collisions with rocks in shallow waters mainly because of the lack of accurate charts that could be used by all warships. By the end of the 18th century, and specifically on August 1795, the Royal British Navy Hydrographic Office was established. It is the first of its kind in this field.
+                                <br /><br />
+
+
+                                The production of modern charts containing the depths and dangers of the sea to ensure the safety of international navigation began in 1807, when thousands of nautical charts were issued. Two years after the publication of the charts, it was agreed that copies of the British charts would be sold to all the world's sea pioneers, which encouraged the UK Hydrographic Office to expand its surveys to include all the water bodies in the world. This has also encouraged other countries to take an interest in this field, especially by the end of the nineteenth century, where there was hardly a maritime country without hydrographic capabilities.
+
+
+                            </p>
+                        </div>
+
+
+
+
+
+                        <img src="~/Images/Pline.png" style="width: 100%; " class="mt-5">
+
+                        <h2 class="txtColorBlue text-center mt-3 "><mark class="markSty-who highlight">  Historical Background of the Office </mark></h2>
+
+
+                        <div class="col-sm-12 p-3 bg-white ">
+                            <p class="praStyle ">
+
+
+                                <ul class="list-style">
+                                    <li class="phgJust">
+                                        <img src="~/Images/tick-e.PNG" width="20"> &nbsp
+
+
+
+                                        The National Hydrographic Survey Authority of the Sultanate of Oman was formed by Ministerial Decision No. 200/92 of 15 February 1992, which assigned responsibility for the administration and supervision of hydrographic surveys in the Sultanate to the Ministry of Defense, represented by the Royal Navy of Oman on behalf of the Ministry of Transport, Communications and Information Technology, followed by the accession of the Sultanate of Oman in October of the same year to the International Hydrographic Organization (IHO).
+
+                                    </li>
+
+                                    <br />
+
+                                    <li class="phgJust">
+                                        <img src="~/Images/tick-e.PNG" width="20">   &nbsp
+
+
+
+                                        On 19 December 2011, the National Hydrographic Requirements Committee was formed by Ministerial Decision No. 215/2011 repealing Ministerial Decision No. 200/92 and authorizing the Ministry of Defense, represented by the Royal Navy of Oman, to take over and administer the affairs and work of hydrographic surveys, the responsibility for cartography, the production of maritime publications, the publication of maritime charts, border maps and publications related to the safety of maritime navigation.
+
+                                    </li>
+
+                                    <br />
+
+                                    <li class="phgJust">
+
+                                        <img src="~/Images/tick-e.PNG" width="20"> &nbsp
+
+
+
+                                        On 1 July 1983, the Sultanate signed the United Nations Convention on the Law of the Sea, and ratified it on 17 August 1989. It also signed the Treaty of Safety of Life at Sea (SOLAS), followed by its membership in the International Maritime Organization (IMO). Thus, the Sultanate of Oman is accountable to the international community for providing hydrographic services in accordance with the standards and specifications established by these organizations.
+
+                                    </li>
+
+
+
+
+                                </ul>
+                            </p>
+
+                        </div>
+
+
+
+
+                        <div class="row text-center txtColorBlue mb-3">
+
+                            <div class="col-sm-4  shadow p-2 ">
+                                <div class="item  shadow"><img src="~/Images/pic2.jpg" width="100%"></div>
+                                <br>
+                                <P>The first visit of sultan Qaboos  in 1986</P>
+                            </div>
+
+
+
+                            <div class="col-sm-4  shadow  p-2  ">
+                                <div class="item  shadow"><img src="~/Images/pic1.jpg" width="100%"></div>
+                                <br>
+                                <P>Procedure of taking elevations and bearing of hydrographic survey by theodolite instrument in 1990</P>
+                            </div>
+
+
+
+                            <div class="col-sm-4  shadow  p-2  ">
+                                <div class="item  shadow"><img src="~/Images/pic3.jpg" width="100%"></div>
+                                <br>
+                                <P>Procedure of taking the elevations of bench marks by level instrument in 2009</P>
+                            </div>
+
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+}
+else
+{
+
+     <h2 class="txtColorBlue text-center "><mark class="markSty-who highlight">الهيدروغرافيا</mark></h2>
+
+                <div class="container mt-3 mb-5 ">
+                    <div class="row">
+
+                        <div class="col-sm-12 p-3  bg-white ">
+
+                            <p class=" phgJust">
+                                الهيدروغرافيا هو علم يعنى بدراسة وجمع الخصائص العلمية والظواهر الطبيعية للمسطحات المائية، مثل: البحار، المحيطات، الأنهار، والبحيرات، وتمثيل البيانات والمعلومات الخاصة بها، واستخدامها لتوفير أقصى درجات السلامة الملاحية. وبالتالي؛ فإنه أحد العلوم التطبيقية المشتركة مع العلوم الأخرى مثل: الطوبوغرافيا، علم الملاحة، الجيوديسيا، علم الجيولوجيا، وعلم الطبيعة. وإضافة إلى توفير وتأمين السلامة الملاحية؛ فإن للهيدروغرافيا استخدامات تدعم الجوانب الاقتصادية، والدفاعية، والبحث العلمي، والأمن البحري، وخدمة القطاعات المعنية بالشؤون البحرية.
+                            </p>
+
+
+                            <div id="container">
+                                <img src="~/Images/DSC08669.jpg" style="width: 100%; ">
+                            </div>
+
+
+                        </div>
+
+
+
+                        <img src="~/Images/Pline.png" style="width: 100%; ">
+
+                
+
+
+
+                        <h2 class="txtColorBlue text-center  "><mark class="markSty-who highlight">تأريخ الهيدروغرافيا</mark></h2>
+
+
+                        <div class="col-sm-12 p-3  bg-white ">
+                            <p class=" phgJust">
+
+
+
+
+                                تعود نشأة الهيدروغرافيا إلى القرن 18م، تحديدًا خلال الحروب التي خاضها البريطانيون ضد أعدائهم، حين لاحظوا فقدانهم لمعظم سفنهم الحربية؛ ليس بقوة عدوهم فحسب، بل بسبب الأخطار الملاحية، أو ارتطامها بصخور في المياه الضحلة؛ لعدم توافر خرائط بحرية ذات معلومات دقيقة تصلح للاستخدام من قبل جميع السفن الحربية. ومع نهاية القرن 18م؛ تحديدًا في أغسطس 1795م، أُنشئ المكتب الهيدروغرافي للبحرية الملكية البريطانية، والذي يُعد الأول من نوعه في هذا المجال.
+                                <br /><br />
+
+
+                                وفي 1807م، بدأ إنتاج الخرائط البحرية الحديثة، التي تحتوي على أعماق وأخطار البحر، لتأمين سلامة الملاحة الدولية، إذ أُصدرت آلاف الخرائط البحرية. وبعد عامين من إصدار الخرائط؛ تمت الموافقة على بيع نسخ من الخرائط البريطانية لكافة رواد البحر في العالم، ممَّا شجَّع المكتب الهيدروغرافي البريطاني على توسيع مسوحاتها لجميع المياه في العالم، وشجَّع ذلك دولًا أخرى إلى الاهتمام بهذا المجال، خاصة مع نهاية القرن التاسع عشر، إذ لا توجد دولة بحرية دون وجود قدرات مساحة هيدروغرافية.
+
+
+
+                            </p>
+                        </div>
+
+
+
+
+
+                        <img src="~/Images/Pline.png" style="width: 100%; " class="mt-5">
+
+                        <h2 class="txtColorBlue text-center mt-3 "><mark class="markSty-who highlight"> تاريخ المكتب الهيدروغرافي</mark></h2>
+
+
+                        <div class="col-sm-12 p-3 bg-white ">
+                            <p class="praStyle ">
+
+
+                                <ul class="list-style">
+                                    <li class="phgJust">
+                                        <img src="~/Images/tick.PNG" width="20"> &nbsp
+
+
+
+                                        تَشكَّلتْ الهيئة الوطنية للمسح الهيدروغرافي في سلطنة عمان بموجب القرار الوزاري رقم (200/92)، الصادر في 15 سبتمبر1992 م، والذي أسْنَدَ مسؤولية الإدارة والإشراف على المسح الهيدروغرافي في السلطنة إلى وزارة الدفاع - مُمثَّلة في البحرية السلطانية العمانية- نيابة عن وزارة النقل والاتصالات وتِقنية المعلومات، تَلَاه انضمام سلطنة عُمان في أكتوبر من العام ذاته إلى منظمة الهيدروغرافيا الدولية (IHO).
+
+                                    </li>
+
+                                    <br />
+
+                                    <li class="phgJust">
+                                        <img src="~/Images/tick.PNG" width="20">   &nbsp
+
+
+
+                                        وفي 19 ديسمبر2011م؛ صدر القرار الوزاري رقم (215/2011م) بتشكيل اللجنة الوطنية للمتطلبات الهيدروغرافية، والذي ألغى القرار الوزاري رقم (200/92)، وفوِّضت وزارة الدفاع - ممثلة في البحرية السلطانية العمانية- بتولي إدارة شؤون وأعمال المسح الهيدروغرافي، ومسؤولية رسم الخرائط وإصدار المطبوعات البحرية، ونَشْر الخرائط البحرية وإصدارها، وخرائط الحدود والمنشورات ذات الصلة بسلامة الملاحة البحرية.
+
+                                    </li>
+
+                                    <br />
+
+                                    <li class="phgJust">
+
+                                        <img src="~/Images/tick.PNG" width="20"> &nbsp
+
+
+
+                                        وفي 1 يوليو 1983؛ وقّعت السلطنة على اتفاقية الأمم المتحدة لقانون البحار 1982م، وصَادقتْ عليها في 17أغسطس1989 م، ووقعت أيضًا على معاهدة سلامة الأرواح في البحر Safety of Life At Sea Convention (SOLAS)، تلتها عضويتها في المنظمة البحرية الدولية، وبذلك أصبحت سلطنة عمان مسؤولة أمام المجتمع الدولي عن تقديم خدمات هيدروغرافية وفقًا للمستويات والمواصفات التي تحددها هذه المنظمات.
+
+                                    </li>
+
+
+
+
+                                </ul>
+                            </p>
+
+                        </div>
+
+
+
+
+                        <div class="row text-center txtColorBlue mb-3">
+
+                            <div class="col-sm-4  shadow p-2 ">
+                                <div class="item  shadow"><img src="~/Images/pic2.jpg" width="100%"></div>
+                                <br>
+                                <P>
+                                    زيارة السلطان الراحل رحمة الله عليه وحدة الهيدروغرافيا عام 1986م
+
+                                </P>
+                            </div>
+
+
+
+                            <div class="col-sm-4  shadow  p-2  ">
+                                <div class="item  shadow"><img src="~/Images/pic1.jpg" width="100%"></div>
+                                <br>
+                                <P>
+                                    عملية اخذ الارتفاعات و الزوايا للمسح الهيدروغرافي عن طريق جهاز (theodolite) عام 1990م
+
+                                </P>
+                            </div>
+
+
+
+                            <div class="col-sm-4  shadow  p-2  ">
+                                <div class="item  shadow"><img src="~/Images/pic3.jpg" width="100%"></div>
+                                <br>
+                                <P>
+                                    عملية اخذ ازتفاعات للنقاط المرجعية عم طريق جهاز (level) عام 2009م
+
+                                </P>
+                            </div>
+
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@section Scripts{
+    <script src="~/sweetAlert/sweetalert.min.js"></script>
+
+    <script>
+
+    $(document).ready(function () {
+    debugger;
+    if ('@ViewBag.Done' != '' && '@ViewBag.Done' != null) {
+
+    swal('@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Done.. Your Request Success" : "تم ارسال طلبك")', "", "success");
+    }
+    });
+    </script>
+}

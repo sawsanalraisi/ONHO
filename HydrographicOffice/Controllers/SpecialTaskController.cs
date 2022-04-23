@@ -78,7 +78,8 @@ namespace HydrographicOffice.Controllers
                 mapper.ListOfFiles = list;
 
                 _specialTaskRepository.AddDocument(mapper.ListOfFiles, mapper.Id);
-         
+                TempData["Success"] = (System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English") ? "Done.. Your Request Success" : "تم إرسال طلبك");
+                TempData.Keep("Success");
 
                 return RedirectToAction("Index", "Home");
             }

@@ -1,0 +1,129 @@
+﻿@model IEnumerable<Hydro.BAL.DTO.NotificationDTO>
+@inject CultureLocalizer  _Localizer
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_AdminLayout";
+    var url = "";
+}
+
+<link href="~/Admin/sty/Style-Page.css" rel="stylesheet" />
+
+<h1 class="txtColorBlue text-center"><mark class="highlight">@_Localizer.Text("Notification")</mark></h1>
+
+<hr />
+<div class="container">
+
+    <div class="p-1 scrollmenu " style="overflow-x:auto;">
+
+        <table class="table tbl shadow-lg p-3 mb-5 bg-body rounded" id="tbl">
+
+            <thead>
+                <tr>
+                    <th style=" width: 140px;">
+                        @_Localizer.Text("CreateDate")
+                    </th>
+                
+                    <th style="width: 150px; ">
+                        @_Localizer.Text("isRead")
+                    </th>
+                    <th style="width: 100px; ">
+                        @_Localizer.Text("AssignTo")
+                    </th>
+                  
+                 
+                    <th style=" width: 50px;" data-orderable="false">
+                        @_Localizer.Text("NotificationName")
+
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>
+                        @(Convert.ToString(item.CreateDate.ToString("dd-MM-yyyy")))
+
+
+                    </td>
+               
+                    <td>
+                        @Html.DisplayFor(modelItem => item.isRead)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AssignTo)
+                    </td>
+                 
+                    <td>
+                        @if (item.NotificationName == "Special Task")
+                        {
+                            url = @Url.Action("Details", "SpecialTasks") + item.RefId;
+                            <a href='" + url + "' class='btn btn-success btn-lg glyphicon glyphicon-print'>Print</a>
+                        }
+                        else
+                        {
+
+                        }
+
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+@section Scripts{
+
+    <script>
+       $(document).ready(function () {
+            DrawTable();
+
+        });
+        function DrawTable() {
+            $("#tbl").dataTable({
+                "dom": '<"pull-left"B><"pull-right"f>rt<"row"<"col-sm-4"l><"col-sm-4"i><"col-sm-4"p>>',
+                "autoWidth": true,
+                "bFilter": true,
+                "aaSorting": [],
+                //"bSortable": true,
+                //ordering: true,
+                language: {
+                    loadingRecords: '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Loading..." : "تحميل البيانات ...")',
+                    processing: '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Processing..." : "جاري تحميل البيانات ...")',
+                    emptyTable:'@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")?"No data available in table":"لا توجد بيانات")',
+                    info:     '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Showing _START_ to _END_ of _TOTAL_ records" : "اظهار _START_ الى _END_ من _TOTAL_ سجلات")' ,
+                    infoEmpty: '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")?"No records found":"لا توجد سجلات")',
+                    infoFiltered:'@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "(filtered1 from _MAX_ total records)" : "(تمت تصفيته من _MAX_ سجلات)")' ,
+                    lengthMenu: '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Show _MENU_" : "اظهار _MENU_")',
+                    search: '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")?"Search:":"بحث:")',
+                    zeroRecords: '@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")?"No matching records found":"لا توجد سجلات متطابقة")',
+                    paginate: {
+                        previous:'@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")?"Prev":"السابق")',
+                        next:'@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")?"Next":"التالي")' ,
+                        last:'@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")?"Last":"الأخير")' ,
+                        first:'@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")?"First":"الأول")'
+                    }
+                },
+                responsive: {
+                    details: {
+                    }
+                },
+                buttons: [
+                    //'excelHtml5',
+                    //'csvHtml5',
+                    //'print'
+                ],
+               lengthMenu: [
+                    [10, 25, 50, 100],
+                    [10, 25, 50, 100]
+                ],
+                pageLength: 10,
+                pagingType: "full_numbers"
+
+            });
+        }
+    </script>
+
+
+}
+

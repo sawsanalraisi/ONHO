@@ -2,6 +2,7 @@
 @inject CultureLocalizer Localizer
 @{
     Layout = null;
+    var X = Localizer.Text("Home");
 }
 
 <form method="post" id="form">
@@ -24,7 +25,7 @@
             <span asp-validation-for="Password" class="text-danger"></span>
         </div>
 
-        <button type="submit" class="btn btn-primary block full-width m-b">@Localizer.Text("Login")</button>
+        <button type="submit" class="btn mt-4 signup backBlue text-white">@Localizer.Text("Login")</button>
 
         <div class="text-center mt-4">
             <a href="@Url.Action("ForgetPassword","User")">@Localizer.Text("Forget Password")</a>
@@ -66,7 +67,7 @@
                          location.reload(true);
                 } else {
                         $("#errodiv").html("");
-                        $("#errodiv").html(result.erro)
+                        $("#errodiv").html(result.erro.value)
 
                     }
                     // console.log("success");

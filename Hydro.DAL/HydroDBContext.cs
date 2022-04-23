@@ -38,5 +38,7 @@ namespace Hydro.DAL
         public DbSet<EmailConfigur> EmailConfigurs { get; set; }
         public DbSet<Notification> Notifications { get; set; }
 
+        public DbSet<Omanbook> Omanbooks { get; set; }
+
     }
 }

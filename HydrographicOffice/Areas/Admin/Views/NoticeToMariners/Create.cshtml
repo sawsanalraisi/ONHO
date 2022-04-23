@@ -52,23 +52,23 @@
 
 
                 <div class="form-input">
-                    <input asp-for="NoticeFileName" class="form-control form-controlNonSpace" placeholder="Notice File Name" />
+                    <input asp-for="NoticeFileName" class="form-control form-controlNonSpace" placeholder=@_Localizer.Text("NoticeFileName") />
                     <span asp-validation-for="NoticeFileName" class="text-danger"></span>
                 </div>
 
                 <div class="form-input">
-                    <input asp-for="NoticeEdition" class="form-control form-controlNonSpace" placeholder="  Notice Edition " />
+                    <input asp-for="NoticeEdition" class="form-control form-controlNonSpace" placeholder=@_Localizer.Text("NoticeEdition") />
                     <span asp-validation-for="NoticeEdition" class="text-danger"></span>
                 </div>
 
                 <div class="form-input">
-                    <input asp-for="NoticeDate" class="form-control form-controlNonSpace" placeholder="  Notice Date " />
+                    <input asp-for="NoticeDate" class="form-control form-controlNonSpace" placeholder=@_Localizer.Text("NoticeDate") />
                     <span asp-validation-for="NoticeDate" class="text-danger"></span>
                 </div>
 
 
                 <div class="form-input">
-                    <textarea asp-for="NotiecDesc" class="form-control3 form-control2  " rows="5" placeholder=" Description . . ."></textarea>
+                    <textarea asp-for="NotiecDesc" class="form-control3 form-control2  " rows="5" placeholder=@_Localizer.Text("NotiecDesc")></textarea>
                     <span asp-validation-for="NotiecDesc" class="text-danger"></span>
                 </div>
               

@@ -89,14 +89,13 @@
                                 <div class="d-flex justify-content-center">
 
 
-                              
-                                    <div class="ps-2 iconDetail">  <a asp-action="Details" asp-route-id="@item.Id"><i class="fa-solid fa-file-lines" style="font-size:25px;"></i></a> </div>
+                                    <div class="ps-2 iconEdit">  <a asp-action="Details" asp-route-id="@item.Id"><i class="fas fa-edit" style="font-size:25px;"></i></a> </div>
 
 
 
                                     @*<div class="ps-2 iconDown">
-            <a>  <i class="fa-solid fa-download" style="font-size: 25px; color: #409eff ;" data-bs-toggle="modal" data-bs-target="#myModal"></i> </a>
-        </div>*@
+                                            <a>  <i class="fa-solid fa-download" style="font-size: 25px; color: #409eff ;" data-bs-toggle="modal" data-bs-target="#myModal"></i> </a>
+                                        </div>*@
 
 
                                     <div class="ps-2 iconDown">
@@ -106,11 +105,11 @@
 
 
                                     @*<div class="ps-2 iconDown">
-            foreach (var item2 in item.ListOfFiles.ToList())
-            {
-                <a href="~/UploadedFiles/item2.Path" download="download">item2.ParentId<i class="fa-solid fa-download" style="font-size:25px;"></i></a>
-            }
-        </div>*@
+                                            foreach (var item2 in item.ListOfFiles.ToList())
+                                            {
+                                                <a href="~/UploadedFiles/item2.Path" download="download">item2.ParentId<i class="fa-solid fa-download" style="font-size:25px;"></i></a>
+                                            }
+                                        </div>*@
 
 
 
@@ -121,8 +120,8 @@
                                         <a data-id="@item.Id" class="Openbutton" data-toggle="modal" data-target="#UpdateRequest"><img src="~/Admin/Images/test1.png" style="width:40px;height:35px" />@*request*@</a>
 
                                         @*<button type="button" data-id="@item.Id" class="btn signup backBlue text-white Openbutton" data-toggle="modal" data-target="#UpdateRequest">
-                Update Request
-            </button>*@
+                                                Update Request
+                                            </button>*@
                                     </div>
 
                                 </div>
@@ -166,7 +165,7 @@
 
 
 
-                                    <div class="ps-2 iconDetail">  <a asp-action="Details" asp-route-id="@item.Id"><i class="fa-solid fa-file-lines" style="font-size:25px;"></i></a> </div>
+                                    <div class="ps-2 iconEdit">  <a asp-action="Details" asp-route-id="@item.Id"><i class="fas fa-edit" style="font-size:25px;"></i></a> </div>
 
 
 

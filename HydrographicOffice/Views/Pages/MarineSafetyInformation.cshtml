@@ -1,0 +1,410 @@
+﻿@inject CultureLocalizer  _Localizer
+@{
+    ViewData["Title"] = "Marine Safety Information";
+     Layout = "_Layout";
+    var X = _Localizer.Text("Home");
+        var culture = System.Globalization.CultureInfo.CurrentCulture;
+
+}
+
+<link href="~/Admin/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+
+  @if (culture.Name.Contains("en-US"))
+{
+
+
+    <br /><br />
+    <h2 class="txtColorBlue text-center "><mark class="markSty-who highlight"> Maritime Safety Information   </mark></h2>
+
+    <div class="container mt-3 mb-5 ">
+        <div class="row phgJust ">
+
+
+
+                        <div class="col-sm-12  p-3 m-2 bg-white ">
+
+                            <p>
+
+                                This section, through direct coordination with Ministry of Transport, communication and IT, issues navigation warnings and notices to all the users to ensure safe navigation in Omani water.
+                                <br />  <br />
+                                As soon as these information are reported through local sources as ports, RNO vessels, RAO and other crafts, informing navigation danger, information and location are made on the chart.
+                                <br />  <br />
+                                Then, a draft of navigation notice is sent to coastline Muscat channel, as it is responsible of marine affairs section of Ministry of Transport, communication and IT (recently off), issued via Radio to all ships in Omani waters.
+                                <br />  <br />
+                                In addition, this draft is also sent to Pakistan Hydro Office, as it is the responsible authority of the ninth region, to be transmitted through SAFETY NET.
+                                <br />  <br />
+                                Moreover, the section also publishes half monthly notices to mariners to be benefit for Oman’s ships and monthly notices to mariners distributed to users of Oman Navigational charts to be corrected.
+
+
+
+                            </p>
+
+                        </div>
+
+
+
+
+                        <div class="container mt-1">
+                            <div id="accordion">
+
+                                <div class="card">
+
+                                    <div class="card-header backBlue  d-flex justify-content-between hovertitle" data-bs-toggle="collapse" href="#collapseOne">
+
+                                        <a class="btn text-white" data-bs-toggle="collapse" href="#collapseOne">
+                                            <b>  Navigation Warning</b>
+                                        </a>
+
+                                        <a class="btn text-white arrow" data-bs-toggle="collapse" href="#collapseOne">
+
+                                            <img src="~/Images/tick-m.PNG" width="20">
+                                        </a>
+
+
+
+                                    </div>
+                                    <div id="collapseOne" class="collapse " data-bs-parent="#accordion">
+                                        <div class="card-body">
+
+                                            After receiving information, which may affect navigation safety and life at sea, the section issues warning notice to mariners to take precautionary actions. These warring notices include the next mentioned:                                                <br />           <br />
+
+
+                                            <img src="~/Images/tick-e.PNG" width="21"> <b>RNO Fleet Warning :  </b> <br />
+                                            A message is sent by COMMS center.
+                                            <br />           <br />
+
+                                            <img src="~/Images/tick-e.PNG" width="21"> <b>Oman Navigation Warning  : </b> <br />
+                                            As soon as corrections are received, 	a warning draft is transmitted via Muscat Radio channel. Due to defects in this channel, the draft is emailed to some authorities as Arabian Company of Sea Service Navigation Aids, Coast Guard Police, Royal Yacht, and others related.
+
+
+                                            <br />           <br />
+                                            <img src="~/Images/tick-e.PNG" width="21"> <b>  Regional Warning:</b> <br />
+
+                                            It is transmitted through Regional Office of Navigation Warning Transmission represented in Pakistan Hydrography Office by satellite, which of the Sultanate is part of it. Regularly, warnings are sent behind 12 nautical miles but as there is defect in the local station, this office is requested to assist in less than this range in some cases as projects, exercises and dangers that threaten navigation safety.
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="card">
+                                    <div class="card-header backBlue d-flex justify-content-between hovertitle" data-bs-toggle="collapse" href="#collapseTwo">
+                                        <a class="collapsed btn text-white " data-bs-toggle="collapse" href="#collapseTwo">
+                                            <b>  Notices to Mariners </b>
+                                        </a>
+
+                                        <a class="btn text-white arrow" data-bs-toggle="collapse" href="#collapseTwo">
+                                            <img src="~/Images/tick-m.PNG" width="20">
+                                        </a>
+
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+                                        <div class="card-body">
+
+
+
+                                            Notices are derived into
+                                            <br />           <br />
+
+                                            <img src="~/Images/tick-e.PNG" width="21"> <b>     Oman Notices to Mariners:</b> <br />
+
+                                            The section of Navigation Safety Information collects data in case of any corrections to charts or publications and issues them in a monthly notices to be distributed to all users through Ministry of Defense website, ONHO site or emails.
+                                            <br />           <br />
+
+
+                                            <img src="~/Images/tick-e.PNG" width="21"> <b>    British Notices to Mariners:</b> <br />
+
+                                            The section of Navigation Safety Information downloads weekly Notices, made by UK Hydrographic Office, and captures all British charts in relation to Oman coastline and British publications used by RNO. These notices are distributed once a fortnight to RNO fleet through MOD.
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+                                <div class="card">
+                                    <div class="card-header backBlue d-flex justify-content-between hovertitle" data-bs-toggle="collapse" href="#collapsefour">
+                                        <a class="collapsed btn text-white  " data-bs-toggle="collapse" href="#collapsefour">
+                                            <b>   Works of Charts Maintenance Unit  </b>
+                                        </a>
+
+
+                                        <a class="btn text-white arrow" data-bs-toggle="collapse" href="#collapsefour">
+                                            <img src="~/Images/tick-m.PNG" width="20">
+                                        </a>
+
+                                    </div>
+                                    <div id="collapsefour" class="collapse" data-bs-parent="#accordion">
+                                        <div class="card-body">
+
+
+
+
+                                            <img src="~/Images/tick-e.PNG" width="20" />
+                                            Maintain and update charts and publications continuously.
+                                            <br />           <br />
+
+                                            <img src="~/Images/tick-e.PNG" width="20" />
+                                            Provide navigation charts and publications to RNO units and vessels as per NAV SET.
+                                            <br />           <br />
+
+
+
+                                            <img src="~/Images/tick-e.PNG" width="20" />
+                                            Provide navigation chart and publications to authorities, upon request, of special nature as outside trips or naval exercises and operations.
+                                            <br />           <br />
+
+
+
+                                            <img src="~/Images/tick-e.PNG" width="20" />
+                                            Examine regularly all charts and publications of RNO units and vessels.
+                                            <br />           <br />
+
+                                            <img src="~/Images/tick-e.PNG" width="20" />
+                                            Follow up corrections to hydrographic products of vessels under maintenance.
+                                            <br />           <br />
+
+
+
+                                            <img src="~/Images/tick-e.PNG" width="20" />
+                                            Execute training workshops and courses of navigation charts and publications to users, either officers or rating, military and civil institutions.
+                                            <br />           <br />
+
+                                            <img src="~/Images/tick-e.PNG" width="20" />
+                                            Follow up requests of hydrographic products from purchase section.
+                                            <br />         <br />
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+                                <video width="100%" playsinline autoplay muted loop class="mt-2">
+                                    <source src="~/Video/mappaper.mov" type="video/mp4">
+                                </video>
+
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+}
+else{
+
+    
+                <br /><br />
+                <h2 class="txtColorBlue text-center "><mark class="markSty-who highlight">  معلومات السلامة البحرية  </mark></h2>
+
+                <div class="container mt-3 mb-5 ">
+                    <div class="row phgJust ">
+
+
+
+                        <div class="col-sm-12  p-3 m-2 bg-white ">
+
+                            <p>
+
+                                يقوم القسم - بالتعاون مع وزارة النقل والاتصالات وتِقنية المعلومات- بإصدار التعليمات والتحذيرات الملاحية لمرتادي المياه العمانية كالإعلانات، والإنذارت الملاحية، وتوصيل المعلومات إلى السفن الموجودة في عرض البحر؛ حفاظاً على السلامة البحرية. وعند تلقي قسم السلامة البحرية بالمكتب الهيدروغرافي الوطني الإشارات والمعلومات من خلال المصادر المحلية، مثل:
+                                <br />
+                                <img src="~/Images/tick.PNG" width="23">    الموانئ<br />
+                                <img src="~/Images/tick.PNG" width="23">  طائرات سلاح الجو السلطاني العماني<br />
+                                <img src="~/Images/tick.PNG" width="23"> السفن العابرة والموجودة في المياه العمانية<br />
+                                <br />
+                                تُفيد بوجود خطرٍ ملاحي، يتم التأكد من صحته، وتحديد موقعه برسمه على الخارطة، ثم يتم إصدار مسودة الإنذار الملاحي وإرسالها إلى محطة راديو مسقط الساحلية التابعة لدائرة الشؤون البحرية بوزارة النقل والاتصالات وتِقنية المعلومات (حاليا مُعطلة)، ويتم بثه لاسلكيًا خلال فترات البث اليومي لكل السفن الموجودة في المياه العمانية، كما يُرسَل الى المكتب الهيدروغرافي الباكستاني بصفته الجهة المسؤولة عن المنطقة التاسعة، لتُبث عن طريق (SAFETY NET).
+                                <br />  <br />
+                                <br />  <br />
+                                كما يُصدر القسم نشرة إعلانات ملاحية نصف شهرية خاصة بسفن البحرية؛ لتصحيح خرائط الأدميرالية البريطانية الخاصة بالمياه العمانية، إضافة إلى نشر إعلانات ملاحية شهرية يتم توزيعها على الجهات المستخدمة للخرائط العمانية لتصحيحها.
+                                <br />  <br />
+
+
+
+                            </p>
+
+                        </div>
+
+
+
+
+                        <div class="container mt-1">
+                            <div id="accordion">
+
+                                <div class="card">
+
+                                    <div class="card-header backBlue  d-flex justify-content-between hovertitle" data-bs-toggle="collapse" href="#collapseOne">
+
+                                        <a class="btn text-white" data-bs-toggle="collapse" href="#collapseOne">
+                                            <b>
+                                                الإنذارات الملاحية
+                                            </b>
+                                        </a>
+
+                                        <a class="btn text-white arrow " data-bs-toggle="collapse" href="#collapseOne">
+
+                                            <img src="~/Images/tick-w.PNG" width="20">
+                                        </a>
+
+
+
+                                    </div>
+                                    <div id="collapseOne" class="collapse " data-bs-parent="#accordion">
+                                        <div class="card-body">
+
+                                            بعد استلام القسم معلومات قد تؤثر على الملاحة البحرية وسلامة الأرواح، يُصدر القسم تلك الإنذارات لإشعار البحارة بوجود خطر ملاحي، لتوخي الحيطة والحذر. وتنقسم تلك الإنذارات إلى أنواع، منها:
+                                            <br />
+
+
+
+                                            <img src="~/Images/tick.PNG" width="21"> <b>إنذار خاص لإسطول البحرية السلطانية العمانية :  </b> <br />
+                                            ويكون عبارة عن برقية يتم يتوزيعها عن طريق مركز الاتصالات.
+                                            <br />           <br />
+
+                                            <img src="~/Images/tick.PNG" width="21"> <b>إنذار ملاحي عماني: </b> <br />
+                                            عند استلام تلك التغييرات تُصْدرمسودة للإنذار ليتم بثها عن طريق محطة راديو مسقط. ونظرًا لحدوث عطل في تلك المحطة، يتم إرسالها عن طريق البريد الإلكتروني لبعض الجهات، منها: الشركة العربية للخدمات البحرية والمساعدات الملاحية، خفر السواحل التابع لشرطة عمان السلطانية، واليخوت السلطانية، وغيرها ممَّن لهم علاقة بالملاحة البحرية.
+
+
+                                            <br />           <br />
+                                            <img src="~/Images/tick.PNG" width="21"> <b>  إنذار اقليمي: </b> <br />
+
+                                            يتم بثه عن طريق المكتب الاقليمي لبث الإنذارات الملاحية، والمُتمثل في المكتب الهيدروغرافي الباكستاني (الجهة المنسقة للمنطقة التاسعة) بواسطة الأقمار الصناعية، والتي تندرج السلطنة تحت نطاقها. وتُرسل الإنذارات عادة بعد 12 ميلًا بحريًا، ولكن لوجود قصور في المحطة المحلية؛ يتم الاستعانة بهم في: المشاريع، التمارين، والأخطار التي تؤثر في سلامة الملاحة البحرية.
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="card">
+                                    <div class="card-header backBlue d-flex justify-content-between hovertitle" data-bs-toggle="collapse" href="#collapseTwo">
+                                        <a class="collapsed btn text-white " data-bs-toggle="collapse" href="#collapseTwo">
+                                            <b>  الإعلانات الملاحية </b>
+                                        </a>
+
+                                        <a class="btn text-white arrow" data-bs-toggle="collapse" href="#collapseTwo">
+                                            <img src="~/Images/tick-w.PNG" width="20">
+                                        </a>
+
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+                                        <div class="card-body">
+
+
+
+                                            ينقسم إلى قسمين                                            <br />           <br />
+
+                                            <img src="~/Images/tick.PNG" width="21"> <b>    إعلان ملاحي عماني:</b> <br />
+
+                                            يقوم قسم معلومات السلامة البحرية بتجميع البيانات من المصادر المختلفة حال وجود أي تحديثات في الخرائط أو المنشورات البحرية؛ من خلال نشرها في الإعلانات الملاحية العمانية في نهاية الشهر، وتوزع على جميع مستخدمي الخرائط والمنشورات البحرية العمانية عن طريق الموقع التابع لوزارة الدفاع أو الموقع الخارجي للمكتب، أو يُرسل عن طريق البريد الإلكتروني التابع للجهات المستخدمة.
+                                            <br />           <br />
+
+
+                                            <img src="~/Images/tick.PNG" width="21"> <b>    إعلان ملاحي بريطاني:</b> <br />
+
+                                            يقوم قسم معلومات السلامة البحرية أيضا باقتباس الإعلانات الملاحية البريطانية؛ عن طريق تحميل تلك الإعلانات التي يصدرها المكتب الهيدروغرافي البريطاني أسبوعيًا من شبكة الإنترنت، ومن خلال اقتباس كل ما يخص الخرائط البحرية البريطانية التي تُغطي السواحل العمانية والمنشورات البحرية البريطانية التي يستخدمها أسطول البحرية السلطانية العمانية. وتُنشر الإعلانات الملاحية البريطانية وتوزع كل أسبوعين على أسطول البحرية السلطانية العمانية عن طريق شبكة وزارة الدفاع.
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="card">
+                                    <div class="card-header backBlue d-flex justify-content-between hovertitle" data-bs-toggle="collapse" href="#collapsefour">
+                                        <a class="collapsed btn text-white  " data-bs-toggle="collapse" href="#collapsefour">
+                                            <b>  أعمال وحدة حفظ وصيانة الخرائط </b>
+                                        </a>
+
+
+                                        <a class="btn text-white arrow" data-bs-toggle="collapse" href="#collapsefour">
+                                            <img src="~/Images/tick-w.PNG" width="20">
+                                        </a>
+
+                                    </div>
+                                    <div id="collapsefour" class="collapse" data-bs-parent="#accordion">
+                                        <div class="card-body">
+
+
+
+
+                                            <img src="~/Images/tick.PNG" width="20" />
+                                            حفظ وصيانة (تحديث) الخرائط والكتب الملاحية، ومتابعة تحديثاتها باستمرار.
+                                            <br />           <br />
+
+                                            <img src="~/Images/tick.PNG" width="20" />
+                                            تزويد جميع سفن الأسطول ووحدات البحرية السلطانية العمانية بالخرائط والكتب الملاحية وفق جدول الاستحقاق (NAVISET)                                            <br />           <br />
+
+
+
+                                            <img src="~/Images/tick.PNG" width="20" />
+                                            تزويد جميع سفن الأسطول بالخرائط والكتب الملاحية عند الطلب للرحلات الخارجية، أو التمارين والعمليات البحرية.                                            <br />           <br />
+
+
+
+                                            <img src="~/Images/tick.PNG" width="20" />
+                                            التفتيش الدوري على جميع الخرائط والكتب الملاحية لسفن الأسطول ووحدات البحرية السلطانية العمانية.                                            <br />           <br />
+
+                                            <img src="~/Images/tick.PNG" width="20" />
+                                            متابعة تحديثات الخرائط والكتب الملاحية للسفن التي تحت الصيانة.                                            <br />           <br />
+
+
+
+                                            <img src="~/Images/tick.PNG" width="20" />
+                                            عمل دورات وورش تدريبية لمستخدمي الخرائط والكتب الملاحية من الأفراد والضباط، والمؤسسات المدنية والعسكرية.
+                                            <br />           <br />
+
+                                            <img src="~/Images/tick.PNG" width="20" />
+                                            متابعة طلبات الخرائط والكتب الملاحية الحديثة من قسم المشتريات.
+                                            <br /><br />
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <video width="100%" playsinline autoplay muted loop class="mt-2">
+                                    <source src="~/Video/mappaper.mov" type="video/mp4">
+                                </video>
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+}
+
+
+
+
+@section Scripts{
+    <script src="~/sweetAlert/sweetalert.min.js"></script>
+
+    <script>
+
+    $(document).ready(function () {
+    debugger;
+    if ('@ViewBag.Done' != '' && '@ViewBag.Done' != null) {
+
+    swal('@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Done.. Your Request Success" : "تم ارسال طلبك")', "", "success");
+    }
+    });
+    </script>
+}

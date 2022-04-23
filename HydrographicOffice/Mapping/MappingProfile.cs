@@ -34,6 +34,8 @@ namespace HydrographicOffice.Mapping
             CreateMap<User, RegisterUserMVm>().ReverseMap();
             CreateMap<User, LoginRegisterVm>().ReverseMap();
             CreateMap<Notification, NotificationDTO>().ReverseMap();
+            CreateMap<Omanbook, OmanbookMVm>().ReverseMap();
+            CreateMap<Omanbook, OmanbookDto>().ReverseMap();
         }
     }
 }

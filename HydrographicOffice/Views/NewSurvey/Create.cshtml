@@ -6,13 +6,16 @@
     Layout = "_Layout";
 
 }
-<link href="~/Admin/FileUploader/css/fileinput.css" rel="stylesheet" />
+@*<link href="~/Admin/FileUploader/css/fileinput.css" rel="stylesheet" />
 <link href="~/Admin/FileUploader/themes/explorer-fa/theme.css" rel="stylesheet">
 <link href="~/Admin/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css" rel="stylesheet" />*@
 
 
-<h2 class="txtTopStylearch223-Hyd mt-5" style="text-align:center"><mark class="highlight ">New Survey </mark> </h2>
+
+<link href="~/sty/Style_Qty.css" rel="stylesheet">
+
+<h2 class="txtTopStylearch223-Hyd mt-5" style="text-align:center"><mark class="highlight ">@_Localizer.Text("HydroSurvey") </mark> </h2>
 
 
 <div class="container">
@@ -28,7 +31,7 @@
 
                 @*<div class="card px-5 py-5 ">*@
                 @*<h2 class="mt-3 txtColorGold text-center">New Survey</h2>*@
-                <p class="mt-5 mb-3txtColorBlue">Please fill the form ...</p>
+                <p class="mt-5 mb-3txtColorBlue">@_Localizer.Text("Pleasefilltheform")</p>
 
 
 
@@ -38,7 +41,7 @@
                         @*<label class="control-label align-self-center" style="width:30%;">Chosse Survey Type:</label>*@
                         <select asp-for="Type" class="form-control form-select form-controlNonSpace">
 
-                            <option value="0">Select Survey Type</option>
+                            <option value="0">@_Localizer.Text("SelectSurveyType") </option>
 
                             @foreach (EnumCommon.SurveyType suit in (EnumCommon.SurveyType[])Enum.GetValues(typeof(EnumCommon.SurveyType)))
                             {
@@ -53,11 +56,14 @@
 
 
                     <div class="form-input" style="width:50%">
-                        @*<label class="control-label align-self-center" for="cars" style="width:30%;">Choose File Type:</label>*@                    
+                        @*<label class="control-label align-self-center" for="cars" style="width:30%;">Choose File Type:</label>*@
                         @*<select asp-for="FileFormatId" class="form-control form-select " asp-items="ViewBag.FileFormatId"></select>*@
 
                         <select asp-for="FileFormatId" class="form-control form-select form-controlNonSpace">
-                            <option value="0">Select File Format</option>
+
+
+                            <option value="0">@_Localizer.Text("SelectFileFormat")</option>
+
                             @foreach (var suit in ViewBag.FileFormatId as SelectList)
                             {
                                 <option value="@(suit.Value)">@(suit.Text)</option>
@@ -73,7 +79,7 @@
                 <div class="d-flex d-grid gap-1 ">
 
                     <div class="form-input" style="width:50%">
-                        <input asp-for="Position" class="form-control form-controlNonSpace" placeholder="Position" />
+                        <input asp-for="Position" class="form-control form-controlNonSpace" placeholder="@_Localizer.Text("Position")" />
                         <span asp-validation-for="Position" class="text-danger"></span>
                     </div>
 
@@ -86,8 +92,8 @@
 
 
                     <div class="form-input" style="width:50%">
-                        <i class="fa fa-calendar" style=" position: absolute; padding: 15px; right:0;"></i>
-                        <input type="text" asp-for="Date" class="form-control form-controlNonSpace" value="@DateTime.Now.ToString("dd/MM/yyyy")">
+                        <i class="fa fa-calendar txtColorGold calsty"></i>
+                        <input type="text" asp-for="Date" class="form-control form-controlNonSpace" placeholder="@_Localizer.Text("dateformat")">
                         <span asp-validation-for="Date" class="text-danger"></span>
                     </div>
 
@@ -95,25 +101,26 @@
                 </div>
 
                 <div class="form-input">
-                    <input asp-for="Purpose" class="form-control form-controlNonSpace" placeholder="  Purpose " />
+                    <input asp-for="Position" class="form-control form-controlNonSpace" placeholder="@_Localizer.Text("Purpose")" />
                     <span asp-validation-for="Purpose" class="text-danger"></span>
                 </div>
 
                 <div class="form-input">
-                    <textarea asp-for="Description" class="form-control3 form-control2  " rows="5" placeholder=" Description . . ."></textarea>
+                    <textarea asp-for="Description" class="form-control3 form-control2  " rows="5" placeholder="@_Localizer.Text("Description")"></textarea>
                     <span asp-validation-for="Description" class="text-danger"></span>
                 </div>
 
                 <div class="form-input mt-3 d-f text-center">
                     <div class="BoxDach p-3">
-                        <label for="file" class="form-label"> <i class="fa-solid fa-cloud-arrow-up inputfileicon"></i>@*<br /> @_Localizer.Text("UploadFile")*@</label>
-                        <br />
+                        <!--<label for="file" class="form-label"> <i class="fa-solid fa-cloud-arrow-up inputfileicon"></i>-->@*<br /> @_Localizer.Text("UploadFile")*@
+                        <!--</label>
+                        <br />-->
                         <input asp-for="Files" type="file" class="" name="Files" id="Files" multiple>
 
                     </div>
                 </div>
 
-                <button type="submit" class="btn mt-4 signup backBlue text-white" style="width:100%"><h5>  Send new Survey</h5> </button>
+                <button type="submit" class="btn mt-4 signup backBlue text-white" style="width:100%"><h5>  @_Localizer.Text("Send")</h5> </button>
 
 
             </form>
@@ -143,7 +150,7 @@
                 forceParse: false,
                 calendarWeeks: true,
                 autoclose: true,
-                format: "mm/dd/yyyy"
+                dateFormat: "dd/mm/yyyy"
             });
             var check = "#sertype".val;
         });

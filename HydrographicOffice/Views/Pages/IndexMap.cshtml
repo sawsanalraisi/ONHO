@@ -1,0 +1,46 @@
+﻿@inject CultureLocalizer  _Localizer
+@{
+    ViewData["Title"] = "IndexMap";
+     Layout = "_Layout";
+    var X = _Localizer.Text("Home");
+}
+
+<link href="~/Admin/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+
+
+    <h2 class="txtColorBlue mt-5 text-center "><mark class="markSty-who highlight">@_Localizer.Text("IndexofOmanimaps")</mark></h2>
+    <br />
+                <iframe src="~/map/index.html" width="100%" height="500" style="border:none;" scrolling="no"></iframe>
+
+
+                <div class="example11 mt-5 mb-5">
+                    <p style="margin-top: 10px; margin-right: 80px;  ">
+
+                        @_Localizer.Text("getPaperNautical") <a href="@Url.Action("ContactUs","Pages")">@_Localizer.Text("OfficeName")</a>
+
+                    </p>
+                </div>
+
+
+
+
+
+
+
+
+
+@section Scripts{
+    <script src="~/sweetAlert/sweetalert.min.js"></script>
+
+    <script>
+
+    $(document).ready(function () {
+    debugger;
+    if ('@ViewBag.Done' != '' && '@ViewBag.Done' != null) {
+
+    swal('@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Done.. Your Request Success" : "تم ارسال طلبك")', "", "success");
+    }
+    });
+    </script>
+}

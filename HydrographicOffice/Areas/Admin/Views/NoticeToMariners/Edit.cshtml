@@ -9,11 +9,10 @@
 <style>
 
     .form-check-label {
-    margin-top: 2px;
-    font-size: 18px;
+        margin-top: 2px;
+        font-size: 18px;
         margin-left: 160px;
- }
-
+    }
 </style>
 
 <h1 class="txtColorBlue text-center"><mark class="highlight">@_Localizer.Text("Notice To Mariner") </mark></h1>
@@ -26,13 +25,21 @@
     <div class="row d-flex align-items-center justify-content-center">
         <div class="col-md-10 ">
 
-            <form asp-action="Edit">
+            <form asp-action="Edit" method="post" enctype="multipart/form-data">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <input type="hidden" asp-for="Id" />
 
                 <div class="form-input d-flex">
-                    <label asp-for="NoticeType" class="control-label align-self-center" style="width:20%;"></label>
-                    <input asp-for="NoticeType" class="form-control form-controlNonSpace" />
+                    <label asp-for="NoticeType" class="control-label align-self-center" style="width:20%;">@_Localizer.Text("NoticeType")</label>
+
+                    <select asp-for="NoticeType" class="form-control">
+                        @foreach (EnumCommon.NoticeToMariner suit in (EnumCommon.NoticeToMariner[])Enum.GetValues(typeof(EnumCommon.NoticeToMariner)))
+                        {
+
+                            <option value="@(((int)suit).ToString())">@_Localizer.Text(suit.ToString())</option>
+
+                        }
+                    </select>
                     <span asp-validation-for="NoticeType" class="text-danger"></span>
                 </div>
 
@@ -59,13 +66,17 @@
                     <input asp-for="NoticeEdition" class="form-control form-controlNonSpace" />
                     <span asp-validation-for="NoticeEdition" class="text-danger"></span>
                 </div>
+                <div class="form-input d-flex">
+                    <label asp-for="UploadeFile" class="control-label align-self-center" style="width:20%;"></label>
 
-                @*<div class="form-check d-flex mt-3">
+                     <a href="~/UploadedFiles/@Html.DisplayFor(model =>model.UploadeFile)"download="file" target="_blank"></a>
+                </div>
 
-                    <label class="form-check-label align-self-baseline">
-                        <div>  <input class="form-check-input p-3" asp-for="Isdelete" /></div>  <div class="p-3 "> @Html.DisplayNameFor(model => model.Isdelete)</div>
-                    </label>
-                </div>*@
+                <div class="form-input">
+                    <label class="control-label align-self-center" style="width:20%;">@_Localizer.Text("UploadFile")</label>
+                    <input type="file" asp-for="File" />
+                 
+                </div>
 
 
                 <div class="form-input">
@@ -79,8 +90,6 @@
                     <a asp-action="Index"><i class="fas fa-arrow-left"></i> &nbsp; Back to List</a>
                 </div>
 
-
-
             </form>
         </div>
     </div>
@@ -89,5 +98,20 @@
 
 
 @section Scripts {
+    <script>
+        updateList = function () {
+            debugger;
+            var input = document.getElementById('Files');
+            var output = document.getElementById('fileList');
+            var children = "";
+            for (var i = 0; i < input.files.length; ++i) {
+                children += '<li>' + input.files.item(i).name + '</li>';
+            }
+            output.innerHTML = '<ul>' + children + '</ul>';
+        }
+    </script>
+
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+
+

@@ -44,7 +44,7 @@ namespace Hydro.BAL.Service
 
         public void Update(NavigationWarning navigationWarning)
         {
-            var existingParent = _context.NewFeatures.Where(x => x.Id == navigationWarning.Id).SingleOrDefault();
+            var existingParent = _context.NavigationWarnings.Where(x => x.Id == navigationWarning.Id).SingleOrDefault();
             if (existingParent != null)
             {
                 _context.Entry(existingParent).CurrentValues.SetValues(navigationWarning);

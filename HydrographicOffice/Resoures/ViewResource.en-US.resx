@@ -120,6 +120,9 @@
   <data name="Acitve" xml:space="preserve">
     <value>Acitve</value>
   </data>
+  <data name="Activities" xml:space="preserve">
+    <value>Activities</value>
+  </data>
   <data name="AddAds" xml:space="preserve">
     <value>Add Ads</value>
   </data>
@@ -156,6 +159,12 @@
   <data name="Agree" xml:space="preserve">
     <value>Agree All Condation</value>
   </data>
+  <data name="Aims" xml:space="preserve">
+    <value>Vision, Mission and Objective</value>
+  </data>
+  <data name="Announcement" xml:space="preserve">
+    <value>Announcement</value>
+  </data>
   <data name="AppStore" xml:space="preserve">
     <value>AppStore</value>
   </data>
@@ -183,11 +192,29 @@
   <data name="ChangePassword" xml:space="preserve">
     <value>Change Password</value>
   </data>
+  <data name="Character" xml:space="preserve">
+    <value>Character</value>
+  </data>
+  <data name="ChartIndex" xml:space="preserve">
+    <value>Chart Index</value>
+  </data>
+  <data name="ChartIndexInfo" xml:space="preserve">
+    <value>it includes the index of Oman paper and electronic charts approved by the Oman National Hydrographic Office</value>
+  </data>
+  <data name="contactus" xml:space="preserve">
+    <value>contact us</value>
+  </data>
   <data name="ContactUsList" xml:space="preserve">
     <value>Contact-Us List</value>
   </data>
+  <data name="CopyRight" xml:space="preserve">
+    <value>All rights reserved to the Oman National Hydrographic Office 2022</value>
+  </data>
   <data name="Date" xml:space="preserve">
     <value>Date</value>
+  </data>
+  <data name="dateformat" xml:space="preserve">
+    <value>dd/MM/yyyy</value>
   </data>
   <data name="Delete" xml:space="preserve">
     <value>Delete</value>
@@ -216,6 +243,9 @@
   <data name="Emailerror" xml:space="preserve">
     <value>Please Enter Valid Email</value>
   </data>
+  <data name="EmailHydroOffice" xml:space="preserve">
+    <value>Email : onho@mod.gov.om</value>
+  </data>
   <data name="EmailRequired" xml:space="preserve">
     <value>Email Required</value>
   </data>
@@ -228,6 +258,9 @@
   <data name="FileFormatId" xml:space="preserve">
     <value>File Formate</value>
   </data>
+  <data name="FMGOV" xml:space="preserve">
+    <value>Foreign Ministry of Oman</value>
+  </data>
   <data name="FrequenciesAdmin" xml:space="preserve">
     <value>Frequencies Admin</value>
   </data>
@@ -237,11 +270,47 @@
   <data name="FullName" xml:space="preserve">
     <value>Full Name</value>
   </data>
+  <data name="getPaperNautical" xml:space="preserve">
+    <value>To get Paper Nautical Charts, please visit</value>
+  </data>
   <data name="GooglePlay" xml:space="preserve">
     <value>GooglePlay</value>
   </data>
   <data name="Home" xml:space="preserve">
     <value>Home</value>
+  </data>
+  <data name="HydroArchiveSection" xml:space="preserve">
+    <value>Hydrographic Archive Section</value>
+  </data>
+  <data name="HydrographicNotes" xml:space="preserve">
+    <value>Hydrographic Notes</value>
+  </data>
+  <data name="HydrographicSurvey" xml:space="preserve">
+    <value>Hydrographic Survey</value>
+  </data>
+  <data name="HydroHistory" xml:space="preserve">
+    <value>Hydrography History</value>
+  </data>
+  <data name="HydroNotes" xml:space="preserve">
+    <value>hydrographic Notes</value>
+  </data>
+  <data name="HydroOffice" xml:space="preserve">
+    <value>Hydrographic Office</value>
+  </data>
+  <data name="HydroOrg" xml:space="preserve">
+    <value>HydrographicOrganizations</value>
+  </data>
+  <data name="HydroSurvey" xml:space="preserve">
+    <value>Request a new hydrographic survey</value>
+  </data>
+  <data name="HydroTrainSchool" xml:space="preserve">
+    <value>Hydrographic Training School</value>
+  </data>
+  <data name="HydroUnit" xml:space="preserve">
+    <value>Hydrography Unit</value>
+  </data>
+  <data name="IHO" xml:space="preserve">
+    <value>International Hydrographic Organization</value>
   </data>
   <data name="Image" xml:space="preserve">
     <value>Image</value>
@@ -255,8 +324,20 @@
   <data name="ImagesList" xml:space="preserve">
     <value>Images List</value>
   </data>
+  <data name="IMO" xml:space="preserve">
+    <value>International Maritime Organization</value>
+  </data>
+  <data name="IndexofOmanimaps" xml:space="preserve">
+    <value>Index of Omani maps</value>
+  </data>
   <data name="IsActive" xml:space="preserve">
     <value>Active</value>
+  </data>
+  <data name="ITA" xml:space="preserve">
+    <value>Ministry of Transport, Communications and Information Technology</value>
+  </data>
+  <data name="LocationHydroOffice" xml:space="preserve">
+    <value>Ministry of Defence - Muaskar Al Murtafa'a</value>
   </data>
   <data name="Login" xml:space="preserve">
     <value>User Login</value>
@@ -267,8 +348,23 @@
   <data name="LogOut" xml:space="preserve">
     <value>LogOut</value>
   </data>
+  <data name="MAF" xml:space="preserve">
+    <value>Ministry of Agriculture, Fisheries and Water Recourses</value>
+  </data>
   <data name="MainProgramsAdmin" xml:space="preserve">
     <value>Main Programs Admin</value>
+  </data>
+  <data name="Marinedata" xml:space="preserve">
+    <value>Marine data</value>
+  </data>
+  <data name="MarinedataInfo" xml:space="preserve">
+    <value>Provides access to marine data sets held by Oman National Hydrographic Office's Archive</value>
+  </data>
+  <data name="MaritimeBoundaries" xml:space="preserve">
+    <value>Maritime Boundaries</value>
+  </data>
+  <data name="MaritimeSafetyInfo" xml:space="preserve">
+    <value>Maritime Safety Information</value>
   </data>
   <data name="Message" xml:space="preserve">
     <value>Message</value>
@@ -279,14 +375,26 @@
   <data name="Name" xml:space="preserve">
     <value>Name</value>
   </data>
+  <data name="NationalHydrogArchive" xml:space="preserve">
+    <value>National Hydrographic Archive</value>
+  </data>
   <data name="NavFileName" xml:space="preserve">
     <value>File Name</value>
+  </data>
+  <data name="NavigationalWarnings" xml:space="preserve">
+    <value>Navigational Warnings</value>
+  </data>
+  <data name="NavigationWarning" xml:space="preserve">
+    <value>Navigation Warning</value>
   </data>
   <data name="NavWarnDesc" xml:space="preserve">
     <value>Description</value>
   </data>
   <data name="NewAdmin" xml:space="preserve">
     <value>News Admin</value>
+  </data>
+  <data name="NewFeature" xml:space="preserve">
+    <value>New Feature</value>
   </data>
   <data name="NewPassword" xml:space="preserve">
     <value>New Password</value>
@@ -297,9 +405,6 @@
   <data name="News_List" xml:space="preserve">
     <value>News List</value>
   </data>
-  <data name="Notice To Mariner" xml:space="preserve">
-    <value>Notice To Mariner</value>
-  </data>
   <data name="NoticeDate" xml:space="preserve">
     <value>Notice Date</value>
   </data>
@@ -308,6 +413,12 @@
   </data>
   <data name="NoticeFileName" xml:space="preserve">
     <value>Notice File Name</value>
+  </data>
+  <data name="NoticeToMariner" xml:space="preserve">
+    <value>Notice To Mariner</value>
+  </data>
+  <data name="NoticetoMariners" xml:space="preserve">
+    <value>Notice to Mariners</value>
   </data>
   <data name="NoticeType" xml:space="preserve">
     <value>Notice Type</value>
@@ -318,14 +429,35 @@
   <data name="Number" xml:space="preserve">
     <value>Number</value>
   </data>
+  <data name="OfficeName" xml:space="preserve">
+    <value>Oman National Hydrographic Office</value>
+  </data>
+  <data name="OfficialWorkingHours" xml:space="preserve">
+    <value>Official Working Hours: Sunday – Thursday, 0700 AM – 1330PM</value>
+  </data>
   <data name="OldPassword" xml:space="preserve">
     <value>Old Password</value>
   </data>
   <data name="Oman" xml:space="preserve">
     <value>Oman Notice To Mariner</value>
   </data>
+  <data name="OmanMaritimeBook" xml:space="preserve">
+    <value>Oman Maritime Book</value>
+  </data>
+  <data name="omannational" xml:space="preserve">
+    <value>Oman National</value>
+  </data>
+  <data name="openOffice" xml:space="preserve">
+    <value>Hydrographic Office Openning Cermony</value>
+  </data>
+  <data name="Organization" xml:space="preserve">
+    <value>Organization</value>
+  </data>
   <data name="OrgraizationName" xml:space="preserve">
     <value>Orgraization Name</value>
+  </data>
+  <data name="OurServices" xml:space="preserve">
+    <value>Our Services</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Password</value>
@@ -339,11 +471,41 @@
   <data name="PhoneNumber" xml:space="preserve">
     <value>Phone</value>
   </data>
+  <data name="PhotoesExhibition" xml:space="preserve">
+    <value>Photoes Exhibition</value>
+  </data>
+  <data name="PhotoGallery" xml:space="preserve">
+    <value>Photo Gallery</value>
+  </data>
+  <data name="PhotoGalleryInfo" xml:space="preserve">
+    <value>Highlight some of the works and events belong to Oman National Hydrographic Office</value>
+  </data>
+  <data name="Pleasefilltheform" xml:space="preserve">
+    <value>Please fill the form</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="Production" xml:space="preserve">
+    <value>Production</value>
+  </data>
+  <data name="ProductsandData" xml:space="preserve">
+    <value>Products and Data</value>
+  </data>
   <data name="ProgramList" xml:space="preserve">
     <value>Program List</value>
   </data>
   <data name="ProgramsAdmin" xml:space="preserve">
     <value>Programs Admin</value>
+  </data>
+  <data name="Purpose" xml:space="preserve">
+    <value>Purpose</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="Quicklinks" xml:space="preserve">
+    <value>Quick links</value>
   </data>
   <data name="Region" xml:space="preserve">
     <value>Region</value>
@@ -354,11 +516,44 @@
   <data name="Roles" xml:space="preserve">
     <value>Roles</value>
   </data>
+  <data name="RolesandResp" xml:space="preserve">
+    <value>Roles and Responsibilities</value>
+  </data>
   <data name="Save" xml:space="preserve">
     <value>Save</value>
   </data>
+  <data name="SelectCategory" xml:space="preserve">
+    <value>Select Category</value>
+  </data>
+  <data name="SelectFileFormat" xml:space="preserve">
+    <value>Select File Format</value>
+  </data>
+  <data name="SelectNewFeaturstatus" xml:space="preserve">
+    <value>Select New Featur status</value>
+  </data>
+  <data name="SelectSurveyType" xml:space="preserve">
+    <value>Select Survey Type</value>
+  </data>
+  <data name="SelhydroNotstatus" xml:space="preserve">
+    <value>Select hydrographic Notes status</value>
+  </data>
+  <data name="SelSpecialTaskType" xml:space="preserve">
+    <value>Select  Special Task Type</value>
+  </data>
+  <data name="seltypeofservice" xml:space="preserve">
+    <value>Select Type of Service</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Send</value>
+  </data>
   <data name="SendNotfactions" xml:space="preserve">
     <value>Send Notifications</value>
+  </data>
+  <data name="ServiceRequest" xml:space="preserve">
+    <value>New Service Request</value>
+  </data>
+  <data name="Services" xml:space="preserve">
+    <value>Services</value>
   </data>
   <data name="Settings" xml:space="preserve">
     <value>Settings</value>
@@ -366,11 +561,23 @@
   <data name="SettingsAdmin" xml:space="preserve">
     <value>Settings Admin</value>
   </data>
+  <data name="SignIn" xml:space="preserve">
+    <value>Sign In</value>
+  </data>
+  <data name="SignUp" xml:space="preserve">
+    <value>Sign Up</value>
+  </data>
   <data name="SliderList" xml:space="preserve">
     <value>Slider List</value>
   </data>
   <data name="SoundCloud" xml:space="preserve">
     <value>SoundCloud</value>
+  </data>
+  <data name="SpecialTask" xml:space="preserve">
+    <value>Special Task</value>
+  </data>
+  <data name="SQU" xml:space="preserve">
+    <value>Sultan Qaboos University</value>
   </data>
   <data name="StartTime" xml:space="preserve">
     <value>Start Time</value>
@@ -380,6 +587,12 @@
   </data>
   <data name="StatusRequest" xml:space="preserve">
     <value>Status Request</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="telepHydroOffice" xml:space="preserve">
+    <value>Telephone: 21512432  968 +</value>
   </data>
   <data name="Title" xml:space="preserve">
     <value>Title</value>
@@ -392,6 +605,9 @@
   </data>
   <data name="Titles" xml:space="preserve">
     <value>Titles</value>
+  </data>
+  <data name="Training" xml:space="preserve">
+    <value>Training</value>
   </data>
   <data name="Update" xml:space="preserve">
     <value>Update</value>
@@ -438,6 +654,9 @@
   <data name="UsersType" xml:space="preserve">
     <value>UsersType</value>
   </data>
+  <data name="USHO" xml:space="preserve">
+    <value>United Kingdom Hydrographic Office</value>
+  </data>
   <data name="VideoAdmin" xml:space="preserve">
     <value>Video Admin</value>
   </data>
@@ -447,10 +666,22 @@
   <data name="View" xml:space="preserve">
     <value>View</value>
   </data>
+  <data name="VisitofBiritishadmiral" xml:space="preserve">
+    <value>Visit of Biritish admiral</value>
+  </data>
+  <data name="VisitofNewOfficers" xml:space="preserve">
+    <value>Visit of New Officers</value>
+  </data>
   <data name="WaringDate" xml:space="preserve">
     <value>Waring Date</value>
   </data>
   <data name="WarnNumber" xml:space="preserve">
     <value>Warning Number</value>
+  </data>
+  <data name="whoweAre" xml:space="preserve">
+    <value>Who We Are</value>
+  </data>
+  <data name="WorkingHours" xml:space="preserve">
+    <value>Working Hours</value>
   </data>
 </root>

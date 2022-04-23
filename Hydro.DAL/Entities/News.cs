@@ -16,7 +16,8 @@ namespace Hydro.DAL.Entities
         public DateTime CreateAt { get; set; }
         public string CoverImage { get; set; }
 
-
+        public ICollection<ImageNews> ImageNews { get; set; }
+        = new List<ImageNews>();
 
     }
 }

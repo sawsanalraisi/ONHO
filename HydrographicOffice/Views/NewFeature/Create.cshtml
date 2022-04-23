@@ -6,12 +6,13 @@
     Layout = "_Layout";
 }
 
-<link href="~/Admin/FileUploader/css/fileinput.css" rel="stylesheet" />
-<link href="~/Admin/FileUploader/themes/explorer-fa/theme.css" rel="stylesheet">
-<link href="~/Admin/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css" rel="stylesheet" />
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/6.4.1/css/intlTelInput.css">
+@*<link href="~/Admin/FileUploader/css/fileinput.css" rel="stylesheet" />
+    <link href="~/Admin/FileUploader/themes/explorer-fa/theme.css" rel="stylesheet">
+    <link href="~/Admin/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/6.4.1/css/intlTelInput.css">*@
 
+<link href="~/sty/Style_Qty.css" rel="stylesheet">
 
 
 <style id="jsbin-css">
@@ -20,23 +21,7 @@
     }
 </style>
 
-<style>
-
-    /*    .input-group{
-        margin-top:40px;
-        width:100%;
-    }
-
-        .input-group .btn {
-            position: relative;
-            z-index: 2;
-            margin-top: -78px;
-            margin-right: 319px;
-        }*/
-
-</style>
-
-<h2 class="txtTopStylearch223-Hyd mt-5" style="text-align:center"><mark class="highlight ">New Feature </mark> </h2>
+<h2 class="txtTopStylearch223-Hyd mt-5" style="text-align:center"><mark class="highlight ">@_Localizer.Text("HydroNotes")</mark> </h2>
 
 <!--//New Feature-->
 <div class="container">
@@ -49,7 +34,7 @@
 
                 @*<div class="card px-5 py-5 ">*@
 
-                <p class="mt-5 mb-3txtColorBlue">Please fill the form ...</p>
+                <p class="mt-5 mb-3txtColorBlue">@_Localizer.Text("Pleasefilltheform")</p>
 
 
                 <div class="d-flex d-grid gap-1 ">
@@ -59,7 +44,7 @@
 
                         <select asp-for="Status" class="form-control form-select form-controlNonSpace">
 
-                            <option value="0">Select New Featur status</option>
+                            <option value="0">@_Localizer.Text("SelhydroNotstatus")</option>
 
 
                             @foreach (EnumCommon.StatusNewFeature suit in (EnumCommon.StatusNewFeature[])Enum.GetValues(typeof(EnumCommon.StatusNewFeature)))
@@ -74,15 +59,9 @@
                     </div>
 
 
-                    @*<div class="form-input" style="width:50%">
-                            <input asp-for="NewFeatureDate" class="form-control form-controlNonSpace" placeholder="  New Feature Date " />
-                            <span asp-validation-for="NewFeatureDate" class="text-danger"></span>
-                        </div>*@
-
-
                     <div class="form-input" style="width:50%">
-                        <i class="fa fa-calendar" style=" position: absolute; padding: 15px; right:0;"></i>
-                        <input type="text" asp-for="NewFeatureDate" class="form-control form-controlNonSpace" value="@DateTime.Now.ToString("dd/MM/yyyy")">
+                        <i class="fa fa-calendar txtColorGold calsty"></i>
+                        <input type="text" asp-for="NewFeatureDate" class="form-control form-controlNonSpace" placeholder="@_Localizer.Text("dateformat")">
                         <span asp-validation-for="NewFeatureDate" class="text-danger"></span>
                     </div>
 
@@ -91,7 +70,7 @@
 
 
                 <div class="form-input">
-                    <input asp-for="Organization" class="form-control form-controlNonSpace" placeholder="  Organization " />
+                    <input asp-for="Organization" class="form-control form-controlNonSpace" placeholder="@_Localizer.Text("Organization")" />
                     <span asp-validation-for="Organization" class="text-danger"></span>
                 </div>
 
@@ -101,13 +80,13 @@
                     <div class="form-input">
                         <input id="phone" name="phone" type="hidden" placeholder="Phone" />
 
-                        <input asp-for="key" class="form-control form-controlNonSpace" type="tel" placeholder="Phone" style="width:100%" />
+                        <input asp-for="key" class="form-control form-controlNonSpace" type="tel" placeholder="@_Localizer.Text("Phone")" style="width:100%" />
                         <span id="valid-msg" class="hide text-success">✓ Valid</span>
                         <span id="error-msg" class="hide text-danger">Invalid number</span>
                     </div>
 
                     <div class="form-input " style="width:100%">
-                        <input asp-for="Email" class="form-control form-controlNonSpace" placeholder="  Email " />
+                        <input asp-for="Email" class="form-control form-controlNonSpace" placeholder="@_Localizer.Text("Email")" />
                         <span asp-validation-for="Email" class="text-danger"></span>
                     </div>
 
@@ -117,28 +96,28 @@
                 <div class="d-flex d-grid gap-1 ">
 
                     <div class="form-input" style="width:100%">
-                        <input asp-for="Position" class="form-control form-controlNonSpace" placeholder="Position" />
+                        <input asp-for="Position" class="form-control form-controlNonSpace" placeholder="@_Localizer.Text("Position")" />
                         <span asp-validation-for="Position" class="text-danger"></span>
                     </div>
 
 
 
                     <div class="form-input" style="width:100%">
-                        <input asp-for="Region" class="form-control form-controlNonSpace" placeholder="  Region " />
+                        <input asp-for="Region" class="form-control form-controlNonSpace" placeholder="@_Localizer.Text("Region")" />
                         <span asp-validation-for="Region" class="text-danger"></span>
                     </div>
                 </div>
 
 
                 <div class="form-input">
-                    <input asp-for="Purpose" class="form-control form-controlNonSpace" placeholder="  Purpose " />
+                    <input asp-for="Purpose" class="form-control form-controlNonSpace" placeholder="@_Localizer.Text("Purpose")" />
                     <span asp-validation-for="Purpose" class="text-danger"></span>
                 </div>
 
 
 
                 <div class="form-input">
-                    <input asp-for="Character" class="form-control form-controlNonSpace" placeholder="  Character " />
+                    <input asp-for="Character" class="form-control form-controlNonSpace" placeholder="@_Localizer.Text("Character")" />
                     <span asp-validation-for="Character" class="text-danger"></span>
                 </div>
 
@@ -146,24 +125,21 @@
 
 
                 <div class="form-input">
-                    <textarea asp-for="Description" class="form-control3 form-control2  " rows="5" placeholder=" Description . . ."></textarea>
+                    <textarea asp-for="Description" class="form-control3 form-control2  " rows="5" placeholder="@_Localizer.Text("Description")"></textarea>
                     <span asp-validation-for="Description" class="text-danger"></span>
                 </div>
 
 
                 <div class="form-input mt-3 d-f text-center">
                     <div class="BoxDach p-3">
-                        <label for="file" class="form-label">
-                            <i class="fa-solid fa-cloud-arrow-up inputfileicon"></i>
-
-                        </label>
+                        @*<label for="file" class="form-label"><i class="fa-solid fa-cloud-arrow-up inputfileicon"></i> </label>*@
 
                         <input asp-for="Files" type="file" class="" name="Files" id="Files" multiple>
                     </div>
                 </div>
 
 
-                <button type="submit" class="btn mt-4 signup backBlue text-white" style="width:100%"><h5> Send new Feature </h5> </button>
+                <button type="submit" class="btn mt-4 signup backBlue text-white" style="width:100%"><h5> @_Localizer.Text("Send")</h5> </button>
             </form>
 
         </div>
@@ -191,7 +167,7 @@
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 
 
-<script>
+    <script>
 
 
     $(document).ready(function () {
@@ -201,7 +177,7 @@
             forceParse: false,
             calendarWeeks: true,
             autoclose: true,
-            format: "mm/dd/yyyy"
+            dateFormat: "dd/mm/yyyy"
         });
         var check = "#sertype".val;
     });
@@ -217,7 +193,7 @@
                 mainClass: "input-group"
         });
 
-</script>
+    </script>
 
 
 
@@ -248,7 +224,7 @@
                 if (telInput.intlTelInput("isValidNumber")) {
                     validMsg.removeClass("hide");
                     var getCode = telInput.intlTelInput('getSelectedCountryData').dialCode;
-                 /*   alert(getCode + telInput.val());*/
+                    /*   alert(getCode + telInput.val());*/
                     $("#phone").val(getCode + telInput.val());
                 } else {
                     telInput.addClass("error");

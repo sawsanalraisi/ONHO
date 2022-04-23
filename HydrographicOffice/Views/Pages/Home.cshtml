@@ -1,0 +1,232 @@
+﻿@inject CultureLocalizer  _Localizer
+@{
+    ViewData["Title"] = "Home";
+     Layout = "_MainLayout";
+    var X = _Localizer.Text("Home");
+}
+
+<link href="~/Admin/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+
+
+
+<video width="100%" playsinline autoplay muted loop class="mt-2" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) inset; mix-blend-mode: multiply; ">
+    <source src="~/Video/OHNO.mov" type="video/mp4">
+
+</video>
+
+
+
+
+
+<div class="container-fluid mt-5 text-center">
+
+    <h2 class=" mt-5 txtColorBlue">Our Services</h2>
+
+    <div class="row mt-5 txtColorBlue justify-content-center list-style">
+
+
+         
+
+
+        <div class="col-lg-2 col-md-4">
+            <a href="@Url.Action("Index","NoticeToMariner")">
+                <div class="centerimgCir">
+                    <img src="~/Images/not1.png" class="rounded-circle  imgstylecir " width="150" height="150" style="object-fit: scale-down; ">
+                    <div class="overlay2 rounded-circle"></div>
+                </div>
+                <br />
+                <h5><p class=""> Notice to Mariners </p></h5>
+            </a>
+        </div>
+
+
+
+        <div class="col-lg-2 col-md-4">
+            <a href="@Url.Action("Index","NavigationWarning")">
+                <div class="centerimgCir">
+                    <img src="~/Images/Nav.png" class="rounded-circle  imgstylecir " width="150" height="150" style="">
+                    <div class="overlay2 rounded-circle"></div>
+                </div>
+                <br />
+
+                <h5> <p>  Navigational Warnings </p></h5>
+            </a>
+        </div>
+
+
+
+
+        <div class="col-lg-2 col-md-4">
+            <a href="@Url.Action("Create","NewFeature")">
+                <div class="centerimgCir">
+                    <img src="~/Images/New.png" class="rounded-circle  imgstylecir " width="150" height="150">
+                    <div class="overlay2 rounded-circle"></div>
+                </div>
+                <br />
+
+                <h5><p>     Hydrographic Notes </p></h5>
+            </a>
+        </div>
+
+
+        <div class="col-lg-2 col-md-4">
+            <a href="@Url.Action("Create","NewSurvey")">
+                <div class="centerimgCir">
+                    <img src="~/Images/news.png" class="rounded-circle  imgstylecir " width="150" height="150">
+                    <div class="overlay2 rounded-circle"></div>
+                </div>
+                <br />
+
+                <h5><p>Hydrographic Survey </p></h5>
+            </a>
+        </div>
+
+        <div class="col-lg-2 col-md-4">
+             <a href="@Url.Action("Index","Omanbook")">
+                <div class="centerimgCir">
+                    <img src="~/Images/omanbook.png" class="rounded-circle  imgstylecir " width="150" height="150">
+                    <div class="overlay2 rounded-circle"></div>
+                </div>
+                <br />
+
+                <h5><p>Oman Maritime Book</p></h5>
+            </a>
+        </div>
+
+
+        <div class="col-lg-2 col-md-4">
+         <a href="@Url.Action("Create","ServiceRequestType")">
+                <div class="centerimgCir">
+                    <img src="~/Images/data.png" class="rounded-circle  imgstylecir " width="150" height="150">
+                    <div class="overlay2 rounded-circle"></div>
+                </div>
+                <br />
+
+                <h5><p> Products and Data  </p></h5>
+            </a>
+        </div>
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="container-fluid p-5 text-center txtColorBlue">
+
+
+    <div class="row no-gutters">
+
+        <div class="col-md-4 p-4 BackHighColor">
+            <div class="p-3">
+                <img src="~/Images/portal.png" width="120" height="120" class="mb-3" />
+                <p><a href="http://ocsew1/ocse/index.html">Marine Data </a></p>
+                <p>Provides access to marine data sets held by Oman National Hydrographic Office's Archive</p>
+            </div>
+        </div>
+
+
+        <div class="col-md-4 p-4 ">
+            <div class="p-3">
+                <img src="~/Images/multi.png" width="120" height="120" class="mb-3" />
+
+                <p><a href="@Url.Action("PhotoGallery","Pages")"> Photo Gallery</a></p>
+
+                <p>Highlight some of the works and events belong to Oman National Hydrographic Office</p>
+            </div>
+        </div>
+
+
+        <div class="col-md-4 p-4 BackHighColor ">
+            <div class="p-3">
+                <img src="~/Images/pp3.png" width="120" height="120" class="mb-3" />
+
+                <p><a href="@Url.Action("IndexMap","Pages")"> Chart Index</a></p>
+                <p>it includes the index of Oman paper and electronic charts approved by the Oman National Hydrographic Office</p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="row no-gutters">
+
+        <div class="col-md-4 p-4 ">
+            <div class="p-3 list-style">
+                <img src="~/Images/org.png" width="90" height="90" class="mb-3" />
+                <p>Hydrographic Organizations </p>
+
+                <a href="https://iho.int/">  International Hydrographic Organization <i class="fa-solid fa-arrow-up-right-from-square"></i> </a><br />
+                <a href="https://www.imo.org/">International Maritime Organization<i class="fa-solid fa-arrow-up-right-from-square"></i></a><br />
+                <a href="https://www.gov.uk/government/organisations/uk-hydrographic-office">United Kingdom Hydrographic Office    <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br />
+
+            </div>
+        </div>
+
+
+        <div class="col-md-4 p-4 BackHighColor">
+            <div class="p-3  list-style">
+                <img src="~/Images/links.png" width="90" height="90" class="mb-3" />
+                <p>Quick links </p>
+
+                <a href="https://www.ita.gov.om/itaportal/About/about.aspx">  Ministry of Transport, Communications and Information Technology <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br />
+                <a href="https://fm.gov.om/">   Foreign Ministry of Oman <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br />
+                <a href="https://www.squ.edu.om/squ-ar">   Sultan Qaboos University<i class="fa-solid fa-arrow-up-right-from-square"></i></a><br />
+                <a href="https://www.maf.gov.om/">   Ministry of Agriculture, Fisheries and Water Recourses<i class="fa-solid fa-arrow-up-right-from-square"></i></a><br />
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-4 p-4  ">
+            <div class="p-3 list-style">
+                <img src="~/Images/ads.png" width="90" height="90" class="mb-3" />
+
+                <p>Announcement</p>
+
+
+                <a href="">  ############################################<i class="fa-solid fa-arrow-up-right-from-square"></i></a><br />
+                <a href="">  ############################################<i class="fa-solid fa-arrow-up-right-from-square"></i></a><br />
+                <a href="">  ############################################<i class="fa-solid fa-arrow-up-right-from-square"></i></a><br />
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+@section Scripts{
+    <script src="~/sweetAlert/sweetalert.min.js"></script>
+
+    <script>
+
+    $(document).ready(function () {
+    debugger;
+    if ('@ViewBag.Done' != '' && '@ViewBag.Done' != null) {
+
+    swal('@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Done.. Your Request Success" : "تم ارسال طلبك")', "", "success");
+    }
+    });
+    </script>
+}

@@ -1,6 +1,6 @@
 ﻿
 .backgroungbody {
-    background-image: url('Images/background.jpg');
+    background-image: url('~/Admin/Images/background.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;

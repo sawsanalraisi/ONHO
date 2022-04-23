@@ -104,10 +104,9 @@
 
                             <td class="d-flex justify-content-center">
 
-                                <div class="ps-2 iconDetail">
-                                    <a asp-action="Details" asp-route-id="@item.Id"><i class="fa-solid fa-file-lines" style="font-size:25px;"></i>@*Details*@</a>
+                                <div class="ps-2 iconEdit">
+                                    <a asp-action="Details" asp-route-id="@item.Id"><i class="fas fa-edit" style="font-size:25px;"></i>@*Details*@</a>
                                 </div>
-
 
 
 
@@ -117,14 +116,14 @@
 
 
                                 @*<div>
-            <button type="button" data-id="@item.Id" class="btn signup backBlue text-white Openbutton" data-toggle="modal" data-target="#UpdateRequest">
-                Update Request
-            </button>
-        </div>*@
+                                        <button type="button" data-id="@item.Id" class="btn signup backBlue text-white Openbutton" data-toggle="modal" data-target="#UpdateRequest">
+                                            Update Request
+                                        </button>
+                                    </div>*@
 
 
                                 <div class="ps-2 iconDown">
-                                    <a data-id="@item.Id" class="Openbutton2">  <i class="fa-solid fa-download" style="font-size: 25px; color: #409eff "></i> </a>
+                                    <a data-id="@item.Id"  class="Openbutton2">  <i class="fa-solid fa-download" style="font-size: 25px; color: #409eff "></i> </a>
                                 </div>
 
 
@@ -132,12 +131,12 @@
                                 @*<div class="d-flex ps-2 iconDown" style="margin-right:10px;">
 
 
-            foreach (var item2 in item.ListOfFiles.ToList())
-            {
-                <a href="~/UploadedFiles/item2.Path" download="download">item2.ParentId<i class="fa-solid fa-download" style="font-size:25px;"></i></a>
-            }
+                                    foreach (var item2 in item.ListOfFiles.ToList())
+                                    {
+                                        <a href="~/UploadedFiles/item2.Path" download="download">item2.ParentId<i class="fa-solid fa-download" style="font-size:25px;"></i></a>
+                                    }
 
-        </div>*@
+                                </div>*@
 
 
                                 <div class="ps-2 iconreq1">
@@ -184,7 +183,7 @@
 
                             <td class="d-flex justify-content-center">
 
-                                <div class="ps-2 iconDetail">  <a asp-action="Details" asp-route-id="@item.Id"><i class="fa-solid fa-file-lines" style="font-size:25px;"></i>@*request*@</a> </div>
+                                <div class="ps-2 iconEdit">  <a asp-action="Details" asp-route-id="@item.Id"><i class="fas fa-edit" style="font-size:25px;"></i>@*request*@</a> </div>
 
 
                                 <!--<div class="ps-2 iconreq1"> <a data-id="@item.Id" class="Openbutton" data-toggle="modal" data-target="#UpdateRequest"><i class="fa-solid fa-code-pull-request" style="font-size:25px;"></i>-->@*Details*@<!--</a></div>-->

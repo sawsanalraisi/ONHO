@@ -1,0 +1,188 @@
+﻿@inject CultureLocalizer  _Localizer
+@{
+    ViewData["Title"] = "Hydrography School";
+     Layout = "_Layout";
+    var X = _Localizer.Text("Home");
+        var culture = System.Globalization.CultureInfo.CurrentCulture;
+
+}
+
+<link href="~/Admin/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+
+   @if (culture.Name.Contains("en-US"))
+{
+
+    <div class="container-fluid p-5 bg-warning  p-3 mb-5 bg-body rounded-3">
+
+                    <h2 class="txtColorBlue text-center "><mark class="markSty-who highlight">  Hydrographic Training School </mark></h2>
+
+
+
+
+                    <br /><br />
+
+
+                    <div class="row no-gutters">
+
+                        <div class="col-md-5">
+                            <img src="~/Images/picS1.jpg" width="100%" class="rounded-3" />
+                        </div>
+
+                        <div class="col-md-7 align-self-center">
+                            <p class=" phgJust">
+                                The hydrographic training school falls under the specialized training wing in the Sultan Qaboos Academic Naval Base (SQNA).
+                                It is responsible for training and qualifying RNO members from the hydrographic branch to specialize as hydrographic technicians.
+
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <br /><br />
+
+
+
+
+                    <div class="row no-gutters">
+
+                        <div class="col-md-12  align-self-center">
+
+                            <p class=" phgJust">
+
+                                The selected trainees should pass advanced stages and levels in the English Language. The trainees join a basic hydrographic course where they
+                                study a variety of academic subjects such as mathematics, physics, computer, survey equipment technology and advanced level of English Language
+                                course. On completion of spatial geography on National Survey Authority, the trainee moves to the hydrographic section that includes theoretical
+                                and practical studies. The practical session focuses on studying geodetic, tide and marine currents and their measurement methodologies and
+                                pursuing navigational aids and identifies their locations. In addition, the trainees learns on utilizing GPS and single or multi-beam echo
+                                sounders for obtaining and analyzing data, determining coastline, studying seabed nature, measuring the depth of waters and identify sailing
+                                direction signs and coastal erosion etc.
+                                Once students completed successfully the hydrographic training, they move to the cartographic section. The main aspect in cartographic section
+                                is to gain knowledge about cartographic, drawing and producing of paper and electronic charts and training on collecting, analyzing hydrographic
+                                data in order to produce nautical charts and navigational publications and references.
+                                All these activities are delivered to the students through lectures, presentations and intensive practical and field exercises whether ashore or onboard RNO vessels.
+                            </p>
+
+                        </div>
+
+
+
+                    </div>
+
+
+                    <br /><br />
+
+
+                    <div class="row no-gutters">
+
+                        <div class="col-md-5">
+
+                            <img style="box-shadow" src="~/Images/picS3.jpg" width="100%" class="rounded-3" />
+                        </div>
+
+                        <div class="col-md-7 align-self-center">
+                            <p class=" phgJust">
+                                In the same context, the hydrographic training school, in conjunction with other higher educational authorities and institutes, provides hydrographic
+                                training for academic institute in Oman and other government departments through organizing foundation and short-term courses.
+
+                            </p>
+                        </div>
+
+                    </div>
+
+
+
+    </div>
+
+
+
+
+}
+else
+{
+    
+                   <div class="container-fluid p-5 bg-warning  p-3 mb-5 bg-body rounded-3">
+
+                    <h2 class="txtColorBlue text-center "><mark class="markSty-who highlight">مدرسة تدريب الهيدروغرافيا</mark></h2>
+
+
+
+
+                    <br /><br />
+
+
+                    <div class="row no-gutters">
+
+                        <div class="col-md-5">
+                            <img src="~/Images/picS1.jpg" width="100%" class="rounded-3" />
+                        </div>
+
+                        <div class="col-md-7 align-self-center">
+                            <p class=" phgJust">
+                                تُعد أكاديمية السلطان قابوس البحرية الصرح الأساس لرفد البحرية السلطانية العمانية بالكوادر المُدرَّبة لتلبية احتياجات ومتطلبات السلاح من الضباط والأفراد؛ من خلال أجنحة التدريب الأكاديمية المتعددة؛ كلٌّ وفق اختصاصه.
+
+
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <br /><br />
+
+
+
+
+                    <div class="row no-gutters">
+
+                        <div class="col-md-12  align-self-center">
+
+                            <p class=" phgJust">
+                                تندرج مدرسة التدريب الهيدروغرافي تحت جناح التدريب التخصصي، إذ تُعنى مدرسة التدريب الهيدروغرافي بتدريب وتأهيل فنيي الهيدروغرافيا، والذين يتم اختيارهم بعد تخرجهم واجتيازهم مراحل ومستويات متقدمة في اللغة الإنجليزية، ثم تبدأ الدورة التأسيسية، التي تشتمل على منهاج: الفيزياء، الرياضيات، الحاسب الآلي، واللغة الإنجليزية؛ الشارحة للتخصص، وكذلك دورة في أساسيات الجغرافيا المكانية، وتِقنية الأجهزة المساحية، بعدها ينتقل المتدرب لدورة الهيدروغرافيا التي تشمل العديد من المواد منها: علوم الأرض، الجيوديسيا، قياسات المد والجزر، وتصنيف مكونات القاع، وخصائص العوَّامات، والأنوار الملاحية، والتيارات البحرية، إذ تُختتم هذه المرحلة بالتطبيق العملي للمنهاج، ثم ينتقل المتدرب لمرحلة رسم وإعداد وإنتاج الخرائط بالبحرية باستخدام الأنظمة القياسية والرقمية، والتطبيق العملي للإنتاج النهائي للخارطة البحرية، والتي يقوم بعدها بمرحلة التدريب على رأس العمل في وحدات الهيدروغرافيا بالبحرية السلطانية العمانية؛ لاكتساب الخبرة، وصقل المهارة من خلال المشاركة في بيئة العمل والتأقلم على الظروف العملياتية بالمسوحات الهيدروغرافية، يحصل بعدها المتدرب على مؤهل الدبلوم في الهيدروغرافيا.
+
+
+
+                            </p>
+
+                        </div>
+
+
+
+                    </div>
+
+
+                    <br /><br />
+
+
+                    <div class="row no-gutters">
+
+                        <div class="col-md-5">
+
+                            <img style="box-shadow" src="~/Images/picS3.jpg" width="100%" class="rounded-3" />
+                        </div>
+
+                        <div class="col-md-7 align-self-center">
+                            <p class=" phgJust">
+
+                                تُعِدُّ المدرسة دراسات لضباط الهيدروغرافيا الجدد، قبل إرسالهم لدورات التخصص حسب المسار المُعد لهم، وتقديم بعض الدورات القصيرة للجهات الحكومية الأخرى حسب الطلب.
+
+
+                            </p>
+                        </div>
+
+                    </div>     </div>
+
+}
+@section Scripts{
+    <script src="~/sweetAlert/sweetalert.min.js"></script>
+
+    <script>
+
+    $(document).ready(function () {
+    debugger;
+    if ('@ViewBag.Done' != '' && '@ViewBag.Done' != null) {
+
+    swal('@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Done.. Your Request Success" : "تم ارسال طلبك")', "", "success");
+    }
+    });
+    </script>
+}

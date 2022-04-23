@@ -46,4 +46,9 @@
     <Folder Include="wwwroot\UploadedFiles\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\Admin\Images\brush2.webp" />
+    <None Include="wwwroot\Admin\Images\undraw_profile.svg" />
+  </ItemGroup>
+
 </Project>

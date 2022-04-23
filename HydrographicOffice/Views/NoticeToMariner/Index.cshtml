@@ -6,39 +6,32 @@
 
 }
 
-<link href="~/Admin/sty/Style-Page.css" rel="stylesheet" />
 
-@*<link href="~/sty/Style.css" rel="stylesheet" />*@
-@*<link href="~/css/jquery.dataTables.min.css" rel="stylesheet" />*@
-
-
-<h2 class="txtTopStylearch223-Hyd mt-5" style="text-align:center"><mark class="markSty-who highlight ">@_Localizer.Text("Notice To Mariner")   </mark> </h2>
-
-@*<table class="table tbl shadow-lg p-3 mb-5 bg-body rounded" id="tbl" style="text-align:center;">*@
+<h2 class="txtTopStylearch223-Hyd mt-5" style="text-align:center"><mark class="markSty-who highlight ">@_Localizer.Text("NoticeToMariner")   </mark> </h2>
 
 <div class="p-1 scrollmenu " style="overflow-x:auto;">
 
     <table class="table tbl shadow-lg p-3 mb-5 bg-body rounded" id="tbl">
         <thead>
             <tr>
-                <th>
+                <th style=" width: 140px;">
                     @_Localizer.Text("NoticeType")
                 </th>
-                <th>
+                <th style="width: 200px; ">
                     @_Localizer.Text("NotiecDesc")
                 </th>
-                <th>
+                <th style="width: 150px; ">
                     @_Localizer.Text("NoticeFileName")
                 </th>
-                <th>
+                <th style="width: 100px; ">
                     @_Localizer.Text("NoticeDate")
                 </th>
-                <th>
+                <th style="width: 100px; ">
                     @_Localizer.Text("NoticeEdition")
-
                 </th>
-                <th data-orderable="false">
+                <th style=" width: 50px;" data-orderable="false">
                     @_Localizer.Text("View")
+
 
                 </th>
 
@@ -59,7 +52,6 @@
                     </td>
                     <td>
                         @(Convert.ToString(item.NoticeDate.ToString("dd-MM-yyyy")))
-                        @*@Html.DisplayFor(modelItem => item.NoticeDate)*@
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.NoticeEdition)

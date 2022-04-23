@@ -6,36 +6,31 @@
     Layout = "_Layout";
 }
 
-<link href="~/Admin/sty/Style-Page.css" rel="stylesheet" />
 
-<h2 class="txtTopStylearch223-Hyd mt-5" style="text-align:center"><mark class="markSty-who highlight ">Navigation Warning  </mark> </h2>
-
-
+<h2 class="txtTopStylearch223-Hyd mt-5" style="text-align:center"><mark class="markSty-who highlight ">@_Localizer.Text("NavigationWarning")</mark> </h2>
 <div class="p-1 scrollmenu " style="overflow-x:auto;">
 
     <table class="table tbl shadow-lg p-3 mb-5 bg-body rounded" id="tbl1">
 
-
-        @*<table class="table table-striped dt-responsive nowrap tbl shadow-lg p-3 mb-5 rounded" width="100%" cellspacing="0" id="tbl1">*@
         <thead>
             <tr>
-                <th>
+                <th style=" width: 70px;">
                     @_Localizer.Text("Status")
                 </th>
-                <th>
+                <th style=" width: 180px;">
                     @_Localizer.Text("NavWarnDesc")
                 </th>
-                <th>
+                <th style=" width: 150px;">
                     @_Localizer.Text("NavFileName")
                 </th>
-                <th>
+                <th style=" width: 120px;">
                     @_Localizer.Text("WarnNumber")
                 </th>
-                <th>
+                <th style=" width: 100px;">
                     @_Localizer.Text("WaringDate")
                 </th>
-                <th data-orderable="false">
-                    View
+                <th style=" width: 50px;" data-orderable="false">
+                    @_Localizer.Text("View")
                 </th>
 
             </tr>

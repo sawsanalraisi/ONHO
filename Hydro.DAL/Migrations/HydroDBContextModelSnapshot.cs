@@ -220,6 +220,32 @@ namespace Hydro.DAL.Migrations
                     b.ToTable("FileFormats");
                 });
 
+            modelBuilder.Entity("Hydro.DAL.Entities.ImageNews", b =>
+                {
+                    b.Property<long>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<long>("IdNews")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("NewsId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Path")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Type")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("NewsId");
+
+                    b.ToTable("ImageNews");
+                });
+
             modelBuilder.Entity("Hydro.DAL.Entities.LegalDocument", b =>
                 {
                     b.Property<long>("Id")
@@ -522,6 +548,33 @@ namespace Hydro.DAL.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Notifications");
+                });
+
+            modelBuilder.Entity("Hydro.DAL.Entities.Omanbook", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreateAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreateBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Isdelete")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UploadeFile")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Year")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Omanbooks");
                 });
 
             modelBuilder.Entity("Hydro.DAL.Entities.Order", b =>
@@ -961,6 +1014,13 @@ namespace Hydro.DAL.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("Hydro.DAL.Entities.ImageNews", b =>
+                {
+                    b.HasOne("Hydro.DAL.Entities.News", "News")
+                        .WithMany("ImageNews")
+                        .HasForeignKey("NewsId");
                 });
 
             modelBuilder.Entity("Hydro.DAL.Entities.LegalDocument", b =>

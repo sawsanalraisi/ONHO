@@ -1,0 +1,300 @@
+﻿@inject CultureLocalizer  _Localizer
+@{
+    ViewData["Title"] = "National Role";
+     Layout = "_Layout";
+    var X = _Localizer.Text("Home");
+        var culture = System.Globalization.CultureInfo.CurrentCulture;
+
+}
+
+<link href="~/Admin/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+
+
+   @if (culture.Name.Contains("en-US"))
+{
+
+    <!--//part1-->
+
+    <br /><br />
+    <h2 class="txtColorBlue text-center "><mark class="markSty-who highlight">National Roles </mark></h2>
+
+    <div class="container mt-3  phgJust  ">
+        <div class="row">
+
+            <div class="col-sm-12 shadow-sm p-3 m-2 bg-white ">
+
+
+
+                <p class="text-justify">
+                    <img src="~/Images/tick-e.PNG" width="23" />
+                    Coastal zone management through the provision of support, information and important hydrographic surveys for projects for the establishment and development of vital ports in the Sultanate of Oman.
+                </p>
+            </div>
+
+
+            <div class="col-sm-12 shadow-sm p-3 m-2 bg-white">
+                <p class="text-justify">
+                    <img src="~/Images/tick-e.PNG" width="23" />
+                    Monitoring and observing of the effects of beach erosion, which affects coasts both on the long term and by climate events affecting the Sultanate of Oman.
+                </p>
+            </div>
+
+
+
+            <div class="col-sm-12 shadow-sm p-3 m-2 bg-white">
+                <p class="text-justify">
+                    <img src="~/Images/tick-e.PNG" width="23" />
+                    Contributing to the development of fish farming activities and projects.
+                </p>
+            </div>
+
+
+            <div class="col-sm-12 shadow-sm p-3 m-2 bg-white">
+
+                <p class="text-justify">
+                    <img src="~/Images/tick-e.PNG" width="23" />
+                    The development of community knowledge and awareness of Hydrography and emphasizing the role and achievements of the Sultanate of Oman in this field through the participation with the world celebrating World Hydrography Day and circulating through media and social media.
+                </p>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <!--//part2-->
+
+
+
+
+
+
+
+
+
+    <br /><br />
+    <h2 class="txtColorBlue text-center "><mark class="markSty-who highlight"> General Tasks and Roles </mark></h2>
+
+
+
+    <!--//part1-->
+    <div class="container mt-3  phgJust mb-5">
+        <div class="row">
+
+            <div class="col-sm-12 shadow-sm p-3 m-2 bg-white ">
+
+
+
+                <p class="text-justify">
+                    <img src="~/Images/tick-e.PNG" width="23" />
+
+                    The Office coordinates and collaborates with regional and local organizations and commissions related to hydrography.
+                </p>
+            </div>
+
+
+            <div class="col-sm-12 shadow-sm p-3 m-2 bg-white">
+                <p class="text-justify">
+                    <img src="~/Images/tick-e.PNG" width="23" />
+                    The provision of hydrographic information and data through Omani nautical charts of all ships, both military and commercial, as well as other maritime sectors to ensure the maximum navigational safety of maritime transport operations with all its types, as well as to contribute to saving lives at sea.
+                </p>
+            </div>
+
+
+
+            <div class="col-sm-12 shadow-sm p-3 m-2 bg-white">
+                <p class="text-justify">
+                    <img src="~/Images/tick-e.PNG" width="23" />
+                    The provision of maritime information to support military naval operations for the defence of the country, such as the creation of special charts of naval operations and amphibious landing sites, the planning of anti-maritime enemy landing operations, and navigational support for naval bases and the assurance of safety of their entry and exit.
+                </p>
+            </div>
+
+
+            <div class="col-sm-12 shadow-sm p-3 m-2 bg-white">
+
+                <p class="text-justify">
+                    <img src="~/Images/tick-e.PNG" width="23" />
+                    Provide hydrographic information for the development of public interests in the Sultanate. These services include hydrographic information for non-navigation as well as non-defence purposes.
+                </p>
+            </div>
+
+
+
+            <div class="col-sm-12 shadow-sm p-3 m-2 bg-white">
+
+                <p class="text-justify">
+                    <img src="~/Images/tick-e.PNG" width="23" />
+                    Supporting maritime boundary demarcation and implementation of the provisions of the United Nations Convention on the Law of the Sea (UNCLOS), in which each coastal country shall determine the baselines against which the breadth of its maritime areas such as the territorial sea, the exclusive economic zone and the continental shelf shall be measured.
+                </p>
+            </div>
+
+
+        </div>
+    </div>
+
+}
+else
+{
+    
+      <!--//part1-->
+
+                <br /><br />
+                <h2 class="txtColorBlue text-center "><mark class="markSty-who highlight">الأدوار الوطنية</mark></h2>
+
+                <div class="container mt-3  phgJust  ">
+                    <div class="row">
+
+                        <div class="col-sm-12 shadow-sm p-3 m-2 bg-white ">
+
+
+
+                            <p class="text-justify">
+                                <img src="~/Images/tick.PNG" width="23" />
+                                إدارة المناطق الساحلية؛ من خلال تقديم الدعم والمعلومات والمسوحات الهيدروغرافية المهمة لمشاريع إنشاء وتطوير الموانئ الحيوية في سلطنة عمان.
+
+                            </p>
+                        </div>
+
+
+                        <div class="col-sm-12 shadow-sm p-3 m-2 bg-white">
+                            <p class="text-justify">
+                                <img src="~/Images/tick.PNG" width="23" />
+                                مراقبة ورصد آثار ظاهرة تآكل الشواطئ التي تتأثر بها بعض السواحل، سواء على الأمد البعيد أَمْ المتأثرة بالأنواء المناخية التي تتعرض لها سلطنة عمان.
+
+                            </p>
+                        </div>
+
+
+
+                        <div class="col-sm-12 shadow-sm p-3 m-2 bg-white">
+                            <p class="text-justify">
+                                <img src="~/Images/tick.PNG" width="23" />
+                                المساهمة في تنمية أنشطة ومشاريع الاستزراع السمكي.
+
+                            </p>
+                        </div>
+
+
+                        <div class="col-sm-12 shadow-sm p-3 m-2 bg-white">
+
+                            <p class="text-justify">
+                                <img src="~/Images/tick.PNG" width="23" />
+                                تنمية المعرفة المجتمعية والتعريف بالهيدروغرافيا، وإبراز دور سلطنة عمان وإنجازاتها في هذا المجال من خلال مشاركة دول العالم في الاحتفال باليوم العالمي للهيدروغرافيا، والنشر عبر وسائل الإعلام والتواصل الاجتماعي.
+
+                            </p>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+
+
+
+
+                <!--//part2-->
+
+
+
+
+
+
+
+
+
+                <br /><br />
+                <h2 class="txtColorBlue text-center "><mark class="markSty-who highlight">المهام والأدوار العامة</mark></h2>
+
+
+
+                <!--//part1-->
+                <div class="container mt-3  phgJust mb-5">
+                    <div class="row">
+
+                        <div class="col-sm-12 shadow-sm p-3 m-2 bg-white ">
+
+
+
+                            <p class="text-justify">
+                                <img src="~/Images/tick.PNG" width="23" />
+
+                                يتولى المكتب التنسيق والتعاون مع المنظمات واللجان الإقليمية والمحلية ذات الصلة بالهيدروغرافيا.
+
+                            </p>
+                        </div>
+
+
+                        <div class="col-sm-12 shadow-sm p-3 m-2 bg-white">
+                            <p class="text-justify">
+                                <img src="~/Images/tick.PNG" width="23" />
+                                توفير المعلومات والبيانات الهيدروغرافية من خلال الخرائط الملاحية العمانية لجميع السفن، سواء العسكرية أَمْ التجارية، وكذلك القطاعات الأخرى المعنية بالشؤون البحرية؛ لتأمين أقصى درجات السلامة الملاحية لعمليات النقل البحري بأنواعه، والإسهام في إنقاذ الأرواح في عرض البحر.
+
+                            </p>
+                        </div>
+
+
+
+                        <div class="col-sm-12 shadow-sm p-3 m-2 bg-white">
+                            <p class="text-justify">
+                                <img src="~/Images/tick.PNG" width="23" />
+                                تقديم المعلومات البحرية لدعم العمليات البحرية العسكرية للدفاع عن الدولة مثل إيجاد خرائط خاصة للعمليات البحرية، ومواقع الإنزال البرمائي، والتخطيط لصد عمليات الإبرار البحري المعادي للوحدات البحرية، والدعم الملاحي للقواعد البحرية وتأكيد سلامة الدخول والخروج منها.
+
+                            </p>
+                        </div>
+
+
+                        <div class="col-sm-12 shadow-sm p-3 m-2 bg-white">
+
+                            <p class="text-justify">
+                                <img src="~/Images/tick.PNG" width="23" />
+                                توفير معلومات هيدروغرافية لتنمية المصالح العامة في السلطنة، تتضمن المعلومات الهيدروغرافية التي تُنفذ للأعمال غير المتعلقة بالملاحة، وكذلك لأغراض غير متعلقة بالدفاع.
+
+                            </p>
+                        </div>
+
+
+
+                        <div class="col-sm-12 shadow-sm p-3 m-2 bg-white">
+
+                            <p class="text-justify">
+                                <img src="~/Images/tick.PNG" width="23" />
+                                إسناد عمليات ترسيم الحدود البحرية، وتنفيذ أحكام اتفاقية الأمم المتحدة الخاصة بقانون البحار، بعد تحديد دولة ساحلية لخطوط الأساس الذي تقاس على أساسه اتساع مناطقها البحرية، مثل: البحر الإقليمي، والمنطقة الاقتصادية الخالصة، والجرف القاري.
+
+                            </p>
+                        </div>
+
+
+
+
+
+
+                    </div>
+                </div>
+
+
+
+}
+
+
+
+
+@section Scripts{
+    <script src="~/sweetAlert/sweetalert.min.js"></script>
+
+    <script>
+
+    $(document).ready(function () {
+    debugger;
+    if ('@ViewBag.Done' != '' && '@ViewBag.Done' != null) {
+
+    swal('@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Done.. Your Request Success" : "تم ارسال طلبك")', "", "success");
+    }
+    });
+    </script>
+}

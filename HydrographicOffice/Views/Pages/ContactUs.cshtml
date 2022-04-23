@@ -1,0 +1,192 @@
+﻿@inject CultureLocalizer  _Localizer
+@{
+    ViewData["Title"] = "Aims";
+     Layout = "_Layout";
+    var X = _Localizer.Text("Home");
+
+        var culture = System.Globalization.CultureInfo.CurrentCulture;
+
+}
+
+<link href="~/Admin/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+
+                <div class="container">
+                    <div class="row">
+
+
+                        <div class="col-md-6  mt-3">
+
+
+
+                            <iframe width="100%" height="750px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=100%25&amp;hl=en&amp;q=%D8%A7%D9%84%D9%85%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D9%87%D9%8A%D8%AF%D8%B1%D9%88%D8%BA%D8%B1%D8%A7%D9%81%D9%8A%20%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A%20%D8%A7%D9%84%D8%B9%D9%85%D8%A7%D9%86%D9%8A%20Oman%20National%20Hydrographic%20Office+(Yo%D8%A7%D9%84%D9%85%D9%83%D8%AA%D8%A8%20%D8%A7%D9%84%D9%87%D9%8A%D8%AF%D8%B1%D9%88%D8%BA%D8%B1%D8%A7%D9%81%D9%8A%20%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A%20%D8%A7%D9%84%D8%B9%D9%85%D8%A7%D9%86%D9%8A%20Oman%20National%20Hydrographic%20Officeur%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+
+
+
+                        </div>
+
+
+                        <div class="col-md-6  ">
+
+
+
+                            @*<form asp-action="Create" method="post" enctype="multipart/form-data">
+
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                                <div class="card">
+
+
+                                    <h2 class="mt-3 txtColorGold text-center"> @_Localizer.Text("contactus") </h2>
+
+
+
+
+                                    <div class="form-input">
+                                        <i class="fa-solid fa-user search-icon2"></i>
+                                        <input type="text" class="form-control" placeholder="@_Localizer.Text("Name")" asp-for="UserName">
+                                        <span asp-validation-for="UserName" class="text-danger"></span>
+                                    </div>
+
+
+                                    <div class="form-input">
+                                        <i class="fa-solid fa-envelope search-icon2"></i>
+                                        <input type="text" class="form-control" placeholder="@_Localizer.Text("Email") " asp-for="Emailaddress">
+                                        <span asp-validation-for="Emailaddress" class="text-danger"></span>
+
+                                    </div>
+
+
+                                    <div class="form-input">
+                                        <i class="fa-solid fa-envelope search-icon2"></i>
+                                        <input type="text" class="form-control" placeholder="@_Localizer.Text("Subject")" asp-for="topic">
+                                        <span asp-validation-for="topic" class="text-danger"></span>
+
+                                    </div>
+
+
+                                    <div class="form-input">
+                                        <i class="fa-solid fa-comment search-icon2"></i>
+                                        <textarea class="form-control2" rows="10" id="comment" name="text"></textarea>
+
+                                        <span asp-validation-for="comment" class="text-danger"></span>
+
+                                    </div>
+
+
+                                    <button class="btn mt-4 signup backBlue text-white">Send</button>
+
+
+                                    <section class="mt-5">
+
+                                        <h3 class="txtColorBlue">Working Hours</h3>
+                                        <hr />
+                                        <p class="">   Official Working Hours: Sunday – Thursday, 0700 AM – 1330PM</p>
+                                    </section>
+
+
+
+                                </div>
+
+                            </form>*@
+
+
+                            <form>
+
+                                <div  class="text-danger"></div>
+
+                                <div class="card">
+
+
+                                    <h2 class="mt-3 txtColorGold text-center">@_Localizer.Text("contactus") </h2>
+
+
+
+
+                                    <div class="form-input">
+                                        <i class="fa-solid fa-user search-icon2"></i>
+                                        <input type="text" class="form-control" placeholder="@_Localizer.Text("Name")" >
+                                        <span  class="text-danger"></span>
+                                    </div>
+
+
+                                    <div class="form-input">
+                                        <i class="fa-solid fa-envelope search-icon2"></i>
+                                        <input type="text" class="form-control" placeholder="ٍ@_Localizer.Text("Email")" >
+                                        <span  class="text-danger"></span>
+
+                                    </div>
+
+
+                                    <div class="form-input">
+                                        <i class="fa-solid fa-envelope search-icon2"></i>
+                                        <input type="text" class="form-control" placeholder="@_Localizer.Text("Subject")">
+                                        <span class="text-danger"></span>
+
+                                    </div>
+
+
+                                    <div class="form-input">
+                                        <i class="fa-solid fa-comment search-icon2"></i>
+                                        <textarea class="form-control2" rows="10" id="comment" name="text"></textarea>
+
+                                        <span class="text-danger"></span>
+
+                                    </div>
+
+
+                                    <button class="btn mt-4 signup backBlue text-white">@_Localizer.Text("Send")</button>
+
+
+                                    <section class="mt-5">
+
+                                        <h3 class="txtColorBlue">@_Localizer.Text("WorkingHours")</h3>
+                                        <hr />
+                                        <p class="">  @_Localizer.Text("OfficialWorkingHours")</p>
+                                    </section>
+
+
+
+                                </div>
+
+                            </form>
+
+
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+@section Scripts{
+    <script src="~/sweetAlert/sweetalert.min.js"></script>
+
+    <script>
+
+    $(document).ready(function () {
+    debugger;
+    if ('@ViewBag.Done' != '' && '@ViewBag.Done' != null) {
+
+    swal('@(System.Globalization.CultureInfo.CurrentCulture.DisplayName.Contains("English")? "Done.. Your Request Success" : "تم ارسال طلبك")', "", "success");
+    }
+    });
+    </script>
+}

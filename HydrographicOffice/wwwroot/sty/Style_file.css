@@ -1,0 +1,138 @@
+﻿
+.BoxDach {
+    border: 3px dotted #d4a658;
+    border-radius: 10px;
+}
+
+.input-group > .form-control {
+    width: 100%;
+}
+
+.file-caption {
+    border-style: none;
+}
+
+.file-caption-name {
+    text-align: center;
+    margin-right: 100px;
+    font-size: 18px;
+}
+
+.file-caption .file-caption-name {
+    width: 100%;
+}
+
+.icon-visible, .fileinput-remove-button, .hidden-xs, .fa-circle-plus, .kv-error-close {
+    visibility: hidden;
+    font-size: 0px;
+    display: none;
+}
+
+
+
+
+.btn-file {
+    color: #20426b;
+    font-size: 50px;
+    background-color: white;
+    border-color: white;
+}
+
+.file-preview {
+    width: 100%;
+}
+
+
+.input-group-btn {
+    width: 100%;
+}
+
+
+
+.btn-file .fa-folder-open .hidden-xs .txtColorBlue {
+    color: #20426b;
+}
+
+
+.input-group-btn, {
+    position: relative;
+}
+
+.kv-file-zoom {
+    margin-top: 20px;
+}
+
+.clearfix {
+    padding: 0px;
+    padding-top: 0px;
+}
+
+.fileinput-remove {
+    padding: 2px;
+}
+
+.file-preview .fileinput-remove {
+    top: -39px;
+    right: -3px;
+    line-height: 10px;
+}
+
+.fileinput-remove, .kv-error-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    justify-content: center;
+    width: 1.2em;
+    height: 1.2em;
+    padding: 0;
+    transition: color .1s ease-out;
+    border: none;
+    border-radius: 0;
+    outline: initial;
+    background: 0 0;
+    color: #ccc;
+    font-family: serif;
+    font-size: 2.5em;
+    line-height: 1.2;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.file-preview {
+    border-style: none;
+}
+
+.file-preview-thumbnails .file-preview-frame {
+    margin-bottom: 10px;
+}
+
+
+
+.theme-explorer-fa .file-preview-frame {
+    border: 1px solid navy;
+}
+
+.theme-explorer-fa .explorer-caption {
+    color: navy;
+}
+
+.theme-explorer-fa .explorer-caption {
+    color: #20426b;
+    padding-top: 5px;
+}
+
+.btn a, btn-primary a {
+    color: none;
+    background-color: none;
+}
+
+.btn-file {
+    display: block;
+    border-color: none;
+}
+
+.btn-primary:hover {
+    color: #20426b;
+    background-color: rgba(0,0,0,0);
+    border-color: rgba(0,0,0,0);
+}
